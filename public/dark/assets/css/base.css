@@ -1,0 +1,63 @@
+.serviceDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  margin-top: 20px;
+}
+
+.serviceDetails-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.serviceDetails-feature {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.serviceDetails-feature p {
+  border: 2px white;
+  border-radius: 2px;
+  border-color: beige;
+}
+
+.product_image {
+  padding: 10px;
+}
+
+.product_category {
+  margin-bottom: 200px;
+}
+
+.hover-reveal {
+  position: fixed;
+  width: 200px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hover-reveal__inner,
+.hover-reveal__img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hover-reveal__deco {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #181314;
+}
+
+.hover-reveal__img {
+  background-size: cover;
+  background-position: 50% 50%;
+}
