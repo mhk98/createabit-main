@@ -22,7 +22,7 @@ function PageServiceDetails() {
         <title>Geekfolio - Services</title>
       </Head>
       <Loader />
-    <DarkNavbar></DarkNavbar>
+      <DarkNavbar></DarkNavbar>
 
       <main>
         {error ? (
@@ -46,9 +46,7 @@ function PageServiceDetails() {
             </div>
 
             <div className="serviceDetails-title">
-              <h2>
-                {serviceDetails?.question}
-              </h2>
+              <h2>{serviceDetails?.question}</h2>
               <div>
                 <div className="serviceDetails-feature">
                   <p className="shadow-lg p-4 rounded-lg">
