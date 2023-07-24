@@ -4,11 +4,11 @@ import loadBackgroudImages from "@/common/loadBackgroudImages";
 import isInView from "@/common/isInView";
 //= Data
 import Link from "next/link";
-import { useGetProductCategory3Query } from "@/features/product/productCategory3";
+import { useGetProductCategory1Query } from "@/features/product/productCategory1";
 
-function Product2({ lightMode }) {
+function Products({ lightMode }) {
   const { data, isLoading, isSuccess, isError, error } =
-    useGetProductCategory3Query();
+    useGetProductCategory1Query();
 
   const products = data?.data;
 
@@ -78,7 +78,7 @@ function Product2({ lightMode }) {
                   {products?.map((item, index) => (
                     <div
                       id={`tab-${index + 1}`}
-                      className="img bg-img"
+                      className="img bg-img product_image"
                       // data-background={`${
                       //   lightMode ? "/light/" : "/dark/"
                       // }${item.image}`}
@@ -217,4 +217,4 @@ function Product2({ lightMode }) {
   );
 }
 
-export default Product2;
+export default Products;

@@ -1,6 +1,7 @@
 import { productCategory1Api } from "@/features/product/productCategory1";
 import { productCategory2Api } from "@/features/product/productCategory2";
 import { productCategory3Api } from "@/features/product/productCategory3";
+import { productsApi } from "@/features/product/products";
 import { serviceApi } from "@/features/service/serviceApi";
 import { serviceDetailsApi } from "@/features/service/serviceDetailsApi";
 // import serviceDetailsSlice from "@/features/serviceDetails/serviceDetailsSlice";
@@ -16,6 +17,7 @@ const store = configureStore({
     [productCategory1Api.reducerPath]: productCategory1Api.reducer,
     [productCategory2Api.reducerPath]: productCategory2Api.reducer,
     [productCategory3Api.reducerPath]: productCategory3Api.reducer,
+    [productsApi.reducerPath]: productsApi.reducer,
 
     // services: servicesSlice,
     // serviceDetails: serviceDetailsSlice,
@@ -29,7 +31,8 @@ const store = configureStore({
       serviceDetailsApi.middleware,
       productCategory1Api.middleware,
       productCategory2Api.middleware,
-      productCategory3Api.middleware
+      productCategory3Api.middleware,
+      productsApi.middleware
     ),
 });
 

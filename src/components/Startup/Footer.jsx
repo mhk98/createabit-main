@@ -19,7 +19,7 @@ function Footer({ lightMode, subBg }) {
   }, []);
 
   return (
-    <footer className={subBg ? "sub-bg pt-80" : ""}>
+    <footer className={subBg ? "sub-bg pt-40" : ""}>
       <div className="footer-container">
         <div className="container pt-80 ontop">
           <div className="row">

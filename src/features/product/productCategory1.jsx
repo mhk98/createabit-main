@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productCategory1Api = createApi({
   reducerPath: "productCategory1Api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://createabit-backend.onrender.com/api/v1/",
+    baseUrl: "http://localhost:5000/api/v1/",
   }),
   endpoints: (builder) => ({
     getProductCategory1: builder.query({
@@ -12,4 +12,4 @@ export const productCategory1Api = createApi({
   }),
 });
 
-export const {useGetProductCategory1Query } = productCategory1Api;
+export const { useGetProductCategory1Query } = productCategory1Api;

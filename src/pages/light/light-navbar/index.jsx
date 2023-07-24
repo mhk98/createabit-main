@@ -618,16 +618,16 @@ function LightNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
               onMouseMove={handleDropdownMouseMove}
               onMouseLeave={handleDropdownMouseLeave}
             >
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
                 data-toggle="dropdown"
-                href="#"
+                href="/light/page-product"
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
                 <span className="rolling-text">Products</span>
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li
                   className="dropdown-item"

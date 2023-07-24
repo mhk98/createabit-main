@@ -6,11 +6,11 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 import Footer from "@/components/Startup/Footer";
-import Product from "@/components/InnerPages/Products/product";
 import DarkNavbar from "../dark-navbar";
 import Header from "@/components/InnerPages/Header";
+import Products from "@/components/InnerPages/Products/products";
 
-function PageProductsCategory1() {
+function PageProducts() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -33,7 +33,7 @@ function PageProductsCategory1() {
       <DarkNavbar></DarkNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
-        <Product />
+        <Products />
         {/* <Services />
         <ServicesTab /> */}
         {/* <FAQ /> */}
@@ -44,6 +44,6 @@ function PageProductsCategory1() {
   );
 }
 
-PageProductsCategory1.getLayout = (page) => <Layout>{page}</Layout>;
+PageProducts.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default PageProductsCategory1;
+export default PageProducts;
