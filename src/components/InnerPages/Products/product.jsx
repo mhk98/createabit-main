@@ -464,7 +464,7 @@ function Product({ lightMode }) {
                         </h6>
                       </li>
                     </ul>
-                    <a className="butn-circle d-flex align-items-center text-center mt-50">
+                    <a href="/dark/page-productshop3" className="butn-circle d-flex align-items-center text-center mt-50">
                       <div className="full-width">
                         <span>
                           <svg

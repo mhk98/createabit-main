@@ -85,7 +85,10 @@ function Product1({ lightMode }) {
 
                       key={index}
                     >
-                      <img src={`http://localhost:5000/${item.image}`} alt="" />
+                      <img
+                        src={`https://createabit-backend.onrender.com/${item.image}`}
+                        alt=""
+                      />
                     </div>
                   ))}
                 </div>
@@ -98,7 +101,10 @@ function Product1({ lightMode }) {
                     key={index}
                   >
                     <div className="img-hiden">
-                      <img src={`http://localhost:5000/${item.image}`} alt="" />
+                      <img
+                        src={`https://createabit-backend.onrender.com/${item.image}`}
+                        alt=""
+                      />
                     </div>
                     <span className="sub-title mb-15">
                       {item.number} {item.type}
