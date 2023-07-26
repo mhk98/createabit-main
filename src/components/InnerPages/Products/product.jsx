@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Scripts
-import loadBackgroudImages from "@/common/loadBackgroudImages";
 import isInView from "@/common/isInView";
+import loadBackgroudImages from "@/common/loadBackgroudImages";
 //= Data
-import Link from "next/link";
 import { useGetProductCategory1Query } from "@/features/product/productCategory1";
+import Link from "next/link";
 import banner1 from "../../../../images/Digital-Marketing-_-Seo-01.png";
-import banner2 from "../../../../images/digital-signage.png";
 import banner3 from "../../../../images/Feature-of-app-development-01.png";
+import banner2 from "../../../../images/digital-signage.png";
 
 import Image from "next/image";
 
@@ -178,7 +178,7 @@ function Product({ lightMode }) {
                       </li>
                     </ul>
 
-                    <a
+                    <Link
                       href="/dark/page-productshop1"
                       className="butn-circle d-flex align-items-center text-center mt-50"
                     >
@@ -206,7 +206,7 @@ function Product({ lightMode }) {
                         alt=""
                         className="circle-star"
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -321,7 +321,7 @@ function Product({ lightMode }) {
                         </h6>
                       </li>
                     </ul>
-                    <a
+                    <Link
                       href="/dark/page-productshop2"
                       className="butn-circle d-flex align-items-center text-center mt-50"
                     >
@@ -349,7 +349,7 @@ function Product({ lightMode }) {
                         alt=""
                         className="circle-star"
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -464,7 +464,10 @@ function Product({ lightMode }) {
                         </h6>
                       </li>
                     </ul>
-                    <a href="/dark/page-productshop3" className="butn-circle d-flex align-items-center text-center mt-50">
+                    <Link
+                      href="/dark/page-productshop3"
+                      className="butn-circle d-flex align-items-center text-center mt-50"
+                    >
                       <div className="full-width">
                         <span>
                           <svg
@@ -492,7 +495,7 @@ function Product({ lightMode }) {
                         alt=""
                         className="circle-star"
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
