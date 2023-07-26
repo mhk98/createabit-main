@@ -1,6 +1,7 @@
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import instrument from "../../../../images/each-part-graphic.jpg";
 import laptop from "../../../../images/laptop.png";
 import tab from "../../../../images/tab.jpg";
 import testimonial from "../../../../images/testimonial.png";
@@ -173,7 +174,7 @@ const ProductShop3 = () => {
           alignItems: "center",
           justifyContent: "space-between",
           height: "200px",
-          paddingTop: "60px",
+          paddingTop: "100px",
           paddingBottom: "150px",
           marginBottom: "50px",
           backgroundColor: "#2468A3",
@@ -188,17 +189,51 @@ const ProductShop3 = () => {
             awesome.”
           </p>
           <p>
-            <small>Terry Ickowicz-</small>
-            <span>
-              <a href="https://www.posnation.com/pos-nation-reviews">
-                Doughboy’s Bakery and Café - Los Angeles, CA
-              </a>
-            </span>
+            Terry Ickowicz -{" "}
+            <a style={{ color: "#74ABE5", paddingTop: "40px" }}>
+              Doughboy’s Bakery and Café - Los Angeles, CA
+            </a>
           </p>
         </div>
         <div>
           <Image src={testimonial} alt="" />
         </div>
+      </div>
+
+      <div
+        style={{
+          textAlign: "left",
+          width: "900px",
+          margin: "auto",
+        }}
+      >
+        <h2>Each Part of the System Plays a Role</h2>
+        <h6 style={{ color: "#F5AB1E", marginBottom: "40px" }}>
+          We Combine Hardware, Software, and Services to Provide Turnkey POS
+          Solutions
+        </h6>
+        <Image style={{ marginBottom: "40px" }} src={instrument} alt="" />
+        <p
+          style={{
+            color: "black",
+            marginBottom: "120px",
+            paddingBottom: "80px",
+          }}
+        >
+          Navigating the POS purchasing decision can be daunting, and we’re here
+          to help. We offer a variety of point of sale hardware and POS software
+          options to meet the unique needs of retail stores and restaurants
+          around the world. Our POS systems are supported by our dedicated
+          customer service – including 24/7 US-based support, payment
+          processing, and even ongoing employee training – to offer our
+          customers a complete point of sale solution. We've helped over 5,000
+          businesses streamline their operations and increase their efficiency.
+          Our Product Specialists act as true consultants to help you customize
+          a system to meet your business goals. Recognized by Top Ten Reviews as
+          one of the best POS system providers, we have the experience and
+          expertise to help you make the right point of sale decision for your
+          business. Learn why we're the best POS system provider for you here
+        </p>
       </div>
     </div>
   );
