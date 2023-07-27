@@ -88,6 +88,14 @@
   gap: 50px;
   padding: 0 50px;
 }
+
+.cart_parking {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 100px;
+  margin-top: 100px;
+}
 @media only screen and (max-width: 600px) {
   .produtshop1 {
     display: grid;
