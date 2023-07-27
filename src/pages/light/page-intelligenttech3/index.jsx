@@ -5,17 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Navbar from "@/components/Common/MainNavbar";
-import Header from "@/components/InnerPages/Header";
-import Services from "@/components/InnerPages/About/Services";
-import Portfolio from "@/components/InnerPages/Services/Portfolio";
-import ServicesTab from "@/components/DigitalAgency/ServicesTab";
-import FAQ from "@/components/InnerPages/Services/FAQ";
-import CallToAction from "@/components/Startup/CallToAction";
 import Footer from "@/components/Startup/Footer";
-import DarkNavbar from "../dark-navbar";
-import ProductShop2 from "@/components/InnerPages/Shop/productShop2";
-// import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
+import LightNavbar from "../light-navbar";
+import IntelligentTech3 from "@/components/InnerPages/Intelligent/IntelligentTech3";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -36,9 +28,9 @@ function PageProductShop1() {
       </Head>
 
       <Loader />
-      <DarkNavbar></DarkNavbar>
+      <LightNavbar></LightNavbar>
       <main>
-        <ProductShop2></ProductShop2>
+        <IntelligentTech3></IntelligentTech3>
       </main>
       <Footer />
     </>
