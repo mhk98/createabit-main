@@ -5,11 +5,13 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
+import ProductShop2 from "@/components/InnerPages/Shop/productShop2";
 import Footer from "@/components/Startup/Footer";
-import LightNavbar from "../light-navbar";
+import DarkNavbar from "../dark-navbar";
+import ProductShop3 from "@/components/InnerPages/Shop/productShop3";
+// import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
-function PageProductShop1() {
+function PageProductShop3() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -28,15 +30,15 @@ function PageProductShop1() {
       </Head>
 
       <Loader />
-      <LightNavbar></LightNavbar>
+      <DarkNavbar></DarkNavbar>
       <main>
-        <ProductShop1></ProductShop1>
+        <ProductShop3></ProductShop3>
       </main>
       <Footer />
     </>
   );
 }
 
-PageProductShop1.getLayout = (page) => <Layout lightMode>{page}</Layout>;
+PageProductShop3.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default PageProductShop1;
+export default PageProductShop3;
