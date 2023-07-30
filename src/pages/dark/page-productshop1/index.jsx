@@ -5,16 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Navbar from "@/components/Common/MainNavbar";
-import Header from "@/components/InnerPages/Header";
-import Services from "@/components/InnerPages/About/Services";
-import Portfolio from "@/components/InnerPages/Services/Portfolio";
-import ServicesTab from "@/components/DigitalAgency/ServicesTab";
-import FAQ from "@/components/InnerPages/Services/FAQ";
-import CallToAction from "@/components/Startup/CallToAction";
-import Footer from "@/components/Startup/Footer";
-import DarkNavbar from "../dark-navbar";
 import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
+import DarkNavbar from "../dark-navbar";
+import Footer from "@/components/HomeMain/Footer";
 
 function PageProductShop1() {
   useEffect(() => {

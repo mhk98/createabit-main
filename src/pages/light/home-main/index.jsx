@@ -1,29 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/HomeMain/Header';
-import About from '@/components/HomeMain/About';
-import Marq from '@/components/HomeMain/Marq';
-import Clients from '@/components/HomeMain/Clients';
-import Services from '@/components/HomeMain/Services';
-import Works from '@/components/HomeMain/Works';
-import ServicesTabs from '@/components/HomeMain/ServicesTabs';
-import Testimonials from '@/components/HomeMain/Testimonials';
-import Blog from '@/components/HomeMain/Blog';
-import Footer from '@/components/HomeMain/Footer';
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import Header from "@/components/HomeMain/Header";
+import About from "@/components/HomeMain/About";
+import Marq from "@/components/HomeMain/Marq";
+import Clients from "@/components/HomeMain/Clients";
+import Services from "@/components/HomeMain/Services";
+import Works from "@/components/HomeMain/Works";
+import ServicesTabs from "@/components/HomeMain/ServicesTabs";
+import Testimonials from "@/components/HomeMain/Testimonials";
+import Blog from "@/components/HomeMain/Blog";
+import Footer from "@/components/HomeMain/Footer";
+import Navigation from "@/components/Showcases/Navigation";
+import LightNavbar from "../light-navbar";
 
 function HomeMainLight() {
   useEffect(() => {
-    document.body.classList.add('home-main-crev', 'main-bg');
+    document.body.classList.add("home-main-crev", "main-bg");
 
     // Smooth Scroll of Page
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    ScrollTrigger.normalizeScroll(true)
+    ScrollTrigger.normalizeScroll(true);
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
@@ -39,25 +41,25 @@ function HomeMainLight() {
           trigger: ".thecontainer",
           pin: true,
           scrub: 1,
-          end: () => "+=" + document.querySelector(".thecontainer").offsetWidth
-        }
+          end: () => "+=" + document.querySelector(".thecontainer").offsetWidth,
+        },
       });
     }
     // Footer Animation
     if (window.innerWidth > 991) {
-      gsap.set('.footer-container', { yPercent: -50 });
+      gsap.set(".footer-container", { yPercent: -50 });
       const uncover = gsap.timeline({ paused: true });
-      uncover.to('.footer-container', { yPercent: 0, ease: 'none' });
+      uncover.to(".footer-container", { yPercent: 0, ease: "none" });
       ScrollTrigger.create({
-        trigger: 'main',
-        start: 'bottom bottom',
-        end: '+=50%',
+        trigger: "main",
+        start: "bottom bottom",
+        end: "+=50%",
         animation: uncover,
         scrub: true,
       });
     }
 
-    return () => document.body.classList.remove('home-main-crev', 'main-bg');
+    return () => document.body.classList.remove("home-main-crev", "main-bg");
   }, []);
 
   return (
@@ -67,8 +69,8 @@ function HomeMainLight() {
       </Head>
 
       <Loader />
+      <LightNavbar></LightNavbar>
       <div id="smooth-wrapper">
-        <Navbar mainBg noStatic lightMode />
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
@@ -85,9 +87,9 @@ function HomeMainLight() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-HomeMainLight.getLayout = page => <Layout lightMode>{page}</Layout>
+HomeMainLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default HomeMainLight;

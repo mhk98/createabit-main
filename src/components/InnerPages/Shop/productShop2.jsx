@@ -11,7 +11,7 @@ import product2 from "../../../../images/B1158671887.jpg";
 
 const ProductShop2 = () => {
   return (
-    <div>
+    <div className="container">
       {/* Banner part start */}
       <div className="productshop_banner ">
         <div className="text-middle">
@@ -22,10 +22,7 @@ const ProductShop2 = () => {
       {/* Banner part end */}
 
       {/* Branding part start */}
-      <div
-        className="mb-50 productshop_brand"
-        style={{ backgroundColor: "white", color: "black", padding: "60px" }}
-      >
+      <div className="mb-50 productshop_brand">
         <div>
           <h3>Grow your brand</h3>
           <h3>in the palm of</h3>
@@ -35,8 +32,8 @@ const ProductShop2 = () => {
           <FontAwesomeIcon
             style={{
               width: "20px",
-              color: "white",
-              backgroundColor: "black",
+              // color: "white",
+              // background
               borderRadius: "100%",
               width: "80px",
               height: "80px",
@@ -45,14 +42,14 @@ const ProductShop2 = () => {
             icon={faUserSecret}
           />
           <h5>3D advertising</h5>
-          <p style={{ color: "black" }}>An open eye 3D experience</p>
+          <p>An open eye 3D experience</p>
         </div>
         <div>
           <FontAwesomeIcon
             style={{
               width: "20px",
-              color: "white",
-              backgroundColor: "black",
+              // color: "white",
+              // background
               borderRadius: "100%",
               width: "80px",
               height: "80px",
@@ -61,14 +58,14 @@ const ProductShop2 = () => {
             icon={faUserSecret}
           />
           <h5>3D advertising</h5>
-          <p style={{ color: "black" }}>An open eye 3D experience</p>
+          <p>An open eye 3D experience</p>
         </div>
         <div>
           <FontAwesomeIcon
             style={{
               width: "20px",
-              color: "white",
-              backgroundColor: "black",
+              // color: "white",
+              // background
               borderRadius: "100%",
               width: "80px",
               height: "80px",
@@ -77,7 +74,7 @@ const ProductShop2 = () => {
             icon={faHandsHelping}
           />
           <h5>3D advertising</h5>
-          <p style={{ color: "black" }}>An open eye 3D experience</p>
+          <p>An open eye 3D experience</p>
         </div>
       </div>
       {/* Branding part end */}
@@ -164,18 +161,15 @@ const ProductShop2 = () => {
       {/* Products start */}
       <div
         style={{
-          backgroundColor: "white",
           paddingBottom: "180px",
           paddingTop: "90px",
-          color: "black",
+
           textAlign: "center",
         }}
       >
         <h1>More About Our Products</h1>
-        <p style={{ color: "black" }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        </p>
-        <p style={{ color: "black", paddingBottom: "60px" }}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+        <p style={{ paddingBottom: "60px" }}>
           {" "}
           sed do eiusmod tempor incididunt ut labore.
         </p>
@@ -188,30 +182,24 @@ const ProductShop2 = () => {
           </div>
           <div style={{ textAlign: "left" }}>
             <h2>42 cm (2 Blades)</h2>
-            <p style={{ color: "black" }}>
+            <p>
               Multi-functional - Use 42cm LED fan to have a 42 cm length
               holographic effect.
             </p>
-            <p style={{ color: "black" }}>
-              Immediately attract people's attention.
-            </p>
-            <p style={{ color: "black", marginTop: "20px" }}>
+            <p>Immediately attract people's attention.</p>
+            <p style={{ marginTop: "20px" }}>
               Easy To Use -Easy to install, you can customize your video or
               pictures to display,
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "20px" }}>
               it will bring a vivid 3d advertising display in the air.
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "20px" }}>
               Display Size - Displaying dimension: 16.53 inches;
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
-              LED lamps: 224;
-            </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
-              Resolution(pixel):450*224.
-            </p>
-            <p style={{ color: "black" }}>
+            <p style={{ marginBottom: "20px" }}>LED lamps: 224;</p>
+            <p style={{ marginBottom: "20px" }}>Resolution(pixel):450*224.</p>
+            <p>
               Display Support Format - mp4, avi, rmvb, mkv, gif, jpg, png with
               black background.
             </p>
@@ -221,30 +209,24 @@ const ProductShop2 = () => {
         <div className="product_review">
           <div style={{ textAlign: "left" }}>
             <h2>42 cm (2 Blades)</h2>
-            <p style={{ color: "black" }}>
+            <p>
               Multi-functional - Use 42cm LED fan to have a 42 cm length
               holographic effect.
             </p>
-            <p style={{ color: "black" }}>
-              Immediately attract people's attention.
-            </p>
-            <p style={{ color: "black", marginTop: "20px" }}>
+            <p>Immediately attract people's attention.</p>
+            <p style={{ marginTop: "20px" }}>
               Easy To Use -Easy to install, you can customize your video or
               pictures to display,
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "20px" }}>
               it will bring a vivid 3d advertising display in the air.
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "20px" }}>
               Display Size - Displaying dimension: 16.53 inches;
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
-              LED lamps: 224;
-            </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
-              Resolution(pixel):450*224.
-            </p>
-            <p style={{ color: "black" }}>
+            <p style={{ marginBottom: "20px" }}>LED lamps: 224;</p>
+            <p style={{ marginBottom: "20px" }}>Resolution(pixel):450*224.</p>
+            <p>
               Display Support Format - mp4, avi, rmvb, mkv, gif, jpg, png with
               black background.
             </p>
@@ -261,30 +243,24 @@ const ProductShop2 = () => {
           </div>
           <div style={{ textAlign: "left" }}>
             <h2>42 cm (2 Blades)</h2>
-            <p style={{ color: "black" }}>
+            <p>
               Multi-functional - Use 42cm LED fan to have a 42 cm length
               holographic effect.
             </p>
-            <p style={{ color: "black" }}>
-              Immediately attract people's attention.
-            </p>
-            <p style={{ color: "black", marginTop: "20px" }}>
+            <p>Immediately attract people's attention.</p>
+            <p style={{ marginTop: "20px" }}>
               Easy To Use -Easy to install, you can customize your video or
               pictures to display,
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "20px" }}>
               it will bring a vivid 3d advertising display in the air.
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "20px" }}>
               Display Size - Displaying dimension: 16.53 inches;
             </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
-              LED lamps: 224;
-            </p>
-            <p style={{ color: "black", marginBottom: "20px" }}>
-              Resolution(pixel):450*224.
-            </p>
-            <p style={{ color: "black" }}>
+            <p style={{ marginBottom: "20px" }}>LED lamps: 224;</p>
+            <p style={{ marginBottom: "20px" }}>Resolution(pixel):450*224.</p>
+            <p>
               Display Support Format - mp4, avi, rmvb, mkv, gif, jpg, png with
               black background.
             </p>
@@ -307,14 +283,12 @@ const ProductShop2 = () => {
       {/* Background video part end */}
 
       {/* Faq part start */}
-      <div
-        style={{ backgroundColor: "white", width: "100%", paddingTop: "20px" }}
-      >
-        <h1 style={{ textAlign: "center", color: "black" }}>FAQ</h1>
-        <p style={{ textAlign: "center", color: "black" }}>
+      <div style={{ width: "100%", paddingTop: "20px" }}>
+        <h1 style={{ textAlign: "center" }}>FAQ</h1>
+        <p style={{ textAlign: "center" }}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         </p>
-        <p style={{ textAlign: "center", color: "black" }}>
+        <p style={{ textAlign: "center" }}>
           sed do eiusmod tempor incididunt ut labore.
         </p>
 

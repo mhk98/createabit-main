@@ -10,7 +10,7 @@ import product6 from "../../../../images/Touch-Screen-Kiosk2.jpg";
 import Link from "next/link";
 const ProductShop1 = () => {
   return (
-    <div className="produtshop1">
+    <div className="produtshop1 container">
       <div>
         <Image src={product1} alt="" />
         <h4>Lcd Wall Video</h4>
@@ -21,8 +21,8 @@ const ProductShop1 = () => {
           stations, etc.
         </p>
         {/* <Link className="btn" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link> */}
+            <span className="rolling-text">Classic Mode</span>
+          </Link> */}
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"
@@ -42,8 +42,8 @@ const ProductShop1 = () => {
           stations, etc.
         </p>
         {/* <Link className="btn" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link> */}
+            <span className="rolling-text">Classic Mode</span>
+          </Link> */}
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"
@@ -63,8 +63,8 @@ const ProductShop1 = () => {
           stations, etc.
         </p>
         {/* <Link className="btn" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link> */}
+            <span className="rolling-text">Classic Mode</span>
+          </Link> */}
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"
@@ -84,8 +84,8 @@ const ProductShop1 = () => {
           stations, etc.
         </p>
         {/* <Link className="btn" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link> */}
+            <span className="rolling-text">Classic Mode</span>
+          </Link> */}
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"
@@ -105,8 +105,8 @@ const ProductShop1 = () => {
           stations, etc.
         </p>
         {/* <Link className="btn" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link> */}
+            <span className="rolling-text">Classic Mode</span>
+          </Link> */}
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"
@@ -126,8 +126,8 @@ const ProductShop1 = () => {
           stations, etc.
         </p>
         {/* <Link className="btn" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link> */}
+            <span className="rolling-text">Classic Mode</span>
+          </Link> */}
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"
