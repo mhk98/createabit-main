@@ -1,20 +1,22 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Portfolio from "@/components/Freelancer/Portfolio";
-import About from "@/components/HomeMain/About";
-import Clients from "@/components/HomeMain/Clients";
-import Footer from "@/components/HomeMain/Footer";
+import Navbar from "@/components/Common/MainNavbar";
 import Header from "@/components/HomeMain/Header";
+import About from "@/components/HomeMain/About";
 import Marq from "@/components/HomeMain/Marq";
+import Clients from "@/components/HomeMain/Clients";
 import Services from "@/components/HomeMain/Services";
+import Works from "@/components/HomeMain/Works";
 import ServicesTabs from "@/components/HomeMain/ServicesTabs";
 import Testimonials from "@/components/HomeMain/Testimonials";
-import Works from "@/components/HomeMain/Works";
+import Blog from "@/components/HomeMain/Blog";
+import Footer from "@/components/HomeMain/Footer";
+import Portfolio from "@/components/Freelancer/Portfolio";
 import DarkNavbar from "../dark-navbar";
 
 function HomeMain() {
@@ -99,19 +101,19 @@ function HomeMain() {
       </Head>
 
       <Loader />
-      <DarkNavbar></DarkNavbar>
       <div id="smooth-wrapper">
+        <DarkNavbar />
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
             <About />
             <Portfolio />
+
             <Marq />
             <Clients />
             <Services />
-            <Works />
+            {/* <Works /> */}
             <ServicesTabs />
-            {/* <HzScroll /> */}
             <Testimonials />
             {/* <Blog /> */}
           </main>

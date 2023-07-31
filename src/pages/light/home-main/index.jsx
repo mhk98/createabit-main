@@ -16,7 +16,7 @@ import ServicesTabs from "@/components/HomeMain/ServicesTabs";
 import Testimonials from "@/components/HomeMain/Testimonials";
 import Blog from "@/components/HomeMain/Blog";
 import Footer from "@/components/HomeMain/Footer";
-import Navigation from "@/components/Showcases/Navigation";
+import Portfolio from "@/components/Freelancer/Portfolio";
 import LightNavbar from "../light-navbar";
 
 function HomeMainLight() {
@@ -69,19 +69,20 @@ function HomeMainLight() {
       </Head>
 
       <Loader />
-      <LightNavbar></LightNavbar>
       <div id="smooth-wrapper">
+        <LightNavbar />
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
             <About />
+            <Portfolio />
             <Marq />
             <Clients lightMode />
             <Services lightMode />
-            <Works />
+            {/* <Works /> */}
             <ServicesTabs lightMode />
             <Testimonials lightMode />
-            <Blog />
+            {/* <Blog /> */}
           </main>
           <Footer lightMode />
         </div>
