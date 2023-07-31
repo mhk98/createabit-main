@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/InnerPages/ProjectDetails/Header';
-import Content from '@/components/InnerPages/ProjectDetails/Content';
-import CallToAction from '@/components/InnerPages/ProjectDetails/CallToAction';
-import Footer from '@/components/Startup/Footer';
-
+import Loader from "@/components/Common/Loader";
+import CallToAction from "@/components/InnerPages/ProjectDetails/CallToAction";
+import Content from "@/components/InnerPages/ProjectDetails/Content";
+import Header from "@/components/InnerPages/ProjectDetails/Header";
+import LightNavbar from "../light-navbar";
+import Footer from "@/components/HomeMain/Footer";
 
 function ProjectDetailsLight() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   return (
@@ -25,7 +24,7 @@ function ProjectDetailsLight() {
       </Head>
 
       <Loader />
-      <Navbar mainBg lightMode />
+      <LightNavbar />
       <main>
         <Header />
         <Content />
@@ -33,9 +32,9 @@ function ProjectDetailsLight() {
       </main>
       <Footer lightMode />
     </>
-  )
+  );
 }
 
-ProjectDetailsLight.getLayout = page => <Layout lightMode>{page}</Layout>
+ProjectDetailsLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default ProjectDetailsLight;

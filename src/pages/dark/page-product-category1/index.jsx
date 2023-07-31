@@ -5,10 +5,10 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/Startup/Footer";
 import Product from "@/components/InnerPages/Products/product";
 import DarkNavbar from "../dark-navbar";
 import Header from "@/components/InnerPages/Header";
+import Footer from "@/components/HomeMain/Footer";
 
 function PageProductsCategory1() {
   useEffect(() => {

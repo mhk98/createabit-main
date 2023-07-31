@@ -1,26 +1,26 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Product from '@/components/Shop/Product';
-import Footer from '@/components/Startup/Footer';
+import Loader from "@/components/Common/Loader";
+import Footer from "@/components/HomeMain/Footer";
+import Product from "@/components/Shop/Product";
+import LightNavbar from "../light-navbar";
 
 function ShopProductLight() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
+    document.body.classList.add("main-bg");
     // Smooth Scroll of Page
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    ScrollTrigger.normalizeScroll(true)
+    ScrollTrigger.normalizeScroll(true);
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
     });
 
-    return () => document.body.classList.remove('main-bg');
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   return (
@@ -31,18 +31,18 @@ function ShopProductLight() {
 
       <Loader />
       <div id="smooth-wrapper">
-        <Navbar mainBg noStatic lightMode />
+        <LightNavbar />
         <div id="smooth-content">
           <main className="main-bg">
             <Product />
           </main>
-          <Footer subBg lightMode />
+          <Footer lightMode />
         </div>
       </div>
     </>
-  )
+  );
 }
 
-ShopProductLight.getLayout = page => <Layout lightMode>{page}</Layout>
+ShopProductLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default ShopProductLight;

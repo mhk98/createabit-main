@@ -5,10 +5,11 @@ import Head from 'next/head';
 import Layout from '@/layouts/default';
 //= Components
 import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
 import Header from '@/components/InnerPages/Blog/Header';
 import List from '@/components/InnerPages/Blog/List';
-import Footer from '@/components/Startup/Footer';
+import LightNavbar from '../light-navbar';
+import Footer from '@/components/HomeMain/Footer';
+
 
 
 function BlogListLight() {
@@ -29,7 +30,7 @@ function BlogListLight() {
       </Head>
 
       <Loader />
-      <Navbar mainBg lightMode />
+      <LightNavbar />
       <main className="main-bg">
         <Header data={metadata} />
         <List />
