@@ -1,21 +1,22 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Header from "@/components/HomeMain/Header";
-import About from "@/components/HomeMain/About";
-import Marq from "@/components/HomeMain/Marq";
-import Clients from "@/components/HomeMain/Clients";
-import Services from "@/components/HomeMain/Services";
-import Works from "@/components/HomeMain/Works";
-import ServicesTabs from "@/components/HomeMain/ServicesTabs";
-import Footer from "@/components/HomeMain/Footer";
-import DarkNavbar from "../dark-navbar";
+import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import Portfolio from "@/components/Freelancer/Portfolio";
-import Testimonials from "@/components/CreativeAgency/Testimonials";
+import About from "@/components/HomeMain/About";
+import Clients from "@/components/HomeMain/Clients";
+import Footer from "@/components/HomeMain/Footer";
+import Header from "@/components/HomeMain/Header";
+import Marq from "@/components/HomeMain/Marq";
+import Services from "@/components/HomeMain/Services";
+import ServicesTabs from "@/components/HomeMain/ServicesTabs";
+import Testimonials from "@/components/HomeMain/Testimonials";
+import Works from "@/components/HomeMain/Works";
+import DarkNavbar from "../dark-navbar";
 
 function HomeMain() {
   useEffect(() => {
@@ -105,12 +106,13 @@ function HomeMain() {
           <main className="main-bg">
             <Header />
             <About />
+            <Portfolio />
             <Marq />
             <Clients />
             <Services />
             <Works />
             <ServicesTabs />
-            <Portfolio />
+            <HzScroll />
             <Testimonials />
             {/* <Blog /> */}
           </main>
