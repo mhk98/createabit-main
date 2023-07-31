@@ -5,7 +5,6 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
 import Clients from "@/components/HomeMain/Clients";
@@ -112,7 +111,7 @@ function HomeMain() {
             <Services />
             <Works />
             <ServicesTabs />
-            <HzScroll />
+            {/* <HzScroll /> */}
             <Testimonials />
             {/* <Blog /> */}
           </main>
