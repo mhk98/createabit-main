@@ -5,11 +5,11 @@ import Head from 'next/head';
 import Layout from '@/layouts/default';
 //= Components
 import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
 import Header from '@/components/InnerPages/ProjectDetails/Header';
 import Content from '@/components/InnerPages/ProjectDetails/Content';
 import CallToAction from '@/components/InnerPages/ProjectDetails/CallToAction';
-import Footer from '@/components/Startup/Footer';
+import DarkNavbar from '../dark-navbar';
+import Footer from '@/components/HomeMain/Footer';
 
 
 function ProjectDetails() {
@@ -25,7 +25,7 @@ function ProjectDetails() {
       </Head>
 
       <Loader />
-      <Navbar mainBg />
+      <DarkNavbar />
       <main>
         <Header />
         <Content />

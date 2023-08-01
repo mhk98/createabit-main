@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Navbar from "@/components/Common/MainNavbar";
-import Header from "@/components/HomeMain/Header";
+import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
-import Marq from "@/components/HomeMain/Marq";
+import Blog from "@/components/HomeMain/Blog";
 import Clients from "@/components/HomeMain/Clients";
+import Footer from "@/components/HomeMain/Footer";
+import Header from "@/components/HomeMain/Header";
+import Marq from "@/components/HomeMain/Marq";
 import Services from "@/components/HomeMain/Services";
-import Works from "@/components/HomeMain/Works";
 import ServicesTabs from "@/components/HomeMain/ServicesTabs";
 import Testimonials from "@/components/HomeMain/Testimonials";
-import Blog from "@/components/HomeMain/Blog";
-import Footer from "@/components/HomeMain/Footer";
-import Navigation from "@/components/Showcases/Navigation";
+import Works from "@/components/HomeMain/Works";
 import LightNavbar from "../light-navbar";
 
 function HomeMainLight() {
@@ -41,7 +40,8 @@ function HomeMainLight() {
           trigger: ".thecontainer",
           pin: true,
           scrub: 1,
-          end: () => "+=" + document.querySelector(".thecontainer").offsetWidth,
+          end: () =>
+            "+=" + document.querySelector(".thecontainer")?.offsetWidth,
         },
       });
     }
@@ -71,10 +71,12 @@ function HomeMainLight() {
       <Loader />
       <LightNavbar></LightNavbar>
       <div id="smooth-wrapper">
+        <LightNavbar />
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
             <About />
+            <Portfolio />
             <Marq />
             <Clients lightMode />
             <Services lightMode />

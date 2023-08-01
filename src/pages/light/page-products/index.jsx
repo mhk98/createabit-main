@@ -39,7 +39,7 @@ function PageProducts() {
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
       </main>
-      <Footer />
+      <Footer lightMode/>
     </>
   );
 }

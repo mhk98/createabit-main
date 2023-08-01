@@ -11,8 +11,8 @@ export default function IntelligentTech2() {
       style={{
         width: "1200px",
         margin: "auto",
-        padding: "20 100px",
         marginBottom: "180px",
+        marginTop: "150px",
       }}
     >
       <h5>Windowmate</h5>
@@ -71,9 +71,9 @@ export default function IntelligentTech2() {
         <Image src={intelligent3} alt="" width={"100%"} />
       </div>
 
-      <div>
-        <h3 style={{ marginTop: "20px" }}>Windowmate</h3>
-        <p style={{ marginBottom: "20px" }}>
+      <div style={{ marginBottom: "20px" }}>
+        <h3 style={{ marginTop: "50px" }}>Windowmate</h3>
+        <p>
           Autonomous navigation robots attached to both sides of a glass window
           by using permanent magnet.
         </p>

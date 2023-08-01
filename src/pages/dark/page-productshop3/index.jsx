@@ -6,8 +6,8 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
-import DarkNavbar from "../dark-navbar";
 import ProductShop3 from "@/components/InnerPages/Shop/productShop3";
+import DarkNavbar from "../dark-navbar";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
 function PageProductShop3() {

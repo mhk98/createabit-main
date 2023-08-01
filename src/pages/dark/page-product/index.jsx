@@ -7,8 +7,8 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 import Header from "@/components/InnerPages/Header";
 import Products from "@/components/InnerPages/Products/products";
-import Footer from "@/components/Startup/Footer";
 import DarkNavbar from "../dark-navbar";
+import Footer from "@/components/HomeMain/Footer";
 
 function PageProducts() {
   useEffect(() => {

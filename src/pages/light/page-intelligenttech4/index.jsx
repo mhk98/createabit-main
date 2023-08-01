@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/Startup/Footer";
-import LightNavbar from "../light-navbar";
+import Footer from "@/components/HomeMain/Footer";
 import IntelligentTech4 from "@/components/InnerPages/Intelligent/IntelligentTech4";
+import LightNavbar from "../light-navbar";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -32,7 +32,7 @@ function PageProductShop1() {
       <main>
         <IntelligentTech4></IntelligentTech4>
       </main>
-      <Footer />
+      <Footer lightMode />
     </>
   );
 }

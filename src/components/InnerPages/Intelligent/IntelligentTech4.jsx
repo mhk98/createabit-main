@@ -10,7 +10,7 @@ import product7 from "../../../../images/Car Parking System.jpg";
 
 export default function IntelligentTech4() {
   return (
-    <div>
+    <div className="container">
       <div className="cart_parking">
         <div>
           <h5>Tripod Turnstile</h5>

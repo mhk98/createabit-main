@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import Footer from "@/components/HomeMain/Footer";
 import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 import DarkNavbar from "../dark-navbar";
-import Footer from "@/components/HomeMain/Footer";
 
 function PageProductShop1() {
   useEffect(() => {

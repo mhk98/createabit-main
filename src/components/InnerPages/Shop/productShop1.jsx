@@ -1,13 +1,12 @@
 import Image from "next/image";
-import React from "react";
 import product1 from "../../../../images/LCD-VIDEO-WALL-47 (1).jpg";
 import product2 from "../../../../images/Wall-Mount-Models.jpg";
 
+import Link from "next/link";
 import product3 from "../../../../images/42-inch-lcd-digital-signage.jpg";
-import product4 from "../../../../images/Touch-table3.jpg";
 import product5 from "../../../../images/Mirror-advertising-player.jpg";
 import product6 from "../../../../images/Touch-Screen-Kiosk2.jpg";
-import Link from "next/link";
+import product4 from "../../../../images/Touch-table3.jpg";
 const ProductShop1 = () => {
   return (
     <div className="produtshop1 container">
@@ -20,9 +19,7 @@ const ProductShop1 = () => {
           places, hydraulic monitoring stations, power plant monitoring
           stations, etc.
         </p>
-        {/* <Link className="btn" href="/light/home-creative-agency/">
-            <span className="rolling-text">Classic Mode</span>
-          </Link> */}
+
         <div className="purchase mt-4">
           <Link
             href="/light/home-creative-agency/"

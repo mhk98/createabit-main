@@ -5,9 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/Startup/Footer";
 import LightNavbar from "../light-navbar";
 import IntelligentTech3 from "@/components/InnerPages/Intelligent/IntelligentTech3";
+import Footer from "@/components/HomeMain/Footer";
 
 function PageProductShop1() {
   useEffect(() => {

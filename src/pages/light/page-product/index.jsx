@@ -5,9 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Header";
 import Products from "@/components/InnerPages/Products/products";
-import Footer from "@/components/Startup/Footer";
 import LightNavbar from "../light-navbar";
 
 function PageProducts() {
@@ -38,7 +38,7 @@ function PageProducts() {
         <ServicesTab /> */}
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
-        <Footer />
+        <Footer lightMode />
       </main>
     </>
   );

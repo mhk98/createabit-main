@@ -78,7 +78,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
     }
   }
   return (
-    <div className="hamenu">
+    <div className="hamenu" style={{padding:"50px 0px"}}>
       <div className="container">
         <div className="row">
           <div className="col-lg-2">

@@ -15,7 +15,7 @@ const ProductShop3 = () => {
           alignItems: "center",
           display: "block",
           alignContent: "center",
-          padding: "0 200px",
+          // padding: "0 200px",
           marginTop: "100px",
           marginBottom: "80px",
         }}
@@ -84,7 +84,7 @@ const ProductShop3 = () => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: " 0 50px",
+            gap: "70px",
           }}
         >
           <div>
@@ -93,7 +93,6 @@ const ProductShop3 = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 gap: "40px",
-
                 alignItems: "center",
               }}
             >
@@ -176,7 +175,12 @@ const ProductShop3 = () => {
           paddingTop: "100px",
           paddingBottom: "150px",
           marginBottom: "50px",
+<<<<<<< HEAD
           // backgroundColor: "#2468A3",
+=======
+          backgroundColor: "#2468A3",
+          paddingLeft: "15px",
+>>>>>>> af38202cb1a54e367ccd3e90e8c01c8db92c0679
         }}
       >
         <div>
@@ -195,14 +199,14 @@ const ProductShop3 = () => {
           </p>
         </div>
         <div>
-          <Image src={testimonial} alt="" />
+          <Image style={{ width: "250px" }} src={testimonial} alt="" />
         </div>
       </div>
 
       <div
         style={{
           textAlign: "left",
-          width: "900px",
+          // width: "900px",
           margin: "auto",
         }}
       >
