@@ -1,29 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/HomeMain/Header';
-import About from '@/components/HomeMain/About';
-import Marq from '@/components/HomeMain/Marq';
-import Clients from '@/components/HomeMain/Clients';
-import Services from '@/components/HomeMain/Services';
-import Works from '@/components/HomeMain/Works';
-import ServicesTabs from '@/components/HomeMain/ServicesTabs';
-import Testimonials from '@/components/HomeMain/Testimonials';
-import Blog from '@/components/HomeMain/Blog';
-import Footer from '@/components/HomeMain/Footer';
+import Loader from "@/components/Common/Loader";
+import Header from "@/components/HomeMain/Header";
+import About from "@/components/HomeMain/About";
+import Marq from "@/components/HomeMain/Marq";
+import Clients from "@/components/HomeMain/Clients";
+import Services from "@/components/HomeMain/Services";
+import Works from "@/components/HomeMain/Works";
+import ServicesTabs from "@/components/HomeMain/ServicesTabs";
+import Footer from "@/components/HomeMain/Footer";
+import DarkNavbar from "../dark-navbar";
+import Portfolio from "@/components/Freelancer/Portfolio";
+import Testimonials from "@/components/CreativeAgency/Testimonials";
 
 function HomeMain() {
   useEffect(() => {
-    document.body.classList.add('home-main-crev', 'main-bg');
+    document.body.classList.add("home-main-crev", "main-bg");
 
     // Smooth Scroll of Page
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    ScrollTrigger.normalizeScroll(true)
+    ScrollTrigger.normalizeScroll(true);
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
@@ -39,37 +39,44 @@ function HomeMain() {
           trigger: ".thecontainer",
           pin: true,
           scrub: 1,
-          end: () => "+=" + document.querySelector(".thecontainer")?.offsetWidth
-        }
+          end: () =>
+            "+=" + document.querySelector(".thecontainer")?.offsetWidth,
+        },
       });
     }
     // Footer Animation
     if (window.innerWidth > 991) {
-      gsap.set('.footer-container', { yPercent: -50 });
+      gsap.set(".footer-container", { yPercent: -50 });
       const uncover = gsap.timeline({ paused: true });
-      uncover.to('.footer-container', { yPercent: 0, ease: 'none' });
+      uncover.to(".footer-container", { yPercent: 0, ease: "none" });
       ScrollTrigger.create({
-        trigger: 'main',
-        start: 'bottom bottom',
-        end: '+=50%',
+        trigger: "main",
+        start: "bottom bottom",
+        end: "+=50%",
         animation: uncover,
         scrub: true,
       });
     }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      document.body.classList.remove('home-main-crev', 'main-bg');
-    }
+      window.removeEventListener("resize", handleResize);
+      document.body.classList.remove("home-main-crev", "main-bg");
+    };
   }, []);
 
   function handleResize() {
-    if (window.innerWidth < 991 && document.querySelector('.thecontainer').style.maxHeight) {
+    if (
+      window.innerWidth < 991 &&
+      document.querySelector(".thecontainer").style.maxHeight
+    ) {
       location.reload();
     }
-    if (window.innerWidth > 991 && !document.querySelector('.thecontainer').style.maxHeight) {
+    if (
+      window.innerWidth > 991 &&
+      !document.querySelector(".thecontainer").style.maxHeight
+    ) {
       gsap.registerPlugin(ScrollTrigger);
       let sections = gsap.utils.toArray(".panel");
       gsap.to(sections, {
@@ -79,8 +86,8 @@ function HomeMain() {
           trigger: ".thecontainer",
           pin: true,
           scrub: 1,
-          end: () => "+=" + document.querySelector(".thecontainer").offsetWidth
-        }
+          end: () => "+=" + document.querySelector(".thecontainer").offsetWidth,
+        },
       });
     }
   }
@@ -92,8 +99,8 @@ function HomeMain() {
       </Head>
 
       <Loader />
+      <DarkNavbar></DarkNavbar>
       <div id="smooth-wrapper">
-        <Navbar mainBg noStatic />
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
@@ -103,16 +110,17 @@ function HomeMain() {
             <Services />
             <Works />
             <ServicesTabs />
+            <Portfolio />
             <Testimonials />
-            <Blog />
+            {/* <Blog /> */}
           </main>
           <Footer />
         </div>
       </div>
     </>
-  )
+  );
 }
 
-HomeMain.getLayout = page => <Layout>{page}</Layout>
+HomeMain.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default HomeMain;

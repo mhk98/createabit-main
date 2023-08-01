@@ -16,6 +16,8 @@ import Team from "@/components/CreativeAgency/Team";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import Blog from "@/components/CreativeAgency/Blog";
 import Footer from "@/components/CreativeAgency/Footer";
+import Navigation from "@/components/Showcases/Navigation";
+import Menu from "@/components/Showcases/Menu";
 import DarkNavbar from "../dark-navbar";
 
 function HomeCreativeAgency() {
@@ -31,8 +33,8 @@ function HomeCreativeAgency() {
       </Head>
 
       <Loader />
-      {/* <Navbar mainBg /> */}
-      <DarkNavbar></DarkNavbar>
+      <Navigation />
+      <DarkNavbar />
       <main className="main-bg position-re">
         <Header />
         <Marq />

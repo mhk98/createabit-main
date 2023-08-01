@@ -7,8 +7,13 @@ import Layout from "@/layouts/preview";
 
 import Overlay from "@/components/Preview/Overlay";
 import Footer from "@/components/Preview/Footer";
-import DarkNavbar from "./dark/dark-navbar";
+// import DarkNavbar from "./dark/dark-navbar";
+// import HomeCreativeAgency from "./dark/home-creative-agency";
+import ProjectDetails2 from "./dark/project-details2";
+import Navigation from "@/components/Showcases/Navigation";
+import Menu from "@/components/Showcases/Menu";
 import HomeCreativeAgency from "./dark/home-creative-agency";
+import HomeMain from "./dark/home-main";
 
 function LandingPreview() {
   useEffect(() => {
@@ -21,12 +26,9 @@ function LandingPreview() {
       <Head>
         <title>Geekfolio - Preview</title>
       </Head>
-
-      {/* <DarkNavbar></DarkNavbar> */}
       <Overlay />
       <main>
-        <HomeCreativeAgency></HomeCreativeAgency>
-        <Footer />
+        <HomeMain></HomeMain>
       </main>
     </>
   );

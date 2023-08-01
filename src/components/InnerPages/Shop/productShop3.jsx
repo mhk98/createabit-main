@@ -8,7 +8,7 @@ import testimonial from "../../../../images/testimonial.png";
 import icon from "../../../../images/websiteboxes-new-Bluegrey-retail.png";
 const ProductShop3 = () => {
   return (
-    <div style={{ backgroundColor: "white", color: "black" }}>
+    <div className="container">
       <div
         style={{
           textAlign: "left",
@@ -20,8 +20,8 @@ const ProductShop3 = () => {
           marginBottom: "80px",
         }}
       >
-        <h3>Finally, a POS System That Fits Your Business</h3>
-        <p style={{ color: "black" }}>
+        <h2>Finally, a POS System That Fits Your Business</h2>
+        <p>
           Your search for the perfect POS system is over. POS Nation recognizes
           that retail store, restaurant, and specialty store owners need a point
           of sale specifically tailored to their unique businesses. That’s why
@@ -40,30 +40,30 @@ const ProductShop3 = () => {
         >
           <div>
             <Image src={icon} alt="" />
-            <p style={{ textAlign: "center", color: "black" }}>Retail POS</p>
+            <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
           <div>
             <Image src={icon} alt="" />
-            <p style={{ textAlign: "center", color: "black" }}>Retail POS</p>
+            <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
           <div>
             <Image src={icon} alt="" />
-            <p style={{ textAlign: "center", color: "black" }}>Retail POS</p>
+            <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
           <div>
             <Image src={icon} alt="" />
-            <p style={{ textAlign: "center", color: "black" }}>Retail POS</p>
+            <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
           <div>
             <Image src={icon} alt="" />
-            <p style={{ textAlign: "center", color: "black" }}>Retail POS</p>
+            <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
           <div>
             <Image src={icon} alt="" />
-            <p style={{ textAlign: "center", color: "black" }}>Retail POS</p>
+            <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
         </div>
-        <h6 style={{ textAlign: "center", marginTop: "20px", color: "black" }}>
+        <h6 style={{ textAlign: "center", marginTop: "20px" }}>
           <a href="">
             Don't see your industry? Don't worry, we've got you covered. See
             them all here{" "}
@@ -75,9 +75,9 @@ const ProductShop3 = () => {
       </div>
 
       <div>
-        <h3 style={{ textAlign: "center" }}>
+        <h2 style={{ textAlign: "center", marginBottom: "100px" }}>
           Everything You Need to Run a Successful Business
-        </h3>
+        </h2>
 
         <div
           style={{
@@ -99,8 +99,8 @@ const ProductShop3 = () => {
             >
               <Image className="tab_img" src={laptop} alt="" />
               <div style={{ width: "400px", height: "115px" }}>
-                <h5 style={{ color: "#F9AF4C" }}>Customize Your System</h5>
-                <p style={{ color: "black" }}>
+                <h5>Customize Your System</h5>
+                <p>
                   Choose the POS software, hardware, and peripherals you need to
                   maximize the productivity and profitability of your business.
                 </p>
@@ -117,8 +117,8 @@ const ProductShop3 = () => {
             >
               <Image className="tab_img" src={laptop} alt="" />
               <div style={{ width: "400px", height: "115px" }}>
-                <h5 style={{ color: "#F9AF4C" }}>Customize Your System</h5>
-                <p style={{ color: "black" }}>
+                <h5>Customize Your System</h5>
+                <p>
                   Choose the POS software, hardware, and peripherals you need to
                   maximize the productivity and profitability of your business.
                 </p>
@@ -134,8 +134,8 @@ const ProductShop3 = () => {
             >
               <Image className="tab_img" src={laptop} alt="" />
               <div style={{ width: "400px", height: "115px" }}>
-                <h5 style={{ color: "#F9AF4C" }}>Customize Your System</h5>
-                <p style={{ color: "black" }}>
+                <h5>Customize Your System</h5>
+                <p>
                   Choose the POS software, hardware, and peripherals you need to
                   maximize the productivity and profitability of your business.
                 </p>
@@ -156,7 +156,6 @@ const ProductShop3 = () => {
             textAlign: "center",
             marginTop: "20px",
             paddingBottom: "50px",
-            color: "black",
           }}
         >
           <a href="">
@@ -177,7 +176,7 @@ const ProductShop3 = () => {
           paddingTop: "100px",
           paddingBottom: "150px",
           marginBottom: "50px",
-          backgroundColor: "#2468A3",
+          // backgroundColor: "#2468A3",
         }}
       >
         <div>
@@ -190,7 +189,7 @@ const ProductShop3 = () => {
           </p>
           <p>
             Terry Ickowicz -{" "}
-            <a style={{ color: "#74ABE5", paddingTop: "40px" }}>
+            <a style={{ paddingTop: "40px" }}>
               Doughboy’s Bakery and Café - Los Angeles, CA
             </a>
           </p>
@@ -208,14 +207,13 @@ const ProductShop3 = () => {
         }}
       >
         <h2>Each Part of the System Plays a Role</h2>
-        <h6 style={{ color: "#F5AB1E", marginBottom: "40px" }}>
+        <h6 style={{ marginBottom: "40px" }}>
           We Combine Hardware, Software, and Services to Provide Turnkey POS
           Solutions
         </h6>
         <Image style={{ marginBottom: "40px" }} src={instrument} alt="" />
         <p
           style={{
-            color: "black",
             marginBottom: "120px",
             paddingBottom: "80px",
           }}

@@ -5,8 +5,7 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import ProductShop2 from "@/components/InnerPages/Shop/productShop2";
-import Footer from "@/components/Startup/Footer";
+import Footer from "@/components/HomeMain/Footer";
 import DarkNavbar from "../dark-navbar";
 import ProductShop3 from "@/components/InnerPages/Shop/productShop3";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";

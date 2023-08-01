@@ -1,909 +1,283 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
-function DarkNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
+function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (darkOnScroll) {
+      let nav = document.querySelector("#navi");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          nav.className = "topnav dark change nav-scroll";
+          nav.querySelector("img").src = "/dark/assets/imgs/logo-dark.png";
+        } else {
+          nav.className = "topnav";
+          nav.querySelector("img").src = "/dark/assets/imgs/logo-light.png";
+        }
+      });
+    }
+  }, [darkOnScroll]);
 
-  function handleScroll() {
-    const bodyScroll = window.scrollY;
-    const navbar = document.querySelector(".navbar");
+  function toggleMenu(event) {
+    let menu = document.querySelector(".hamenu");
+    let nav = document.querySelector("#navi");
 
-    if (bodyScroll > 300) navbar.classList.add("nav-scroll");
-    else navbar.classList.remove("nav-scroll");
+    if (event.currentTarget.classList.contains("open")) {
+      event.currentTarget.classList.remove("open");
+      menu?.classList.remove("open");
+      menu.style.left = `-100%`;
+      if (lightMode && !alwaysDark) {
+        nav.classList.remove("navlit");
+        nav.querySelector("img").src = "/dark/assets/imgs/logo-light.png";
+      }
+    } else {
+      event.currentTarget.classList.add("open");
+      menu?.classList.add("open");
+      menu.style.left = 0;
+      if (lightMode && !alwaysDark) {
+        nav.classList.add("navlit");
+        nav.querySelector("img").src = "/dark/assets/imgs/logo-dark.png";
+      }
+    }
   }
 
-  function handleDropdownMouseMove(event) {
-    event.currentTarget.querySelector(".dropdown-menu").classList.add("show");
+  function handleMouseEnter(event) {
+    document.querySelectorAll("ul.main-menu li").forEach((item) => {
+      item.classList.add("hoverd");
+    });
+    event.currentTarget.classList.remove("hoverd");
   }
 
-  function handleDropdownMouseLeave(event) {
-    event.currentTarget
-      .querySelector(".dropdown-menu")
-      .classList.remove("show");
+  function handleMouseLeave() {
+    document
+      .querySelectorAll("ul.main-menu li")
+      .forEach((item) => item.classList.remove("hoverd"));
   }
 
-  function handleDropdownSideMouseMove(event) {
-    event.currentTarget.querySelector(".dropdown-side").classList.add("show");
+  function toggleSubMenu(event) {
+    const subMenu = event.currentTarget.querySelector(".sub-menu");
+    if (subMenu) {
+      if (subMenu.classList.contains("sub-open")) {
+        document.querySelectorAll(".sub-menu").forEach((item) => {
+          item.classList.remove("sub-open");
+          item.style.maxHeight = "0";
+          item.previousElementSibling.children[0].classList.remove("dopen");
+        });
+        subMenu.classList.remove("sub-open");
+        subMenu.style.maxHeight = "0";
+        subMenu.previousElementSibling.children[0].classList.remove("dopen");
+      } else if (!subMenu.classList.contains("sub-open")) {
+        document.querySelectorAll(".sub-menu").forEach((item) => {
+          item.classList.remove("sub-open");
+          item.style.maxHeight = "0";
+          item.previousElementSibling.children[0].classList.remove("dopen");
+        });
+        subMenu.classList.add("sub-open");
+        subMenu.style.maxHeight = "400px";
+        subMenu.previousElementSibling.children[0].classList.add("dopen");
+      }
+    }
   }
-
-  function handleDropdownSideMouseLeave(event) {
-    event.currentTarget
-      .querySelector(".dropdown-side")
-      .classList.remove("show");
-  }
-
-  function toggleNavbar() {
-    document.querySelector(".navbar .navbar-collapse").classList.toggle("show");
-  }
-
-  function toggleSearch() {
-    let form = document.querySelector(".navbar .search-form");
-    let closeBtn = document.querySelector(".search-form .close-search");
-
-    form.classList.toggle("open");
-    if (form.classList.contains("open")) closeBtn.style.display = "block";
-    else closeBtn.style.display = "none";
-  }
-
   return (
-    <nav
-      className={`navbar navbar-expand-lg ${curve ? "nav-crev" : ""} ${
-        noStatic ? "" : "static"
-      } ${mainBg ? "main-bg" : ""} ${subBg ? "sub-bg" : ""}`}
-    >
+    <div className="hamenu">
       <div className="container">
-        <Link className="logo icon-img-100" href="/dark/home-creative-agency">
-          <img src="/light/assets/imgs/logo-light.png" alt="logo" />
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={toggleNavbar}
-        >
-          <span className="icon-bar">
-            <i className="fas fa-bars"></i>
-          </span>
-        </button>
-
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarSupportedContent"
-        >
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                // href={`/${lightMode ? "light" : "dark"}/home-creative-agency`}
-                href="/dark/home-creative-agency"
-              >
-                <span className="rolling-text">Home</span>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                // href={`/${lightMode ? "light" : "dark"}/page-services`}
-                href="/dark/page-services"
-              >
-                <span className="rolling-text">Services</span>
-              </Link>
-            </li>
-
-            <li
-              className="nav-item dropdown"
-              onMouseMove={handleDropdownMouseMove}
-              onMouseLeave={handleDropdownMouseLeave}
-            >
-              <Link
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="/dark/page-product/"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Products</span>
-              </Link>
-              <ul className="dropdown-menu">
+        <div className="row">
+          <div className="col-lg-2">
+            {/* <div className="menu-text">
+              <div className="text">
+                <h2>Menu</h2>
+              </div>
+            </div> */}
+            <div id="navi" className={`topnav ${alwaysDark && "navlit"}`}>
+              <div className="container">
+                <div className="logo icon-img-120">
+                  <a href="#">
+                    <img src="/dark/assets/imgs/logo-light.png" alt="" />
+                  </a>
+                </div>
+                <div className="menu-icon cursor-pointer" onClick={toggleMenu}>
+                  <span className="icon">
+                    <i></i>
+                    <i></i>
+                  </span>
+                  <span className="text">
+                    <span className="word">Menu</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-7">
+            <div className="menu-links">
+              <ul className="main-menu rest">
                 <li
-                  className="dropdown-item"
-                  onMouseMove={handleDropdownSideMouseMove}
-                  onMouseLeave={handleDropdownSideMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <Link href="/dark/page-product-category1">
-                    Dynamic Digital Products
-                    <i className="fas fa-angle-right icon-arrow"></i>
-                  </Link>
-                  <ul className="dropdown-side">
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        DIGITAL DISPLAY
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Lcd Wall Video
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Wall Mount Display
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Stand Alone Signage
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Touch Table
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            OutDoor Digital Synage
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Multimedia Kiosk
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        3D HOLOGRAPHIC SIGNS
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        POS SYSTEMS
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                  <div className="o-hidden">
+                    <Link href="/dark/home-main" className="link">
+                      <span className="fill-text" data-text="Home">
+                        Home
+                      </span>
+                    </Link>
+                  </div>
                 </li>
                 <li
-                  className="dropdown-item"
-                  onMouseMove={handleDropdownSideMouseMove}
-                  onMouseLeave={handleDropdownSideMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <Link href="/dark/page-product-category2">
-                    Intelligent Tech Products
-                    <i className="fas fa-angle-right icon-arrow"></i>
-                  </Link>
-                  <ul className="dropdown-side">
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        INTELLIGENT NAIL PRINTER
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        CLEANING WINDOWS ROBOTS
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        LASER ENGRAVING MACHINE
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        CAR PARKING & SECURITY ENTRIES
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        Business Gift and custom product
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                  <div className="o-hidden">
+                    <Link href="/dark/page-services/" className="link">
+                      <span className="fill-text" data-text="Services">
+                        Services
+                      </span>
+                    </Link>
+                  </div>
+                </li>
+
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={toggleSubMenu}
+                >
+                  <div className="o-hidden">
+                    <div className="link cursor-pointer dmenu">
+                      <Link href="/dark/page-product/" className="link">
+                        <span className="fill-text" data-text="Products">
+                          Products
+                        </span>
+                      </Link>
+                      <i></i>
+                    </div>
+                  </div>
+                  <div className="sub-menu">
+                    <ul>
+                      <li>
+                        <Link
+                          href="/dark/page-product-category1/"
+                          className="sub-link"
+                        >
+                          Dynamic Digital Products
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/dark/page-product-category2/"
+                          className="sub-link"
+                        >
+                          Intelligent TECH Products
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/dark/page-product-category3/"
+                          className="sub-link"
+                        >
+                          INTERACTIVE WOW PRODUCTION
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/dark/page-contact/" className="link">
+                      <span className="fill-text" data-text="Solution">
+                        Solution
+                      </span>
+                    </Link>
+                  </div>
                 </li>
                 <li
-                  className="dropdown-item"
-                  onMouseMove={handleDropdownSideMouseMove}
-                  onMouseLeave={handleDropdownSideMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <Link href="/dark/page-product-category3">
-                    Interactive Wow Production
-                    <i className="fas fa-angle-right icon-arrow"></i>
-                  </Link>
-                  <ul className="dropdown-side">
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        INTERACTIVE FLOOR PROJECTION
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        PROJECTION BOOK
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        INTERACTIVE BAR SYSTEM & INTERACTIVE BAR
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li
-                      className="dropdown-item"
-                      onMouseMove={handleDropdownSideMouseMove}
-                      onMouseLeave={handleDropdownSideMouseLeave}
-                    >
-                      <a href="#0">
-                        MULTI TOUCH WALL PROJECTION
-                        <i className="fas fa-angle-right icon-arrow"></i>
-                      </a>
-                      <ul className="dropdown-side">
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-1"
-                          >
-                            Nested Item 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item"
-                            href="/dark/nested-item-2"
-                          >
-                            Nested Item 2
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                  <div className="o-hidden">
+                    <Link href="/dark/blog-list/" className="link">
+                      <span className="fill-text" data-text="Blog">
+                        Blog
+                      </span>
+                    </Link>
+                  </div>
+                </li>
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/dark/page-contact/" className="link">
+                      <span className="fill-text" data-text="Contact">
+                        Contact
+                      </span>
+                    </Link>
+                  </div>
+                </li>
+
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/light/home-main/" className="link">
+                      <span className="fill-text" data-text="Classic Mode">
+                        Classic Mode
+                      </span>
+                    </Link>
+                  </div>
                 </li>
               </ul>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                href={`/${lightMode ? "light" : "dark"}/page-contact`}
-              >
-                <span className="rolling-text">Solution</span>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                href={`/${lightMode ? "light" : "dark"}/page-contact`}
-              >
-                <span className="rolling-text">Contact</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" href="/light/home-creative-agency/">
-                <span className="rolling-text">Classic Mode</span>
-              </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div className="col-lg-3 d-flex align-items-end">
+            <div className="cont-info full-width">
+              <div className="item">
+                <h5 className="mb-15">Get In Touch</h5>
+                <p>541 Melville Geek, Palo Alto, CA 94301</p>
+                <p className="underline main-color mt-5 mb-5">
+                  <a href="#0">+1 840 841 25 69</a>
+                </p>
+                <p>
+                  <a href="#0">GeekFolio_website@gmail.com</a>
+                </p>
+              </div>
+              <div className="search-form">
+                <div className="form-group">
+                  <input type="text" name="search" placeholder="Search" />
+                  <button>
+                    <span className="pe-7s-search"></span>
+                  </button>
+                </div>
+              </div>
+              <ul className="rest social-text d-flex mt-50 fz-13">
+                <li className="mr-20">
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">Facebook</span>
+                  </a>
+                </li>
+                <li className="mr-20">
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">Twitter</span>
+                  </a>
+                </li>
+                <li className="mr-20">
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">Instagram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
 
