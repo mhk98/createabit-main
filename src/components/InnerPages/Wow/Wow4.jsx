@@ -23,7 +23,7 @@ export default function Wow4() {
 
       <div
         className="d-flex justify-content-between gap-20"
-        style={{ margin: "50px 0px" }}
+        style={{ margin: "120px 0px" }}
       >
         <div style={{ padding: "30px" }}>
           <h3>Advantage:</h3>
@@ -35,7 +35,7 @@ export default function Wow4() {
           <p>Customizable to your needs</p>
           <p>Brand it, personalize it, build and design your own effects</p>
         </div>
-        <Image style={{ width: "500px" }} src={pro1} alt="" />
+        <Image style={{ width: "600px" }} src={pro1} alt="" />
       </div>
 
       <div>
@@ -88,7 +88,7 @@ export default function Wow4() {
                   <div className="img">
                     <Image src={app1} alt="" className="radius-10" />
                     <Link href="/dark/project-details1" className="tag">
-                      <p>Wow Product</p>
+                      <span>Wow Product</span>
                     </Link>
                   </div>
                   <div className="cont mt-30 d-flex">
@@ -110,7 +110,7 @@ export default function Wow4() {
                   <div className="img">
                     <Image src={app2} alt="" className="radius-10" />
                     <Link href="/dark/project-details1" className="tag">
-                      <p>Wow Product</p>
+                      <span>Wow Product</span>
                     </Link>
                   </div>
                   <div className="cont mt-30 d-flex">
@@ -134,7 +134,7 @@ export default function Wow4() {
                   <div className="img">
                     <Image src={app3} alt="" className="radius-10" />
                     <Link href="/dark/project-details1" className="tag">
-                      <p>Wow Product</p>
+                      <span>Wow Product</span>
                     </Link>
                   </div>
                   <div className="cont mt-30 d-flex">
@@ -156,7 +156,7 @@ export default function Wow4() {
                   <div className="img">
                     <Image src={app4} alt="" className="radius-10" />
                     <Link href="/dark/project-details1" className="tag">
-                      <p>Wow Product</p>
+                      <span>Wow Product</span>
                     </Link>
                   </div>
                   <div className="cont mt-30 d-flex">
@@ -186,8 +186,8 @@ export default function Wow4() {
                   <div className="cont mt-30 d-flex">
                     <div>
                       <h6 className="line-height-1">
-                        <Link href="/dark/project-details1">
-                          Interactive WoW Production
+                        <Link href="/dark/project-details1" className="tag">
+                          <span>Wow Product</span>
                         </Link>
                       </h6>
                     </div>
@@ -229,7 +229,7 @@ export default function Wow4() {
           <div className="e801-54 x-text x-text-headline">
             <div className="x-text-content">
               <div className="x-text-content-text">
-                <h1 className="x-text-content-text-primary">
+                <h1 className="x-text-content-text-primary" style={{textAlign:"left"}}>
                   Technical Specs:
                 </h1>
               </div>
@@ -319,9 +319,104 @@ export default function Wow4() {
                   </td>
                   <td className="py-2">
                     <h6>
-                      CPU: Intel Pentium D 925 with 2MB Level 2 Cache or
-                      better;t
+                      CPU: Intel Pentium D 925 with 2MB Level 2 Cache or better;
                     </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold"></h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>Memory: 1GB RAM or more;</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold"></h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>Hard disk: 40GB free hard disk space or more;</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Recommended PC:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>
+                      Graphic card: Independent graphic card with NVIDIA GeForce
+                      8600GT or better;
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold"></h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>2 USB Ports or more;</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold"></h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>Windows 7/XP;</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Power-supply:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>220 V & 110 V;</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Sensor Positioning:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>
+                      A minimum of 2m and a maximum of 6m from detection area.
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Response time:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>
+                      15 milliseconds for light correction and interaction
+                      Calibration Drift: No drift.
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Display System Resolution:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>Supports up to 8 Screens blending.</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Operating Temperature:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6> 0 to + 40° C</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2">
+                    <h6 className="font-bold">Humidity:</h6>
+                  </td>
+                  <td className="py-2">
+                    <h6>10% to 90% non-condensing</h6>
                   </td>
                 </tr>
               </tbody>

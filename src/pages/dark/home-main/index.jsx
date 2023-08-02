@@ -70,7 +70,7 @@ function HomeMain() {
   function handleResize() {
     if (
       window.innerWidth < 991 &&
-      document.querySelector(".thecontainer").style.maxHeight
+      document.querySelector(".thecontainer")?.style.maxHeight
     ) {
       location.reload();
     }

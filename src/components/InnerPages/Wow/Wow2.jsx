@@ -13,43 +13,45 @@ export default function Wow2() {
     <div className="container">
       <div>
         <div
-          className="d-flex justify-content-between gap-20 mt-100 "
-          style={{ margin: "50px 0px" }}
+          className="d-flex justify-content-between"
+          style={{ margin: "120px 0px" }}
         >
           <Image style={{ width: "600px" }} src={projection1} alt="" />
-          <p style={{ padding: "30px" }}>
-            Interactive eBook system is a simple but typical application of
-            interactive system. User move their hands to turn pages of a
-            projection book. The book supports all kinds od content format,
-            including text, image and video.
-          </p>
+          <div>
+            <p style={{ padding: "30px", marginLeft: "80px" }}>
+              Interactive eBook system is a simple but typical application of
+              interactive system. User move their hands to turn pages of a
+              projection book. The book supports all kinds od content format,
+              including text, image and video.
+            </p>
+          </div>
         </div>
         <div
-          className="d-flex justify-content-between gap-20"
-          style={{ margin: "50px 0px" }}
+          className="d-flex justify-content-between"
+          style={{ margin: "120px 0px" }}
         >
           <Image style={{ width: "600px" }} src={projection2} alt="" />
-          <div style={{ padding: "30px" }}>
+          <div style={{ padding: "30px", marginRight: "240px" }}>
             <h2>Feature:</h2>
-            <li>Fully gesture controlled</li>
-            <li>Easy content customization</li>
-            <li>Flexible installation</li>
+            <p>- Fully gesture controlled</p>
+            <p>- Easy content customization</p>
+            <p>- Flexible installation</p>
           </div>
         </div>
         <div
           className="d-flex justify-content-between gap-20"
-          style={{ margin: "50px 0px" }}
+          style={{ margin: "100px 0px" }}
         >
           <Image style={{ width: "600px" }} src={wow7} alt="" />
           <div style={{ padding: "30px" }}>
             <h3>Advantage:</h3>
-            <li>Exciting to play and watch</li>
-            <li> Move your body to play it’s magic!</li>
-            <li>Easy and safe to use - It’s a complete virtual experience</li>
-            <li>Large number of effects available</li>
-            <li>Customer will never get bored</li>
-            <li>Customizable to your needs</li>
-            <li>Brand it, personalize it, build and design your own effects</li>
+            <p>- Exciting to play and watch</p>
+            <p>- Move your body to play it’s magic!</p>
+            <p>- Easy and safe to use - It’s a complete virtual experience</p>
+            <p>- Large number of effects available</p>
+            <p>- Customer will never get bored</p>
+            <p>- Customizable to your needs</p>
+            <p>- Brand it, personalize it, build and design your own effects</p>
           </div>
         </div>
       </div>

@@ -14,26 +14,29 @@ export default function Wow1() {
     <div className="container">
       <div>
         <div
-          className="d-flex justify-content-between gap-20 mt-100 "
-          style={{ margin: "50px 0px" }}
+          className="d-flex justify-content-between"
+          style={{ margin: "120px 0px" }}
         >
           <Image style={{ width: "550px" }} src={wow1} alt="" />
-          <p style={{ padding: "30px" }}>
-            Createabit interactive projection system can be projected on the
-            normal floor, wall or window with any desired effect. It will show
-            attractive effects by detecting people's actions on the projection
-            screen. We provide professional service, tailored to your effects.
-            We can even supply multiple display technology to make two or three
-            projection sizes look like one projection image without any light
-            gaps.
-          </p>
+
+          <div>
+            <p style={{ padding: "30px", marginLeft: "80px" }}>
+              Createabit interactive projection system can be projected on the
+              normal floor, wall or window with any desired effect. It will show
+              attractive effects by detecting people's actions on the projection
+              screen. We provide professional service, tailored to your effects.
+              We can even supply multiple display technology to make two or
+              three projection sizes look like one projection image without any
+              light gaps.
+            </p>
+          </div>
         </div>
         <div
-          className="d-flex justify-content-between gap-20"
-          style={{ margin: "50px 0px" }}
+          className="d-flex justify-content-between"
+          style={{ margin: "120px 0px" }}
         >
           <Image style={{ width: "550px" }} src={wow2} alt="" />
-          <p style={{ padding: "30px" }}>
+          <p style={{ padding: "30px", marginLeft: "80px" }}>
             Createabit interactive projection system can be projected on the
             normal floor, wall or window with any desired effect. It will show
             attractive effects by detecting people's actions on the projection
@@ -44,19 +47,19 @@ export default function Wow1() {
           </p>
         </div>
         <div
-          className="d-flex justify-content-between gap-20"
-          style={{ margin: "50px 0px" }}
+          className="d-flex justify-content-between "
+          style={{ margin: "120px 0px" }}
         >
-          <Image style={{ width: "600px" }} src={wow7} alt="" />
+          <Image style={{ width: "550px" }} src={wow7} alt="" />
           <div style={{ padding: "30px" }}>
             <h3>Advantage:</h3>
-            <p>Exciting to play and watch</p>
-            <p> Move your body to play it’s magic!</p>
-            <p>Easy and safe to use - It’s a complete virtual experience</p>
-            <p>Large number of effects available</p>
-            <p>Customer will never get bored</p>
-            <p>Customizable to your needs</p>
-            <p>Brand it, personalize it, build and design your own effects</p>
+            <p>- Exciting to play and watch</p>
+            <p>- Move your body to play it’s magic!</p>
+            <p>- Easy and safe to use - It’s a complete virtual experience</p>
+            <p>- Large number of effects available</p>
+            <p>- Customer will never get bored</p>
+            <p>- Customizable to your needs</p>
+            <p>- Brand it, personalize it, build and design your own effects</p>
           </div>
         </div>
       </div>
