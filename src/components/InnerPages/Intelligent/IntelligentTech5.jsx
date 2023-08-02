@@ -1,14 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-export default function IntelligentTech5() {
-  return (
-    <div>
-      <div className="business_gift">
-        <h1>Business Gift and custom product</h1>
-      </div>
-    </div>
-=======
 import cards from "../../../../images/cards_thumb.jpg";
 import card1 from "../../../../images/USB_cards_1.jpg";
 import card2 from "../../../../images/flashbay-trusted-1.jpg";
@@ -209,6 +199,5 @@ export default function IntelligentTech5() {
       </div>
     </div>
     </div>
->>>>>>> af38202cb1a54e367ccd3e90e8c01c8db92c0679
   );
 }
