@@ -9,7 +9,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Wow2 from "@/components/InnerPages/Wow/Wow2";
 import DarkNavbar from "../dark-navbar";
 
-function PageProductShop1() {
+function PageWow2() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -37,6 +37,6 @@ function PageProductShop1() {
   );
 }
 
-PageProductShop1.getLayout = (page) => <Layout lightMode>{page}</Layout>;
+PageWow2.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
-export default PageProductShop1;
+export default PageWow2;

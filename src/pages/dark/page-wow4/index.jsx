@@ -6,8 +6,8 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
-import IntelligentTech4 from "@/components/InnerPages/Intelligent/IntelligentTech4";
 import Wow4 from "@/components/InnerPages/Wow/Wow4";
+import DarkNavbar from "../dark-navbar";
 
 function PageWow4() {
   useEffect(() => {
@@ -28,9 +28,9 @@ function PageWow4() {
       </Head>
 
       <Loader />
-      <Wow4></Wow4>
+      <DarkNavbar></DarkNavbar>
       <main>
-        <IntelligentTech4></IntelligentTech4>
+        <Wow4></Wow4>
       </main>
       <Footer />
     </>

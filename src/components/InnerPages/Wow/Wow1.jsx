@@ -2,9 +2,7 @@ import Image from "next/image";
 import wow1 from "../../../../images/wow1.png";
 import wow2 from "../../../../images/wow2.jpg";
 
-
 import Link from "next/link";
-import { useEffect } from "react";
 import wow3 from "../../../../images/wow3.jpg";
 import wow4 from "../../../../images/wow4.jpg";
 import wow5 from "../../../../images/wow5.jpg";
@@ -12,7 +10,6 @@ import wow6 from "../../../../images/wow6.jpg";
 import wow7 from "../../../../images/wow7.jpg";
 
 export default function Wow1() {
-
   return (
     <div className="container">
       <div>
@@ -20,7 +17,7 @@ export default function Wow1() {
           className="d-flex justify-content-between gap-20 mt-100 "
           style={{ margin: "50px 0px" }}
         >
-          <Image style={{ width: "600px" }} src={wow1} alt="" />
+          <Image style={{ width: "550px" }} src={wow1} alt="" />
           <p style={{ padding: "30px" }}>
             Createabit interactive projection system can be projected on the
             normal floor, wall or window with any desired effect. It will show
@@ -35,7 +32,7 @@ export default function Wow1() {
           className="d-flex justify-content-between gap-20"
           style={{ margin: "50px 0px" }}
         >
-          <Image style={{ width: "600px" }} src={wow2} alt="" />
+          <Image style={{ width: "550px" }} src={wow2} alt="" />
           <p style={{ padding: "30px" }}>
             Createabit interactive projection system can be projected on the
             normal floor, wall or window with any desired effect. It will show
@@ -53,13 +50,13 @@ export default function Wow1() {
           <Image style={{ width: "600px" }} src={wow7} alt="" />
           <div style={{ padding: "30px" }}>
             <h3>Advantage:</h3>
-            <li>Exciting to play and watch</li>
-            <li> Move your body to play it’s magic!</li>
-            <li>Easy and safe to use - It’s a complete virtual experience</li>
-            <li>Large number of effects available</li>
-            <li>Customer will never get bored</li>
-            <li>Customizable to your needs</li>
-            <li>Brand it, personalize it, build and design your own effects</li>
+            <p>Exciting to play and watch</p>
+            <p> Move your body to play it’s magic!</p>
+            <p>Easy and safe to use - It’s a complete virtual experience</p>
+            <p>Large number of effects available</p>
+            <p>Customer will never get bored</p>
+            <p>Customizable to your needs</p>
+            <p>Brand it, personalize it, build and design your own effects</p>
           </div>
         </div>
       </div>

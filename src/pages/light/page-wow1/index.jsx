@@ -11,7 +11,7 @@ import Wow1 from "@/components/InnerPages/Wow/Wow1";
 import DarkNavbar from "../dark-navbar";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
-function PageProductShop1() {
+function PageWow1() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -39,6 +39,6 @@ function PageProductShop1() {
   );
 }
 
-PageProductShop1.getLayout = (page) => <Layout lightMode>{page}</Layout>;
+PageWow1.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
-export default PageProductShop1;
+export default PageWow1;
