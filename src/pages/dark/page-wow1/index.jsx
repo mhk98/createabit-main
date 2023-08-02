@@ -8,7 +8,7 @@ import Loader from "@/components/Common/Loader";
 
 import Footer from "@/components/HomeMain/Footer";
 import Wow1 from "@/components/InnerPages/Wow/Wow1";
-import LightNavbar from "@/pages/light/light-navbar";
+import DarkNavbar from "../dark-navbar";
 
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
@@ -31,7 +31,7 @@ function PageWow1() {
       </Head>
 
       <Loader />
-      <LightNavbar></LightNavbar>
+      <DarkNavbar />
       <main>
         <Wow1></Wow1>
       </main>
@@ -40,6 +40,6 @@ function PageWow1() {
   );
 }
 
-PageWow1.getLayout = (page) => <Layout lightMode>{page}</Layout>;
+PageWow1.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default PageWow1;

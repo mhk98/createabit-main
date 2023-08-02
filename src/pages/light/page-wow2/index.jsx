@@ -7,7 +7,7 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import Wow2 from "@/components/InnerPages/Wow/Wow2";
-import DarkNavbar from "../dark-navbar";
+import LightNavbar from "../light-navbar";
 
 function PageWow2() {
   useEffect(() => {
@@ -28,7 +28,7 @@ function PageWow2() {
       </Head>
 
       <Loader />
-      <DarkNavbar></DarkNavbar>
+      <LightNavbar />
       <main>
         <Wow2></Wow2>
       </main>

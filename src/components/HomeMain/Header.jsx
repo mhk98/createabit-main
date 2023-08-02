@@ -28,7 +28,7 @@ function Header({ lightMode }) {
               <h1>
                 High End <br /> <span className="stroke">Creative</span> Agency
               </h1>
-              <div className="row mt-30 mr-30">
+              <div className="row mt-30">
                 <div className="col-lg-5 offset-lg-1">
                   <div className="text">
                     <p>
