@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 //= Components
 import ModalVideo from "@/components/Common/ModalVideo";
 //= Scripts
 import loadBackgroudImages from "@/common/loadBackgroudImages";
-import home_main from "../../../images/home-main.jpg";
 import Image from "next/image";
+import home_main from "../../../images/home-main.jpg";
 
 function Header({ lightMode }) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);

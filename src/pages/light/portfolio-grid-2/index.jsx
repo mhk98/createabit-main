@@ -1,26 +1,22 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Footer from '@/components/Startup/Footer';
-import Header from '@/components/Portfolio/Header';
-import GridTwoCols from '@/components/Portfolio/ClassicGrid/2Col';
-
+import Loader from "@/components/Common/Loader";
+import GridTwoCols from "@/components/Portfolio/ClassicGrid/2Col";
 
 function PortfolioClassicGrid2Light() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   const metadata = {
     subTitle: "Our Works",
-    title: "Classic Grid 2."
-  }
+    title: "Classic Grid 2.",
+  };
 
   return (
     <>
@@ -29,16 +25,18 @@ function PortfolioClassicGrid2Light() {
       </Head>
 
       <Loader />
-      <Navbar mainBg lightMode />
+      {/* <Navbar mainBg lightMode /> */}
       <main>
-        <Header data={metadata} />
+        {/* <Header data={metadata} /> */}
         <GridTwoCols />
       </main>
-      <Footer subBg lightMode />
+      {/* <Footer subBg lightMode /> */}
     </>
-  )
+  );
 }
 
-PortfolioClassicGrid2Light.getLayout = page => <Layout lightMode>{page}</Layout>
+PortfolioClassicGrid2Light.getLayout = (page) => (
+  <Layout lightMode>{page}</Layout>
+);
 
 export default PortfolioClassicGrid2Light;

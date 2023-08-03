@@ -28,7 +28,7 @@ function PortfolioClassicGrid2() {
       <Loader />
       {/* <Navbar mainBg /> */}
       <main className="main-bg">
-        <Header data={metadata} />
+        {/* <Header data={metadata} /> */}
         <GridTwoCols />
       </main>
       {/* <Footer subBg /> */}

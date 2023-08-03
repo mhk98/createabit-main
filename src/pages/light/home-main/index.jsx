@@ -7,7 +7,6 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
-import Blog from "@/components/HomeMain/Blog";
 import Clients from "@/components/HomeMain/Clients";
 import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/HomeMain/Header";
@@ -15,8 +14,9 @@ import Marq from "@/components/HomeMain/Marq";
 import Services from "@/components/HomeMain/Services";
 import ServicesTabs from "@/components/HomeMain/ServicesTabs";
 import Testimonials from "@/components/HomeMain/Testimonials";
-import Works from "@/components/HomeMain/Works";
 import LightNavbar from "../light-navbar";
+import PortfolioClassicGrid2Light from "../portfolio-grid-2";
+import PortfolioClassicGrid3 from "../portfolio-grid-3";
 
 function HomeMainLight() {
   useEffect(() => {
@@ -77,13 +77,15 @@ function HomeMainLight() {
             <Header />
             <About />
             <Portfolio />
+            <PortfolioClassicGrid2Light />
+            <PortfolioClassicGrid3 />
             <Marq />
             <Clients lightMode />
             <Services lightMode />
-            <Works />
+            {/* <Works /> */}
             <ServicesTabs lightMode />
             <Testimonials lightMode />
-            <Blog />
+            {/* <Blog /> */}
           </main>
           <Footer lightMode />
         </div>

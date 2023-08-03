@@ -5,9 +5,6 @@ import Head from 'next/head';
 import Layout from '@/layouts/default';
 //= Components
 import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Footer from '@/components/Startup/Footer';
-import Header from '@/components/Portfolio/Header';
 import GridThreeCols from '@/components/Portfolio/ClassicGrid/3Col';
 
 
@@ -29,12 +26,12 @@ function PortfolioClassicGrid3() {
       </Head>
 
       <Loader />
-      <Navbar mainBg lightMode />
+      {/* <Navbar mainBg lightMode /> */}
       <main>
-        <Header data={metadata} />
+        {/* <Header data={metadata} /> */}
         <GridThreeCols />
       </main>
-      <Footer subBg lightMode />
+      {/* <Footer subBg lightMode /> */}
     </>
   )
 }

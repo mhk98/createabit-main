@@ -1,6 +1,11 @@
 import Link from "next/link";
 //= Data
-import data from "@/data/Freelancer/portfolio.json";
+import Image from "next/image";
+import portfolio1 from "../../../images/portfolio1.jpg";
+import portfolio2 from "../../../images/portfolio2.jpg";
+import portfolio3 from "../../../images/portfolio3.jpg";
+import portfolio4 from "../../../images/portfolio4.jpg";
+import portfolio5 from "../../../images/portfolio5.jpg";
 
 function Portfolio() {
   return (
@@ -40,28 +45,118 @@ function Portfolio() {
           </div>
         </div>
         <div className="row">
-          {data.map((item, index) => (
-            <div className={`col-lg-${index > 1 ? "4" : "6"}`} key={item.id}>
-              <div className="item mt-30">
-                <div className="img">
-                  <img src={item.image} alt="" className="radius-10" />
-                  <Link href="/dark/project-details1" className="tag">
-                    <span>{item.category}</span>
-                  </Link>
+          <div className="col-lg-6">
+            <div className="item mt-30">
+              <div className="img">
+                <Image src={portfolio1} alt="" className="radius-10" />
+                <Link href="/dark/project-details1" className="tag">
+                  <span>Intelligent TECH Products</span>
+                </Link>
+              </div>
+              <div className="cont mt-30 d-flex">
+                <div>
+                  <h6 className="line-height-1">
+                    <Link href="/dark/project-details1">
+                      INTELLIGENT NAIL PRINTER
+                    </Link>
+                  </h6>
                 </div>
-                <div className="cont mt-30 d-flex">
-                  <div>
-                    <h6 className="line-height-1">
-                      <Link href="/dark/project-details1">{item.title}</Link>
-                    </h6>
-                  </div>
-                  <div className="ml-auto">
-                    <p className="fz-14">© {item.date}</p>
-                  </div>
+                <div className="ml-auto">
+                  <p className="fz-14">© 2023</p>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
+          <div className="col-lg-6">
+            <div className="item mt-30">
+              <div className="img">
+                <Image src={portfolio2} alt="" className="radius-10" />
+                <Link href="/dark/project-details1" className="tag">
+                  <span>Intelligent TECH Products</span>
+                </Link>
+              </div>
+              <div className="cont mt-30 d-flex">
+                <div>
+                  <h6 className="line-height-1">
+                    <Link href="/dark/project-details1">
+                      INTELLIGENT NAIL PRINTER
+                    </Link>
+                  </h6>
+                </div>
+                <div className="ml-auto">
+                  <p className="fz-14">© 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-4">
+            <div className="item mt-30">
+              <div className="img">
+                <Image src={portfolio2} alt="" className="radius-10" />
+                <Link href="/dark/project-details1" className="tag">
+                  <span>Intelligent TECH Products</span>
+                </Link>
+              </div>
+              <div className="cont mt-30 d-flex">
+                <div>
+                  <h6 className="line-height-1">
+                    <Link href="/dark/project-details1">
+                      INTELLIGENT NAIL PRINTER
+                    </Link>
+                  </h6>
+                </div>
+                <div className="ml-auto">
+                  <p className="fz-14">© 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="item mt-30">
+              <div className="img">
+                <Image src={portfolio3} alt="" className="radius-10" />
+                <Link href="/dark/project-details1" className="tag">
+                  <span>Intelligent TECH Products</span>
+                </Link>
+              </div>
+              <div className="cont mt-30 d-flex">
+                <div>
+                  <h6 className="line-height-1">
+                    <Link href="/dark/project-details1">
+                      INTELLIGENT NAIL PRINTER
+                    </Link>
+                  </h6>
+                </div>
+                <div className="ml-auto">
+                  <p className="fz-14">© 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="item mt-30">
+              <div className="img">
+                <Image src={portfolio4} alt="" className="radius-10" />
+                <Link href="/dark/project-details1" className="tag">
+                  <span>Intelligent TECH Products</span>
+                </Link>
+              </div>
+              <div className="cont mt-30 d-flex">
+                <div>
+                  <h6 className="line-height-1">
+                    <Link href="/dark/project-details1">
+                      INTELLIGENT NAIL PRINTER
+                    </Link>
+                  </h6>
+                </div>
+                <div className="ml-auto">
+                  <p className="fz-14">© 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

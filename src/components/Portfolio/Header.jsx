@@ -1,9 +1,7 @@
-import React from 'react'
-
 function Header({ data }) {
   return (
     <header className="work-header section-padding pb-0">
-      <div className="container mt-80">
+      <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="caption">
@@ -14,7 +12,7 @@ function Header({ data }) {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
