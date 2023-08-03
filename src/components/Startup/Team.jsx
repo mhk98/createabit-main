@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 //= Modules
 import { Swiper, SwiperSlide } from "swiper/react";
 //= Data
-import data from "@/data/Startup/team.json";
+import Image from "next/image";
+import member1 from "../../../images/member1.jpg";
+import member2 from "../../../images/member2.jpg";
+import member3 from "../../../images/member3.jpg";
+import member4 from "../../../images/member4.jpg";
 
 const swiperOptions = {
   slidesPerView: 4,
@@ -52,7 +56,7 @@ function Team() {
       sticky_item.style.top = "0px";
       sticky_item.style.width = width + "px";
       sticky_item.classList.add("is_stuck");
-      if (sticky_item.nextElementSibling.id !== "placeholder") {
+      if (sticky_item.nextElementSibling?.id !== "placeholder") {
         const placeholderElement = document.createElement("div");
         placeholderElement.id = "placeholder";
         placeholderElement.style.height = height + "px";
@@ -86,66 +90,201 @@ function Team() {
             >
               <h2>Developer Team</h2>
             </div>
-            <div className="swiper4">
-              {loadSwiper && (
-                <Swiper
-                  {...swiperOptions}
-                  id="content-carousel-container-unq-team"
-                  className="swiper-container"
-                >
-                  {data.map((item) => (
-                    <SwiperSlide key={item.id}>
-                      <div className="item">
-                        <div className="img">
-                          <img src={item.image} alt="" />
-                        </div>
-                        <div className="info">
-                          <div className="main-marq team-position">
-                            <div className="slide-har st1 non-strok">
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.position}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.position}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                          <div className="main-marq team-name">
-                            <div className="slide-har st1 non-strok">
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.name}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.name}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              )}
-            </div>
           </div>
         </div>
-        <div className="row pt-100 pb-100">
+      </div>
+      <div className="swiper4" style={{ marginBottom: "200px" }}>
+        {loadSwiper && (
+          <Swiper
+            {...swiperOptions}
+            id="content-carousel-container-unq-team"
+            className="swiper-container"
+          >
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member1} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member2} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member3} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member4} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        )}
+      </div>
+      <div className="container-fluid rest">
+        <div className="row">
           <div className="col-12" style={{ position: "relative" }}>
             <div
               className="sec-head-lg text-center text-u mb-80"
@@ -153,65 +292,198 @@ function Team() {
             >
               <h2>Marketing Team</h2>
             </div>
-            <div className="swiper4">
-              {loadSwiper && (
-                <Swiper
-                  {...swiperOptions}
-                  id="content-carousel-container-unq-team"
-                  className="swiper-container"
-                >
-                  {data.map((item) => (
-                    <SwiperSlide key={item.id}>
-                      <div className="item">
-                        <div className="img">
-                          <img src={item.image} alt="" />
-                        </div>
-                        <div className="info">
-                          <div className="main-marq team-position">
-                            <div className="slide-har st1 non-strok">
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.position}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.position}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                          <div className="main-marq team-name">
-                            <div className="slide-har st1 non-strok">
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.name}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                              <div className="box">
-                                {new Array(5).fill().map((_, i) => (
-                                  <div className="item" key={i}>
-                                    <h4>{item.name}</h4>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              )}
-            </div>
           </div>
         </div>
+      </div>
+      <div className="swiper4" style={{ marginBottom: "200px" }}>
+        {loadSwiper && (
+          <Swiper
+            {...swiperOptions}
+            id="content-carousel-container-unq-team"
+            className="swiper-container"
+          >
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member1} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member2} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member3} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img">
+                  <Image src={member4} alt="" />
+                </div>
+                <div className="info">
+                  <div className="main-marq team-position">
+                    <div className="slide-har  st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Fullstack Developer</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-marq team-name">
+                    <div className="slide-har st1 non-strok">
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert</h4>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="box">
+                        {new Array(5).fill().map((_, i) => (
+                          <div className="item" key={i}>
+                            <h4>Stefan Robert </h4>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        )}
       </div>
     </section>
   );
