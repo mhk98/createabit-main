@@ -118,7 +118,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/light/home-main" className="link">
+                    <Link href="/light/home-creative-agency/" className="link">
                       <span className="fill-text" data-text="Home">
                         Home
                       </span>
@@ -268,7 +268,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/dark/home-main/" className="link">
+                    <Link href="/dark/home-creative-agency/" className="link">
                       <span className="fill-text" data-text="Dark Mode">
                         Dark Mode
                       </span>

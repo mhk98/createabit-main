@@ -78,7 +78,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
     }
   }
   return (
-    <div className="hamenu" style={{padding:"50px 0px"}}>
+    <div className="hamenu" style={{ padding: "50px 0px" }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-2">
@@ -114,7 +114,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/dark/home-main" className="link">
+                    <Link href="/dark/home-creative-agency/" className="link">
                       <span className="fill-text" data-text="Home">
                         Home
                       </span>
@@ -221,7 +221,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/light/home-main/" className="link">
+                    <Link href="/light/home-creative-agency/" className="link">
                       <span className="fill-text" data-text="Classic Mode">
                         Classic Mode
                       </span>

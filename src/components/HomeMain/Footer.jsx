@@ -77,8 +77,8 @@ function Footer({ lightMode }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
-                    Instagram
+                  <Link href={`/${lightMode ? "light" : "dark"}/shop-list`}>
+                    Shop
                   </Link>
                 </li>
               </ul>

@@ -28,7 +28,8 @@ function LandingPreview() {
       </Head>
       <Overlay />
       <main>
-        <HomeMain></HomeMain>
+        {/* <HomeMain></HomeMain> */}
+        <HomeCreativeAgency></HomeCreativeAgency>
       </main>
     </>
   );

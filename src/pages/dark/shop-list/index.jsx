@@ -1,33 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/Shop/Header';
-import List from '@/components/Shop/List';
-import Footer from '@/components/Startup/Footer';
+import Loader from "@/components/Common/Loader";
+import Header from "@/components/Shop/Header";
+import List from "@/components/Shop/List";
+import DarkNavbar from "../dark-navbar";
+import Footer from "@/components/HomeMain/Footer";
 
 function ShopList() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
+    document.body.classList.add("main-bg");
     // Smooth Scroll of Page
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    ScrollTrigger.normalizeScroll(true)
+    ScrollTrigger.normalizeScroll(true);
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
     });
 
-    return () => document.body.classList.remove('main-bg');
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   const metadata = {
     subTitle: "SHOPPING",
-    title: "List."
-  }
+    title: "List.",
+  };
 
   return (
     <>
@@ -37,7 +37,7 @@ function ShopList() {
 
       <Loader />
       <div id="smooth-wrapper">
-        <Navbar mainBg noStatic />
+        <DarkNavbar />
         <div id="smooth-content">
           <main className="main-bg">
             <Header data={metadata} />
@@ -47,9 +47,9 @@ function ShopList() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-ShopList.getLayout = page => <Layout>{page}</Layout>
+ShopList.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default ShopList;
