@@ -13,7 +13,7 @@ const ProductShop2 = () => {
   return (
     <div className="container">
       {/* Banner part start */}
-      <div className="productshop_banner ">
+      <div className="productshop_banner row">
         <div className="text-middle">
           <h1>“The Ultimate 3D Advertising</h1>
           <h1>Display Machine”</h1>
@@ -22,13 +22,13 @@ const ProductShop2 = () => {
       {/* Banner part end */}
 
       {/* Branding part start */}
-      <div className="mb-50 productshop_brand" style={{ padding: "60px" }}>
-        <div>
+      <div className="mb-50 productshop_brand row" style={{ margin: "auto" }}>
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <h3>Grow your brand</h3>
           <h3>in the palm of</h3>
           <h3>your hand</h3>
         </div>
-        <div>
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <FontAwesomeIcon
             style={{
               width: "20px",
@@ -37,14 +37,13 @@ const ProductShop2 = () => {
               borderRadius: "100%",
               width: "80px",
               height: "80px",
-              padding: "15px",
             }}
             icon={faUserSecret}
           />
           <h5>3D advertising</h5>
           <p>An open eye 3D experience</p>
         </div>
-        <div>
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <FontAwesomeIcon
             style={{
               width: "20px",
@@ -53,14 +52,13 @@ const ProductShop2 = () => {
               borderRadius: "100%",
               width: "80px",
               height: "80px",
-              padding: "15px",
             }}
             icon={faUserSecret}
           />
           <h5>3D advertising</h5>
           <p>An open eye 3D experience</p>
         </div>
-        <div>
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <FontAwesomeIcon
             style={{
               width: "20px",
@@ -69,7 +67,6 @@ const ProductShop2 = () => {
               borderRadius: "100%",
               width: "80px",
               height: "80px",
-              padding: "15px",
             }}
             icon={faHandsHelping}
           />
@@ -83,8 +80,8 @@ const ProductShop2 = () => {
       <div>
         <h1 className="pt-50 pb-40">Benefits of 3D holographic Sign</h1>
 
-        <div className="benefit_main">
-          <div>
+        <div className="benefit_main row">
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="benefit">
               <div>
                 <h5>Distinguish the Brand</h5>
@@ -116,10 +113,10 @@ const ProductShop2 = () => {
               <FontAwesomeIcon style={{ width: "50px" }} icon={faFingerprint} />
             </div>
           </div>
-          <div>
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <Image src={product} alt="" />
           </div>
-          <div>
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="benefit1">
               <FontAwesomeIcon style={{ width: "50px" }} icon={faFingerprint} />
 
@@ -163,7 +160,6 @@ const ProductShop2 = () => {
         style={{
           paddingBottom: "180px",
           paddingTop: "90px",
-
           textAlign: "center",
         }}
       >
@@ -176,11 +172,17 @@ const ProductShop2 = () => {
 
         {/* product reveiw part start */}
 
-        <div className="product_review">
-          <div>
+        <div className="product_review row">
+          <div
+            className="col-lg-6 col-md-12 col-sm-12"
+            style={{ width: "550px" }}
+          >
             <Image src={product1} alt="" />
           </div>
-          <div style={{ textAlign: "left" }}>
+          <div
+            className="col-lg-6 col-md-12 col-sm-12"
+            style={{ textAlign: "left" }}
+          >
             <h2>42 cm (2 Blades)</h2>
             <p>
               Multi-functional - Use 42cm LED fan to have a 42 cm length
@@ -206,8 +208,11 @@ const ProductShop2 = () => {
           </div>
         </div>
 
-        <div className="product_review">
-          <div style={{ textAlign: "left" }}>
+        <div className="product_review row">
+          <div
+            style={{ textAlign: "left" }}
+            className="col-lg-6 col-md-12 col-sm-12"
+          >
             <h2>42 cm (2 Blades)</h2>
             <p>
               Multi-functional - Use 42cm LED fan to have a 42 cm length
@@ -232,16 +237,25 @@ const ProductShop2 = () => {
             </p>
           </div>
 
-          <div>
+          <div
+            className="col-lg-6 col-md-12 col-sm-12"
+            style={{ width: "550px" }}
+          >
             <Image src={product2} alt="" />
           </div>
         </div>
 
-        <div className="product_review">
-          <div>
+        <div className="product_review row">
+          <div
+            className="col-lg-6 col-md-12 col-sm-12"
+            style={{ width: "550px" }}
+          >
             <Image src={product1} alt="" />
           </div>
-          <div style={{ textAlign: "left" }}>
+          <div
+            style={{ textAlign: "left" }}
+            className="col-lg-6 col-md-12 col-sm-12"
+          >
             <h2>42 cm (2 Blades)</h2>
             <p>
               Multi-functional - Use 42cm LED fan to have a 42 cm length
@@ -293,6 +307,7 @@ const ProductShop2 = () => {
         </p>
 
         <div
+          className="row"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -302,7 +317,10 @@ const ProductShop2 = () => {
             paddingRight: "50px",
           }}
         >
-          <section class="faq">
+          <section
+            class="faq col-lg-6 col-md-12 col-sm-12"
+            style={{ marginBottom: "50px" }}
+          >
             <div class="faq-container">
               <details class="faq-box" open>
                 <summary class="faq-header">
@@ -343,7 +361,10 @@ const ProductShop2 = () => {
             </div>
           </section>
 
-          <div>
+          <div
+            className="col-lg-6 col-md-12 col-sm-12"
+            style={{ width: "550px" }}
+          >
             <Image src={product2} alt="" />
           </div>
         </div>

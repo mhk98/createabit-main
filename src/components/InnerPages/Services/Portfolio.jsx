@@ -70,7 +70,7 @@ function Portfolio({ lightMode }) {
       ) : isLoading ? (
         <>Loading...</>
       ) : data ? (
-        <section className="portfolio-fixed">
+        <section className="portfolio-fixed" >
           <div className="container-fluid rest">
             <div className="row">
               <div className="col-lg-6 rest" style={{ position: "relative" }}>

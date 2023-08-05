@@ -80,19 +80,19 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   return (
     <div className="hamenu" style={{ padding: "50px 0px" }}>
       <div className="container">
-        <div className="row">
+        <div className="row" style={{ marginTop: "80px" }}>
           <div className="col-lg-2">
-            {/* <div className="menu-text">
+            <div className="menu-text" style={{ marginTop: "65px" }}>
               <div className="text">
                 <h2>Menu</h2>
               </div>
-            </div> */}
+            </div>
             <div id="navi" className={`topnav ${alwaysDark && "navlit"}`}>
               <div className="container">
                 <div className="logo icon-img-120">
-                  <a href="#">
+                  <Link href="/dark/home-creative-agency/">
                     <img src="/dark/assets/imgs/logo-light.png" alt="" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="menu-icon cursor-pointer" onClick={toggleMenu}>
                   <span className="icon">
@@ -139,9 +139,9 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                   onClick={toggleSubMenu}
                 >
-                  <div className="o-hidden">
+                 <div className="o-hidden">
                     <div className="link cursor-pointer dmenu">
-                      <Link href="/dark/page-product/" className="link">
+                      <Link href="/dark/page-product/" className="">
                         <span className="fill-text" data-text="Products">
                           Products
                         </span>

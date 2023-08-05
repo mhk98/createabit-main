@@ -78,21 +78,21 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
     }
   }
   return (
-    <div className="hamenu">
+    <div className="hamenu" style={{ padding: "50px 0px" }}>
       <div className="container">
-        <div className="row">
+        <div className="row" style={{ marginTop: "80px" }}>
           <div className="col-lg-2">
-            {/* <div className="menu-text">
+            <div className="menu-text" style={{ marginTop: "65px" }}>
               <div className="text">
                 <h2>Menu</h2>
               </div>
-            </div> */}
+            </div>
             <div id="navi" className={`topnav ${alwaysDark && "navlit"}`}>
               <div className="container">
                 <div className="logo icon-img-120">
-                  <a href="#">
+                  <Link href="/light/home-creative-agency/">
                     <img src="/dark/assets/imgs/logo-dark.png" alt="" />
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className="menu-icon cursor-pointer"
@@ -145,7 +145,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                 >
                   <div className="o-hidden">
                     <div className="link cursor-pointer dmenu">
-                      <Link href="/light/page-product/" className="link">
+                      <Link href="/light/page-product/" className="">
                         <span className="fill-text" data-text="Products">
                           Products
                         </span>

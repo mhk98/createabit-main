@@ -28,7 +28,7 @@ function PageServicesLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

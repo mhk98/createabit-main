@@ -5,7 +5,6 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Header from "@/components/HomeMain/Header";
 import Portfolio from "@/components/Freelancer/Portfolio";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import About from "@/components/HomeMain/About";
@@ -18,6 +17,7 @@ import ServicesTabs from "@/components/HomeMain/ServicesTabs";
 import Footer from "@/components/HomeMain/Footer";
 import Testimonials from "@/components/HomeMain/Testimonials";
 import LightNavbar from "../light-navbar";
+import Header from "@/components/HomeMain/Header";
 
 function HomeCreativeAgencyLight() {
   useEffect(() => {
@@ -32,11 +32,12 @@ function HomeCreativeAgencyLight() {
       </Head>
 
       <Loader />
-      <LightNavbar />
+
       <div id="smooth-wrapper">
+        <LightNavbar />
         <div id="smooth-content">
-          <main className="main-bg position-re">
-            <Header />
+          <main className="main-bg">
+            <Header lightMode />
             <About />
             <Portfolio />
             <PortfolioClassicGrid2Light />
@@ -47,7 +48,7 @@ function HomeCreativeAgencyLight() {
             {/* <Works /> */}
             <ServicesTabs lightMode />
             <Testimonials lightMode />
-            <HzScroll />
+            <HzScroll lightMode />
           </main>
           <Footer />
         </div>

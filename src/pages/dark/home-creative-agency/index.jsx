@@ -25,8 +25,6 @@ function HomeCreativeAgency() {
     return () => document.body.classList.remove("sub-bg");
   }, []);
 
-
-
   return (
     <>
       <Head>
@@ -34,10 +32,10 @@ function HomeCreativeAgency() {
       </Head>
 
       <Loader />
-      <DarkNavbar />
       <div id="smooth-wrapper">
+        <DarkNavbar mainBg noStatic />
         <div id="smooth-content">
-          <main className="main-bg position-re">
+          <main className="main-bg">
             <Header />
             <About />
             <Portfolio />

@@ -106,8 +106,19 @@
   position: relative;
   margin-bottom: 100px;
 }
-@media only screen and (max-width: 600px) {
+
+/* @media only screen and (max-width: 600px) {
   .produtshop1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .productshop_banner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .productshop_brand {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -117,7 +128,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
+  .productshop_banner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .productshop_brand {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */
 
 .productshop_banner {
   background-image: url("../../assets/imgs//sass-img/shap1.png");
@@ -127,13 +148,13 @@
   align-items: center;
   display: block;
   position: relative;
-  margin-bottom: 100 100px;
+  margin-bottom: 100px;
 }
 
 .productshop_brand {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  /* gap: 40px; */
   margin: 0 auto;
 }
 
@@ -146,10 +167,8 @@
 }
 
 .benefit_main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
+  /* gap: 50px; */
+
   padding-bottom: 120px;
 }
 
@@ -185,7 +204,6 @@
 .product_category {
   margin-bottom: 200px;
 }
-
 
 .productshop_video {
   background-image: url("../../assets/imgs/sass-img/shap2.png");
@@ -235,8 +253,8 @@ section.faq {
 /* Code Here ↓ */
 
 .faq-container {
-  display: grid;
-  gap: 1em;
+  /* display: grid; */
+  /* gap: 1em; */
 }
 
 .faq-header {
