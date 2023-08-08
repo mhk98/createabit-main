@@ -1,15 +1,17 @@
-import React from 'react';
+import Image from "next/image";
+import sq1 from "../../../images/sq1.jpg";
+import sq2 from "../../../images/sq2.jpg";
 
 function Intro() {
   function openAccordion(event) {
-    document.querySelectorAll('.accordion-info').forEach(element => {
-      element.classList.remove('active');
+    document.querySelectorAll(".accordion-info").forEach((element) => {
+      element.classList.remove("active");
       element.style.maxHeight = 0;
-      element.parentElement.classList.remove('active');
-    })
-    event.currentTarget.parentElement.classList.add('active');
-    event.currentTarget.nextElementSibling.style.maxHeight = '300px';
-    event.currentTarget.nextElementSibling.classList.add('active');
+      element.parentElement.classList.remove("active");
+    });
+    event.currentTarget.parentElement.classList.add("active");
+    event.currentTarget.nextElementSibling.style.maxHeight = "300px";
+    event.currentTarget.nextElementSibling.classList.add("active");
   }
 
   return (
@@ -19,10 +21,10 @@ function Intro() {
           <div className="col-lg-5 valign md-mb50">
             <div className="imgs full-width mb-80">
               <div className="img1 main-color2 wow fadeInUp">
-                <img src="/dark/assets/imgs/about/sq1.jpg" alt="" />
+                <Image src={sq1} alt="" />
               </div>
               <div className="img2 wow fadeInLeft">
-                <img src="/dark/assets/imgs/about/sq2.jpg" alt="" />
+                <Image src={sq2} alt="" />
               </div>
             </div>
           </div>
@@ -42,14 +44,16 @@ function Intro() {
                 </h2>
               </div>
               <div className="accordion bord mt-40">
-
                 <div className="item mb-15 wow fadeInUp" data-wow-delay=".1s">
                   <div className="title" onClick={openAccordion}>
                     <h6 className="fz-18">The Power of Influencer Marketing</h6>
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet
+                      mornings of spring which i enjoy with my whole.
+                    </p>
                   </div>
                 </div>
 
@@ -59,7 +63,10 @@ function Intro() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet
+                      mornings of spring which i enjoy with my whole.
+                    </p>
                   </div>
                 </div>
 
@@ -69,17 +76,19 @@ function Intro() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet
+                      mornings of spring which i enjoy with my whole.
+                    </p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Intro
+export default Intro;

@@ -121,25 +121,63 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </Link>
                   </div>
                 </li>
-                <li
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="o-hidden">
-                    <Link href="/dark/page-services/" className="link">
-                      <span className="fill-text" data-text="Services">
-                        Services
-                      </span>
-                    </Link>
-                  </div>
-                </li>
 
                 <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onClick={toggleSubMenu}
                 >
-                 <div className="o-hidden">
+                  <div className="o-hidden">
+                    <div className="link cursor-pointer dmenu">
+                      <Link href="/dark/page-services/" className="">
+                        <span className="fill-text" data-text="Services">
+                          Services
+                        </span>
+                      </Link>
+                      <i></i>
+                    </div>
+                  </div>
+                  <div className="sub-menu">
+                    <ul>
+                      <li>
+                        <Link href="/dark/page-service1/" className="sub-link">
+                          WEBSITE DEVELOPMENT
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/dark/page-service2/" className="sub-link">
+                          WEB APPLICATION
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/dark/page-service3/" className="sub-link">
+                          MOBILE APPS DEVELOPMENT
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/dark/page-service4/" className="sub-link">
+                          DIGITAL MARKETING & SEO
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/dark/page-service5/" className="sub-link">
+                          GRAPHICS DESIGN & PRINTING
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/dark/page-service6/" className="sub-link">
+                          VIDEO & ANIMATION
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={toggleSubMenu}
+                >
+                  <div className="o-hidden">
                     <div className="link cursor-pointer dmenu">
                       <Link href="/dark/page-product/" className="">
                         <span className="fill-text" data-text="Products">

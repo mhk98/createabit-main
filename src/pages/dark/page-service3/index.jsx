@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Header from "@/components/InnerPages/Header";
 
 import Footer from "@/components/HomeMain/Footer";
+import Service3 from "@/components/InnerPages/ServiceDetails/Service3";
 import DarkNavbar from "../dark-navbar";
 
 function PageService3() {
@@ -31,6 +32,7 @@ function PageService3() {
       <DarkNavbar></DarkNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
+        <Service3 />
       </main>
       <Footer />
     </>
