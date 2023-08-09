@@ -7,7 +7,7 @@ import service1 from "../../../../images/website-design-and-development-01.png";
 function Service1() {
   return (
     <div>
-      <div className="service container">
+      <div className="container service">
         <div
           className="serviceDetails"
           style={{ display: "flex", justifyContent: "space-between" }}
@@ -224,14 +224,11 @@ function Service1() {
           <h3 className="text-center mt-60">Features That You’ll Love</h3>
           <div>
             <div className="row mt-100">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-5 col-md-12 col-sm-12">
                 <Image src={web_banner} alt=""></Image>
               </div>
 
-              <div
-                class=" col-lg-6 col-md-12 col-sm-12"
-                style={{ width: "500px" }}
-              >
+              <div class=" col-lg-6 col-md-12 col-sm-12 ml-90">
                 <div class="e1617-51 x-text x-text-headline">
                   <div class="x-text-content">
                     <span class="x-graphic" aria-hidden="true">
