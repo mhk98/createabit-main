@@ -99,13 +99,20 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   style={{ color: "black" }}
                   onClick={toggleMenu}
                 >
-                  <span className="icon" style={{ color: "black" }}>
+                  <span className="icon text-black">
                     <i style={{ color: "black" }}></i>
                     <i style={{ color: "black" }}></i>
                   </span>
                   <span className="text">
                     <span className="word">Menu</span>
                   </span>
+                </div>
+                <div className="o-hidden ml-50 text-black">
+                  <Link href="/dark/home-creative-agency/" className="link">
+                    <span className="fill-text" data-text="Dark Mode">
+                      Dark Mode
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>

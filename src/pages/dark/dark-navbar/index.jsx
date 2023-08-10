@@ -103,10 +103,18 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <span className="word">Menu</span>
                   </span>
                 </div>
+                <div className="o-hidden ml-50">
+                  <Link href="/light/home-creative-agency/" className="link">
+                    <span className="fill-text" data-text="Classic Mode">
+                      Classic Mode
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-7">
+          {/* <div className="col-lg-2">Classic Mode</div> */}
+          <div className="col-lg-5">
             <div className="menu-links">
               <ul className="main-menu rest">
                 <li

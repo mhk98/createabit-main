@@ -69,7 +69,7 @@ function Service4() {
       </div>
 
       <div
-        className="serviceDetails row"
+        className="serviceDetails row mt-100"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         <div className="col-lg-6 col-md-6 col-sm-12">
@@ -115,7 +115,10 @@ function Service4() {
 
       <div className="row">
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div className="col-lg-6 col-md-6 col-sm-12" style={{ width: "500px" }}>
+        <div
+          className="col-lg-6 col-md-6 col-sm-12 mt-60"
+          style={{ width: "500px" }}
+        >
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
             <small style={{ fontSize: "15px" }}>
@@ -154,7 +157,10 @@ function Service4() {
       </div>
       <div className="row">
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div className="col-lg-6 col-md-6 col-sm-12" style={{ width: "500px" }}>
+        <div
+          className="col-lg-6 col-md-6 col-sm-12 mt-60"
+          style={{ width: "500px" }}
+        >
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
             <small style={{ fontSize: "15px" }}>
@@ -193,7 +199,7 @@ function Service4() {
       </div>
       <div className="row">
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div className="col-lg-6 col-md-6 col-sm-12" style={{ width: "500px" }}>
+        <div className="col-lg-6 col-md-6 col-sm-12 mt-60" style={{ width: "500px" }}>
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
             <small style={{ fontSize: "15px" }}>
