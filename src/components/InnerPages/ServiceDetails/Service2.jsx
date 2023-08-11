@@ -38,7 +38,6 @@ function Service2() {
             </div>
           </div>
         </div>
-        <div></div>
 
         <div className="serviceDetails-title">
           <h4 className="text-center mt-80 mb-30">Why choose our Web Apps?</h4>

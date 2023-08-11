@@ -1,20 +1,30 @@
 import Testimonials from "@/components/DigitalAgency/Testimonials";
-import { faBuildingUser, faCheck, faSquarePersonConfined, faUserAltSlash, faUserGraduate, faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBuildingUser,
+  faCheck,
+  faSquarePersonConfined,
+  faUserAltSlash,
+  faUserGraduate,
+  faUserSecret,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import service3 from "../../../../images/Apps-developer-and-expart-01.png";
 import service2 from "../../../../images/Apps-developer-service-01.png";
-import service1 from "../../../../images/website-design-and-development-01.png";
+import service1 from "../../../../images/Graphic-01.png";
 
 function Service3() {
   return (
     <div>
       <div className="container service">
-        <div className="serviceDetails row">
-          <div className="col-lg-6 col-md-6 col-sm-12">
-            <Image src={service1} alt="" />
+        <div
+          className="serviceDetails"
+          style={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <div>
+            <Image src={service1} alt="" style={{ width: "500px" }} />
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12">
+          <div style={{ width: "500px" }}>
             <h4>Website Design & Development</h4>
             <h5>Professional & Creative Web Design Solution</h5>
             <p className="mt-8">
@@ -37,7 +47,6 @@ function Service3() {
             </div>
           </div>
         </div>
-        <div></div>
 
         <div
           className="serviceDetails-title row"

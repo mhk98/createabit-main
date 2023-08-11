@@ -1,5 +1,15 @@
 import Image from "next/image";
 import service1 from "../../../../images/DIGITAL-MARKETING-01.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBuildingUser,
+  faLightbulb,
+  faSquarePersonConfined,
+  faUserAltSlash,
+  faUserGraduate,
+  faUserSecret,
+} from "@fortawesome/free-solid-svg-icons";
+import service2 from "../../../../images/Marketing-STRATEGY-02-01.png";
 
 function Service4() {
   return (
@@ -113,7 +123,7 @@ function Service4() {
         </div>
       </div>
 
-      <div className="row">
+      <div className="row" style={{ marginLeft: "307px" }}>
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
         <div
           className="col-lg-6 col-md-6 col-sm-12 mt-60"
@@ -155,7 +165,7 @@ function Service4() {
           </ul>
         </div>
       </div>
-      <div className="row">
+      <div className="row" style={{ marginLeft: "307px" }}>
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
         <div
           className="col-lg-6 col-md-6 col-sm-12 mt-60"
@@ -197,9 +207,12 @@ function Service4() {
           </ul>
         </div>
       </div>
-      <div className="row">
+      <div className="row" style={{ marginLeft: "307px" }}>
         <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-60" style={{ width: "500px" }}>
+        <div
+          className="col-lg-6 col-md-6 col-sm-12 mt-60"
+          style={{ width: "500px" }}
+        >
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
             <small style={{ fontSize: "15px" }}>
@@ -234,6 +247,527 @@ function Service4() {
               CREATING THE AWARENESS, ATTACHMENT & PULL.
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3 className="mb-40 text-center mt-80">Benefits of our SMM Service</h3>
+        <div className="row mb-40">
+          <div className="col-lg-3 service_smm">
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div className="col-lg-3 service_smm">
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div
+            className="col-lg-3 service_smm"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              padding: "20px",
+              border: "2px solid #fff",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div
+            className="col-lg-3 service_smm"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              padding: "20px",
+              border: "2px solid #fff",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+        </div>
+        <div className="row mb-40">
+          <div className="col-lg-3 service_smm">
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div className="col-lg-3 service_smm">
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div
+            className="col-lg-3 service_smm"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              padding: "20px",
+              border: "2px solid #fff",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div
+            className="col-lg-3 service_smm"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              padding: "20px",
+              border: "2px solid #fff",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-3 service_smm">
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div className="col-lg-3 service_smm">
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div
+            className="col-lg-3 service_smm"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              padding: "20px",
+              border: "2px solid #fff",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+          <div
+            className="col-lg-3 service_smm"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              padding: "20px",
+              border: "2px solid #fff",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faLightbulb}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                color: "black",
+                padding: "20px",
+              }}
+            />
+            <h4>Extended Awareness</h4>
+            <p>
+              We will implement a social media strategy that will greatly
+              increase your brand recognition since you will be engaging with a
+              broad audience of consumers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-100 mb-100">
+        <h3>Features that you’ll love about our SMM Service</h3>
+        <div className="row mt-100">
+          <div className="col-lg-4">
+            <Image src={service2} alt="" />
+          </div>
+          <div class=" col-lg-4 col-md-12 col-sm-12">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center ",
+                marginBottom: "20px",
+              }}
+            >
+              <div className="left-side">
+                <div className="user-icon">
+                  <FontAwesomeIcon
+                    className="rounded-circle"
+                    icon={faBuildingUser}
+                    style={{
+                      fontSize: "10px",
+                      backgroundColor: "white",
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      padding: "25px",
+                    }}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+              <div className="ml-20 right-side">
+                <p
+                  className="heading"
+                  style={{ fontWeight: "600", fontSize: "18px" }}
+                >
+                  Superior security and compliance
+                </p>
+                <small className="content">
+                  We understand your industry and business. So, we provide the
+                  solution that is customized and fits according to your needs.
+                </small>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center ",
+                marginBottom: "20px",
+              }}
+            >
+              <div className="left-side">
+                <div className="user-icon">
+                  <FontAwesomeIcon
+                    className="rounded-circle"
+                    icon={faBuildingUser}
+                    style={{
+                      fontSize: "10px",
+                      backgroundColor: "white",
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      padding: "25px",
+                    }}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+              <div className="ml-20 right-side">
+                <p
+                  className="heading"
+                  style={{ fontWeight: "600", fontSize: "18px" }}
+                >
+                  Superior security and compliance
+                </p>
+                <small className="content">
+                  We understand your industry and business. So, we provide the
+                  solution that is customized and fits according to your needs.
+                </small>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center ",
+                marginBottom: "20px",
+              }}
+            >
+              <div className="left-side">
+                <div className="user-icon">
+                  <FontAwesomeIcon
+                    className="rounded-circle"
+                    icon={faUserGraduate}
+                    style={{
+                      fontSize: "10px",
+                      backgroundColor: "white",
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      padding: "25px",
+                    }}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+              <div className="ml-20 right-side">
+                <p
+                  className="heading"
+                  style={{ fontWeight: "600", fontSize: "18px" }}
+                >
+                  Superior security and compliance
+                </p>
+                <small className="content">
+                  We understand your industry and business. So, we provide the
+                  solution that is customized and fits according to your needs.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class=" col-lg-4 col-md-12 col-sm-12">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center ",
+                marginBottom: "20px",
+              }}
+            >
+              <div className="left-side">
+                <div className="user-icon">
+                  <FontAwesomeIcon
+                    className="rounded-circle"
+                    icon={faBuildingUser}
+                    style={{
+                      fontSize: "10px",
+                      backgroundColor: "white",
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      padding: "25px",
+                    }}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+              <div className="ml-20 right-side">
+                <p
+                  className="heading"
+                  style={{ fontWeight: "600", fontSize: "18px" }}
+                >
+                  Superior security and compliance
+                </p>
+                <small className="content">
+                  We understand your industry and business. So, we provide the
+                  solution that is customized and fits according to your needs.
+                </small>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center ",
+                marginBottom: "20px",
+              }}
+            >
+              <div className="left-side">
+                <div className="user-icon">
+                  <FontAwesomeIcon
+                    className="rounded-circle"
+                    icon={faBuildingUser}
+                    style={{
+                      fontSize: "10px",
+                      backgroundColor: "white",
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      padding: "25px",
+                    }}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+              <div className="ml-20 right-side">
+                <p
+                  className="heading"
+                  style={{ fontWeight: "600", fontSize: "18px" }}
+                >
+                  Superior security and compliance
+                </p>
+                <small className="content">
+                  We understand your industry and business. So, we provide the
+                  solution that is customized and fits according to your needs.
+                </small>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center ",
+                marginBottom: "20px",
+              }}
+            >
+              <div className="left-side">
+                <div className="user-icon">
+                  <FontAwesomeIcon
+                    className="rounded-circle"
+                    icon={faUserGraduate}
+                    style={{
+                      fontSize: "10px",
+                      backgroundColor: "white",
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      padding: "25px",
+                    }}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+              <div className="ml-20 right-side">
+                <p
+                  className="heading"
+                  style={{ fontWeight: "600", fontSize: "18px" }}
+                >
+                  Superior security and compliance
+                </p>
+                <small className="content">
+                  We understand your industry and business. So, we provide the
+                  solution that is customized and fits according to your needs.
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

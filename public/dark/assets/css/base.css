@@ -342,3 +342,17 @@ section.faq {
 .content {
   margin: 10px 0;
 }
+
+.service_smm {
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #fff;
+  transition: all linear 0.3s;
+  gap: 5px;
+}
+
+.service_smm:hover {
+  background-color: white;
+  color: black;
+}
