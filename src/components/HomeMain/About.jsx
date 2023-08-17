@@ -5,7 +5,7 @@ function About({ lightMode }) {
   return (
     <section
       className="about-intro section-padding"
-      style={{ marginTop: "100px" }}
+      style={{ marginTop: "220px" }}
     >
       <div className="container pt-40">
         <div className="row mb-80">

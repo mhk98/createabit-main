@@ -36,28 +36,28 @@ function Footer({ lightMode }) {
                   <h6>Address</h6>
                 </div>
                 <div className="text">
-                  <p>Germany — 785 15h Street, Office 478 Berlin, De 81566</p>
+                  <p>901 South Highland St, Suite # 301,Arlington, VA 22041</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 offset-lg-1">
               <div className="colum md-mb50">
                 <div className="tit mb-20">
-                  <h6>Say Hello</h6>
+                  <h6>Company</h6>
                 </div>
                 <div className="text">
                   <p className="mb-10">
-                    <a href="#0">hello@design.com</a>
+                    <a href="#0">info@createabit.com</a>
                   </p>
                   <h5>
-                    <a href="#">+1 840 841 25 69</a>
+                    <a href="#">+703-347-6512</a>
                   </h5>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 md-mb50">
               <div className="tit mb-20">
-                <h6>Social</h6>
+                <h6>Information</h6>
               </div>
 
               <ul className="rest social-text ">
@@ -85,9 +85,9 @@ function Footer({ lightMode }) {
             </div>
             <div className="col-lg-3">
               <div className="tit mb-20">
-                <h6>Newsletter</h6>
+                <h6>Social</h6>
               </div>
-              <div className="subscribe">
+              {/* <div className="subscribe">
                 <form action="contact.php">
                   <div className="form-group rest">
                     <input type="email" placeholder="Type Your Email" />
@@ -96,7 +96,29 @@ function Footer({ lightMode }) {
                     </button>
                   </div>
                 </form>
-              </div>
+              </div> */}
+              <ul className="rest social-text ">
+                <li className="mr-30">
+                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
+                    Facebook
+                  </Link>
+                </li>
+                <li className="mr-30">
+                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
+                    Instagram
+                  </Link>
+                </li>
+                <li className="mr-30">
+                  <Link href={`/${lightMode ? "light" : "dark"}/blog-list/`}>
+                    Twitter
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/${lightMode ? "light" : "dark"}/shop-list`}>
+                    LInkedin
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

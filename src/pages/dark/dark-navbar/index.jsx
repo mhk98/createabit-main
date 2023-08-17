@@ -137,9 +137,56 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 >
                   <div className="o-hidden">
                     <div className="link cursor-pointer dmenu">
+                      <Link href="/dark/page-product/" className="">
+                        <span
+                          className="fill-text"
+                          data-text="Product Solution"
+                        >
+                          Product Solution
+                        </span>
+                      </Link>
+                      <i></i>
+                    </div>
+                  </div>
+                  <div className="sub-menu">
+                    <ul>
+                      <li>
+                        <Link
+                          href="/dark/page-product-category1/"
+                          className="sub-link"
+                        >
+                          Dynamic Digital Products
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/dark/page-product-category2/"
+                          className="sub-link"
+                        >
+                          Intelligent TECH Products
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/dark/page-product-category3/"
+                          className="sub-link"
+                        >
+                          INTERACTIVE WOW PRODUCTION
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={toggleSubMenu}
+                >
+                  <div className="o-hidden">
+                    <div className="link cursor-pointer dmenu">
                       <Link href="/dark/page-services/" className="">
                         <span className="fill-text" data-text="Services">
-                          Services
+                          Service
                         </span>
                       </Link>
                       <i></i>
@@ -180,50 +227,6 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </ul>
                   </div>
                 </li>
-                <li
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  onClick={toggleSubMenu}
-                >
-                  <div className="o-hidden">
-                    <div className="link cursor-pointer dmenu">
-                      <Link href="/dark/page-product/" className="">
-                        <span className="fill-text" data-text="Products">
-                          Products
-                        </span>
-                      </Link>
-                      <i></i>
-                    </div>
-                  </div>
-                  <div className="sub-menu">
-                    <ul>
-                      <li>
-                        <Link
-                          href="/dark/page-product-category1/"
-                          className="sub-link"
-                        >
-                          Dynamic Digital Products
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/dark/page-product-category2/"
-                          className="sub-link"
-                        >
-                          Intelligent TECH Products
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/dark/page-product-category3/"
-                          className="sub-link"
-                        >
-                          INTERACTIVE WOW PRODUCTION
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
 
                 <li
                   onMouseEnter={handleMouseEnter}
@@ -231,8 +234,8 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 >
                   <div className="o-hidden">
                     <Link href="/dark/page-contact/" className="link">
-                      <span className="fill-text" data-text="Solution">
-                        Solution
+                      <span className="fill-text" data-text="Software">
+                        Software
                       </span>
                     </Link>
                   </div>
@@ -249,7 +252,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </Link>
                   </div>
                 </li>
-                <li
+                {/* <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -260,9 +263,9 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       </span>
                     </Link>
                   </div>
-                </li>
+                </li> */}
 
-                <li
+                {/* <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -273,7 +276,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       </span>
                     </Link>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

@@ -187,7 +187,7 @@ function Testimonials({ lightMode }) {
             </div>
           </div>
         </div>
-        <Numbers />
+        {/* <Numbers /> */}
       </div>
     </section>
   );
