@@ -6,8 +6,8 @@ import Layout from "@/layouts/default";
 //= Components
 import Header from "@/components/Architecture/Header";
 import Loader from "@/components/Common/Loader";
-import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import Portfolio from "@/components/Freelancer/Portfolio";
+import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import About from "@/components/HomeMain/About";
 import Clients from "@/components/HomeMain/Clients";
 import Footer from "@/components/HomeMain/Footer";
