@@ -132,6 +132,20 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                     </Link>
                   </div>
                 </li>
+
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/light/home-creative-agency/" className="link">
+                      <span className="fill-text" data-text="Who We Are">
+                        Who We Are
+                      </span>
+                    </Link>
+                  </div>
+                </li>
+
                 <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}

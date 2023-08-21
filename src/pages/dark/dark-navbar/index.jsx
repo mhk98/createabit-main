@@ -129,6 +129,31 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </Link>
                   </div>
                 </li>
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/dark/who-we-are" className="link">
+                      <span className="fill-text" data-text="Who We Are">
+                        Who We Are
+                      </span>
+                    </Link>
+                  </div>
+                </li>
+
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/dark/grocery" className="link">
+                      <span className="fill-text" data-text="Grocery">
+                        Grocery
+                      </span>
+                    </Link>
+                  </div>
+                </li>
 
                 <li
                   onMouseEnter={handleMouseEnter}
@@ -233,7 +258,10 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/dark/page-contact/" className="link">
+                    <Link
+                      href="/dark/showcase-interactive-center-horizontal/"
+                      className="link"
+                    >
                       <span className="fill-text" data-text="Software">
                         Software
                       </span>

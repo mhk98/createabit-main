@@ -8,6 +8,7 @@ import Loader from '@/components/Common/Loader';
 import Navigation from '@/components/Showcases/Navigation';
 import Menu from '@/components/Showcases/Menu';
 import InteractiveCenterHorizontal from '@/components/Showcases/InteractiveCenterHorizontal';
+import Footer from '@/components/HomeMain/Footer';
 
 
 function ShowcaseInteractiveCenterHorizontal() {
@@ -27,6 +28,7 @@ function ShowcaseInteractiveCenterHorizontal() {
       <Menu />
       <main>
         <InteractiveCenterHorizontal />
+        <Footer/>
       </main>
     </>
   )

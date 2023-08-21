@@ -356,3 +356,19 @@ section.faq {
   background-color: white;
   color: black;
 }
+
+.points-list {
+  list-style: none;
+  padding: 0;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check-mark {
+  margin-left: 5px;
+ font-size: 20px;
+}
