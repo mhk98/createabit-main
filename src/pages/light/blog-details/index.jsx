@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Details from '@/components/InnerPages/Blog/Details';
-import Footer from '@/components/Startup/Footer';
-
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import LightFooter from "@/components/HomeMain/LightFooter";
+import Details from "@/components/InnerPages/Blog/Details";
 
 function BlogDetailsLight() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   return (
@@ -27,11 +26,11 @@ function BlogDetailsLight() {
       <main>
         <Details />
       </main>
-      <Footer lightMode />
+      <LightFooter />
     </>
-  )
+  );
 }
 
-BlogDetailsLight.getLayout = page => <Layout lightMode>{page}</Layout>
+BlogDetailsLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default BlogDetailsLight;

@@ -12,6 +12,7 @@ import Team from "@/components/InnerPages/Team/Team";
 import Testimonials from "@/components/InnerPages/Team/Testimonials";
 import CallToAction from "@/components/Startup/CallToAction";
 import LightNavbar from "../light-navbar";
+import LightFooter from "@/components/HomeMain/LightFooter";
 
 function PageTeamLight() {
   useEffect(() => {
@@ -33,7 +34,7 @@ function PageTeamLight() {
         <Testimonials />
         <CallToAction innerPageStyle />
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
     </>
   );
 }

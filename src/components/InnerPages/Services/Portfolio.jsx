@@ -178,7 +178,7 @@ function Portfolio({ lightMode }) {
 
                     <Link
                       href="/dark/page-service1"
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="butn butn-md butn-bord radius-30 mt-4" 
                     >
                       <span>View Details</span>
                     </Link>

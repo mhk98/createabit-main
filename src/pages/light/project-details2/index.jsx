@@ -12,6 +12,7 @@ import About from '@/components/InnerPages/ProjectDetails2/About';
 import Content from '@/components/InnerPages/ProjectDetails2/Content';
 import CallToAction from '@/components/InnerPages/ProjectDetails2/CallToAction';
 import Footer from '@/components/Startup/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 
 function ProjectDetails2Light() {
@@ -35,7 +36,7 @@ function ProjectDetails2Light() {
         <Content />
         <CallToAction />
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
     </>
   )
 }

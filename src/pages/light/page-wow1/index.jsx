@@ -6,7 +6,7 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 
-import Footer from "@/components/HomeMain/Footer";
+import LightFooter from "@/components/HomeMain/LightFooter";
 import Wow1 from "@/components/InnerPages/Wow/Wow1";
 import LightNavbar from "../light-navbar";
 
@@ -35,7 +35,7 @@ function PageWow1() {
       <main>
         <Wow1></Wow1>
       </main>
-      <Footer />
+      <LightFooter lightMode />
     </>
   );
 }

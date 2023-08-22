@@ -16,6 +16,7 @@ import Testimonials from '@/components/Freelancer/Testimonials';
 import Blog from '@/components/Freelancer/Blog';
 import Contact from '@/components/Freelancer/Contact';
 import Footer from '@/components/Freelancer/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 function HomeFreelancer() {
   useEffect(() => {
@@ -42,7 +43,7 @@ function HomeFreelancer() {
         <Blog />
         <Contact />
       </main>
-      <Footer lightMode />
+      <LightFooter  />
     </>
   )
 }

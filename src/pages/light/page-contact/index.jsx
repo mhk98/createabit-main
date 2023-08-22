@@ -9,6 +9,7 @@ import Header from '@/components/InnerPages/Contact/Header';
 import Form from '@/components/InnerPages/Contact/Form';
 import LightNavbar from '../light-navbar';
 import Footer from '@/components/HomeMain/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 
 function PageContactLight() {
@@ -29,7 +30,7 @@ function PageContactLight() {
         <Header />
         <Form />
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
     </>
   )
 }

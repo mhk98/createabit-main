@@ -6,10 +6,10 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 
-import Product1 from "@/components/InnerPages/Products/product1";
-import Header from "@/components/InnerPages/Header";
-import LightNavbar from "../light-navbar";
 import Footer from "@/components/HomeMain/Footer";
+import Header from "@/components/InnerPages/Header";
+import Product1 from "@/components/InnerPages/Products/product1";
+import LightNavbar from "../light-navbar";
 
 function PageProductsCategory2() {
   useEffect(() => {
@@ -34,7 +34,7 @@ function PageProductsCategory2() {
       <LightNavbar></LightNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
-        <Product1 />
+        <Product1 lightMode />
         {/* <Services />
         <ServicesTab /> */}
         {/* <FAQ /> */}

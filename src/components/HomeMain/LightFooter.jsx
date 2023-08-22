@@ -1,9 +1,8 @@
-import React from "react";
 //= Data
 import data from "@/data/app-data.json";
 import Link from "next/link";
 
-function Footer({ lightMode }) {
+function LightFooter({ lightMode }) {
   return (
     <footer className="sub-bg">
       <div className="footer-container">
@@ -62,24 +61,16 @@ function Footer({ lightMode }) {
 
               <ul className="rest social-text ">
                 <li className="mr-30">
-                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
-                    Our Team
-                  </Link>
+                  <Link href="/light/page-team">Our Team</Link>
                 </li>
                 <li className="mr-30">
-                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
-                    Our Client
-                  </Link>
+                  <Link href="/light/page-team">Our Client</Link>
                 </li>
                 <li className="mr-30">
-                  <Link href={`/${lightMode ? "light" : "dark"}/blog-list/`}>
-                    Our Blog
-                  </Link>
+                  <Link href="/light/blog-list">Our Blog</Link>
                 </li>
                 <li>
-                  <Link href={`/${lightMode ? "light" : "dark"}/shop-list`}>
-                    Shop
-                  </Link>
+                  <Link href="/light/shop-list">Shop</Link>
                 </li>
               </ul>
             </div>
@@ -99,25 +90,16 @@ function Footer({ lightMode }) {
               </div> */}
               <ul className="rest social-text ">
                 <li className="mr-30">
-                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
-                    Facebook
-                  </Link>
+                  <Link href="/light/page-team">Facebook</Link>
                 </li>
                 <li className="mr-30">
-                  <Link href={`/${lightMode ? "light" : "dark"}/page-team`}>
-                    Instagram
-                  </Link>
+                  <Link href="/light/page-team">Instagram</Link>
                 </li>
                 <li className="mr-30">
-                  <Link href={`/${lightMode ? "light" : "dark"}/blog-list/`}>
-                    Twitter
-                  </Link>
+                  <Link href="/light/page-team">Twitter</Link>
                 </li>
                 <li>
-                  <Link 
-                  href={`/${lightMode ? "light" : "dark"}/shop-list`}>
-                    LInkedin
-                  </Link>
+                  <Link href="/light/page-team">LInkedin</Link>
                 </li>
               </ul>
             </div>
@@ -161,4 +143,4 @@ function Footer({ lightMode }) {
   );
 }
 
-export default Footer;
+export default LightFooter;

@@ -18,6 +18,7 @@ import Block from '@/components/Corporate/Block';
 import Pricing from '@/components/Corporate/Pricing';
 import Blog from '@/components/Corporate/Blog';
 import Footer from '@/components/Corporate/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 function HomeCorporateLight() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function HomeCorporateLight() {
         <Pricing />
         <Blog />
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
     </>
   )
 }

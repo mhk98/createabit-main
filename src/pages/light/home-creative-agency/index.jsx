@@ -1,23 +1,27 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
+//= Packages
+//= Layout
 import Layout from "@/layouts/default";
 //= Components
+import Header from "@/components/Architecture/Header";
 import Loader from "@/components/Common/Loader";
-import Portfolio from "@/components/Freelancer/Portfolio";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
+import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
-import PortfolioClassicGrid2Light from "../portfolio-grid-2";
-import PortfolioClassicGrid3 from "../portfolio-grid-3";
+import Blog from "@/components/HomeMain/Blog";
+import Clients from "@/components/HomeMain/Clients";
+
+import LightFooter from "@/components/HomeMain/LightFooter";
 import Marq from "@/components/HomeMain/Marq";
 import Services from "@/components/HomeMain/Services";
-import Clients from "@/components/HomeMain/Clients";
 import ServicesTabs from "@/components/HomeMain/ServicesTabs";
-import Footer from "@/components/HomeMain/Footer";
 import Testimonials from "@/components/HomeMain/Testimonials";
 import LightNavbar from "../light-navbar";
-import Header from "@/components/HomeMain/Header";
+import PortfolioClassicGrid2Light from "../portfolio-grid-2";
+import PortfolioClassicGrid3 from "../portfolio-grid-3";
 
 function HomeCreativeAgencyLight() {
   useEffect(() => {
@@ -49,8 +53,9 @@ function HomeCreativeAgencyLight() {
             <ServicesTabs lightMode />
             <Testimonials lightMode />
             <HzScroll lightMode />
+            <Blog />
           </main>
-          <Footer />
+          <LightFooter lightMode/>
         </div>
       </div>
     </>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import abc from "../../../../images/abc.jpg";
 
 function WhoWeAre() {
@@ -62,53 +61,33 @@ function WhoWeAre() {
             <Image src={abc} alt="" height={500} />
           </div>
           <div>
-            <ul className="points-list ">
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">
-                  Expertise in executing customized project requirements to
-                  perfection (short-term as well as long-term)
-                </span>
+            <ul className=" ">
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                1. Expertise in executing customized project requirements to
+                perfection (short-term as well as long-term)
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">Fast project turnaround time</span>
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                2. Fast project turnaround time
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">Substantial cost savings</span>
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                3. Substantial cost savings
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">
-                  Strict adherence to International quality standards
-                </span>
+              <li style={{ fontSize: "18px" }}>
+                4. Strict adherence to International quality standards
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">
-                  A dedicated Project Management, Transitions and Customer
-                  Engagement team available 24 hours a day
-                </span>
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                5. A dedicated Project Management, Transitions and Customer
+                Engagement team available 24 hours a day
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">
-                  Significant increase in business revenue and productivity
-                </span>
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                6. Significant increase in business revenue and productivity
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">
-                  Experience in serving global customers for over 12 years
-                </span>
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                7. Experience in serving global customers for over 12 years
               </li>
-              <li className="point">
-                <span className="check-mark">✓</span>
-                <span className="check-mark">
-                  Vast domain knowledge and outsourcing expertise across
-                  multiple domains
-                </span>
+              <li className="mb-2" style={{ fontSize: "18px" }}>
+                8. Vast domain knowledge and outsourcing expertise across
+                multiple domains
               </li>
             </ul>
           </div>

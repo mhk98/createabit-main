@@ -5,7 +5,7 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/HomeMain/Footer";
+import LightFooter from "@/components/HomeMain/LightFooter";
 import Wow3 from "@/components/InnerPages/Wow/Wow3";
 import LightNavbar from "../light-navbar";
 
@@ -32,7 +32,7 @@ function PageWow3() {
       <main>
         <Wow3></Wow3>
       </main>
-      <Footer />
+      <LightFooter lightMode />
     </>
   );
 }

@@ -9,6 +9,7 @@ import Navbar from '@/components/Common/MainNavbar';
 import Header from '@/components/InnerPages/Blog/Header';
 import ImageOutFrame from '@/components/InnerPages/Blog/ImageOutFrame';
 import Footer from '@/components/Startup/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 
 function BlogImageOutFrameLight() {
@@ -34,7 +35,7 @@ function BlogImageOutFrameLight() {
         <Header data={metadata} />
         <ImageOutFrame />
       </main>
-      <Footer lightMode />
+      <LightFooter/>
     </>
   )
 }

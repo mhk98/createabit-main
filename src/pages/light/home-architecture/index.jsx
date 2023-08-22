@@ -17,6 +17,7 @@ import SectionImage from '@/components/Architecture/SectionImage';
 import Testimonials from '@/components/Architecture/Testimonials';
 import Blog from '@/components/Architecture/Blog';
 import Footer from '@/components/Architecture/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 function HomeArchitecture() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function HomeArchitecture() {
         <Testimonials lightMode />
         <Blog />
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
     </>
   )
 }

@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import IntelligentTech4 from "@/components/InnerPages/Intelligent/IntelligentTech4";
 import LightNavbar from "../light-navbar";
+import LightFooter from "@/components/HomeMain/LightFooter";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -32,7 +33,8 @@ function PageProductShop1() {
       <main>
         <IntelligentTech4></IntelligentTech4>
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
+
     </>
   );
 }

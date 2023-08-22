@@ -15,6 +15,7 @@ import Team from '@/components/Startup/Team';
 import Clients from '@/components/InnerPages/About/Clients';
 import CallToAction from '@/components/Startup/CallToAction';
 import Footer from '@/components/Startup/Footer';
+import LightFooter from '@/components/HomeMain/LightFooter';
 
 function PageAboutLight() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function PageAboutLight() {
         <Clients lightMode />
         <CallToAction innerPageStyle />
       </main>
-      <Footer lightMode />
+      <LightFooter lightMode />
     </>
   )
 }

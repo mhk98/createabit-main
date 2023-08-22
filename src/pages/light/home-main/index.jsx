@@ -8,8 +8,8 @@ import Loader from "@/components/Common/Loader";
 import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
 import Clients from "@/components/HomeMain/Clients";
-import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/HomeMain/Header";
+import LightFooter from "@/components/HomeMain/LightFooter";
 import Marq from "@/components/HomeMain/Marq";
 import Services from "@/components/HomeMain/Services";
 import ServicesTabs from "@/components/HomeMain/ServicesTabs";
@@ -87,7 +87,7 @@ function HomeMainLight() {
             <Testimonials lightMode />
             {/* <Blog /> */}
           </main>
-          <Footer lightMode />
+          <LightFooter />
         </div>
       </div>
     </>

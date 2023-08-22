@@ -358,7 +358,6 @@ section.faq {
 }
 
 .points-list {
-  list-style: none;
   padding: 0;
 }
 
@@ -370,5 +369,5 @@ section.faq {
 
 .check-mark {
   margin-left: 5px;
- font-size: 20px;
+  font-size: 20px;
 }

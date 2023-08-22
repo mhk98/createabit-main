@@ -5,13 +5,13 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Product from "@/components/InnerPages/Products/product";
 
-import Header from "@/components/InnerPages/Header";
+import LightFooter from "@/components/HomeMain/LightFooter";
+import WhoWeAre from "@/components/InnerPages/WhoWeAre/WhoWeAre";
 import LightNavbar from "../light-navbar";
-import Footer from "@/components/HomeMain/Footer";
+// import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
-function PageProductsCategory1() {
+function About() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -20,7 +20,7 @@ function PageProductsCategory1() {
   const headerMetadata = {
     subTitle: "WHAT CAN WE DO ?",
     title: "We combine our passion for design and code.",
-    text: "Dynamic Digital Products",
+    text: "SERVICES",
   };
 
   return (
@@ -30,21 +30,15 @@ function PageProductsCategory1() {
       </Head>
 
       <Loader />
-      {/* <Navbar mainBg /> */}
       <LightNavbar></LightNavbar>
       <main>
-        <Header data={headerMetadata} subBg={true} />
-        <Product lightMode/>
-        {/* <Services />
-        <ServicesTab /> */}
-        {/* <FAQ /> */}
-        {/* <CallToAction innerPageStyle /> */}
-        <Footer lightMode/>
+        <WhoWeAre />
       </main>
+      <LightFooter lightMode />
     </>
   );
 }
 
-PageProductsCategory1.getLayout = (page) => <Layout lightMode>{page}</Layout>;
+About.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
-export default PageProductsCategory1;
+export default About;
