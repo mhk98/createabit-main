@@ -21,7 +21,7 @@ function Header({ lightMode }) {
 
   return (
     <header className="crev-header">
-      <div className="container xxl">
+      <div className="container-xxl">
         <div className="row">
           <div className="col-lg-9">
             <div className="caption">

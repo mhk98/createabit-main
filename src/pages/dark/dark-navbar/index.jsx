@@ -103,14 +103,12 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <span className="word">Menu</span>
                   </span>
                 </div>
-                <div className="o-hidden ml-50">
+                <div className="ml-50 " style={{ marginTop: "-20px" }}>
                   <Link
                     href="/light/home-creative-agency/"
-                    className="link butn butn-md butn-bord radius-30"
+                    className="classic butn butn-md butn-bord radius-30"
                   >
-                    <span className="fill-text" data-text="Classic Mode">
-                      Classic Mode
-                    </span>
+                    <span className="word">Classic Mode</span>
                   </Link>
                 </div>
               </div>
@@ -283,18 +281,18 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   </div>
                 </li> */}
 
-                {/* <li
+                <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
                     <Link href="/light/home-creative-agency/" className="link">
-                      <span className="fill-text" data-text="Classic Mode">
+                      <span className="fill-text classic_btn" data-text="Classic Mode">
                         Classic Mode
                       </span>
                     </Link>
                   </div>
-                </li> */}
+                </li>
               </ul>
             </div>
           </div>

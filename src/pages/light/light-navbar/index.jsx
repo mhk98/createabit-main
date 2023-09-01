@@ -110,7 +110,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                 <div className="o-hidden ml-50 text-black">
                   <Link
                     href="/dark/home-creative-agency/"
-                    className="link butn butn-md butn-bord radius-30"
+                    className="link butn butn-md butn-bord radius-30 classic"
                   >
                     <span className="fill-text" data-text="Dark Mode">
                       Dark Mode
@@ -293,7 +293,10 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                 >
                   <div className="o-hidden">
                     <Link href="/dark/home-creative-agency/" className="link">
-                      <span className="fill-text" data-text="Dark Mode">
+                      <span
+                        className="fill-text classic_btn"
+                        data-text="Dark Mode"
+                      >
                         Dark Mode
                       </span>
                     </Link>

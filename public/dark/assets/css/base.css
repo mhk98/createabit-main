@@ -371,3 +371,7 @@ section.faq {
   margin-left: 5px;
   font-size: 20px;
 }
+
+/* Media query for small screens */
+/* Hide the "Classic Mode" link on small and medium devices */
+

@@ -3382,6 +3382,22 @@ body.loaded {
   cursor: pointer;
 }
 
+@media (max-width: 992px) {
+  .topnav .menu-icon {
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .classic {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .classic_btn {
+    display: none;
+  }
+}
+
 .topnav .menu-icon.open .text .word {
   opacity: 0;
   -webkit-transition-delay: 0.4s;
