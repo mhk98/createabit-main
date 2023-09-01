@@ -4,7 +4,7 @@ import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
-import Header from "@/components/Architecture/Header";
+// import Header from "@/components/Architecture/Header";
 import Loader from "@/components/Common/Loader";
 import Portfolio from "@/components/Freelancer/Portfolio";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
@@ -19,6 +19,11 @@ import DarkNavbar from "../dark-navbar";
 import PortfolioClassicGrid2 from "../portfolio-grid-2";
 import PortfolioClassicGrid3 from "../portfolio-grid-3";
 import Blog from "@/components/HomeMain/Blog";
+
+import CreativeBlog from "@/components/CreativeAgency/Blog";
+import WeAre from "@/components/InnerPages/Weare/WeAre";
+import Wellness from "@/components/InnerPages/Home/Wellness";
+import Header from "@/components/HomeMain/Header";
 
 function HomeCreativeAgency() {
   useEffect(() => {
@@ -48,7 +53,10 @@ function HomeCreativeAgency() {
             <ServicesTabs />
             <Testimonials />
             <HzScroll />
-            <Blog/>
+            <CreativeBlog />
+            <WeAre />
+            <Wellness />
+            <Blog />
           </main>
           <Footer />
         </div>
