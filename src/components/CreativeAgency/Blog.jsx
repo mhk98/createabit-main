@@ -42,7 +42,7 @@ function CreativeBlog() {
   return (
     <section className="blog-modern section-padding">
       <div className="container">
-        <div className="sec-lg-head mb-80">
+        <div className="sec-lg-head mb-80 mt-50">
           <div className="row">
             <div className="col-lg-8">
               <div className="position-re">

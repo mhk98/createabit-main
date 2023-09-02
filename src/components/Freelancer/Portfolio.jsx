@@ -9,14 +9,20 @@ import portfolio5 from "../../../images/portfolio5.jpg";
 
 function Portfolio() {
   return (
-    <section className="portfolio clasic section-padding" data-scroll-index="3">
+    <section
+      className="portfolio clasic section-padding"
+      style={{ marginTop: "180px" }}
+      data-scroll-index="3"
+    >
       <div className="container">
-        <div className="sec-lg-head mb-50">
+        <div className="sec-lg-head">
           <div className="row">
             <div className="col-lg-7">
               <div className="position-re">
                 <h6 className="dot-titl-non mb-10">Product</h6>
-                <h2 className="fz-50">Feature Products</h2>
+                <h2 className="fz-50" style={{ marginBottom: "60px" }}>
+                  Feature Products
+                </h2>
               </div>
             </div>
             <div className="col-lg-5 d-flex align-items-center">

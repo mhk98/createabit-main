@@ -43,7 +43,7 @@ function HomeCreativeAgency() {
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
-            <About />
+
             <Portfolio />
             <PortfolioClassicGrid2 />
             <PortfolioClassicGrid3 />
@@ -54,9 +54,11 @@ function HomeCreativeAgency() {
             <Testimonials />
             <HzScroll />
             <CreativeBlog />
-            <WeAre />
+            {/* <WeAre /> */}
             <Wellness />
             <Blog />
+            <About />
+
           </main>
           <Footer />
         </div>
