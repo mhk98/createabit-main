@@ -58,7 +58,6 @@ function HomeCreativeAgency() {
             <Wellness />
             <Blog />
             <About />
-
           </main>
           <Footer />
         </div>

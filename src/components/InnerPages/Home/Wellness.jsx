@@ -29,28 +29,27 @@ function Wellness(props) {
           </div>
         </div>
       </div>
-
       <div
-        className="row"
-        style={{
-          marginBottom: "100px",
-        }}
+        className="row justify-between gap-5"
+        style={{ marginBottom: "100px" }}
       >
-        <div className="col-lg-6">
-          <h2 style={{ marginBottom: "50px" }}>Self Ordering Kisok</h2>
-          <Image src={kisok} alt="" style={{ width: "500px" }} />
-        </div>
-        <div style={{ width: "550px" }}>
-          <h2 style={{ marginBottom: "50px" }}>What we Offer</h2>
-          <p className="mt-8" style={{ fontSize: "20px" }}>
-            Our experience in fulfilling the growth needs of businesses in New
-            York City has prepared us to expand our services beyond borders.
-            With our performance driven team and carefully planned creative
-            marketing strategies, createAbit designs became a trusted name in
-            the industry. Nevertheless, we believe there is always more to
-            achieve and that is why we entered Washington DC and its surrounding
-            areas to help businesses achieve success in a creative fashion.
+        <div className="col-lg-5">
+          <h2 className="mb-3">What We Offer</h2>
+          <p
+            className="mb-3"
+            style={{ fontSize: "20px", marginBottom: "50px" }}
+          >
+            With more then 7 years experience in kiosks and interactive
+            technology systems,CreateAbit now offers a wide rang of COVID
+            WELLNESS products for businesses to make their enviroment safer for
+            customers and employees. Get your body temperature screening devices
+            and automatic hand sanitizer stations from the most trusted source
+            in North America
           </p>
+        </div>
+        <div className="col-lg-5" style={{ marginBottom: "50px" }}>
+          <h2 className="mb-3">Self Ordering Kisok</h2>
+          <Image src={kisok} alt="kisok" />
         </div>
       </div>
     </div>
