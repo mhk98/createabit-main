@@ -11,7 +11,7 @@ function About({ lightMode }) {
         <div className="row mb-80">
           <div className="col-lg-5">
             <div className="sec-lg-head md-mb30">
-              <h6 className="dot-titl-non mb-15 wow fadeIn">OUR BENEFITS</h6>
+              <h6 className="dot-titl-non mb-15 wow fadeIn">Who We Are</h6>
               <h2 className="d-rotate wow">
                 <span className="rotate-text">
                   Our Team of Dedicated Digital Professionals.
@@ -140,6 +140,14 @@ function About({ lightMode }) {
                       labore et dolore magna aliqua.
                     </p>
                   </div>
+                </div>
+                <div className="ml-70 mt-20 ">
+                  <Link
+                    href="/dark/grocery"
+                    className="classic butn butn-md butn-bord radius-30"
+                  >
+                    <span className="word">Read More</span>
+                  </Link>
                 </div>
               </div>
             </div>

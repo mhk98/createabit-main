@@ -37,10 +37,10 @@ function PageAbout() {
         <Header data={headerMetadata} />
         <Story />
         {/* <Services /> */}
-        <Intro />
+        {/* <Intro /> */}
         {/* <Testimonials mainColor /> */}
         {/* <Team /> */}
-        <Clients />
+        {/* <Clients /> */}
         <CallToAction innerPageStyle />
       </main>
       <Footer />
