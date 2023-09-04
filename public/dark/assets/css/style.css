@@ -8021,6 +8021,10 @@ header.in-box {
   -o-object-position: center center;
   object-position: center center;
 }
+.crev-header .main-banner-img {
+  width: 60%;
+  margin-left: 40%;
+}
 
 .crev-header .bg-pattern {
   height: auto;

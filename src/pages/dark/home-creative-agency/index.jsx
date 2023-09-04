@@ -6,9 +6,10 @@ import Layout from "@/layouts/default";
 //= Components
 // import Header from "@/components/Architecture/Header";
 import Loader from "@/components/Common/Loader";
-import Portfolio from "@/components/Freelancer/Portfolio";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
+import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
+import Blog from "@/components/HomeMain/Blog";
 import Clients from "@/components/HomeMain/Clients";
 import Footer from "@/components/HomeMain/Footer";
 import Marq from "@/components/HomeMain/Marq";
@@ -18,12 +19,10 @@ import Testimonials from "@/components/HomeMain/Testimonials";
 import DarkNavbar from "../dark-navbar";
 import PortfolioClassicGrid2 from "../portfolio-grid-2";
 import PortfolioClassicGrid3 from "../portfolio-grid-3";
-import Blog from "@/components/HomeMain/Blog";
 
 import CreativeBlog from "@/components/CreativeAgency/Blog";
-import WeAre from "@/components/InnerPages/Weare/WeAre";
-import Wellness from "@/components/InnerPages/Home/Wellness";
 import Header from "@/components/HomeMain/Header";
+import Wellness from "@/components/InnerPages/Home/Wellness";
 
 function HomeCreativeAgency() {
   useEffect(() => {
@@ -43,7 +42,7 @@ function HomeCreativeAgency() {
         <div id="smooth-content">
           <main className="main-bg">
             <Header />
-
+            <About />
             <Portfolio />
             <PortfolioClassicGrid2 />
             <PortfolioClassicGrid3 />
@@ -57,7 +56,6 @@ function HomeCreativeAgency() {
             {/* <WeAre /> */}
             <Wellness />
             <Blog />
-            <About />
           </main>
           <Footer />
         </div>
