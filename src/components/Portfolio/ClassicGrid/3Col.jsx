@@ -19,9 +19,9 @@ function Grid() {
   }, []);
 
   return (
-    <section className="portfolio section-padding pb-40">
+    <section className="portfolio section-padding">
       <div className="container">
-        <div className="sec-lg-head mb-50">
+        <div className="sec-lg-head" style={{ marginTop: "-60px" }}>
           <div className="row">
             <div className="col-lg-7">
               <div className="position-re">

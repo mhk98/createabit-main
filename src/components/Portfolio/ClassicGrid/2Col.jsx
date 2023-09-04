@@ -17,11 +17,11 @@ function Grid() {
   return (
     <section className="portfolio section-padding">
       <div className="container">
-        <div className="sec-lg-head mb-50">
+        <div className="sec-lg-head mb-10">
           <div className="row">
             <div className="col-lg-7">
               <div className="position-re">
-                <h6 className="dot-titl-non mb-10">Product</h6>
+                <h6 className="dot-titl-non">Product</h6>
                 <h2 className="fz-50">Dynamic Digital Products</h2>
               </div>
             </div>

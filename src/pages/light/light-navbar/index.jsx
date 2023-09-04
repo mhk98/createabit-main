@@ -108,10 +108,13 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   </span>
                 </div>
                 <div
-                  className="o-hidden ml-50 rounded"
-                  style={{ border: "1px solid", padding: "8px" }}
+                  className="o-hidden ml-50 text-black"
+                  style={{ marginTop: "-10px" }}
                 >
-                  <Link href="/dark/home-creative-agency/" className="link">
+                  <Link
+                    href="/dark/home-creative-agency/"
+                    className="link butn butn-md butn-bord radius-30 classic"
+                  >
                     <span className="fill-text" data-text="Dark Mode">
                       Dark Mode
                     </span>
@@ -141,7 +144,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/light/who-we-are" className="link">
+                    <Link href="/light/page-abouts" className="link">
                       <span className="fill-text" data-text="Who We Are">
                         Who We Are
                       </span>
@@ -293,10 +296,16 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                 >
                   <div
                     className="o-hidden ml-50 rounded"
-                    style={{ border: "1px solid", padding: "8px" }}
+                    style={{
+                      border: "1px solid",
+                      padding: "8px",
+                    }}
                   >
                     <Link href="/dark/home-creative-agency/" className="link">
-                      <span className="fill-text" data-text="Dark Mode">
+                      <span
+                        className="fill-text classic_btn"
+                        data-text="Dark Mode"
+                      >
                         Dark Mode
                       </span>
                     </Link>

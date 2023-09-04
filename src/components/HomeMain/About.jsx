@@ -44,8 +44,8 @@ function About({ lightMode }) {
                 className="vew-all mt-50 ml-30 wow fadeIn"
                 data-wow-delay=".8s"
               >
-                <Link href="/dark/blog-classic">
-                  View All Our News
+                <Link href="/dark/page-abouts/">
+                  Let's Go
                   <span>
                     <svg
                       width="18"

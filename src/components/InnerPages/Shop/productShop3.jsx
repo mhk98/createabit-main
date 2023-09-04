@@ -10,6 +10,7 @@ const ProductShop3 = () => {
   return (
     <div className="container">
       <div
+        className="row"
         style={{
           textAlign: "left",
           alignItems: "center",
@@ -32,33 +33,28 @@ const ProductShop3 = () => {
       </div>
 
       <div style={{ marginBottom: "80px" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <div>
+        <div className="row">
+          <div className="col-lg-2 col-md-12">
             <Image src={icon} alt="" />
             <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
-          <div>
+          <div className="col-lg-2 col-md-12">
             <Image src={icon} alt="" />
             <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
-          <div>
+          <div className="col-lg-2 col-md-12">
             <Image src={icon} alt="" />
             <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
-          <div>
+          <div className="col-lg-2 col-md-12">
             <Image src={icon} alt="" />
             <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
-          <div>
+          <div className="col-lg-2 col-md-12">
             <Image src={icon} alt="" />
             <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
-          <div>
+          <div className="col-lg-2 col-md-12">
             <Image src={icon} alt="" />
             <p style={{ textAlign: "center" }}>Retail POS</p>
           </div>
@@ -80,70 +76,54 @@ const ProductShop3 = () => {
         </h2>
 
         <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "70px",
-          }}
+          className="row justify-between gap-5 mx-auto"
+          // style={{
+          //   display: "flex",
+          //   justifyContent: "space-between",
+          //   alignItems: "center",
+          //   gap: "70px",
+          // }}
         >
-          <div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "40px",
-                alignItems: "center",
-              }}
-            >
-              <Image className="tab_img" src={laptop} alt="" />
-              <div style={{ width: "400px", height: "115px" }}>
-                <h5>Customize Your System</h5>
-                <p>
-                  Choose the POS software, hardware, and peripherals you need to
-                  maximize the productivity and profitability of your business.
-                </p>
+          <div className="col-lg-5">
+            <div className="row gap-3">
+              <div className="col-lg-12">
+                <Image className="tab_img" src={laptop} alt="" />
+                <div>
+                  <h5>Customize Your System</h5>
+                  <p style={{ width: "450px" }}>
+                    Choose the POS software, hardware, and peripherals you need
+                    to maximize the productivity and profitability of your
+                    business.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "40px",
-
-                alignItems: "center",
-              }}
-            >
-              <Image className="tab_img" src={laptop} alt="" />
-              <div style={{ width: "400px", height: "115px" }}>
-                <h5>Customize Your System</h5>
-                <p>
-                  Choose the POS software, hardware, and peripherals you need to
-                  maximize the productivity and profitability of your business.
-                </p>
+              <div className="col-lg-12">
+                <Image className="tab_img" src={laptop} alt="" />
+                <div>
+                  <h5>Customize Your System</h5>
+                  <p style={{ width: "450px" }}>
+                    Choose the POS software, hardware, and peripherals you need
+                    to maximize the productivity and profitability of your
+                    business.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "40px",
-                alignItems: "center",
-              }}
-            >
-              <Image className="tab_img" src={laptop} alt="" />
-              <div style={{ width: "400px", height: "115px" }}>
-                <h5>Customize Your System</h5>
-                <p>
-                  Choose the POS software, hardware, and peripherals you need to
-                  maximize the productivity and profitability of your business.
-                </p>
+              <div className="col-lg-12">
+                <Image className="tab_img" src={laptop} alt="" />
+                <div>
+                  <h5>Customize Your System</h5>
+                  <p style={{ width: "450px" }}>
+                    Choose the POS software, hardware, and peripherals you need
+                    to maximize the productivity and profitability of your
+                    business.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div>
+          <div className="col-lg-5">
             <Image
-              style={{ width: "500px", height: "380px" }}
+              style={{ width: "650px", height: "380px" }}
               src={tab}
               alt=""
             />

@@ -20,8 +20,8 @@ function Header({ lightMode }) {
   }
 
   return (
-    <header className="crev-header">
-      <div className="container xxl">
+    <header className="crev-header" style={{marginTop:"-50px"}}>
+      <div className="container-xxl">
         <div className="row">
           <div className="col-lg-9">
             <div className="caption">

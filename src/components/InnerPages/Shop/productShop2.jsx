@@ -13,7 +13,7 @@ const ProductShop2 = () => {
   return (
     <div className="container">
       {/* Banner part start */}
-      <div className="productshop_banner row">
+      <div className="productshop_banner ">
         <div className="text-middle">
           <h1>“The Ultimate 3D Advertising</h1>
           <h1>Display Machine”</h1>
@@ -78,10 +78,12 @@ const ProductShop2 = () => {
 
       {/* Benefit start */}
       <div>
-        <h1 className="pt-50 pb-40">Benefits of 3D holographic Sign</h1>
+        <h1 className="pt-50 pb-40 text-center">
+          Benefits of 3D holographic Sign
+        </h1>
 
-        <div className="benefit_main row">
-          <div className="col-lg-4 col-md-12 col-sm-12">
+        <div className="benefit_main row justify-between gap-5 mx-auto">
+          <div className="col-lg-3 col-md-12 col-sm-12">
             <div className="benefit">
               <div>
                 <h5>Distinguish the Brand</h5>
@@ -113,10 +115,10 @@ const ProductShop2 = () => {
               <FontAwesomeIcon style={{ width: "50px" }} icon={faFingerprint} />
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="col-lg-3 col-md-12 col-sm-12">
             <Image src={product} alt="" />
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="col-lg-3 col-md-12 col-sm-12">
             <div className="benefit1">
               <FontAwesomeIcon style={{ width: "50px" }} icon={faFingerprint} />
 

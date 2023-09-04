@@ -7,7 +7,6 @@ import Image from "next/image";
 import profile from "../../../images/profile.jpg";
 import testimonial1 from "../../../images/testimonial1.jpg";
 import testimonial2 from "../../../public/dark/assets/imgs/svg-assets/quote.png";
-import Numbers from "./Numbers";
 
 const swiperOptions = {
   modules: [Navigation, Pagination],
@@ -37,7 +36,7 @@ function Testimonials({ lightMode }) {
         lightMode ? "light" : ""
       }`}
     >
-      <div className="container">
+      <div className="container" style={{ marginTop: "80px" }}>
         <div className="row">
           <div className="col-12">
             <div className="sec-lg-head mb-80">
