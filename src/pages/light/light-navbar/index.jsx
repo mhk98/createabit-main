@@ -107,7 +107,10 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                     <span className="word">Menu</span>
                   </span>
                 </div>
-                <div className="o-hidden ml-50 text-black">
+                <div
+                  className="o-hidden ml-50 rounded"
+                  style={{ border: "1px solid", padding: "8px" }}
+                >
                   <Link href="/dark/home-creative-agency/" className="link">
                     <span className="fill-text" data-text="Dark Mode">
                       Dark Mode
@@ -288,7 +291,10 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="o-hidden">
+                  <div
+                    className="o-hidden ml-50 rounded"
+                    style={{ border: "1px solid", padding: "8px" }}
+                  >
                     <Link href="/dark/home-creative-agency/" className="link">
                       <span className="fill-text" data-text="Dark Mode">
                         Dark Mode

@@ -103,7 +103,10 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <span className="word">Menu</span>
                   </span>
                 </div>
-                <div className="o-hidden ml-50">
+                <div
+                  className="o-hidden ml-50 rounded"
+                  style={{ border: "1px solid", padding: "8px" }}
+                >
                   <Link href="/light/home-creative-agency/" className="link">
                     <span className="fill-text" data-text="Classic Mode">
                       Classic Mode
