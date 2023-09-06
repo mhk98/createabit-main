@@ -52,7 +52,7 @@ function HomeCreativeAgency() {
             <ServicesTabs />
             <Testimonials />
             <HzScroll />
-            <CreativeBlog />
+            {/* <CreativeBlog /> */}
             {/* <WeAre /> */}
             <Wellness />
             <Blog />
