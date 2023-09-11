@@ -83,7 +83,7 @@ function Header({ lightMode }) {
                       className="vid"
                       onClick={openVideo}
                     >
-                      <span className="text sub-title px-2">Watch</span>
+                      <span className="px-2 text sub-title">Watch</span>
                       <span className="icon main-colorbg4">
                         <svg
                           className="default"

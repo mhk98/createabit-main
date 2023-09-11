@@ -6,7 +6,7 @@ import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
-import Header from "@/components/Architecture/Header";
+
 import Loader from "@/components/Common/Loader";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import Portfolio from "@/components/Freelancer/Portfolio";
@@ -14,6 +14,7 @@ import About from "@/components/HomeMain/About";
 import Blog from "@/components/HomeMain/Blog";
 import Clients from "@/components/HomeMain/Clients";
 
+import Header from "@/components/HomeMain/Header";
 import LightFooter from "@/components/HomeMain/LightFooter";
 import Marq from "@/components/HomeMain/Marq";
 import Services from "@/components/HomeMain/Services";
@@ -55,7 +56,7 @@ function HomeCreativeAgencyLight() {
             <HzScroll lightMode />
             <Blog />
           </main>
-          <LightFooter lightMode/>
+          <LightFooter lightMode />
         </div>
       </div>
     </>
