@@ -95,11 +95,11 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   </Link>
                 </div>
                 <div
-                  className="menu-icon cursor-pointer"
+                  className="cursor-pointer menu-icon"
                   style={{ color: "black" }}
                   onClick={toggleMenu}
                 >
-                  <span className="icon text-black">
+                  <span className="text-black icon">
                     <i style={{ color: "black" }}></i>
                     <i style={{ color: "black" }}></i>
                   </span>
@@ -108,11 +108,11 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   </span>
                 </div>
                 <div
-                  className="o-hidden ml-50 text-black"
+                  className="text-black o-hidden ml-50"
                   style={{ marginTop: "-10px" }}
                 >
                   <Link
-                    href="/dark/home-creative-agency/"
+                    href="/light/home-creative-agency/"
                     className="link butn butn-md butn-bord radius-30 classic"
                   >
                     <span className="fill-text" data-text="Dark Mode">
@@ -171,7 +171,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onClick={toggleSubMenu}
                 >
                   <div className="o-hidden">
-                    <div className="link cursor-pointer dmenu">
+                    <div className="cursor-pointer link dmenu">
                       <Link href="/light/page-product/" className="">
                         <span className="fill-text" data-text="Products">
                           Products
@@ -231,7 +231,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onClick={toggleSubMenu}
                 >
                   <div className="o-hidden">
-                    <div className="link cursor-pointer dmenu">
+                    <div className="cursor-pointer link dmenu">
                       <span className="fill-text" data-text="Blogs">
                         Blogs
                       </span>{" "}
@@ -295,7 +295,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div
-                    className="o-hidden ml-50 rounded"
+                    className="rounded o-hidden ml-50"
                     style={{
                       border: "1px solid",
                       padding: "8px",
@@ -319,7 +319,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
               <div className="item">
                 <h5 className="mb-15">Get In Touch</h5>
                 <p>541 Melville Geek, Palo Alto, CA 94301</p>
-                <p className="underline main-color mt-5 mb-5">
+                <p className="mt-5 mb-5 underline main-color">
                   <a href="#0">+1 840 841 25 69</a>
                 </p>
                 <p>

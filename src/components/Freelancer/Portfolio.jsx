@@ -5,24 +5,23 @@ import portfolio1 from "../../../images/portfolio1.jpg";
 import portfolio2 from "../../../images/portfolio2.jpg";
 import portfolio3 from "../../../images/portfolio3.jpg";
 import portfolio4 from "../../../images/portfolio4.jpg";
-import portfolio5 from "../../../images/portfolio5.jpg";
 
 function Portfolio() {
   return (
     <section className="portfolio clasic section-padding" data-scroll-index="3">
       <div className="container">
         <div className="sec-lg-head">
-          <div className="row gap-5">
+          <div className="gap-5 row">
             <div className="col-lg-7">
-              <div className="position-re" style={{ marginTop: "180px" }}>
-                <h6 className="dot-titl-non mb-10">Product</h6>
+              <div className="position-re" style={{ marginTop: "0px" }}>
+                <h6 className="mb-10 dot-titl-non">Product</h6>
                 <h2 className="fz-50" style={{ marginBottom: "60px" }}>
                   Feature Products
                 </h2>
               </div>
             </div>
             <div className="col-lg-5 d-flex align-items-center">
-              <div className="full-width d-flex justify-content-end justify-end">
+              <div className="justify-end full-width d-flex justify-content-end">
                 <div className="vew-all">
                   <Link href="/dark/portfolio-classic-grid">
                     View All Works
