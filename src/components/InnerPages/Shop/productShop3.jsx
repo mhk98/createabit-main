@@ -75,66 +75,56 @@ const ProductShop3 = () => {
           Everything You Need to Run a Successful Business
         </h2>
 
-        <div
-          className="row justify-between gap-5 mx-auto"
-          // style={{
-          //   display: "flex",
-          //   justifyContent: "space-between",
-          //   alignItems: "center",
-          //   gap: "70px",
-          // }}
-        >
-          <div className="col-lg-5">
-            <div className="row gap-3">
-              <div className="col-lg-12">
-                <Image className="tab_img" src={laptop} alt="" />
-                <div>
-                  <h5>Customize Your System</h5>
-                  <p style={{ width: "450px" }}>
-                    Choose the POS software, hardware, and peripherals you need
-                    to maximize the productivity and profitability of your
-                    business.
-                  </p>
-                </div>
+        <div className="product_section">
+          <div>
+            <div className="justify-between gap-3 d-flex">
+              <Image className="tab_img" src={laptop} alt="" style={{}} />
+              <div className="product_sub">
+                <h6>Customize Your System</h6>
+                <p>
+                  Choose the POS software, hardware, and peripherals you need to
+                  maximize the productivity and profitability of your business.
+                </p>
               </div>
-              <div className="col-lg-12">
-                <Image className="tab_img" src={laptop} alt="" />
-                <div>
-                  <h5>Customize Your System</h5>
-                  <p style={{ width: "450px" }}>
-                    Choose the POS software, hardware, and peripherals you need
-                    to maximize the productivity and profitability of your
-                    business.
-                  </p>
-                </div>
+            </div>
+            <div className="justify-between gap-3 d-flex">
+              <Image className="tab_img" src={laptop} alt="" />
+              <div className="product_sub">
+                <h6>Customize Your System</h6>
+                <p>
+                  Choose the POS software, hardware, and peripherals you need to
+                  maximize the productivity and profitability of your business.
+                </p>
               </div>
-              <div className="col-lg-12">
-                <Image className="tab_img" src={laptop} alt="" />
-                <div>
-                  <h5>Customize Your System</h5>
-                  <p style={{ width: "450px" }}>
-                    Choose the POS software, hardware, and peripherals you need
-                    to maximize the productivity and profitability of your
-                    business.
-                  </p>
-                </div>
+            </div>
+            <div className="justify-between gap-3 d-flex">
+              <Image className="tab_img" src={laptop} alt="" />
+              <div className="product_sub">
+                <h6>Customize Your System</h6>
+                <p>
+                  Choose the POS software, hardware, and peripherals you need to
+                  maximize the productivity and profitability of your business.
+                </p>
               </div>
             </div>
           </div>
-          <div className="col-lg-5">
+
+          <div>
             <Image
-              style={{ width: "650px", height: "380px" }}
+              style={{ width: "500px", height: "380px" }}
               src={tab}
               alt=""
             />
           </div>
         </div>
+      </div>
 
+      <div>
         <h6
           style={{
             textAlign: "center",
             marginTop: "20px",
-            paddingBottom: "50px",
+            marginBottom: "50px",
           }}
         >
           <a href="">
@@ -144,38 +134,53 @@ const ProductShop3 = () => {
             </span>
           </a>
         </h6>
-      </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: "200px",
-          paddingTop: "100px",
-          paddingBottom: "150px",
-          marginBottom: "50px",
-          backgroundColor: "#2468A3",
-          paddingLeft: "15px",
-        }}
-      >
-        <div>
-          <p>
-            “When I called you guys, I said, ‘Look, I want the easiest thing to
-            use, that takes up the least amount of space, that looks the best’
-            and you came up with a solution. … Literally plug it in, turn on the
-            juice, connect our internet, and we’re in business. … I think it’s
-            awesome.”
-          </p>
-          <p>
-            Terry Ickowicz -{" "}
-            <a style={{ paddingTop: "40px" }}>
-              Doughboy’s Bakery and Café - Los Angeles, CA
-            </a>
-          </p>
+        <div className="product_main">
+          <div className="product_item1">
+            <p>
+              “When I called you guys, I said, ‘Look, I want the easiest thing
+              to use, that takes up the least amount of space, that looks the
+              best’ and you came up with a solution. … Literally plug it in,
+              turn on the juice, connect our internet, and we’re in business. …
+              I think it’s awesome.”
+            </p>
+            <p>
+              Terry Ickowicz -{" "}
+              <a style={{ paddingTop: "40px" }}>
+                Doughboy’s Bakery and Café - Los Angeles, CA
+              </a>
+            </p>
+          </div>
+          <div className="product_item2">
+            <Image style={{ width: "250px" }} src={testimonial} alt="" />
+          </div>
         </div>
+
         <div>
-          <Image style={{ width: "250px" }} src={testimonial} alt="" />
+          <div className="product_main1">
+            <div className="" style={{ textAlign: "center" }}>
+              <p>
+                “When I called you guys, I said, ‘Look, I want the easiest thing
+                to use, that takes up the least amount of space, that looks the
+                best’ and you came up with a solution. … Literally plug it in,
+                turn on the juice, connect our internet, and we’re in business.
+                … I think it’s awesome.”
+              </p>
+              <p>
+                Terry Ickowicz -{" "}
+                <a href="#" style={{ paddingTop: "10px" }}>
+                  Doughboy’s Bakery and Café - Los Angeles, CA
+                </a>
+              </p>
+            </div>
+            <div className="product_item2">
+              <Image
+                style={{ maxWidth: "100%", height: "auto" }} // Make the image responsive
+                src={testimonial}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
 
