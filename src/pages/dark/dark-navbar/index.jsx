@@ -94,7 +94,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <img src="/dark/assets/imgs/logo-light.png" alt="" />
                   </Link>
                 </div>
-                <div className="menu-icon cursor-pointer" onClick={toggleMenu}>
+                <div className="cursor-pointer menu-icon" onClick={toggleMenu}>
                   <span className="icon">
                     <i></i>
                     <i></i>
@@ -149,7 +149,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onClick={toggleSubMenu}
                 >
                   <div className="o-hidden">
-                    <div className="link cursor-pointer dmenu">
+                    <div className="cursor-pointer link dmenu">
                       <Link href="/dark/page-product/" className="">
                         <span
                           className="fill-text"
@@ -196,7 +196,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onClick={toggleSubMenu}
                 >
                   <div className="o-hidden">
-                    <div className="link cursor-pointer dmenu">
+                    <div className="cursor-pointer link dmenu">
                       <Link href="/dark/page-services/" className="">
                         <span className="fill-text" data-text="Services">
                           Service
@@ -268,7 +268,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </Link>
                   </div>
                 </li>
-                {/* <li
+                <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -279,7 +279,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       </span>
                     </Link>
                   </div>
-                </li> */}
+                </li>
 
                 <li
                   onMouseEnter={handleMouseEnter}
@@ -287,7 +287,10 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 >
                   <div className="o-hidden">
                     <Link href="/light/home-creative-agency/" className="link">
-                      <span className="fill-text classic_btn" data-text="Classic Mode">
+                      <span
+                        className="fill-text classic_btn"
+                        data-text="Classic Mode"
+                      >
                         Classic Mode
                       </span>
                     </Link>
@@ -301,7 +304,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
               <div className="item">
                 <h5 className="mb-15">Get In Touch</h5>
                 <p>541 Melville Geek, Palo Alto, CA 94301</p>
-                <p className="underline main-color mt-5 mb-5">
+                <p className="mt-5 mb-5 underline main-color">
                   <a href="#0">+1 840 841 25 69</a>
                 </p>
                 <p>

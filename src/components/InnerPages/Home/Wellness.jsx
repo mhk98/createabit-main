@@ -1,18 +1,17 @@
 import Image from "next/image";
-import React from "react";
+import kisok from "../../../../images/kisok.png";
 import m1 from "../../../../images/m.png";
 import m2 from "../../../../images/m2.png";
 import m3 from "../../../../images/m3.png";
 import m4 from "../../../../images/m4.png";
 import m5 from "../../../../images/m5.png";
-import kisok from "../../../../images/kisok.png";
 
 function Wellness(props) {
   return (
     <div className="container">
       <div style={{ marginBottom: "100px" }}>
         <h2 className="mb-3">Our WELLNESS Products</h2>
-        <p className="mb-3" style={{ fontSize: "20px", marginBottom: "50px" }}>
+        <p className="mb-3" style={{ fontSize: "16px", marginBottom: "50px" }}>
           With more then 7 years experience in kiosks and interactive technology
           systems,CreateAbit now offers a wide rang of COVID WELLNESS products
           for businesses to make their enviroment safer for customers and
@@ -30,14 +29,14 @@ function Wellness(props) {
         </div>
       </div>
       <div
-        className="row justify-between gap-5"
+        className="justify-between gap-5 row"
         style={{ marginBottom: "100px" }}
       >
         <div className="col-lg-5">
           <h2 className="mb-3">What We Offer</h2>
           <p
             className="mb-3"
-            style={{ fontSize: "20px", marginBottom: "50px" }}
+            style={{ fontSize: "16px", marginBottom: "50px" }}
           >
             With more then 7 years experience in kiosks and interactive
             technology systems,CreateAbit now offers a wide rang of COVID
