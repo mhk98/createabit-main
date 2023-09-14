@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Blog/Header";
 import List from "@/components/InnerPages/Blog/List";
 import DarkNavbar from "../dark-navbar";
-import Footer from "@/components/HomeMain/Footer";
 
 function BlogList() {
   useEffect(() => {
@@ -24,7 +24,7 @@ function BlogList() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Blog List</title>
+        <title>Createabit - Blog List</title>
       </Head>
 
       <Loader />

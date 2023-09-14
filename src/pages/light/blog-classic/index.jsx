@@ -24,7 +24,7 @@ function BlogClassicLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Blog Classic</title>
+        <title>Createabit - Blog Classic</title>
       </Head>
 
       <Loader />

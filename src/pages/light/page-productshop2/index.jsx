@@ -5,9 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import Footer from "@/components/HomeMain/Footer";
 import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 import LightNavbar from "../light-navbar";
-import Footer from "@/components/HomeMain/Footer";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -24,7 +24,7 @@ function PageProductShop1() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

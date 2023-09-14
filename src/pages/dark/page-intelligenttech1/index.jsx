@@ -7,8 +7,8 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 import IntelligentTech1 from "@/components/InnerPages/Intelligent/IntelligentTech1";
 
-import DarkNavbar from "../dark-navbar";
 import Footer from "@/components/HomeMain/Footer";
+import DarkNavbar from "../dark-navbar";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
 function PageProductShop1() {
@@ -26,7 +26,7 @@ function PageProductShop1() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

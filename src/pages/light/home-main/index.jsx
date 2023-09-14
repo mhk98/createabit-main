@@ -65,7 +65,7 @@ function HomeMainLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Main</title>
+        <title>Createabit - Main</title>
       </Head>
 
       <Loader />

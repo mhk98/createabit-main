@@ -1,30 +1,28 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navigation from '@/components/Showcases/Navigation';
-import Menu from '@/components/Showcases/Menu';
-import Header from '@/components/InnerPages/ProjectDetails2/Header';
-import About from '@/components/InnerPages/ProjectDetails2/About';
-import Content from '@/components/InnerPages/ProjectDetails2/Content';
-import CallToAction from '@/components/InnerPages/ProjectDetails2/CallToAction';
-import Footer from '@/components/Startup/Footer';
-import LightFooter from '@/components/HomeMain/LightFooter';
-
+import Loader from "@/components/Common/Loader";
+import LightFooter from "@/components/HomeMain/LightFooter";
+import About from "@/components/InnerPages/ProjectDetails2/About";
+import CallToAction from "@/components/InnerPages/ProjectDetails2/CallToAction";
+import Content from "@/components/InnerPages/ProjectDetails2/Content";
+import Header from "@/components/InnerPages/ProjectDetails2/Header";
+import Menu from "@/components/Showcases/Menu";
+import Navigation from "@/components/Showcases/Navigation";
 
 function ProjectDetails2Light() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Project Details</title>
+        <title>Createabit - Project Details</title>
       </Head>
 
       <Loader />
@@ -38,9 +36,9 @@ function ProjectDetails2Light() {
       </main>
       <LightFooter lightMode />
     </>
-  )
+  );
 }
 
-ProjectDetails2Light.getLayout = page => <Layout lightMode>{page}</Layout>
+ProjectDetails2Light.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default ProjectDetails2Light;

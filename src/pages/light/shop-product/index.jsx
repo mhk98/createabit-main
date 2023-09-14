@@ -26,7 +26,7 @@ function ShopProductLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Shop Product</title>
+        <title>Createabit - Shop Product</title>
       </Head>
 
       <Loader />

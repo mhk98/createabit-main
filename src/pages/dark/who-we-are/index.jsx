@@ -6,9 +6,9 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 
-import DarkNavbar from "../dark-navbar";
 import Footer from "@/components/HomeMain/Footer";
 import WhoWeAre from "@/components/InnerPages/WhoWeAre/WhoWeAre";
+import DarkNavbar from "../dark-navbar";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
 function About() {
@@ -26,7 +26,7 @@ function About() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

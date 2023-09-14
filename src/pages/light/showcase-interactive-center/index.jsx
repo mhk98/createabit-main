@@ -1,25 +1,24 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/showcases';
+import Layout from "@/layouts/showcases";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navigation from '@/components/Showcases/Navigation';
-import Menu from '@/components/Showcases/Menu';
-import InteractiveCenter from '@/components/Showcases/InteractiveCenter';
-
+import Loader from "@/components/Common/Loader";
+import InteractiveCenter from "@/components/Showcases/InteractiveCenter";
+import Menu from "@/components/Showcases/Menu";
+import Navigation from "@/components/Showcases/Navigation";
 
 function ShowcaseInteractiveCenterLight() {
   useEffect(() => {
-    document.body.classList.add('main-bg', 'inter-center');
-    return () => document.body.classList.remove('main-bg', 'inter-center');
+    document.body.classList.add("main-bg", "inter-center");
+    return () => document.body.classList.remove("main-bg", "inter-center");
   }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Interactive</title>
+        <title>Createabit - Interactive</title>
       </Head>
 
       <Loader />
@@ -29,9 +28,11 @@ function ShowcaseInteractiveCenterLight() {
         <InteractiveCenter />
       </main>
     </>
-  )
+  );
 }
 
-ShowcaseInteractiveCenterLight.getLayout = page => <Layout lightMode>{page}</Layout>
+ShowcaseInteractiveCenterLight.getLayout = (page) => (
+  <Layout lightMode>{page}</Layout>
+);
 
 export default ShowcaseInteractiveCenterLight;

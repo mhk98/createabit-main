@@ -6,11 +6,9 @@ import Layout from "@/layouts/preview";
 //= Components
 
 import Overlay from "@/components/Preview/Overlay";
-import Footer from "@/components/Preview/Footer";
 // import DarkNavbar from "./dark/dark-navbar";
 // import HomeCreativeAgency from "./dark/home-creative-agency";
 import HomeCreativeAgency from "./dark/home-creative-agency";
-
 
 function LandingPreview() {
   useEffect(() => {
@@ -21,7 +19,7 @@ function LandingPreview() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Preview</title>
+        <title>Createabit - Preview</title>
       </Head>
       <Overlay />
       <main>

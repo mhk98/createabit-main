@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import CallToAction from "@/components/InnerPages/AboutUs/CallToAction";
+import Story from "@/components/InnerPages/AboutUs/Story";
 import Header from "@/components/InnerPages/Header";
 import Footer from "@/components/Startup/Footer";
-import Story from "@/components/InnerPages/AboutUs/Story";
-import Intro from "@/components/InnerPages/AboutUs/Intro";
-import Clients from "@/components/InnerPages/AboutUs/Clients";
-import CallToAction from "@/components/InnerPages/AboutUs/CallToAction";
 import DarkNavbar from "../dark-navbar";
 
 function PageAbout() {
@@ -28,7 +26,7 @@ function PageAbout() {
   return (
     <>
       <Head>
-        <title>Geekfolio - About</title>
+        <title>Createabit - About</title>
       </Head>
 
       <Loader />

@@ -8,8 +8,8 @@ import Loader from "@/components/Common/Loader";
 import Header from "@/components/InnerPages/Header";
 
 import Footer from "@/components/HomeMain/Footer";
-import DarkNavbar from "../dark-navbar";
 import Service6 from "@/components/InnerPages/ServiceDetails/Service6";
+import DarkNavbar from "../dark-navbar";
 
 function PageService6() {
   useEffect(() => {
@@ -25,14 +25,14 @@ function PageService6() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />
       <DarkNavbar></DarkNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
-        <Service6/>
+        <Service6 />
       </main>
       <Footer />
     </>

@@ -1,5 +1,4 @@
 import Loader from "@/components/Common/Loader";
-import Navbar from "@/components/Preview/Navbar";
 import { useGetServiceDetailsQuery } from "@/features/service/serviceDetailsApi";
 import Layout from "@/layouts/default";
 import Head from "next/head";
@@ -19,7 +18,7 @@ function PageServiceDetails() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
       <Loader />
       <DarkNavbar></DarkNavbar>

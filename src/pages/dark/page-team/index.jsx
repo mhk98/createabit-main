@@ -20,7 +20,7 @@ function PageTeam() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Our Team</title>
+        <title>Createabit - Our Team</title>
       </Head>
 
       <Loader />

@@ -10,10 +10,8 @@ import Layout from "@/layouts/default";
 
 import LightFooter from "@/components/HomeMain/LightFooter";
 
-import Service2 from "@/components/InnerPages/ServiceDetails/Service2";
-import LightNavbar from "../light-navbar";
-import Service5 from "@/components/InnerPages/ServiceDetails/Service5";
 import Service6 from "@/components/InnerPages/ServiceDetails/Service6";
+import LightNavbar from "../light-navbar";
 
 function PageService6() {
   useEffect(() => {
@@ -29,7 +27,7 @@ function PageService6() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

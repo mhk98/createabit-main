@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/showcases';
+import Layout from "@/layouts/showcases";
 //= Scripts
-import customScript from '@/common/marketing-agency-customjs';
-import showcaseScript from '@/common/showcase-script';
+import customScript from "@/common/marketing-agency-customjs";
+import showcaseScript from "@/common/showcase-script";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navigation from '@/components/Showcases/Navigation';
-import Menu from '@/components/Showcases/Menu';
-import FrameSlider from '@/components/Showcases/FrameSlider';
-
+import Loader from "@/components/Common/Loader";
+import FrameSlider from "@/components/Showcases/FrameSlider";
+import Menu from "@/components/Showcases/Menu";
+import Navigation from "@/components/Showcases/Navigation";
 
 function ShowcaseFrameSlider() {
   useEffect(() => {
@@ -22,7 +21,7 @@ function ShowcaseFrameSlider() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Frame Slider</title>
+        <title>Createabit - Frame Slider</title>
       </Head>
 
       <Loader />
@@ -32,9 +31,9 @@ function ShowcaseFrameSlider() {
         <FrameSlider />
       </main>
     </>
-  )
+  );
 }
 
-ShowcaseFrameSlider.getLayout = page => <Layout>{page}</Layout>
+ShowcaseFrameSlider.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default ShowcaseFrameSlider;

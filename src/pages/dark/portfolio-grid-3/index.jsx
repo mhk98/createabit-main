@@ -6,7 +6,6 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 import GridThreeCols from "@/components/Portfolio/ClassicGrid/3Col";
-import Header from "@/components/Portfolio/Header";
 
 function PortfolioClassicGrid3() {
   useEffect(() => {
@@ -22,7 +21,7 @@ function PortfolioClassicGrid3() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Portfolio Classic Grid 3 Col</title>
+        <title>Createabit - Portfolio Classic Grid 3 Col</title>
       </Head>
 
       <Loader />

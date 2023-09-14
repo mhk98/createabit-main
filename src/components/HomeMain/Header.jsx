@@ -61,7 +61,7 @@ function Header({ lightMode }) {
   }, [loadSwiper]);
 
   return (
-    <header className="crev-header" style={{ marginTop: "-50px" }}>
+    <header className="crev-header" style={{ marginTop: "-120px" }}>
       <div className="container-xxl">
         <div className="row">
           <div className="col-lg-9">

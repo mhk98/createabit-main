@@ -1,27 +1,25 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Header from '@/components/InnerPages/Contact/Header';
-import Form from '@/components/InnerPages/Contact/Form';
-import LightNavbar from '../light-navbar';
-import Footer from '@/components/HomeMain/Footer';
-import LightFooter from '@/components/HomeMain/LightFooter';
-
+import Loader from "@/components/Common/Loader";
+import LightFooter from "@/components/HomeMain/LightFooter";
+import Form from "@/components/InnerPages/Contact/Form";
+import Header from "@/components/InnerPages/Contact/Header";
+import LightNavbar from "../light-navbar";
 
 function PageContactLight() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Contact Us</title>
+        <title>Createabit - Contact Us</title>
       </Head>
 
       <Loader />
@@ -32,9 +30,9 @@ function PageContactLight() {
       </main>
       <LightFooter lightMode />
     </>
-  )
+  );
 }
 
-PageContactLight.getLayout = page => <Layout lightMode>{page}</Layout>
+PageContactLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default PageContactLight;

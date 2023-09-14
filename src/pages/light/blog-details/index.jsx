@@ -18,7 +18,7 @@ function BlogDetailsLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Blog Details</title>
+        <title>Createabit - Blog Details</title>
       </Head>
 
       <Loader />

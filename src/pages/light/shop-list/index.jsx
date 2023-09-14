@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/Shop/Header";
 import List from "@/components/Shop/List";
 import LightNavbar from "../light-navbar";
-import Footer from "@/components/HomeMain/Footer";
 
 function ShopListLight() {
   useEffect(() => {
@@ -32,7 +32,7 @@ function ShopListLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Shop List</title>
+        <title>Createabit - Shop List</title>
       </Head>
 
       <Loader />

@@ -21,7 +21,7 @@ function PortfolioClassicGrid2Light() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Portfolio Classic Grid 2 Col</title>
+        <title>Createabit - Portfolio Classic Grid 2 Col</title>
       </Head>
 
       <Loader />

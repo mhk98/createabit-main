@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import DarkNavbar from "../dark-navbar";
-import IntelligentTech4 from "@/components/InnerPages/Intelligent/IntelligentTech4";
 import Footer from "@/components/HomeMain/Footer";
-
+import IntelligentTech4 from "@/components/InnerPages/Intelligent/IntelligentTech4";
+import DarkNavbar from "../dark-navbar";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -25,7 +24,7 @@ function PageProductShop1() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

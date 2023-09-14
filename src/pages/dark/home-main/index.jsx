@@ -13,10 +13,10 @@ import Marq from "@/components/HomeMain/Marq";
 import Services from "@/components/HomeMain/Services";
 import ServicesTabs from "@/components/HomeMain/ServicesTabs";
 import Testimonials from "@/components/HomeMain/Testimonials";
+import Header from "@/components/OnePage/Header";
 import DarkNavbar from "../dark-navbar";
 import PortfolioClassicGrid2 from "../portfolio-grid-2";
 import PortfolioClassicGrid3 from "../portfolio-grid-3";
-import Header from "@/components/OnePage/Header";
 
 function HomeMain() {
   useEffect(() => {
@@ -96,7 +96,7 @@ function HomeMain() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Main</title>
+        <title>Createabit - Main</title>
       </Head>
 
       <Loader />

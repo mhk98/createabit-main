@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import DarkNavbar from "../dark-navbar";
 import Footer from "@/components/HomeMain/Footer";
+import DarkNavbar from "../dark-navbar";
 import ShowcaseVerticalParallax from "../showcase-parallax";
 
 function GroceryDetails() {
@@ -24,7 +24,7 @@ function GroceryDetails() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Grocery</title>
+        <title>Createabit - Grocery</title>
       </Head>
 
       <Loader />

@@ -1,32 +1,30 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/InnerPages/Blog/Header';
-import ImageOutFrame from '@/components/InnerPages/Blog/ImageOutFrame';
-import Footer from '@/components/Startup/Footer';
-import LightFooter from '@/components/HomeMain/LightFooter';
-
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import LightFooter from "@/components/HomeMain/LightFooter";
+import Header from "@/components/InnerPages/Blog/Header";
+import ImageOutFrame from "@/components/InnerPages/Blog/ImageOutFrame";
 
 function BlogImageOutFrameLight() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   const metadata = {
     subTitle: "OUR BLOG",
-    title: "Latest News."
-  }
+    title: "Latest News.",
+  };
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Image Out Frame</title>
+        <title>Createabit - Image Out Frame</title>
       </Head>
 
       <Loader />
@@ -35,11 +33,11 @@ function BlogImageOutFrameLight() {
         <Header data={metadata} />
         <ImageOutFrame />
       </main>
-      <LightFooter/>
+      <LightFooter />
     </>
-  )
+  );
 }
 
-BlogImageOutFrameLight.getLayout = page => <Layout lightMode>{page}</Layout>
+BlogImageOutFrameLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default BlogImageOutFrameLight;

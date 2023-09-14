@@ -1,30 +1,30 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Footer from '@/components/Startup/Footer';
-import Header from '@/components/Portfolio/Header';
-import MasonryTwoCols from '@/components/Portfolio/Masonry/2Col';
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import Header from "@/components/Portfolio/Header";
+import MasonryTwoCols from "@/components/Portfolio/Masonry/2Col";
+import Footer from "@/components/Startup/Footer";
 
 function PortfolioMasonry2() {
   useEffect(() => {
-    document.body.classList.add('main-bg');
-    return () => document.body.classList.remove('main-bg');
+    document.body.classList.add("main-bg");
+    return () => document.body.classList.remove("main-bg");
   }, []);
 
   const metadata = {
     subTitle: "Our Works",
-    title: "Masonry 2."
-  }
+    title: "Masonry 2.",
+  };
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Portfolio Masonry 2 Col</title>
+        <title>Createabit - Portfolio Masonry 2 Col</title>
       </Head>
 
       <Loader />
@@ -35,9 +35,9 @@ function PortfolioMasonry2() {
       </main>
       <Footer subBg />
     </>
-  )
+  );
 }
 
-PortfolioMasonry2.getLayout = page => <Layout>{page}</Layout>
+PortfolioMasonry2.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default PortfolioMasonry2;

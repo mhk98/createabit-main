@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Packages
 import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
+import ServicesTab from "@/components/DigitalAgency/ServicesTab";
+import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Header";
 import Portfolio from "@/components/InnerPages/Services/Portfolio";
-import ServicesTab from "@/components/DigitalAgency/ServicesTab";
 import CallToAction from "@/components/Startup/CallToAction";
 import DarkNavbar from "../dark-navbar";
-import Footer from "@/components/HomeMain/Footer";
 
 function PageServices() {
   useEffect(() => {
@@ -27,7 +27,7 @@ function PageServices() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

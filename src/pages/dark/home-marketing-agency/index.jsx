@@ -1,39 +1,39 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import Head from "next/head";
+import { ParallaxProvider } from "react-scroll-parallax";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Scripts
-import customScript from '@/common/marketing-agency-customjs';
+import customScript from "@/common/marketing-agency-customjs";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/MarketingAgency/Header';
-import Marq from '@/components/MarketingAgency/Marq';
-import About from '@/components/MarketingAgency/About';
-import Clients from '@/components/MarketingAgency/Clients';
-import SideImage from '@/components/MarketingAgency/SideImage';
-import Services from '@/components/MarketingAgency/Services';
-import Portfolio from '@/components/MarketingAgency/Portfolio';
-import Intro from '@/components/MarketingAgency/Intro';
-import Testimonials from '@/components/MarketingAgency/Testimonials';
-import Blog from '@/components/MarketingAgency/Blog';
-import CallToAction from '@/components/MarketingAgency/CallToAction';
-import Marq2 from '@/components/MarketingAgency/Marq2';
-import Footer from '@/components/MarketingAgency/Footer';
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import About from "@/components/MarketingAgency/About";
+import Blog from "@/components/MarketingAgency/Blog";
+import CallToAction from "@/components/MarketingAgency/CallToAction";
+import Clients from "@/components/MarketingAgency/Clients";
+import Footer from "@/components/MarketingAgency/Footer";
+import Header from "@/components/MarketingAgency/Header";
+import Intro from "@/components/MarketingAgency/Intro";
+import Marq from "@/components/MarketingAgency/Marq";
+import Marq2 from "@/components/MarketingAgency/Marq2";
+import Portfolio from "@/components/MarketingAgency/Portfolio";
+import Services from "@/components/MarketingAgency/Services";
+import SideImage from "@/components/MarketingAgency/SideImage";
+import Testimonials from "@/components/MarketingAgency/Testimonials";
 
 function HomeMarketingAgency() {
   useEffect(() => {
-    document.body.classList.add('digital-marketing', 'sub-bg');
+    document.body.classList.add("digital-marketing", "sub-bg");
     customScript();
-    return () => document.body.classList.remove('digital-marketing', 'sub-bg');
+    return () => document.body.classList.remove("digital-marketing", "sub-bg");
   }, []);
 
   return (
     <ParallaxProvider>
       <Head>
-        <title>Geekfolio - Marketing Agency</title>
+        <title>Createabit - Marketing Agency</title>
       </Head>
 
       <Loader />
@@ -54,9 +54,9 @@ function HomeMarketingAgency() {
       </main>
       <Footer />
     </ParallaxProvider>
-  )
+  );
 }
 
-HomeMarketingAgency.getLayout = page => <Layout>{page}</Layout>
+HomeMarketingAgency.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default HomeMarketingAgency;

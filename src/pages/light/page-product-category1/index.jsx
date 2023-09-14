@@ -7,9 +7,9 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 import Product from "@/components/InnerPages/Products/product";
 
+import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Header";
 import LightNavbar from "../light-navbar";
-import Footer from "@/components/HomeMain/Footer";
 
 function PageProductsCategory1() {
   useEffect(() => {
@@ -26,7 +26,7 @@ function PageProductsCategory1() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />
@@ -34,12 +34,12 @@ function PageProductsCategory1() {
       <LightNavbar></LightNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
-        <Product lightMode/>
+        <Product lightMode />
         {/* <Services />
         <ServicesTab /> */}
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
-        <Footer lightMode/>
+        <Footer lightMode />
       </main>
     </>
   );

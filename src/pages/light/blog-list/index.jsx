@@ -24,7 +24,7 @@ function BlogListLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Blog List</title>
+        <title>Createabit - Blog List</title>
       </Head>
 
       <Loader />

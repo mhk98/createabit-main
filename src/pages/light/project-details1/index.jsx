@@ -20,7 +20,7 @@ function ProjectDetailsLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Project Details</title>
+        <title>Createabit - Project Details</title>
       </Head>
 
       <Loader />

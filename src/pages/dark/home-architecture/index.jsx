@@ -1,33 +1,33 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/Architecture/Header';
-import BgPattern from '@/components/Architecture/BgPattern';
-import Intro from '@/components/Architecture/Intro';
-import Clients from '@/components/Architecture/Clients';
-import Services from '@/components/Architecture/Services';
-import Portfolio from '@/components/Architecture/Portfolio';
-import About from '@/components/Architecture/About';
-import SectionImage from '@/components/Architecture/SectionImage';
-import Testimonials from '@/components/Architecture/Testimonials';
-import Blog from '@/components/Architecture/Blog';
-import Footer from '@/components/Architecture/Footer';
+import About from "@/components/Architecture/About";
+import BgPattern from "@/components/Architecture/BgPattern";
+import Blog from "@/components/Architecture/Blog";
+import Clients from "@/components/Architecture/Clients";
+import Footer from "@/components/Architecture/Footer";
+import Header from "@/components/Architecture/Header";
+import Intro from "@/components/Architecture/Intro";
+import Portfolio from "@/components/Architecture/Portfolio";
+import SectionImage from "@/components/Architecture/SectionImage";
+import Services from "@/components/Architecture/Services";
+import Testimonials from "@/components/Architecture/Testimonials";
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
 
 function HomeArchitecture() {
   useEffect(() => {
-    document.body.classList.add('home-arch', 'main-bg');
-    return () => document.body.classList.remove('home-arch', 'main-bg');
+    document.body.classList.add("home-arch", "main-bg");
+    return () => document.body.classList.remove("home-arch", "main-bg");
   }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Architecture</title>
+        <title>Createabit - Architecture</title>
       </Head>
 
       <Loader />
@@ -48,9 +48,9 @@ function HomeArchitecture() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-HomeArchitecture.getLayout = page => <Layout>{page}</Layout>
+HomeArchitecture.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default HomeArchitecture;

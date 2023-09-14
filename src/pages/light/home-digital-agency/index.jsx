@@ -29,7 +29,7 @@ function HomeDigitalAgencyLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Digital Agency</title>
+        <title>Createabit - Digital Agency</title>
       </Head>
 
       <Loader />

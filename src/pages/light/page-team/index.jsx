@@ -6,13 +6,12 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 
-import Footer from "@/components/HomeMain/Footer";
+import LightFooter from "@/components/HomeMain/LightFooter";
 import Header from "@/components/InnerPages/Team/Header";
 import Team from "@/components/InnerPages/Team/Team";
 import Testimonials from "@/components/InnerPages/Team/Testimonials";
 import CallToAction from "@/components/Startup/CallToAction";
 import LightNavbar from "../light-navbar";
-import LightFooter from "@/components/HomeMain/LightFooter";
 
 function PageTeamLight() {
   useEffect(() => {
@@ -23,7 +22,7 @@ function PageTeamLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Our Team</title>
+        <title>Createabit - Our Team</title>
       </Head>
 
       <Loader />

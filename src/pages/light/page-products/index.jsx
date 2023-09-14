@@ -25,7 +25,7 @@ function PageProducts() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />
@@ -39,7 +39,7 @@ function PageProducts() {
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
       </main>
-      <Footer lightMode/>
+      <Footer lightMode />
     </>
   );
 }

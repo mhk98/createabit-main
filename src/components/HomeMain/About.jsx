@@ -8,10 +8,20 @@ function About({ lightMode }) {
       style={{ marginTop: "100px" }}
     >
       <div className="container pt-40">
-        <div className="row mb-80">
+        <h6
+          className="text-center dot-titl-non wow fadeIn"
+          style={{
+            border: "1px solid",
+            width: "150px",
+            borderRadius: "50px",
+            marginBottom: "20px",
+          }}
+        >
+          Who We Are
+        </h6>
+        <div className="align-middle row mb-80">
           <div className="col-lg-5">
             <div className="sec-lg-head md-mb30">
-              <h6 className="dot-titl-non mb-15 wow fadeIn">Who We Are</h6>
               <h2 className="d-rotate wow">
                 <span className="rotate-text">
                   CreateAbit designs is a renowned name in the digital world.
@@ -19,7 +29,10 @@ function About({ lightMode }) {
               </h2>
             </div>
           </div>
-          <div className="col-lg-5 offset-lg-2 valign">
+          <div
+            className="col-lg-5 offset-lg-2 valign"
+            style={{ marginTop: "15px" }}
+          >
             <div className="text">
               <p className="d-slideup wow">
                 <span className="sideup-text">

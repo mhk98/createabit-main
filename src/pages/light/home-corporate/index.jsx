@@ -1,35 +1,34 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import LinesTwo from '@/components/Common/LinesTwo';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/Corporate/Header';
-import Services from '@/components/Corporate/Services';
-import About from '@/components/Corporate/About';
-import Marq from '@/components/Corporate/Marq';
-import Portfolio from '@/components/Corporate/Portfolio';
-import Numbers from '@/components/Corporate/Numbers';
-import Testimonials from '@/components/Corporate/Testimonials';
-import Block from '@/components/Corporate/Block';
-import Pricing from '@/components/Corporate/Pricing';
-import Blog from '@/components/Corporate/Blog';
-import Footer from '@/components/Corporate/Footer';
-import LightFooter from '@/components/HomeMain/LightFooter';
+import LinesTwo from "@/components/Common/LinesTwo";
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import About from "@/components/Corporate/About";
+import Block from "@/components/Corporate/Block";
+import Blog from "@/components/Corporate/Blog";
+import Header from "@/components/Corporate/Header";
+import Marq from "@/components/Corporate/Marq";
+import Numbers from "@/components/Corporate/Numbers";
+import Portfolio from "@/components/Corporate/Portfolio";
+import Pricing from "@/components/Corporate/Pricing";
+import Services from "@/components/Corporate/Services";
+import Testimonials from "@/components/Corporate/Testimonials";
+import LightFooter from "@/components/HomeMain/LightFooter";
 
 function HomeCorporateLight() {
   useEffect(() => {
-    document.body.classList.add('home-corp', 'main-bg');
-    return () => document.body.classList.remove('home-corp', 'main-bg');
+    document.body.classList.add("home-corp", "main-bg");
+    return () => document.body.classList.remove("home-corp", "main-bg");
   }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Corporate</title>
+        <title>Createabit - Corporate</title>
       </Head>
 
       <Loader />
@@ -49,9 +48,9 @@ function HomeCorporateLight() {
       </main>
       <LightFooter lightMode />
     </>
-  )
+  );
 }
 
-HomeCorporateLight.getLayout = page => <Layout lightMode>{page}</Layout>
+HomeCorporateLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default HomeCorporateLight;

@@ -5,10 +5,10 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import DarkNavbar from "../dark-navbar";
-import Product2 from "@/components/InnerPages/Products/product2";
-import Header from "@/components/InnerPages/Header";
 import Footer from "@/components/HomeMain/Footer";
+import Header from "@/components/InnerPages/Header";
+import Product2 from "@/components/InnerPages/Products/product2";
+import DarkNavbar from "../dark-navbar";
 
 function PageProductsCategory3() {
   useEffect(() => {
@@ -25,7 +25,7 @@ function PageProductsCategory3() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Services</title>
+        <title>Createabit - Services</title>
       </Head>
 
       <Loader />

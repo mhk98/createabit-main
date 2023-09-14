@@ -1,35 +1,35 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/default';
+import Layout from "@/layouts/default";
 //= Components
-import Loader from '@/components/Common/Loader';
-import LinesTwo from '@/components/Common/LinesTwo';
-import Navbar from '@/components/Common/MainNavbar';
-import Header from '@/components/OnePage/Header';
-import About from '@/components/OnePage/About';
-import Marq from '@/components/OnePage/Marq';
-import Services from '@/components/OnePage/Services';
-import Portfolio from '@/components/OnePage/Portfolio';
-import Intro from '@/components/OnePage/Intro';
-import Testimonials from '@/components/OnePage/Testimonials';
-import ImageSection from '@/components/OnePage/Image';
-import Team from '@/components/OnePage/Team';
-import Blog from '@/components/OnePage/Blog';
-import Contact from '@/components/OnePage/Contact';
-import Footer from '@/components/OnePage/Footer';
+import LinesTwo from "@/components/Common/LinesTwo";
+import Loader from "@/components/Common/Loader";
+import Navbar from "@/components/Common/MainNavbar";
+import About from "@/components/OnePage/About";
+import Blog from "@/components/OnePage/Blog";
+import Contact from "@/components/OnePage/Contact";
+import Footer from "@/components/OnePage/Footer";
+import Header from "@/components/OnePage/Header";
+import ImageSection from "@/components/OnePage/Image";
+import Intro from "@/components/OnePage/Intro";
+import Marq from "@/components/OnePage/Marq";
+import Portfolio from "@/components/OnePage/Portfolio";
+import Services from "@/components/OnePage/Services";
+import Team from "@/components/OnePage/Team";
+import Testimonials from "@/components/OnePage/Testimonials";
 
 function HomeOnePageLight() {
   useEffect(() => {
-    document.body.classList.add('sub-bg');
-    return () => document.body.classList.remove('sub-bg');
+    document.body.classList.add("sub-bg");
+    return () => document.body.classList.remove("sub-bg");
   }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - One Page</title>
+        <title>Createabit - One Page</title>
       </Head>
 
       <Loader />
@@ -50,9 +50,9 @@ function HomeOnePageLight() {
       </main>
       <Footer lightMode />
     </>
-  )
+  );
 }
 
-HomeOnePageLight.getLayout = page => <Layout lightMode>{page}</Layout>
+HomeOnePageLight.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default HomeOnePageLight;

@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Packages
-import Head from 'next/head';
+import Head from "next/head";
 //= Layout
-import Layout from '@/layouts/showcases';
+import Layout from "@/layouts/showcases";
 //= Scripts
-import customScript from '@/common/marketing-agency-customjs';
-import showcaseScript from '@/common/showcase-script';
+import customScript from "@/common/marketing-agency-customjs";
+import showcaseScript from "@/common/showcase-script";
 //= Components
-import Loader from '@/components/Common/Loader';
-import Navigation from '@/components/Showcases/Navigation';
-import Menu from '@/components/Showcases/Menu';
-import CircleSlider from '@/components/Showcases/CircleSlider';
-
+import Loader from "@/components/Common/Loader";
+import CircleSlider from "@/components/Showcases/CircleSlider";
+import Menu from "@/components/Showcases/Menu";
+import Navigation from "@/components/Showcases/Navigation";
 
 function ShowcaseCircleSliderLight() {
   useEffect(() => {
@@ -22,7 +21,7 @@ function ShowcaseCircleSliderLight() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Circle Slider</title>
+        <title>Createabit - Circle Slider</title>
       </Head>
 
       <Loader />
@@ -32,9 +31,11 @@ function ShowcaseCircleSliderLight() {
         <CircleSlider lightMode />
       </main>
     </>
-  )
+  );
 }
 
-ShowcaseCircleSliderLight.getLayout = page => <Layout lightMode>{page}</Layout>
+ShowcaseCircleSliderLight.getLayout = (page) => (
+  <Layout lightMode>{page}</Layout>
+);
 
 export default ShowcaseCircleSliderLight;

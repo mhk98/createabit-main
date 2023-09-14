@@ -1,13 +1,12 @@
-import React from "react";
 //= Packages
-import Script from "next/script";
 import Head from "next/head";
+import Script from "next/script";
 //= Common Styles
-import "@/styles/modal-video.css";
-import "swiper/css/bundle";
-import "@/styles/globals.css";
-import { Provider } from "react-redux";
 import store from "@/app/store";
+import "@/styles/globals.css";
+import "@/styles/modal-video.css";
+import { Provider } from "react-redux";
+import "swiper/css/bundle";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -15,7 +14,7 @@ function App({ Component, pageProps }) {
   return getLayout(
     <>
       <Head>
-        <title>Geekfolio</title>
+        <title>Createabit</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
