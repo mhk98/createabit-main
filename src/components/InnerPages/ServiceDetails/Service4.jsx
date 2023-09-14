@@ -1,14 +1,11 @@
-import Image from "next/image";
-import service1 from "../../../../images/DIGITAL-MARKETING-01.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuildingUser,
   faLightbulb,
-  faSquarePersonConfined,
-  faUserAltSlash,
   faUserGraduate,
-  faUserSecret,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import service1 from "../../../../images/DIGITAL-MARKETING-01.png";
 import service2 from "../../../../images/Marketing-STRATEGY-02-01.png";
 
 function Service4() {
@@ -78,17 +75,14 @@ function Service4() {
         </p>
       </div>
 
-      <div
-        className="serviceDetails row mt-100"
-        style={{ display: "flex", justifyContent: "space-between" }}
-      >
-        <div className="col-lg-6 col-md-6 col-sm-12">
-          <Image src={service1} alt="" style={{ width: "500px" }} />
+      <div className="service_feature mt-100">
+        <div>
+          <Image className="service_image" src={service1} alt="" />
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12" style={{ width: "500px" }}>
+        <div>
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
-            <small style={{ fontSize: "15px" }}>
+            <small style={{ fontSize: "16px" }}>
               Our Social Media Marketing Expert Team will form strategies that
               fit right to your business, and here’s what you can expect from
               it.
@@ -122,16 +116,55 @@ function Service4() {
           </ul>
         </div>
       </div>
-
-      <div className="row" style={{ marginLeft: "307px" }}>
-        <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div
-          className="col-lg-6 col-md-6 col-sm-12 mt-60"
-          style={{ width: "500px" }}
-        >
+      <div className="service_feature mt-100">
+        <div>
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
-            <small style={{ fontSize: "15px" }}>
+            <small style={{ fontSize: "16px" }}>
+              Our Social Media Marketing Expert Team will form strategies that
+              fit right to your business, and here’s what you can expect from
+              it.
+            </small>
+          </div>
+
+          <ul style={{ listStyle: "outside", lineHeight: "35px" }}>
+            <li>1. Identify your TARGET AUDIENCE.</li>
+            <li>2. Choose the Social Media Platforms based on your TG</li>
+            <li>
+              3. Construct the Social Media Pages to contain QUALITY
+              INFORMATION, SHARING KNOWLEDGE, AND ENGAGING PLATFORMS
+            </li>
+            <li>
+              4. Follow other ocial Media Users, Groups & Pages to get more
+              followers
+            </li>
+            <li>
+              5. BOOST ‘PAGE LIKES’ and selected ‘POST PROMOTION’
+              simultaneously, on a regular basis.PAGE LIKES
+            </li>
+            <li>6. Maintain a RIGHTLY BALANCED CONTENT MIX.</li>
+            <li>
+              7. Post Interesting and Trending News by posting Interesting &
+              Trending News.
+            </li>
+            <li>
+              8. BUILD THE REPUTATION – through the digital media, WHILE
+              CREATING THE AWARENESS, ATTACHMENT & PULL.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <Image className="service_image" src={service1} alt="" />
+        </div>
+      </div>
+      <div className="service_feature mt-100">
+        <div>
+          <Image className="service_image" src={service1} alt="" />
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12 mt-60">
+          <div className="mb-60">
+            <h5>Social Media Strategy</h5>
+            <small style={{ fontSize: "16px" }}>
               Our Social Media Marketing Expert Team will form strategies that
               fit right to your business, and here’s what you can expect from
               it.
@@ -165,15 +198,11 @@ function Service4() {
           </ul>
         </div>
       </div>
-      <div className="row" style={{ marginLeft: "307px" }}>
-        <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div
-          className="col-lg-6 col-md-6 col-sm-12 mt-60"
-          style={{ width: "500px" }}
-        >
+      <div className="service_feature mt-100">
+        <div>
           <div className="mb-60">
             <h5>Social Media Strategy</h5>
-            <small style={{ fontSize: "15px" }}>
+            <small style={{ fontSize: "16px" }}>
               Our Social Media Marketing Expert Team will form strategies that
               fit right to your business, and here’s what you can expect from
               it.
@@ -206,53 +235,14 @@ function Service4() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="row" style={{ marginLeft: "307px" }}>
-        <div className="col-lg-6 col-md-6 col-sm-12"></div>
-        <div
-          className="col-lg-6 col-md-6 col-sm-12 mt-60"
-          style={{ width: "500px" }}
-        >
-          <div className="mb-60">
-            <h5>Social Media Strategy</h5>
-            <small style={{ fontSize: "15px" }}>
-              Our Social Media Marketing Expert Team will form strategies that
-              fit right to your business, and here’s what you can expect from
-              it.
-            </small>
-          </div>
-
-          <ul style={{ listStyle: "outside", lineHeight: "35px" }}>
-            <li>1. Identify your TARGET AUDIENCE.</li>
-            <li>2. Choose the Social Media Platforms based on your TG</li>
-            <li>
-              3. Construct the Social Media Pages to contain QUALITY
-              INFORMATION, SHARING KNOWLEDGE, AND ENGAGING PLATFORMS
-            </li>
-            <li>
-              4. Follow other ocial Media Users, Groups & Pages to get more
-              followers
-            </li>
-            <li>
-              5. BOOST ‘PAGE LIKES’ and selected ‘POST PROMOTION’
-              simultaneously, on a regular basis.PAGE LIKES
-            </li>
-            <li>6. Maintain a RIGHTLY BALANCED CONTENT MIX.</li>
-            <li>
-              7. Post Interesting and Trending News by posting Interesting &
-              Trending News.
-            </li>
-            <li>
-              8. BUILD THE REPUTATION – through the digital media, WHILE
-              CREATING THE AWARENESS, ATTACHMENT & PULL.
-            </li>
-          </ul>
+        <div>
+          <Image className="service_image" src={service1} alt="" />
         </div>
       </div>
 
       <div>
         <h3 className="mb-40 text-center mt-80">Benefits of our SMM Service</h3>
-        <div className="row mb-40">
+        <div className="mb-40 row">
           <div className="col-lg-3 service_smm">
             <FontAwesomeIcon
               icon={faLightbulb}
@@ -346,7 +336,7 @@ function Service4() {
             </p>
           </div>
         </div>
-        <div className="row mb-40">
+        <div className="mb-40 row">
           <div className="col-lg-3 service_smm">
             <FontAwesomeIcon
               icon={faLightbulb}
@@ -537,7 +527,9 @@ function Service4() {
       </div>
 
       <div className="mt-100 mb-100">
-        <h3>Features that you’ll love about our SMM Service</h3>
+        <h3 className="text-center">
+          Features that you’ll love about our SMM Service
+        </h3>
         <div className="row mt-100">
           <div className="col-lg-4">
             <Image src={service2} alt="" />

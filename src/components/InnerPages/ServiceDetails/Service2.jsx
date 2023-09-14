@@ -7,11 +7,8 @@ import web_banner from "../../../../images/Custom-web-app-and-developments-01.pn
 function Service2() {
   return (
     <div>
-      <div className="service container">
-        <div
-          className="serviceDetails"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
+      <div className="container service">
+        <div className="service_feature">
           <div>
             <Image src={web_banner} alt="" style={{ width: "500px" }} />
           </div>

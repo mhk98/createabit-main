@@ -17,14 +17,11 @@ function Service3() {
   return (
     <div>
       <div className="container service">
-        <div
-          className="serviceDetails"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
+        <div className="service_feature">
           <div>
-            <Image src={service1} alt="" style={{ width: "500px" }} />
+            <Image className="service_image" src={service1} alt="" />
           </div>
-          <div style={{ width: "500px" }}>
+          <div>
             <h4>Website Design & Development</h4>
             <h5>Professional & Creative Web Design Solution</h5>
             <p className="mt-8">
@@ -103,8 +100,8 @@ function Service3() {
             List Of Our App Development Services
           </h3>
           <div>
-            <div className="row mt-100">
-              <div class=" col-lg-5 col-md-12 col-sm-12 ml-90">
+            <div className="align-middle  mt-100 service_feature">
+              <div class="">
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
@@ -176,7 +173,7 @@ function Service3() {
                   <h5 className="ml-10">Cross-platform Development</h5>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="">
                 <Image src={service2} alt=""></Image>
               </div>
             </div>
@@ -186,13 +183,13 @@ function Service3() {
         <div>
           <div>
             <div
-              className="row mt-100 "
-              style={{ display: "flex", alignItems: "center", padding: "10px" }}
+              className="service_feature mt-100 "
+              style={{ alignItems: "center", padding: "10px" }}
             >
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="">
                 <Image src={service3} alt=""></Image>
               </div>
-              <div class=" col-lg-5 col-md-12 col-sm-12 ml-90">
+              <div class=" ">
                 <div
                   style={{
                     display: "flex",

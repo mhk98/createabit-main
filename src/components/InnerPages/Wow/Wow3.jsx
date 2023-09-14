@@ -1,20 +1,16 @@
 import Image from "next/image";
-import interactive_bar from "../../../../images/interactive_bar.jpg";
 import bar2 from "../../../../images/bar2.jpg";
 import bar3 from "../../../../images/bar3.jpg";
 import bar4 from "../../../../images/bar4.jpg";
+import interactive_bar from "../../../../images/interactive_bar.jpg";
 
-import wow7 from "../../../../images/wow7.jpg";
 export default function Wow3() {
   return (
     <div className="container">
       <div>
         <div>
-          <div
-            className="d-flex justify-content-between "
-            style={{ margin: "120px 0px" }}
-          >
-            <Image style={{ width: "600px" }} src={interactive_bar} alt="" />
+          <div className="wow1_content " style={{ margin: "120px 0px" }}>
+            <Image className="wow1_image" src={interactive_bar} alt="" />
             <p style={{ padding: "30px", marginLeft: "80px" }}>
               Createabit interactive projection system can be projected on the
               normal floor, wall or window with any desired effect. It will show
@@ -25,26 +21,26 @@ export default function Wow3() {
               light gaps.
             </p>
           </div>
-          <div>
-            <h3>Benefits</h3>
-            <p>- Excite your customers with interactive bars</p>
-            <p>
-              - Create a unique talking point environment where customers order
-              more
-            </p>
-            <p>
-              - Keep customers engaged and entertained with games or ads in
-              other areas and increase
-            </p>
-            <p>- Revenue by up to 20%</p>
-            <p>- Increase revenues by renting your bar as media outlet</p>
+          <div className="wow1_content " style={{ margin: "120px 0px" }}>
+            <Image className="wow1_image" src={interactive_bar} alt="" />
+            <div style={{ padding: "30px", marginLeft: "80px" }}>
+              <h3>Benefits</h3>
+              <p>- Excite your customers with interactive bars</p>
+              <p>
+                - Create a unique talking point environment where customers
+                order more
+              </p>
+              <p>
+                - Keep customers engaged and entertained with games or ads in
+                other areas and increase
+              </p>
+              <p>- Revenue by up to 20%</p>
+              <p>- Increase revenues by renting your bar as media outlet</p>
+            </div>
           </div>
         </div>
-        <div
-          className="d-flex justify-content-between "
-          style={{ margin: "120px 0px" }}
-        >
-          <Image style={{ width: "600px" }} src={bar2} alt="" />
+        <div className="wow1_content " style={{ margin: "120px 0px" }}>
+          <Image className="wow1_image" src={bar2} alt="" />
           <div style={{ padding: "30px", marginLeft: "80px" }}>
             <h3>Application</h3>
             <h4>Interactive bar effect application</h4>
@@ -54,11 +50,8 @@ export default function Wow3() {
             </p>
           </div>
         </div>
-        <div
-          className="d-flex justify-content-between "
-          style={{ margin: "120px 0px" }}
-        >
-          <Image style={{ width: "600px" }} src={bar3} alt="" />
+        <div className="wow1_content " style={{ margin: "120px 0px" }}>
+          <Image className="wow1_image" src={bar3} alt="" />
           <p style={{ padding: "30px", marginLeft: "80px" }}>
             Createabit interactive projection system can be projected on the
             normal floor, wall or window with any desired effect. It will show
@@ -69,11 +62,8 @@ export default function Wow3() {
             gaps.
           </p>
         </div>
-        <div
-          className="d-flex justify-content-between"
-          style={{ margin: "50px 0px" }}
-        >
-          <Image style={{ width: "600px" }} src={bar4} alt="" />
+        <div className="wow1_content " style={{ margin: "50px 0px" }}>
+          <Image className="wow1_image" src={bar4} alt="" />
           <div style={{ padding: "30px", marginRight: "150px" }}>
             <h3>Advantage:</h3>
             <li>Exciting to play and watch</li>

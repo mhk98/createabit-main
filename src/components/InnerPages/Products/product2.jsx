@@ -180,7 +180,7 @@ function Product2({ lightMode }) {
                     <Link
                       // href="/dark/page-wow1"
                       href={`/${lightMode ? "light" : "dark"}/page-wow1`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">
                         <span className="full-width">View Details</span>
@@ -302,7 +302,7 @@ function Product2({ lightMode }) {
                     </ul>
                     <Link
                       href={`/${lightMode ? "light" : "dark"}/page-wow2`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <span className="full-width">View Details</span>
                     </Link>
@@ -422,7 +422,7 @@ function Product2({ lightMode }) {
                     </ul>
                     <Link
                       href={`/${lightMode ? "light" : "dark"}/page-wow3`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <span className="full-width">
                         {/* <Link href="">View Details</Link> */}
@@ -543,22 +543,15 @@ function Product2({ lightMode }) {
                         </h6>
                       </li>
                     </ul>
-                    <Link
-                      href={`/${lightMode ? "light" : "dark"}/page-wow4`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
-                    >
-                      <span className="full-width">
-                        {/* <Link href="">View Details</Link> */}
-                        View Details
-                      </span>
 
-                      <img
-                        src={`/${
-                          lightMode ? "light" : "dark"
-                        }/assets/imgs/svg-assets/circle-star.svg`}
-                        alt=""
-                        className="circle-star"
-                      />
+                    <Link
+                      // href="/dark/page-wow1"
+                      href={`/${lightMode ? "light" : "dark"}/page-wow4`}
+                      className="mt-4 butn butn-md butn-bord radius-30"
+                    >
+                      <div className="full-width">
+                        <span className="full-width">View Details</span>
+                      </div>
                     </Link>
                   </div>
                 </div>

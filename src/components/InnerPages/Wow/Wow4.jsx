@@ -8,7 +8,7 @@ import app5 from "../../../../images/app5.jpg";
 import pro1 from "../../../../images/pro1.jpg";
 export default function Wow4() {
   return (
-    <div className="mt-100 container">
+    <div className="container mt-100">
       <div>
         <h3>Multi Touch Wall Projection System</h3>
         <p>
@@ -21,10 +21,7 @@ export default function Wow4() {
         </p>
       </div>
 
-      <div
-        className="d-flex justify-content-between gap-20"
-        style={{ margin: "120px 0px" }}
-      >
+      <div className="wow1_content" style={{ margin: "120px 0px" }}>
         <div style={{ padding: "30px" }}>
           <h3>Advantage:</h3>
           <p>Exciting to play and watch</p>
@@ -35,7 +32,7 @@ export default function Wow4() {
           <p>Customizable to your needs</p>
           <p>Brand it, personalize it, build and design your own effects</p>
         </div>
-        <Image style={{ width: "600px" }} src={pro1} alt="" />
+        <Image className="wow1_image" src={pro1} alt="" />
       </div>
 
       <div>
@@ -53,12 +50,12 @@ export default function Wow4() {
               <div className="row">
                 <div className="col-lg-7">
                   <div className="position-re">
-                    <h6 className="dot-titl-non mb-10">Product</h6>
+                    <h6 className="mb-10 dot-titl-non">Product</h6>
                     <h2 className="fz-50">Feature Products</h2>
                   </div>
                 </div>
                 <div className="col-lg-5 d-flex align-items-center">
-                  <div className="full-width d-flex justify-content-end justify-end">
+                  <div className="justify-end full-width d-flex justify-content-end">
                     <div className="vew-all">
                       <Link href="/dark/portfolio-classic-grid">
                         View All Works
@@ -229,7 +226,10 @@ export default function Wow4() {
           <div className="e801-54 x-text x-text-headline">
             <div className="x-text-content">
               <div className="x-text-content-text">
-                <h1 className="x-text-content-text-primary" style={{textAlign:"left"}}>
+                <h1
+                  className="x-text-content-text-primary"
+                  style={{ textAlign: "left" }}
+                >
                   Technical Specs:
                 </h1>
               </div>

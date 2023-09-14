@@ -14,10 +14,10 @@ export default function Wow1() {
     <div className="container">
       <div>
         <div
-          className="d-flex justify-content-between"
+          className="wow1_content"
           style={{ margin: "120px 0px" }}
         >
-          <Image style={{ width: "550px" }} src={wow1} alt="" />
+          <Image className="wow1_image" src={wow1} alt="" />
 
           <div>
             <p style={{ padding: "30px", marginLeft: "80px" }}>
@@ -32,10 +32,10 @@ export default function Wow1() {
           </div>
         </div>
         <div
-          className="d-flex justify-content-between"
+          className="wow1_content"
           style={{ margin: "120px 0px" }}
         >
-          <Image style={{ width: "550px" }} src={wow2} alt="" />
+          <Image className="wow1_image" src={wow2} alt="" />
           <p style={{ padding: "30px", marginLeft: "80px" }}>
             Createabit interactive projection system can be projected on the
             normal floor, wall or window with any desired effect. It will show
@@ -47,10 +47,10 @@ export default function Wow1() {
           </p>
         </div>
         <div
-          className="d-flex justify-content-between "
+          className="wow1_content "
           style={{ margin: "120px 0px" }}
         >
-          <Image style={{ width: "550px" }} src={wow7} alt="" />
+          <Image className="wow1_image" src={wow7} alt="" />
           <div style={{ padding: "30px" }}>
             <h3>Advantage:</h3>
             <p>- Exciting to play and watch</p>
@@ -73,12 +73,12 @@ export default function Wow1() {
             <div className="row">
               <div className="col-lg-7">
                 <div className="position-re">
-                  <h6 className="dot-titl-non mb-10">Product</h6>
+                  <h6 className="mb-10 dot-titl-non">Product</h6>
                   <h2 className="fz-50">Feature Products</h2>
                 </div>
               </div>
               <div className="col-lg-5 d-flex align-items-center">
-                <div className="full-width d-flex justify-content-end justify-end">
+                <div className="justify-end full-width d-flex justify-content-end">
                   <div className="vew-all">
                     <Link href="/dark/portfolio-classic-grid">
                       View All Works

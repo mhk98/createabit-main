@@ -7,14 +7,7 @@ import intelligent2 from "../../../../images/intelligent3.jpg";
 import intelligent3 from "../../../../images/sub02_01_08.jpg";
 export default function IntelligentTech2() {
   return (
-    <div
-      style={{
-        width: "1200px",
-        margin: "auto",
-        marginBottom: "180px",
-        marginTop: "150px",
-      }}
-    >
+    <div className="intelligentech2_main">
       <h5>Windowmate</h5>
       <p style={{ marginBottom: "50px" }}>
         we provide the best product for our customers

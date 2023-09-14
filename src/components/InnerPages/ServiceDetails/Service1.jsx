@@ -8,14 +8,11 @@ function Service1() {
   return (
     <div>
       <div className="container service">
-        <div
-          className="serviceDetails"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
+        <div className="service_content">
           <div>
-            <Image src={service1} alt="" style={{ width: "500px" }} />
+            <Image className="service_image" src={service1} alt="" />
           </div>
-          <div style={{ width: "500px" }}>
+          <div className="service_image">
             <h4>Website Design & Development</h4>
             <h5>Professional & Creative Web Design Solution</h5>
             <p className="mt-8">
@@ -38,7 +35,6 @@ function Service1() {
             </div>
           </div>
         </div>
-        <div></div>
 
         <div className="serviceDetails-title">
           <h4 className="text-center mt-80 mb-30">
@@ -50,20 +46,10 @@ function Service1() {
             to understand your business and create a strategy to fulfill your
             business objectives. Following are some of our specialties:
           </p>
-          <div
-            style={{
-              marginTop: "80px",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="service_card">
             <div style={{ width: "240px" }}>
               <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
+             
               >
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
@@ -77,13 +63,7 @@ function Service1() {
               </div>
             </div>
             <div style={{ width: "240px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
-              >
+              <div>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -96,13 +76,7 @@ function Service1() {
               </div>
             </div>
             <div style={{ width: "240px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
-              >
+              <div>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -115,13 +89,7 @@ function Service1() {
               </div>
             </div>
             <div style={{ width: "240px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
-              >
+              <div>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -134,20 +102,10 @@ function Service1() {
               </div>
             </div>
           </div>
-          <div
-            style={{
-              marginTop: "50px",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="service_card">
             <div style={{ width: "240px" }}>
               <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
+             
               >
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
@@ -161,13 +119,7 @@ function Service1() {
               </div>
             </div>
             <div style={{ width: "240px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
-              >
+              <div>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -180,13 +132,7 @@ function Service1() {
               </div>
             </div>
             <div style={{ width: "240px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
-              >
+              <div>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -199,13 +145,7 @@ function Service1() {
               </div>
             </div>
             <div style={{ width: "240px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "20px",
-                }}
-              >
+              <div>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -218,17 +158,18 @@ function Service1() {
               </div>
             </div>
           </div>
+         
         </div>
 
         <div>
           <h3 className="text-center mt-60">Features That You’ll Love</h3>
           <div>
-            <div className="row mt-100">
-              <div className="col-lg-5 col-md-12 col-sm-12">
+            <div className="service_feature mt-100">
+              <div>
                 <Image src={web_banner} alt=""></Image>
               </div>
 
-              <div class=" col-lg-6 col-md-12 col-sm-12 ml-90">
+              <div>
                 <div class="e1617-51 x-text x-text-headline">
                   <div class="x-text-content">
                     <span class="x-graphic" aria-hidden="true">

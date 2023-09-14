@@ -1,48 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
-import projection1 from "../../../../images/projection1.jpg";
-import projection2 from "../../../../images/projection2.jpg";
-import wow3 from "../../../../images/wow3.jpg";
-import wow4 from "../../../../images/wow4.jpg";
-import wow5 from "../../../../images/wow5.jpg";
-import wow6 from "../../../../images/wow6.jpg";
-import wow7 from "../../../../images/wow7.jpg";
+import { default as wow1, default as wow7 } from "../../../../images/wow3.jpg";
+import wow2 from "../../../../images/wow4.jpg";
+import { default as wow3, default as wow6 } from "../../../../images/wow5.jpg";
+import wow4 from "../../../../images/wow6.jpg";
+import wow5 from "../../../../images/wow7.jpg";
 
 export default function Wow2() {
   return (
     <div className="container">
       <div>
-        <div
-          className="d-flex justify-content-between"
-          style={{ margin: "120px 0px" }}
-        >
-          <Image style={{ width: "600px" }} src={projection1} alt="" />
+        <div className="wow1_content" style={{ margin: "120px 0px" }}>
+          <Image className="wow1_image" src={wow1} alt="" />
+
           <div>
             <p style={{ padding: "30px", marginLeft: "80px" }}>
-              Interactive eBook system is a simple but typical application of
-              interactive system. User move their hands to turn pages of a
-              projection book. The book supports all kinds od content format,
-              including text, image and video.
+              Createabit interactive projection system can be projected on the
+              normal floor, wall or window with any desired effect. It will show
+              attractive effects by detecting people's actions on the projection
+              screen. We provide professional service, tailored to your effects.
+              We can even supply multiple display technology to make two or
+              three projection sizes look like one projection image without any
+              light gaps.
             </p>
           </div>
         </div>
-        <div
-          className="d-flex justify-content-between"
-          style={{ margin: "120px 0px" }}
-        >
-          <Image style={{ width: "600px" }} src={projection2} alt="" />
-          <div style={{ padding: "30px", marginRight: "240px" }}>
-            <h2>Feature:</h2>
-            <p>- Fully gesture controlled</p>
-            <p>- Easy content customization</p>
-            <p>- Flexible installation</p>
-          </div>
+        <div className="wow1_content" style={{ margin: "120px 0px" }}>
+          <Image className="wow1_image" src={wow2} alt="" />
+          <p style={{ padding: "30px", marginLeft: "80px" }}>
+            Createabit interactive projection system can be projected on the
+            normal floor, wall or window with any desired effect. It will show
+            attractive effects by detecting people's actions on the projection
+            screen. We provide professional service, tailored to your effects.
+            We can even supply multiple display technology to make two or three
+            projection sizes look like one projection image without any light
+            gaps.
+          </p>
         </div>
-        <div
-          className="d-flex justify-content-between gap-20"
-          style={{ margin: "100px 0px" }}
-        >
-          <Image style={{ width: "600px" }} src={wow7} alt="" />
+        <div className="wow1_content " style={{ margin: "120px 0px" }}>
+          <Image className="wow1_image" src={wow7} alt="" />
           <div style={{ padding: "30px" }}>
             <h3>Advantage:</h3>
             <p>- Exciting to play and watch</p>
@@ -65,12 +61,12 @@ export default function Wow2() {
             <div className="row">
               <div className="col-lg-7">
                 <div className="position-re">
-                  <h6 className="dot-titl-non mb-10">Product</h6>
+                  <h6 className="mb-10 dot-titl-non">Product</h6>
                   <h2 className="fz-50">Feature Products</h2>
                 </div>
               </div>
               <div className="col-lg-5 d-flex align-items-center">
-                <div className="full-width d-flex justify-content-end justify-end">
+                <div className="justify-end full-width d-flex justify-content-end">
                   <div className="vew-all">
                     <Link href="/dark/portfolio-classic-grid">
                       View All Works

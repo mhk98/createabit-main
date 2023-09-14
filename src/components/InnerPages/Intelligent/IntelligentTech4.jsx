@@ -1,12 +1,11 @@
 import Image from "next/image";
-import React from "react";
-import product1 from "../../../../images/Tripod Turnstile.png";
-import product2 from "../../../../images/high speed gate.jpg";
-import product3 from "../../../../images/Flap Barrier gate.jpg";
-import product4 from "../../../../images/Swing barrier gate.png";
-import product5 from "../../../../images/full height turnstile.jpg";
 import product6 from "../../../../images/Barrier gate.jpg";
 import product7 from "../../../../images/Car Parking System.jpg";
+import product3 from "../../../../images/Flap Barrier gate.jpg";
+import product4 from "../../../../images/Swing barrier gate.png";
+import product1 from "../../../../images/Tripod Turnstile.png";
+import product5 from "../../../../images/full height turnstile.jpg";
+import product2 from "../../../../images/high speed gate.jpg";
 
 export default function IntelligentTech4() {
   return (
@@ -29,20 +28,12 @@ export default function IntelligentTech4() {
           </div>
         </div>
         <div>
-          <Image
-            style={{ width: "370px", height: "500px" }}
-            src={product1}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product1} alt="" />
         </div>
       </div>
       <div className="cart_parking">
         <div>
-          <Image
-            style={{ width: "500px", height: "400px" }}
-            src={product2}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product2} alt="" />
         </div>
 
         <div>
@@ -81,21 +72,13 @@ export default function IntelligentTech4() {
           </div>
         </div>
         <div>
-          <Image
-            style={{ width: "500px", height: "400px" }}
-            src={product3}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product3} alt="" />
         </div>
       </div>
 
       <div className="cart_parking">
         <div>
-          <Image
-            style={{ width: "500px", height: "400px" }}
-            src={product4}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product4} alt="" />
         </div>
 
         <div>
@@ -134,20 +117,12 @@ export default function IntelligentTech4() {
           </div>
         </div>
         <div>
-          <Image
-            style={{ width: "500px", height: "400px" }}
-            src={product5}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product5} alt="" />
         </div>
       </div>
       <div className="cart_parking">
         <div>
-          <Image
-            style={{ width: "500px", height: "400px" }}
-            src={product6}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product6} alt="" />
         </div>
 
         <div>
@@ -185,11 +160,7 @@ export default function IntelligentTech4() {
           </div>
         </div>
         <div>
-          <Image
-            style={{ width: "500px", height: "400px" }}
-            src={product7}
-            alt=""
-          />
+          <Image className="cart_parking_image" src={product7} alt="" />
         </div>
       </div>
     </div>

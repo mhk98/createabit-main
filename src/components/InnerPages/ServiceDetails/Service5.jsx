@@ -1,21 +1,21 @@
+import {
+  faBuildingUser,
+  faMobile,
+  faUserGraduate,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import React from "react";
 import service1 from "../../../../images/Graphic-01.png";
 import service2 from "../../../../images/Graphic.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBuildingUser, faMobile, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 
 function Service5() {
   return (
     <div className="container">
-      <div
-        className="serviceDetails"
-        style={{ display: "flex", justifyContent: "space-between" }}
-      >
+      <div className="service_feature">
         <div>
-          <Image src={service1} alt="" style={{ width: "500px" }} />
+          <Image className="service_image" src={service1} alt="" />
         </div>
-        <div style={{ width: "500px" }}>
+        <div>
           <h4>Website Design & Development</h4>
           <h5>Professional & Creative Web Design Solution</h5>
           <p className="mt-8">
@@ -40,21 +40,37 @@ function Service5() {
       </div>
 
       <div>
-        <h2 className="text-center mt-100 mb-100">
+        <h3 className="text-center mt-100 mb-100">
           Our Graphic Design Process
-        </h2>
+        </h3>
 
         <div className="row">
           <div className="col-lg-6 col-md-12 col-sm-12">
-            <li className="fs-3">Assemble Requirements</li>
-            <li className="fs-3">Inspect and Design</li>
-            <li className="fs-3">Programming & Development</li>
-            <li className="fs-3">Execution</li>
-            <li className="fs-3">Testing and Verification</li>
-            <li className="fs-3">Support</li>
-            <li className="fs-3">Maintenance</li>
-            <li className="fs-3">Evaluate the Design</li>
-            <p className="fs-4 mt-20">
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Assemble Requirements
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Inspect and Design
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Programming & Development
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Execution
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Testing and Verification
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Support
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Maintenance
+            </li>
+            <li className="font-bold" style={{ fontSize: "16px" }}>
+              Evaluate the Design
+            </li>
+            <p className="mt-20">
               Finally, we will deploy the application which will involve user
               acceptance testing in the live ‘platform’.
             </p>
@@ -66,16 +82,16 @@ function Service5() {
       </div>
 
       <div>
-        <h2 className="text-center mt-100">Why choose US ?</h2>
+        <h3 className="text-center mt-100">Why choose US ?</h3>
         <div className="row mt-80">
           <div className="col-lg-6">
             <div className="d-flex">
               <div>
-                <FontAwesomeIcon className="fs-1" icon={faMobile} />
+                <FontAwesomeIcon className="fs-3" icon={faMobile} />
               </div>
               <div className="ml-20">
                 <h3>High Quality Design</h3>
-                <p className="fs-4">
+                <p className="" style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -85,11 +101,11 @@ function Service5() {
           <div className="col-lg-6">
             <div className="d-flex">
               <div>
-                <FontAwesomeIcon className="fs-1" icon={faMobile} />
+                <FontAwesomeIcon className="fs-3" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>High Quality Design</h3>
-                <p className="fs-4">
+                <h3 className="fs-3">High Quality Design</h3>
+                <p className="" style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -101,11 +117,11 @@ function Service5() {
           <div className="col-lg-6">
             <div className="d-flex">
               <div>
-                <FontAwesomeIcon className="fs-1" icon={faMobile} />
+                <FontAwesomeIcon className="fs-3" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>High Quality Design</h3>
-                <p className="fs-4">
+                <h3 className="fs-3">High Quality Design</h3>
+                <p className="" style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -115,11 +131,11 @@ function Service5() {
           <div className="col-lg-6">
             <div className="d-flex">
               <div>
-                <FontAwesomeIcon className="fs-1" icon={faMobile} />
+                <FontAwesomeIcon className="fs-3" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>High Quality Design</h3>
-                <p className="fs-4">
+                <h3 className="fs-3">High Quality Design</h3>
+                <p className="" style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -130,7 +146,9 @@ function Service5() {
       </div>
 
       <div className="mt-100 mb-100">
-        <h3>Features that you’ll love about our SMM Service</h3>
+        <h3 className="text-center">
+          Features that you’ll love about our SMM Service
+        </h3>
         <div className="row mt-100">
           <div className="col-lg-4">
             <Image src={service2} alt="" />

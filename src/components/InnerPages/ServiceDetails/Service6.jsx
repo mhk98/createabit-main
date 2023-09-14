@@ -1,12 +1,11 @@
-import Image from "next/image";
-import React from "react";
-import Service1 from "../../../../images/Video-Aanimation-01.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuildingUser,
   faMobile,
   faUserGraduate,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Service1 from "../../../../images/Video-Aanimation-01.png";
 import service1 from "../../../../images/animation-video.png";
 import Faq from "../Faq";
 function Service6() {
@@ -15,14 +14,11 @@ function Service6() {
       className="
     container"
     >
-      <div
-        className="serviceDetails"
-        style={{ display: "flex", justifyContent: "space-between" }}
-      >
+      <div className="service_feature">
         <div>
-          <Image src={Service1} alt="" style={{ width: "500px" }} />
+          <Image className="service_image" src={Service1} alt="" />
         </div>
-        <div style={{ width: "500px" }}>
+        <div>
           <h4>Website Design & Development</h4>
           <h5>Professional & Creative Web Design Solution</h5>
           <p className="mt-8">
@@ -47,10 +43,10 @@ function Service6() {
       </div>
 
       <div>
-        <h2 className="text-center mt-100">
+        <h4 className="text-center mt-100">
           What Should You Know About Our Video Production and Animation Service
-        </h2>
-        <p className="fs-4 mt-80 mb-100">
+        </h4>
+        <p className=" mt-80 mb-100" style={{ fontSize: "16px" }}>
           We understand your website is central to your brand identity,
           reputation and how customers perceive you. We pay special attention to
           understand your business and create a strategy to fulfill your
@@ -63,8 +59,8 @@ function Service6() {
                 <FontAwesomeIcon className="fs-1" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>OUR SOLUTIONS EFFECTIVELY AND EFFICIENTLY.</h3>
-                <p className="fs-4">
+                <h4>OUR SOLUTIONS EFFECTIVELY AND EFFICIENTLY.</h4>
+                <p style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -77,8 +73,8 @@ function Service6() {
                 <FontAwesomeIcon className="fs-1" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>WE CARRY OUT WORK WITHOUT BIAS DEADLINE.</h3>
-                <p className="fs-4">
+                <h4>WE CARRY OUT WORK WITHOUT BIAS DEADLINE.</h4>
+                <p style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -93,8 +89,8 @@ function Service6() {
                 <FontAwesomeIcon className="fs-1" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>YOUR PROJECT WILL WORK EXPERIENCED SPECIALISTS.</h3>
-                <p className="fs-4">
+                <h4>YOUR PROJECT WILL WORK EXPERIENCED SPECIALISTS.</h4>
+                <p style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -107,10 +103,10 @@ function Service6() {
                 <FontAwesomeIcon className="fs-1" icon={faMobile} />
               </div>
               <div className="ml-20">
-                <h3>
+                <h4>
                   WE CREATE MEMORABLE SOLUTIONS, USING THE LATEST ECHNOLOGIES.
-                </h3>
-                <p className="fs-4">
+                </h4>
+                <p style={{ fontSize: "16px" }}>
                   The number one benefit of using our web apps is that you can
                   use them on your mobile phone & other devices.
                 </p>
@@ -131,7 +127,7 @@ function Service6() {
 
       <div className="mt-100 mb-100">
         <h3 className="text-center">We’ll handle it</h3>
-        <p className="fs-4 text-center mb-20">
+        <p className=" text-center mb-20" style={{ fontSize: "16px" }}>
           Here at Modicum, our motion design process is collaborative. We keep
           you informed every step of the way, working together to bring your
           story to life.
