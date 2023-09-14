@@ -3,18 +3,14 @@ import Link from "next/link";
 import about1 from "../../../images/1.jpg";
 function About({ lightMode }) {
   return (
-    <section
-      className="about-intro section-padding"
-      style={{ marginTop: "100px" }}
-    >
-      <div className="container pt-40">
+    <section className="about-intro section-padding">
+      <div className="container">
         <h6
           className="text-center dot-titl-non wow fadeIn"
           style={{
             border: "1px solid",
             width: "150px",
             borderRadius: "50px",
-            marginBottom: "20px",
           }}
         >
           Who We Are
