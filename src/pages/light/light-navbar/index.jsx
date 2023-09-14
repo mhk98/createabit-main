@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
-function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
+function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   useEffect(() => {
     if (darkOnScroll) {
       let nav = document.querySelector("#navi");
@@ -78,7 +78,7 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
     }
   }
   return (
-    <div className="hamenu" style={{ padding: "50px 0px" }}>
+    <div className="hamenu">
       <div className="container">
         <div className="row" style={{ marginTop: "80px" }}>
           <div className="col-lg-2">
@@ -95,35 +95,31 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   </Link>
                 </div>
                 <div
-                  className="cursor-pointer menu-icon"
-                  style={{ color: "black" }}
+                  className="cursor-pointer menu-icon text-dark"
                   onClick={toggleMenu}
                 >
-                  <span className="text-black icon">
-                    <i style={{ color: "black" }}></i>
-                    <i style={{ color: "black" }}></i>
+                  <span className="icon">
+                    <i></i>
+                    <i></i>
                   </span>
                   <span className="text">
                     <span className="word">Menu</span>
                   </span>
                 </div>
-                <div
-                  className="text-black o-hidden ml-50"
-                  style={{ marginTop: "-10px" }}
-                >
+                <div className="ml-50 ">
                   <Link
-                    href="/dark/home-creative-agency/"
-                    className="link butn butn-md butn-bord radius-30 classic"
+                    href="/light/home-creative-agency/"
+                    className="classic butn butn-md butn-bord radius-30"
+                    style={{ marginTop: "-5px" }}
                   >
-                    <span className="fill-text" data-text="Dark Mode">
-                      Dark Mode
-                    </span>
+                    <span className="word">Dark Mode</span>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-7">
+          {/* <div className="col-lg-2">Classic Mode</div> */}
+          <div className="col-lg-5">
             <div className="menu-links">
               <ul className="main-menu rest">
                 <li
@@ -138,28 +134,14 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                     </Link>
                   </div>
                 </li>
-
                 <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/light/page-abouts" className="link">
+                    <Link href="/light/page-abouts/" className="link">
                       <span className="fill-text" data-text="Who We Are">
                         Who We Are
-                      </span>
-                    </Link>
-                  </div>
-                </li>
-
-                <li
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="o-hidden">
-                    <Link href="/light/page-services/" className="link">
-                      <span className="fill-text" data-text="Services">
-                        Services
                       </span>
                     </Link>
                   </div>
@@ -173,8 +155,11 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   <div className="o-hidden">
                     <div className="cursor-pointer link dmenu">
                       <Link href="/light/page-product/" className="">
-                        <span className="fill-text" data-text="Products">
-                          Products
+                        <span
+                          className="fill-text"
+                          data-text="Product Solution"
+                        >
+                          Product Solution
                         </span>
                       </Link>
                       <i></i>
@@ -186,7 +171,6 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                         <Link
                           href="/light/page-product-category1/"
                           className="sub-link"
-                          style={{ color: "black" }}
                         >
                           Dynamic Digital Products
                         </Link>
@@ -195,7 +179,6 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                         <Link
                           href="/light/page-product-category2/"
                           className="sub-link"
-                          style={{ color: "black" }}
                         >
                           Intelligent TECH Products
                         </Link>
@@ -204,9 +187,58 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                         <Link
                           href="/light/page-product-category3/"
                           className="sub-link"
-                          style={{ color: "black" }}
                         >
                           INTERACTIVE WOW PRODUCTION
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={toggleSubMenu}
+                >
+                  <div className="o-hidden">
+                    <div className="cursor-pointer link dmenu">
+                      <Link href="/light/page-services/" className="">
+                        <span className="fill-text" data-text="Services">
+                          Service
+                        </span>
+                      </Link>
+                      <i></i>
+                    </div>
+                  </div>
+                  <div className="sub-menu">
+                    <ul>
+                      <li>
+                        <Link href="/light/page-service1/" className="sub-link">
+                          WEBSITE DEVELOPMENT
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/light/page-service2/" className="sub-link">
+                          WEB APPLICATION
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/light/page-service3/" className="sub-link">
+                          MOBILE APPS DEVELOPMENT
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/light/page-service4/" className="sub-link">
+                          DIGITAL MARKETING & SEO
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/light/page-service5/" className="sub-link">
+                          GRAPHICS DESIGN & PRINTING
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/light/page-service6/" className="sub-link">
+                          VIDEO & ANIMATION
                         </Link>
                       </li>
                     </ul>
@@ -218,9 +250,12 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/light/page-contact/" className="link">
-                      <span className="fill-text" data-text="Solution">
-                        Solution
+                    <Link
+                      href="/light/showcase-interactive-center-horizontal/"
+                      className="link"
+                    >
+                      <span className="fill-text" data-text="Software">
+                        Software
                       </span>
                     </Link>
                   </div>
@@ -228,15 +263,13 @@ function LightNavbar({ lightMode, darkOnScroll, alwaysDark }) {
                 <li
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
-                  onClick={toggleSubMenu}
                 >
                   <div className="o-hidden">
-                    <div className="cursor-pointer link dmenu">
-                      <span className="fill-text" data-text="Blogs">
-                        Blogs
-                      </span>{" "}
-                      <i></i>
-                    </div>
+                    <Link href="/light/blog-list/" className="link">
+                      <span className="fill-text" data-text="Blog">
+                        Blog
+                      </span>
+                    </Link>
                   </div>
                 </li>
                 <li
