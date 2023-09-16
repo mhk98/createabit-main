@@ -8032,7 +8032,6 @@ header.in-box {
   bottom: 100px;
 }
 
-
 /* Team
 -----------------------------------------------------------------*/
 .team .item-join {
@@ -9634,7 +9633,6 @@ header.in-box {
     height: 80vh;
     min-height: 500px;
   }
- 
 
   .crev-header {
     min-height: auto;
@@ -10317,7 +10315,7 @@ header.in-box {
     grid-gap: 20px;
   }
 
-  .product_main{
+  .product_main {
     display: none;
   }
 }
@@ -10338,7 +10336,7 @@ header.in-box {
     padding: 15px;
   }
 
-  .product_main{
+  .product_main {
     display: none;
   }
 }
@@ -10354,15 +10352,15 @@ header.in-box {
   }
 
   .product_main {
-    display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: "100px",
-            paddingTop: "100px",
-            paddingBottom: "150px",
-            marginBottom: "50px",
-            backgroundColor: "#2468A3",
-            paddingLeft: "15px",
+    display: "flex";
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    margin-bottom: 150px;
+    background-color: #2468a3;
+    padding-left: 15px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -10383,76 +10381,117 @@ header.in-box {
     padding-top: 100px;
     padding-bottom: 150px;
     margin-bottom: 50px;
-    background-color: #2468A3;
+    background-color: #2468a3;
     padding-left: 15px;
-    
-            
   }
-}
 
-
-@media only screen and (max-width: 600px){
-.intelligenttech2{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-}
-.laser{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-}
-.intelligent-laser{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-}
-
-.cart_parking{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-}
-
-.usb_card{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: 40px;
-  gap: 40px;
-  margin-top: 120px;
-  margin-bottom: 120px;
-}
-}
-@media only screen and (min-width: 600px){
-  .intelligenttech2{
+  .faq_content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
-  .laser{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+  .faq-content p {
+    color: white;
   }
 
-  .intelligent-laser{
+  .faq1 {
+    width: 500px;
+    height: 600px;
+  }
+  .faq2 {
+    width: 500px;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intelligenttech2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
   }
-  .cart_parking{
+  .laser {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+  .intelligent-laser {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
   }
 
-  .cart_parking_image{
+  .cart_parking {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .usb_card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 40px;
+    gap: 40px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  .faq_content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+
+  .faq-content p {
+    color: white;
+  }
+
+  .faq1 {
+    width: 500px;
+    height: 600px;
+  }
+  .faq2 {
+    width: 500px;
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .intelligenttech2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .laser {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .intelligent-laser {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .cart_parking {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .cart_parking_image {
     width: 500px;
     height: 400px;
   }
 
-  .usb_card{
+  .usb_card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
@@ -10460,56 +10499,77 @@ header.in-box {
     margin-top: 120px;
     margin-bottom: 120px;
   }
+
+  .faq_content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+
+  .faq-content p {
+    color: white;
+  }
+
+  .faq1 {
+    width: 500px;
+    height: 600px;
+  }
+  .faq2 {
+    width: 500px;
+    height: 600px;
+  }
 }
-@media only screen and (min-width: 1024px){
-  .intelligentech2_main{
-        width: 1200px;
-        margin: auto;
-        margin-bottom: 180px;
-        margin-top: 150px;
+@media only screen and (min-width: 1024px) {
+  .intelligentech2_main {
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 180px;
+    margin-top: 150px;
   }
 
-  .intelligenttech2{
+  .intelligenttech2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
   }
 
-  .laser{
+  .laser {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
-  .intelligent-laser{
+  .intelligent-laser {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
   }
 
-  .cart_parking{
+  .cart_parking {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
 
-  .cart_parking_image{
+  .cart_parking_image {
     width: 500px;
     height: 400px;
   }
-.USB_content{
-  display: flex;
-  justify-content: space-between;
-}
-  .USB_image{
+  .USB_content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .USB_image {
     width: 550px;
     height: 350px;
   }
 
-  .USB_image1{
+  .USB_image1 {
     height: 420px;
   }
 
-  .usb_card{
+  .usb_card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 40px;
@@ -10519,34 +10579,55 @@ header.in-box {
     margin-bottom: 120px;
   }
 
-  .wow1_image{
+  .wow1_image {
     width: 550px;
   }
 
-  .wow1_content{
+  .wow1_content {
     display: flex;
     justify-content: space-between;
   }
 
-  .service_content{
+  .service_content {
     display: flex;
     justify-content: space-between;
   }
 
-  .service_image{
+  .service_image {
     width: 500px;
   }
 
-  .service_card{
+  .service_card {
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
   }
 
-  .service_feature{
+  .service_feature {
     display: flex;
     justify-content: space-between;
     gap: 150px;
   }
-}
 
+  .faq_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .faq-content p {
+    color: white;
+  }
+
+  .faq1 {
+    width: 500px;
+    height: 600px;
+  }
+  .faq2 {
+    width: 500px;
+    height: 600px;
+  }
+}

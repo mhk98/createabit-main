@@ -108,7 +108,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 </div>
                 <div className="ml-50 ">
                   <Link
-                    href="/light/home-creative-agency/"
+                    href="/dark/home-creative-agency/"
                     className="classic butn butn-md butn-bord radius-30"
                     style={{ marginTop: "-5px" }}
                   >
@@ -295,7 +295,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                         className="fill-text classic_btn"
                         data-text="Classic Mode"
                       >
-                        Classic Mode
+                        Dark Mode
                       </span>
                     </Link>
                   </div>

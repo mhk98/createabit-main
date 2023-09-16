@@ -10,7 +10,7 @@ function Header({ data, subBg }) {
               <h6 className="sub-title">{data.subTitle}</h6>
               <h1 className="fz-55">{data.title}</h1>
               <div className=" offset-lg-4">
-                <div className="text mt-30">
+                <div className="text mt-30 ml-10">
                   <p>
                     We help our clients succeed by creating brand identities,
                     digital experiences, and print materials that communicate
