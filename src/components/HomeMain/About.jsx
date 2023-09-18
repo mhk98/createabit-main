@@ -3,7 +3,7 @@ import Link from "next/link";
 import about1 from "../../../images/1.jpg";
 function About({ lightMode }) {
   return (
-    <section className="about-intro section-padding">
+    <section className="about-intro section-padding about-dark about-light">
       <div className="container">
         <h6
           className="text-center dot-titl-non wow fadeIn"

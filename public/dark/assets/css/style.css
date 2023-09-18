@@ -1453,6 +1453,10 @@ img.left {
   padding-bottom: 120px;
 }
 
+.about-dark {
+  margin-top: -180px;
+}
+
 .section-ptb {
   padding: 80px 0;
 }
@@ -8023,8 +8027,8 @@ header.in-box {
 }
 
 .crev-header .main-banner-img {
-  width: 60%;
-  margin-left: 40%;
+  width: 1100px;
+  margin-left: 800px;
 }
 
 .crev-header .bg-pattern {
@@ -9637,9 +9641,11 @@ header.in-box {
   .crev-header {
     min-height: auto;
   }
+
   .crev-header .caption h1 {
     font-size: 60px;
   }
+
   .crev-header .main-img {
     width: 100%;
     margin-left: 0;

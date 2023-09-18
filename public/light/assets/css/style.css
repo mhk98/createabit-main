@@ -1464,7 +1464,11 @@ img.left {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 60px;
+}
+
+.about-light {
+  margin-top: -260px;
 }
 
 .section-ptb {
@@ -8052,6 +8056,9 @@ header.in-box {
   position: relative;
   padding: 120px 0 0;
 }
+.crev-header .title {
+  margin-right: 80px;
+}
 
 .crev-header .caption h1 {
   font-size: 85px;
@@ -8077,7 +8084,7 @@ header.in-box {
 }
 
 .crev-header .main-banner-img {
-  width: 60%;
+  width: 1140px;
   margin-left: 40%;
 }
 
