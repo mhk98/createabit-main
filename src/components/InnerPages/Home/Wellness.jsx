@@ -35,15 +35,36 @@ function Wellness(props) {
         <div className="col-lg-5">
           <h2 className="mb-3">What We Offer</h2>
           <p
-            className="mb-3"
-            style={{ fontSize: "16px", marginBottom: "50px" }}
+            className="mb-3 "
+            style={{
+              fontSize: "16px",
+              marginBottom: "50px",
+              fontWeight: "600",
+            }}
           >
             With more then 7 years experience in kiosks and interactive
             technology systems,CreateAbit now offers a wide rang of COVID
             WELLNESS products for businesses to make their enviroment safer for
             customers and employees. Get your body temperature screening devices
             and automatic hand sanitizer stations from the most trusted source
-            in North America
+            in North America. We offer the full spectrum of services to help
+            organizations work better.
+          </p>
+          <p
+            style={{
+              fontSize: "16px",
+              marginBottom: "50px",
+              fontWeight: "600",
+            }}
+          >
+            Everything from creating standards of excellence services for your
+            business to work in more effective ways, assessing how you’re doing,
+            and helping you perform even better in future. Get your body
+            temperature screening devices and automatic hand sanitizer stations
+            from the most trusted source in North America. We offer the full
+            spectrum of services to help organizations work better. Everything
+            from creating standards of excellence services for your business to
+            work in more effective ways, assessing how you’re doing.
           </p>
         </div>
         <div className="col-lg-5" style={{ marginBottom: "50px" }}>

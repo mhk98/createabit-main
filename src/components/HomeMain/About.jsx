@@ -15,10 +15,10 @@ function About({ lightMode }) {
         >
           Who We Are
         </h6>
-        <div className="align-middle row mb-80">
+        <div className="mb-40 align-middle row">
           <div className="col-lg-5">
-            <div className="sec-lg-head md-mb30">
-              <h2 className="d-rotate wow">
+            <div className=" sec-lg-head md-mb30" style={{ marginTop: "15px" }}>
+              <h2 className=" d-rotate wow">
                 <span className="rotate-text">
                   CreateAbit designs is a renowned name in the digital world.
                 </span>
@@ -101,7 +101,7 @@ function About({ lightMode }) {
           <div className="col-lg-5 valign rest">
             <div className="cont">
               <h2 className="d-rotate wow">
-                <span className="rotate-text">
+                <span className="rotate-text" style={{ width: "600px" }}>
                   Unlock Revenue Growth for Your Business.
                 </span>
               </h2>
