@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Scripts
-import loadBackgroudImages from "@/common/loadBackgroudImages";
 import isInView from "@/common/isInView";
+import loadBackgroudImages from "@/common/loadBackgroudImages";
 //= Data
-import Link from "next/link";
 import { useGetProductCategory1Query } from "@/features/product/productCategory1";
+import Link from "next/link";
 
 function Products({ lightMode }) {
   const { data, isLoading, isSuccess, isError, error } =
@@ -178,7 +178,7 @@ function Products({ lightMode }) {
                             </h6>
                           </li>
                         </ul>
-                        <a className="butn-circle d-flex align-items-center text-center mt-50">
+                        <a className="text-center butn-circle d-flex align-items-center mt-50">
                           <div className="full-width">
                             <span>
                               <svg

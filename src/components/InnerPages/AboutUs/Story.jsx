@@ -31,14 +31,14 @@ function Story(lightMode) {
 
           <div className="col-lg-8">
             <div className="cont mt-80">
-              <p style={{ fontSize: "16px" }}>
+              <p style={{ fontSize: "16px", fontWeight: "700" }}>
                 CreateAbit designs is a renowned name in the digital world. We
                 are a reputed marketing and branding agency based in Washington
                 DC metro area. Our extensive history, rich experience, and
                 excellent track record make us a more reliable choice when it
                 comes to designing and marketing services.{" "}
               </p>
-              <p style={{ fontSize: "16px" }}>
+              <p style={{ fontSize: "16px", fontWeight: "700" }}>
                 We aim to make your online presence better which is no less than
                 a necessity these days. In this day and age, where technology
                 has takeover, trends have significantly changed. No matter how
@@ -117,37 +117,30 @@ function Story(lightMode) {
         <div className="row">
           <div className="col-lg-8">
             <div className="cont mt-80">
-              <p style={{ fontSize: "16px" }}>
+              <p style={{ fontSize: "16px", fontWeight: "700" }}>
                 We know how important it is to keep the audiences involved and
                 how to maintain their interest in what you do. We ensure the
                 provision of best services that can provide you with the
                 fruitful outcomes and ultimate success for your business.
-                experienced.
+                experienced. Our team of experts comprises top designers, market
+                analysis, social media managers, web developers, software
+                architects and application developers. We are equipped with
+                state of the art technology and each of our team members is
+                highly-qualified and
               </p>
               <br />
-
-              <p style={{ fontSize: "16px" }}>
-                Our team of experts comprises top designers, market analysis,
-                social media managers, web developers, software architects and
-                application developers. We are equipped with state of the art
-                technology and each of our team members is highly-qualified and
-              </p>
-              <br />
-              <p style={{ fontSize: "16px" }}>
+              <p style={{ fontSize: "16px", fontWeight: "700" }}>
                 We provide top-notch services to all our clients and
                 satisfaction is guaranteed here. Whether you need a new website
                 with appealing design and easy to use interface or you are
                 looking for assistance with SEO, we have got you covered.
                 Likewise, you can come to us if you require professional
-                assistance in database administration.
-              </p>
-              <br />
-              <p style={{ fontSize: "16px" }}>
-                In addition to these, we also offer a complete range of online
-                marketing services. WHY USThere are countless companies offering
-                a similar type of services but we are the best at what we do.
-                Coming to us would save your time, money and energy. You will
-                get flawless services and a hassle-free experience with us.
+                assistance in database administration. In addition to these, we
+                also offer a complete range of online marketing services. WHY
+                USThere are countless companies offering a similar type of
+                services but we are the best at what we do. Coming to us would
+                save your time, money and energy. You will get flawless services
+                and a hassle-free experience with us.
               </p>
               <br />
             </div>

@@ -39,7 +39,7 @@ function Wellness(props) {
             style={{
               fontSize: "16px",
               marginBottom: "50px",
-              fontWeight: "600",
+              fontWeight: "700",
             }}
           >
             With more then 7 years experience in kiosks and interactive
@@ -54,7 +54,7 @@ function Wellness(props) {
             style={{
               fontSize: "16px",
               marginBottom: "50px",
-              fontWeight: "600",
+              fontWeight: "700",
             }}
           >
             Everything from creating standards of excellence services for your
