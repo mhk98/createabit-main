@@ -6,8 +6,7 @@ import Layout from "@/layouts/preview";
 //= Components
 
 import Overlay from "@/components/Preview/Overlay";
-// import DarkNavbar from "./dark/dark-navbar";
-// import HomeCreativeAgency from "./dark/home-creative-agency";
+
 import HomeCreativeAgency from "./dark/home-creative-agency";
 
 function LandingPreview() {

@@ -82,7 +82,10 @@ const ProductShop2 = () => {
           Benefits of 3D holographic Sign
         </h1>
 
-        <div className="benefit_main row justify-between gap-5 mx-auto">
+        <div
+          className="benefit_main row justify-between gap-5 align-middle"
+          style={{ margin: "auto" }}
+        >
           <div className="col-lg-3 col-md-12 col-sm-12">
             <div className="benefit">
               <div>
@@ -308,22 +311,81 @@ const ProductShop2 = () => {
           sed do eiusmod tempor incididunt ut labore.
         </p>
 
-        <div
-          className="row"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            paddingTop: "100px",
-            marginBottom: "120px",
-            paddingLeft: "50px",
-            paddingRight: "50px",
-          }}
-        >
-          <section
-            class="faq col-lg-6 col-md-12 col-sm-12"
-            style={{ marginBottom: "50px" }}
-          >
+        <div className="faq_content">
+          <section class="faq1" style={{ marginBottom: "50px" }}>
             <div class="faq-container">
+              <details class="faq-box" open>
+                <summary class="faq-header">
+                  Sed accumsan nulla ut dui hendrerit?
+                </summary>
+                <div class="faq-content">
+                  <p>
+                    Nullam quis justo in lectus consequat facilisis ac et nibh.
+                    Fusce faucibus augue id nibh vestibulum nec.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-box">
+                <summary class="faq-header">
+                  Suspendisse volutpat nunc vestibulum?
+                </summary>
+                <div class="faq-content">
+                  <p>
+                    Sed accumsan nulla ut dui hendrerit, et cursus risus
+                    placerat. Praesent accumsan lectus vitae suscipit
+                    condimentum.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-box">
+                <summary class="faq-header">
+                  Mauris ultrices aliquam lacinia?
+                </summary>
+                <div class="faq-content">
+                  <p>
+                    Integer tristique augue diam, eget ultrices nisi vehicula a.
+                    Curabitur vulputate arcu nec orci laoreet iaculis.
+                  </p>
+                </div>
+              </details>
+              <details class="faq-box" open>
+                <summary class="faq-header">
+                  Sed accumsan nulla ut dui hendrerit?
+                </summary>
+                <div class="faq-content">
+                  <p>
+                    Nullam quis justo in lectus consequat facilisis ac et nibh.
+                    Fusce faucibus augue id nibh vestibulum nec.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-box">
+                <summary class="faq-header">
+                  Suspendisse volutpat nunc vestibulum?
+                </summary>
+                <div class="faq-content">
+                  <p>
+                    Sed accumsan nulla ut dui hendrerit, et cursus risus
+                    placerat. Praesent accumsan lectus vitae suscipit
+                    condimentum.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-box">
+                <summary class="faq-header">
+                  Mauris ultrices aliquam lacinia?
+                </summary>
+                <div class="faq-content">
+                  <p>
+                    Integer tristique augue diam, eget ultrices nisi vehicula a.
+                    Curabitur vulputate arcu nec orci laoreet iaculis.
+                  </p>
+                </div>
+              </details>
               <details class="faq-box" open>
                 <summary class="faq-header">
                   Sed accumsan nulla ut dui hendrerit?
@@ -363,10 +425,7 @@ const ProductShop2 = () => {
             </div>
           </section>
 
-          <div
-            className="col-lg-6 col-md-12 col-sm-12"
-            style={{ width: "550px" }}
-          >
+          <div className="faq2">
             <Image src={product2} alt="" />
           </div>
         </div>

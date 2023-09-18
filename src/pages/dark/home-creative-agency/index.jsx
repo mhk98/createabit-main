@@ -22,6 +22,7 @@ import PortfolioClassicGrid3 from "../portfolio-grid-3";
 
 import Header from "@/components/HomeMain/Header";
 import Wellness from "@/components/InnerPages/Home/Wellness";
+import Overlay from "@/components/Preview/Overlay";
 
 function HomeCreativeAgency() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function HomeCreativeAgency() {
       <Head>
         <title>Createabit - Creative Agency</title>
       </Head>
+      <Overlay />
 
       <Loader />
       <div id="smooth-wrapper">

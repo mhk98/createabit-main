@@ -143,9 +143,9 @@ function Header({ lightMode }) {
       </div>
       <div className="main-banner-img">
         {/* <Image src={home_main} alt="" /> */}
-        <header
+        <div
           className="slider arch-slider slider-prlx"
-          style={{ marginTop: "-550px" }}
+          style={{ marginTop: "-150px" }}
         >
           {loadSwiper && (
             <Swiper
@@ -231,14 +231,14 @@ function Header({ lightMode }) {
               </div>
             </div>
           </div>
-        </header>
+        </div>
       </div>
-      <div
+      {/* <div
         className="bg-pattern bg-img"
         data-background={`/${
           lightMode ? "light" : "dark"
         }/assets/imgs/patterns/graph.png`}
-      ></div>
+      ></div> */}
       <ModalVideo
         videoId="AzwC6umvd1s"
         channel="youtube"
