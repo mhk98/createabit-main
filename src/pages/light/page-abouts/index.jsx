@@ -9,7 +9,7 @@ import Footer from "@/components/HomeMain/Footer";
 import CallToAction from "@/components/InnerPages/AboutUs/CallToAction";
 import Story from "@/components/InnerPages/AboutUs/Story";
 import Header from "@/components/InnerPages/Header";
-import DarkNavbar from "../dark-navbar";
+import LightNavbar from "../light-navbar";
 
 function PageAbout() {
   useEffect(() => {
@@ -30,7 +30,7 @@ function PageAbout() {
       </Head>
 
       <Loader />
-      <DarkNavbar mainBg />
+      <LightNavbar mainBg />
       <main>
         <Header data={headerMetadata} />
         <Story />
@@ -46,6 +46,6 @@ function PageAbout() {
   );
 }
 
-PageAbout.getLayout = (page) => <Layout>{page}</Layout>;
+PageAbout.getLayout = (page) => <Layout lightMode>{page}</Layout>;
 
 export default PageAbout;

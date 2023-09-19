@@ -103,7 +103,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <span className="word">Menu</span>
                   </span>
                 </div>
-                <div className="ml-50 " style={{ marginTop: "-20px" }}>
+                <div className="ml-50 " style={{ marginTop: "-15px" }}>
                   <Link
                     href="/light/home-creative-agency/"
                     className="classic butn butn-md butn-bord radius-30"

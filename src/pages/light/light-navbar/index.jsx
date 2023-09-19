@@ -97,6 +97,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 <div
                   className="cursor-pointer menu-icon text-dark"
                   onClick={toggleMenu}
+                  style={{ marginTop: "10px" }}
                 >
                   <span className="icon">
                     <i></i>

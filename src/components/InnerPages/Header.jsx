@@ -7,8 +7,8 @@ function Header({ data, subBg }) {
         <div className="row">
           <div className="col-lg-8">
             <div className="caption">
-              <h6 className="sub-title">{data.subTitle}</h6>
-              <h1 className="fz-55">{data.title}</h1>
+              {/* <h6 className="sub-title">{data.subTitle}</h6> */}
+              <h1 className="fz-55" style={{marginTop:"80px"}}>{data.title}</h1>
               <div className=" offset-lg-4">
                 <div className="text mt-30 ml-10">
                   <p>

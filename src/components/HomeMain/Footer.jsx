@@ -1,4 +1,3 @@
-import React from "react";
 //= Data
 import data from "@/data/app-data.json";
 import Link from "next/link";
@@ -114,8 +113,7 @@ function Footer({ lightMode }) {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                  href={`/${lightMode ? "light" : "dark"}/shop-list`}>
+                  <Link href={`/${lightMode ? "light" : "dark"}/shop-list`}>
                     LInkedin
                   </Link>
                 </li>
