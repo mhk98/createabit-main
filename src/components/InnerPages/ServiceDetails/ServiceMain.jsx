@@ -20,8 +20,8 @@ const ServiceMain = () => {
           display: "flex",
           justifyContent: "center",
           gap: "20px",
-          marginTop: "50px",
-          marginBottom: "50px",
+          marginTop: "100px",
+          marginBottom: "100px",
         }}
       >
         <button

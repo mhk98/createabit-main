@@ -10,6 +10,7 @@ import Header from "@/components/InnerPages/Header";
 import Footer from "@/components/HomeMain/Footer";
 import Service6 from "@/components/InnerPages/ServiceDetails/Service6";
 import DarkNavbar from "../dark-navbar";
+import ServiceMain from "@/components/InnerPages/ServiceDetails/ServiceMain";
 
 function PageService6() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function PageService6() {
       <DarkNavbar></DarkNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
-        <Service6 />
+        <ServiceMain></ServiceMain>
       </main>
       <Footer />
     </>

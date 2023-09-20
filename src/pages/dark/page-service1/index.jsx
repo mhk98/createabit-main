@@ -33,7 +33,7 @@ function PageService1() {
       <DarkNavbar></DarkNavbar>
       <main>
         <Header data={headerMetadata} subBg={true} />
-        {/* <Service1></Service1> */}
+
         <ServiceMain></ServiceMain>
       </main>
       <Footer />
