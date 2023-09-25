@@ -157,7 +157,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <div className="cursor-pointer link dmenu">
                       <Link href="/light/page-product/" className="">
                         <span
-                          className="fill-text"
+                          className="fill-text "
                           data-text="Product Solution"
                         >
                           Product Solution
@@ -168,15 +168,15 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   </div>
                   <div className="sub-menu">
                     <ul>
-                      <li>
+                      <li className="text-black">
                         <Link
                           href="/light/page-product-category1/"
-                          className="sub-link"
+                          className="sub-link "
                         >
                           Dynamic Digital Products
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link
                           href="/light/page-product-category2/"
                           className="sub-link"
@@ -184,7 +184,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                           Intelligent TECH Products
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link
                           href="/light/page-product-category3/"
                           className="sub-link"
@@ -203,7 +203,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   <div className="o-hidden">
                     <div className="cursor-pointer link dmenu">
                       <Link href="/light/page-services/" className="">
-                        <span className="fill-text" data-text="Services">
+                        <span className="fill-text" data-text="Service">
                           Service
                         </span>
                       </Link>
@@ -212,32 +212,32 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   </div>
                   <div className="sub-menu">
                     <ul>
-                      <li>
+                      <li className="text-black">
                         <Link href="/light/page-service1/" className="sub-link">
                           WEBSITE DEVELOPMENT
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link href="/light/page-service2/" className="sub-link">
                           WEB APPLICATION
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link href="/light/page-service3/" className="sub-link">
                           MOBILE APPS DEVELOPMENT
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link href="/light/page-service4/" className="sub-link">
                           DIGITAL MARKETING & SEO
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link href="/light/page-service5/" className="sub-link">
                           GRAPHICS DESIGN & PRINTING
                         </Link>
                       </li>
-                      <li>
+                      <li className="text-black">
                         <Link href="/light/page-service6/" className="sub-link">
                           VIDEO & ANIMATION
                         </Link>
