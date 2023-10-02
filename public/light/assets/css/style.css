@@ -285,7 +285,7 @@ figure {
 }
 
 .main-colorbg4 {
-  background-color: #ffaa17;
+  background-color: black;
 }
 
 .main-bg {
@@ -603,6 +603,7 @@ img {
   border-radius: 50%;
   text-align: center;
   line-height: 48px;
+  color: white;
 }
 
 .rotate-circle {
@@ -1678,7 +1679,8 @@ img.left {
 }
 
 .icon-img-120 {
-  width: 120px;
+  width: 180px;
+  margin-top: -10px;
 }
 
 /*-------------------------------------------------------

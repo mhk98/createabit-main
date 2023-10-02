@@ -285,7 +285,7 @@ figure {
 }
 
 .main-colorbg4 {
-  background-color: #ffaa17;
+  background-color: white;
 }
 
 .main-bg {
@@ -589,6 +589,7 @@ img {
   border-radius: 50%;
   text-align: center;
   line-height: 48px;
+  color: black;
 }
 
 .rotate-circle {
@@ -1664,7 +1665,8 @@ img.left {
 }
 
 .icon-img-120 {
-  width: 120px;
+  width: 180px;
+  margin-top: -15px;
 }
 
 /*-------------------------------------------------------
@@ -3840,7 +3842,7 @@ body.loaded {
 }
 
 .sticky-sidebar .left-header .header-logo a {
-  height: 100px;
+  height: 150px;
 }
 
 .sticky-sidebar .left-header .header-logo img {
@@ -10647,4 +10649,3 @@ header.in-box {
     height: 600px;
   }
 }
-

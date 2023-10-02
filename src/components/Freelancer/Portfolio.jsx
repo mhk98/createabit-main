@@ -11,13 +11,11 @@ function Portfolio() {
     <section className="portfolio clasic section-padding" data-scroll-index="3">
       <div className="container">
         <div className="sec-lg-head">
-          <div className="gap-5 row">
+          <div className="row">
             <div className="col-lg-7">
-              <div className="position-re" style={{ marginTop: "0px" }}>
-                <h6 className="mb-10 dot-titl-non">Product</h6>
-                <h2 className="fz-50" style={{ marginBottom: "60px" }}>
-                  Feature Products
-                </h2>
+              <div className="position-re">
+                <h6 className="dot-titl-non">Product</h6>
+                <h2 className="fz-50">Feature Products</h2>
               </div>
             </div>
             <div className="col-lg-5 d-flex align-items-center">
