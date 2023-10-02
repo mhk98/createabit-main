@@ -3948,6 +3948,16 @@ body.loaded {
   display: inline-block;
 }
 
+.dot-titl-non {
+  padding: 7px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: inline-block;
+}
+
 .sec-lg-head.text-dark .dot-titl {
   border-color: rgba(0, 0, 0, 0.5);
 }
@@ -10368,8 +10378,6 @@ header.in-box {
     background-color: #2468a3;
     padding-left: 15px;
   }
-
-  
 }
 @media only screen and (min-width: 1400px) {
   .product_section {
@@ -10639,3 +10647,4 @@ header.in-box {
     height: 600px;
   }
 }
+

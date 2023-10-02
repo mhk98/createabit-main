@@ -25,7 +25,9 @@ function Story(lightMode) {
           </div>
           <div className="col-lg-4">
             <div className="sec-head mt-80">
-              <h6 className="sub-title">Our Story.</h6>
+              <h6 className="sub-title" style={{ fontSize: "20px" }}>
+                Our Story.
+              </h6>
             </div>
           </div>
 
@@ -148,7 +150,9 @@ function Story(lightMode) {
 
           <div className="text-right col-lg-4">
             <div className="sec-head mt-80">
-              <h6 className="sub-title">We Do.</h6>
+              <h6 className="sub-title" style={{ fontSize: "20px" }}>
+                What We Do.
+              </h6>
             </div>
           </div>
         </div>

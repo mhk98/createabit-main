@@ -107,6 +107,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   <Link
                     href="/light/home-creative-agency/"
                     className="classic butn butn-md butn-bord radius-30"
+                  
                   >
                     <span className="word">Classic Mode</span>
                   </Link>

@@ -65,7 +65,7 @@ function Header({ lightMode }) {
       <div className="container-xxl">
         <div className="row">
           <div className="col-lg-9">
-            <div className="caption title" >
+            <div className="caption title">
               <h1>
                 High End <br /> <span className="stroke">Creative</span> Agency
               </h1>

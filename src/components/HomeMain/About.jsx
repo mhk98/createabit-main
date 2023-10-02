@@ -5,16 +5,7 @@ function About({ lightMode }) {
   return (
     <section className="about-intro section-padding about-dark about-light">
       <div className="container">
-        <h6
-          className="text-center dot-titl-non wow fadeIn"
-          style={{
-            border: "1px solid",
-            width: "150px",
-            borderRadius: "50px",
-          }}
-        >
-          Who We Are
-        </h6>
+        <h6 className="text-center dot-titl-non fadeIn">Who We Are</h6>
         <div className="mb-40 align-middle row">
           <div className="col-lg-5">
             <div className=" sec-lg-head md-mb30" style={{ marginTop: "15px" }}>
