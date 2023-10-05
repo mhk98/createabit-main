@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Header({ data }) {
   return (
     <header className="page-header section-padding pb-0">
@@ -14,7 +12,7 @@ function Header({ data }) {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

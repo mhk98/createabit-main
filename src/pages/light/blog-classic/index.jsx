@@ -5,10 +5,11 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Navbar from "@/components/Common/MainNavbar";
 import LightFooter from "@/components/HomeMain/LightFooter";
 import Classic from "@/components/InnerPages/Blog/Classic";
 import Header from "@/components/InnerPages/Blog/Header";
+import DarkNavbar from "@/pages/dark/dark-navbar";
+import LightNavbar from "../light-navbar";
 
 function BlogClassicLight() {
   useEffect(() => {
@@ -28,7 +29,7 @@ function BlogClassicLight() {
       </Head>
 
       <Loader />
-      <Navbar mainBg lightMode />
+      <LightNavbar mainBg lightMode />
       <main className="main-bg">
         <Header data={metadata} />
         <Classic />

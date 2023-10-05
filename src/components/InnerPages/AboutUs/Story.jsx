@@ -33,14 +33,14 @@ function Story(lightMode) {
 
           <div className="col-lg-8">
             <div className="cont mt-80">
-              <p style={{ fontSize: "16px", fontWeight: "700" }}>
+              <p style={{ fontSize: "16px" }}>
                 CreateAbit designs is a renowned name in the digital world. We
                 are a reputed marketing and branding agency based in Washington
                 DC metro area. Our extensive history, rich experience, and
                 excellent track record make us a more reliable choice when it
                 comes to designing and marketing services.{" "}
               </p>
-              <p style={{ fontSize: "16px", fontWeight: "700" }}>
+              <p style={{ fontSize: "16px" }}>
                 We aim to make your online presence better which is no less than
                 a necessity these days. In this day and age, where technology
                 has takeover, trends have significantly changed. No matter how
@@ -81,31 +81,31 @@ function Story(lightMode) {
                   </h2>
                   <div className="mt-10 feat">
                     <ul className="">
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Expertise in executing customized project requirements
                         to perfection (short-term as well as long-term)
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Fast project turnaround time
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Substantial cost savings
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Strict adherence to International quality standards
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         A dedicated Project Management, Transitions and Customer
                         Engagement team available 24 hours a day
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Significant increase in business revenue and
                         productivity
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Experience in serving global customers for over 12 years
                       </li>
-                      <li className="mb-10 fw-400" style={{ fontSize: "16px" }}>
+                      <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Vast domain knowledge and outsourcing expertise across
                         multiple domains
                       </li>
@@ -119,7 +119,7 @@ function Story(lightMode) {
         <div className="row">
           <div className="col-lg-8">
             <div className="cont mt-80">
-              <p style={{ fontSize: "16px", fontWeight: "700" }}>
+              <p style={{ fontSize: "16px" }}>
                 We know how important it is to keep the audiences involved and
                 how to maintain their interest in what you do. We ensure the
                 provision of best services that can provide you with the
@@ -131,7 +131,7 @@ function Story(lightMode) {
                 highly-qualified and
               </p>
               <br />
-              <p style={{ fontSize: "16px", fontWeight: "700" }}>
+              <p style={{ fontSize: "16px" }}>
                 We provide top-notch services to all our clients and
                 satisfaction is guaranteed here. Whether you need a new website
                 with appealing design and easy to use interface or you are

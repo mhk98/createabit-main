@@ -5788,6 +5788,13 @@ footer .bg-pattern {
   min-height: 480px;
 }
 
+.caption {
+  margin-top: 50px;
+}
+.caption h1 {
+  margin-top: 60px;
+}
+
 .page-header .caption .sub-title {
   position: relative;
   padding-left: 20px;

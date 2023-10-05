@@ -7624,7 +7624,12 @@ header.in-box {
   position: relative;
   background-position: center bottom;
 }
-
+.caption {
+  margin-top: 120px;
+}
+.caption h1 {
+  margin-top: 60px;
+}
 .header-main .caption h1 {
   font-size: 100px;
 }
