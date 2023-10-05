@@ -5,10 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import LightFooter from "@/components/HomeMain/LightFooter";
+import Footer from "@/components/HomeMain/Footer";
 import Classic from "@/components/InnerPages/Blog/Classic";
 import Header from "@/components/InnerPages/Blog/Header";
-import DarkNavbar from "@/pages/dark/dark-navbar";
 import LightNavbar from "../light-navbar";
 
 function BlogClassicLight() {
@@ -34,7 +33,7 @@ function BlogClassicLight() {
         <Header data={metadata} />
         <Classic />
       </main>
-      <LightFooter />
+      <Footer />
     </>
   );
 }

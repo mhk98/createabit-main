@@ -1304,6 +1304,10 @@ img {
   filter: blur(0px);
 }
 
+.imago img{
+  width: ;
+}
+
 /* ====================== [ Start Helper Classes  ] ====================== */
 .cursor-pointer {
   cursor: pointer;
@@ -1452,6 +1456,10 @@ img.left {
 
 .section-padding {
   padding-bottom: 120px;
+}
+
+.classic_blog {
+  margin-bottom: 120px!important;
 }
 
 .about-dark {

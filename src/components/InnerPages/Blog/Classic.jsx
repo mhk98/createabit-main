@@ -4,9 +4,9 @@ import data from "@/data/InnerPages/Blog/classic.json";
 
 function Classic() {
   return (
-    <section className="blog-modern section-padding sub-bg">
+    <section className="blog-modern section-padding sub-bg ">
       <div className="container">
-        <div className="row">
+        <div className="row classic_blog">
           {data.map((item, index) => (
             <div className="col-lg-4 col-md-6" key={item.id}>
               <div

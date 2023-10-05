@@ -7,12 +7,12 @@ function Header({ data, subBg }) {
         <div className="row">
           <div className="col-lg-8">
             <div className="caption">
-              {/* <h6 className="sub-title">{data.subTitle}</h6> */}
+              <h6 className="sub-title">{data.subTitle}</h6>
               <h1 className="fz-55" style={{ marginTop: "80px" }}>
                 {data.title}
               </h1>
               <div className=" offset-lg-4">
-                <div className=" mt-30" style={{ marginLeft:"-165px" }}>
+                <div className=" mt-30" style={{ marginLeft: "-165px" }}>
                   <p>
                     We help our clients succeed by creating brand identities,
                     digital experiences, and print materials that communicate
