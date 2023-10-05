@@ -5,9 +5,10 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import LightFooter from "@/components/HomeMain/LightFooter";
+
 import Wow4 from "@/components/InnerPages/Wow/Wow4";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageWow4() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function PageWow4() {
       <main>
         <Wow4 />
       </main>
-      <LightFooter lightMode />
+      <LightFooter />
     </>
   );
 }

@@ -17,6 +17,7 @@ import Portfolio from "@/components/Startup/Portfolio";
 import Services from "@/components/Startup/ServicesContainer";
 import Team from "@/components/Startup/Team";
 import Testimonials from "@/components/Startup/Testimonials";
+import DarkFooter from "../dark-footer";
 
 function HomeStartup() {
   useEffect(() => {
@@ -44,7 +45,7 @@ function HomeStartup() {
         <Blog />
         <CallToAction />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

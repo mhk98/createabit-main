@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import Wow4 from "@/components/InnerPages/Wow/Wow4";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageWow4() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function PageWow4() {
       <main>
         <Wow4></Wow4>
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

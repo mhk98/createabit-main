@@ -10,6 +10,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Team/Header";
 import Team from "@/components/Startup/Team";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageTeam() {
   useEffect(() => {
@@ -31,7 +32,7 @@ function PageTeam() {
         {/* <Testimonials /> */}
         {/* <CallToAction innerPageStyle /> */}
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

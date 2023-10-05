@@ -9,6 +9,7 @@ import Navbar from "@/components/Common/MainNavbar";
 import Checkout from "@/components/Shop/Checkout";
 import Header from "@/components/Shop/Header";
 import Footer from "@/components/Startup/Footer";
+import LightFooter from "../light-footer";
 
 function ShopCheckout() {
   useEffect(() => {
@@ -43,7 +44,7 @@ function ShopCheckout() {
             <Header data={metadata} />
             <Checkout />
           </main>
-          <Footer subBg lightMode />
+          <LightFooter   />
         </div>
       </div>
     </>

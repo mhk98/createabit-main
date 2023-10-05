@@ -9,6 +9,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Form from "@/components/InnerPages/Contact/Form";
 import Header from "@/components/InnerPages/Contact/Header";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageContact() {
   useEffect(() => {
@@ -28,7 +29,7 @@ function PageContact() {
         <Header />
         <Form />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

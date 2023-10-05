@@ -9,6 +9,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Header";
 import Product from "@/components/InnerPages/Products/product";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageProductsCategory1() {
   useEffect(() => {
@@ -38,7 +39,7 @@ function PageProductsCategory1() {
         <ServicesTab /> */}
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
-        <Footer />
+        <DarkFooter />
       </main>
     </>
   );

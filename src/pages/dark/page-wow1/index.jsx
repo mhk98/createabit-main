@@ -9,6 +9,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import Wow1 from "@/components/InnerPages/Wow/Wow1";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
@@ -35,7 +36,7 @@ function PageWow1() {
       <main>
         <Wow1></Wow1>
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

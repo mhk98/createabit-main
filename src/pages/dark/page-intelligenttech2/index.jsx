@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import IntelligentTech2 from "@/components/InnerPages/Intelligent/IntelligentTech2";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function PageProductShop1() {
       <main>
         <IntelligentTech2></IntelligentTech2>
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import Product from "@/components/Shop/Product";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function ShopProductLight() {
   useEffect(() => {
@@ -36,7 +37,7 @@ function ShopProductLight() {
           <main className="main-bg">
             <Product />
           </main>
-          <Footer lightMode />
+          <LightFooter  />
         </div>
       </div>
     </>

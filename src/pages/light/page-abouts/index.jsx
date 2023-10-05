@@ -5,10 +5,10 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/HomeMain/Footer";
 import CallToAction from "@/components/InnerPages/AboutUs/CallToAction";
 import Story from "@/components/InnerPages/AboutUs/Story";
 import Header from "@/components/InnerPages/Header";
+import LightFooter from "../light-footer";
 import LightNavbar from "../light-navbar";
 
 function PageAbout() {
@@ -41,7 +41,7 @@ function PageAbout() {
         {/* <Clients /> */}
         <CallToAction innerPageStyle />
       </main>
-      <Footer />
+      <LightFooter />
     </>
   );
 }

@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import Grocery from "@/components/InnerPages/Grocery/Grocery";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function GroceryProduct() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function GroceryProduct() {
       <main>
         <Grocery />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

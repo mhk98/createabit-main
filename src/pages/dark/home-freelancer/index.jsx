@@ -16,6 +16,7 @@ import Portfolio from "@/components/Freelancer/Portfolio";
 import Services from "@/components/Freelancer/Services";
 import Skills from "@/components/Freelancer/Skills";
 import Testimonials from "@/components/Freelancer/Testimonials";
+import DarkFooter from "../dark-footer";
 
 function HomeFreelancer() {
   useEffect(() => {
@@ -42,7 +43,7 @@ function HomeFreelancer() {
         <Blog />
         <Contact />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

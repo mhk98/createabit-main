@@ -5,13 +5,14 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import LightFooter from "@/components/HomeMain/LightFooter";
+
 import About from "@/components/InnerPages/ProjectDetails2/About";
 import CallToAction from "@/components/InnerPages/ProjectDetails2/CallToAction";
 import Content from "@/components/InnerPages/ProjectDetails2/Content";
 import Header from "@/components/InnerPages/ProjectDetails2/Header";
 import Menu from "@/components/Showcases/Menu";
 import Navigation from "@/components/Showcases/Navigation";
+import LightFooter from "../light-footer";
 
 function ProjectDetails2Light() {
   useEffect(() => {
@@ -34,7 +35,7 @@ function ProjectDetails2Light() {
         <Content />
         <CallToAction />
       </main>
-      <LightFooter lightMode />
+      <LightFooter  />
     </>
   );
 }

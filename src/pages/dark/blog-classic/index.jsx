@@ -8,7 +8,7 @@ import Loader from "@/components/Common/Loader";
 
 import Classic from "@/components/InnerPages/Blog/Classic";
 import Header from "@/components/InnerPages/Blog/Header";
-import Footer from "@/components/Startup/Footer";
+import DarkFooter from "../dark-footer";
 import DarkNavbar from "../dark-navbar";
 
 function BlogClassic() {
@@ -34,7 +34,7 @@ function BlogClassic() {
         <Header data={metadata} />
         <Classic />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

@@ -11,6 +11,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Service5 from "@/components/InnerPages/ServiceDetails/Service5";
 import DarkNavbar from "../dark-navbar";
 import ServiceMain from "@/components/InnerPages/ServiceDetails/ServiceMain";
+import DarkFooter from "../dark-footer";
 
 function PageService5() {
   useEffect(() => {
@@ -36,7 +37,7 @@ function PageService5() {
         <ServiceMain></ServiceMain>
 
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

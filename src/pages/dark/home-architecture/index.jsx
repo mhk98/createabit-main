@@ -17,6 +17,7 @@ import Services from "@/components/Architecture/Services";
 import Testimonials from "@/components/Architecture/Testimonials";
 import Loader from "@/components/Common/Loader";
 import Navbar from "@/components/Common/MainNavbar";
+import DarkFooter from "../dark-footer";
 
 function HomeArchitecture() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function HomeArchitecture() {
         <Testimonials />
         <Blog />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

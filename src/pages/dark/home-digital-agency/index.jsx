@@ -19,6 +19,7 @@ import Price from "@/components/DigitalAgency/Price";
 import Services from "@/components/DigitalAgency/Services";
 import ServicesTab from "@/components/DigitalAgency/ServicesTab";
 import Testimonials from "@/components/DigitalAgency/Testimonials";
+import DarkFooter from "../dark-footer";
 
 function HomeDigitalAgency() {
   useEffect(() => {
@@ -48,7 +49,7 @@ function HomeDigitalAgency() {
         <CallToAction />
         <Blog />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

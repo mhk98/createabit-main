@@ -9,6 +9,7 @@ import Navbar from "@/components/Common/MainNavbar";
 import Cart from "@/components/Shop/Cart";
 import Header from "@/components/Shop/Header";
 import Footer from "@/components/Startup/Footer";
+import LightFooter from "../light-footer";
 
 function ShopCartLight() {
   useEffect(() => {
@@ -43,7 +44,7 @@ function ShopCartLight() {
             <Header data={metadata} />
             <Cart lightMode />
           </main>
-          <Footer subBg lightMode />
+          <LightFooter   />
         </div>
       </div>
     </>

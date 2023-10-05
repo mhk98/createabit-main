@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function PageProductShop1() {
       <main>
         <ProductShop1></ProductShop1>
       </main>
-      <Footer lightMode />
+      <LightFooter />
     </>
   );
 }

@@ -6,12 +6,13 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 
-import LightFooter from "@/components/HomeMain/LightFooter";
+
 import Header from "@/components/InnerPages/Team/Header";
 import Team from "@/components/InnerPages/Team/Team";
 import Testimonials from "@/components/InnerPages/Team/Testimonials";
 import CallToAction from "@/components/Startup/CallToAction";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageTeamLight() {
   useEffect(() => {
@@ -33,7 +34,7 @@ function PageTeamLight() {
         <Testimonials />
         <CallToAction innerPageStyle />
       </main>
-      <LightFooter lightMode />
+      <LightFooter  />
     </>
   );
 }

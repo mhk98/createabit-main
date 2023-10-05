@@ -9,6 +9,7 @@ import IntelligentTech1 from "@/components/InnerPages/Intelligent/IntelligentTec
 
 import Footer from "@/components/HomeMain/Footer";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
 function PageProductShop1() {
@@ -34,7 +35,7 @@ function PageProductShop1() {
       <main>
         <IntelligentTech1></IntelligentTech1>
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

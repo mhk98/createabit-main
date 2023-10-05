@@ -9,6 +9,8 @@ import Footer from "@/components/HomeMain/Footer";
 import Classic from "@/components/InnerPages/Blog/Classic";
 import Header from "@/components/InnerPages/Blog/Header";
 import LightNavbar from "../light-navbar";
+import DarkFooter from "@/pages/dark/dark-footer";
+import LightFooter from "../light-footer";
 
 function BlogClassicLight() {
   useEffect(() => {
@@ -33,7 +35,7 @@ function BlogClassicLight() {
         <Header data={metadata} />
         <Classic />
       </main>
-      <Footer />
+      <LightFooter />
     </>
   );
 }

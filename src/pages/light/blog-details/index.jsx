@@ -6,8 +6,8 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 import Navbar from "@/components/Common/MainNavbar";
-import LightFooter from "@/components/HomeMain/LightFooter";
 import Details from "@/components/InnerPages/Blog/Details";
+import LightFooter from "../light-footer";
 
 function BlogDetailsLight() {
   useEffect(() => {

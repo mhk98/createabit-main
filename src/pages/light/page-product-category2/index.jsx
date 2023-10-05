@@ -10,6 +10,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Header";
 import Product1 from "@/components/InnerPages/Products/product1";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageProductsCategory2() {
   useEffect(() => {
@@ -39,7 +40,7 @@ function PageProductsCategory2() {
         <ServicesTab /> */}
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
-        <Footer lightMode />
+        <LightFooter  />
       </main>
     </>
   );

@@ -5,9 +5,9 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import LightFooter from "@/components/HomeMain/LightFooter";
 import IntelligentTech4 from "@/components/InnerPages/Intelligent/IntelligentTech4";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageProductShop1() {
   useEffect(() => {
@@ -32,7 +32,7 @@ function PageProductShop1() {
       <main>
         <IntelligentTech4></IntelligentTech4>
       </main>
-      <LightFooter lightMode />
+      <LightFooter />
     </>
   );
 }

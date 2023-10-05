@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import DarkNavbar from "../dark-navbar";
 import ShowcaseVerticalParallax from "../showcase-parallax";
+import DarkFooter from "../dark-footer";
 
 function GroceryDetails() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function GroceryDetails() {
       <main>
         <ShowcaseVerticalParallax />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

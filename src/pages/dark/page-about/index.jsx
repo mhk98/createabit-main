@@ -15,6 +15,7 @@ import Header from "@/components/InnerPages/Header";
 import CallToAction from "@/components/Startup/CallToAction";
 import Footer from "@/components/Startup/Footer";
 import Team from "@/components/Startup/Team";
+import DarkFooter from "../dark-footer";
 
 function PageAbout() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function PageAbout() {
         <Clients />
         <CallToAction innerPageStyle />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

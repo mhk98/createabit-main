@@ -7,10 +7,10 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 
 import ServicesTab from "@/components/DigitalAgency/ServicesTab";
-import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/InnerPages/Header";
 import Portfolio from "@/components/InnerPages/Services/Portfolio";
 import CallToAction from "@/components/Startup/CallToAction";
+import LightFooter from "../light-footer";
 import LightNavbar from "../light-navbar";
 
 function PageServicesLight() {
@@ -42,7 +42,7 @@ function PageServicesLight() {
         {/* <FAQ /> */}
         <CallToAction innerPageStyle />
       </main>
-      <Footer lightMode />
+      <LightFooter />
     </>
   );
 }

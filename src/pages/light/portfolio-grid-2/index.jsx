@@ -30,7 +30,7 @@ function PortfolioClassicGrid2Light() {
         {/* <Header data={metadata} /> */}
         <GridTwoCols />
       </main>
-      {/* <Footer subBg lightMode /> */}
+      {/* <LightFooter /> */}
     </>
   );
 }

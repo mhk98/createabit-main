@@ -8,7 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Navbar from "@/components/Common/MainNavbar";
 import Header from "@/components/InnerPages/Blog/Header";
 import ImageOutFrame from "@/components/InnerPages/Blog/ImageOutFrame";
-import Footer from "@/components/Startup/Footer";
+import DarkFooter from "../dark-footer";
 
 function BlogImageOutFrame() {
   useEffect(() => {
@@ -33,7 +33,7 @@ function BlogImageOutFrame() {
         <Header data={metadata} />
         <ImageOutFrame />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

@@ -6,9 +6,10 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 
-import LightFooter from "@/components/HomeMain/LightFooter";
+
 import WhoWeAre from "@/components/InnerPages/WhoWeAre/WhoWeAre";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
 function About() {
@@ -34,7 +35,7 @@ function About() {
       <main>
         <WhoWeAre />
       </main>
-      <LightFooter lightMode />
+      <LightFooter  />
     </>
   );
 }

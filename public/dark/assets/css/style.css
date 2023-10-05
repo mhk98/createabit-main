@@ -1304,8 +1304,9 @@ img {
   filter: blur(0px);
 }
 
-.imago img{
-  width: ;
+.about_img {
+  width: 415px;
+  height: 470px;
 }
 
 /* ====================== [ Start Helper Classes  ] ====================== */
@@ -1459,7 +1460,7 @@ img.left {
 }
 
 .classic_blog {
-  margin-bottom: 120px!important;
+  margin-bottom: 120px !important;
 }
 
 .about-dark {

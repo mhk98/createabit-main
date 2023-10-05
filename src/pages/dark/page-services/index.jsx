@@ -11,6 +11,7 @@ import Header from "@/components/InnerPages/Header";
 import Portfolio from "@/components/InnerPages/Services/Portfolio";
 import CallToAction from "@/components/Startup/CallToAction";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageServices() {
   useEffect(() => {
@@ -40,7 +41,7 @@ function PageServices() {
         {/* <FAQ /> */}
         <CallToAction innerPageStyle />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

@@ -18,6 +18,7 @@ import Portfolio from "@/components/Corporate/Portfolio";
 import Pricing from "@/components/Corporate/Pricing";
 import Services from "@/components/Corporate/Services";
 import Testimonials from "@/components/Corporate/Testimonials";
+import DarkFooter from "../dark-footer";
 
 function HomeCorporate() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function HomeCorporate() {
         <Pricing />
         <Blog />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

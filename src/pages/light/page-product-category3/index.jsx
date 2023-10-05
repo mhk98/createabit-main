@@ -5,10 +5,10 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import LightFooter from "@/components/HomeMain/LightFooter";
 import Header from "@/components/InnerPages/Header";
 import Product2 from "@/components/InnerPages/Products/product2";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageProductsCategory3() {
   useEffect(() => {
@@ -38,7 +38,7 @@ function PageProductsCategory3() {
         <ServicesTab /> */}
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
-        <LightFooter lightMode />
+        <LightFooter />
       </main>
     </>
   );

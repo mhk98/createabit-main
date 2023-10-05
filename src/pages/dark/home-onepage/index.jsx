@@ -19,6 +19,7 @@ import Portfolio from "@/components/OnePage/Portfolio";
 import Services from "@/components/OnePage/Services";
 import Team from "@/components/OnePage/Team";
 import Testimonials from "@/components/OnePage/Testimonials";
+import DarkFooter from "../dark-footer";
 
 function HomeOnePage() {
   useEffect(() => {
@@ -48,7 +49,7 @@ function HomeOnePage() {
         <Blog />
         <Contact />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

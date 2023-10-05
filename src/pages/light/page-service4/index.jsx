@@ -8,10 +8,11 @@ import Loader from "@/components/Common/Loader";
 import Header from "@/components/InnerPages/Header";
 import Layout from "@/layouts/default";
 
-import LightFooter from "@/components/HomeMain/LightFooter";
+
 
 import Service4 from "@/components/InnerPages/ServiceDetails/Service4";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageService4() {
   useEffect(() => {

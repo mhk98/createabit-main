@@ -63,7 +63,7 @@ function Story(lightMode) {
                   <div className="img1">
                     <div className="o-hidden">
                       <div className="imago wow">
-                        <img
+                        <img className="about_img"
                           src={`/${
                             lightMode ? "light" : "dark"
                           }/assets/imgs/about/01.jpg`}

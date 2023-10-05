@@ -9,7 +9,6 @@ import Loader from "@/components/Common/Loader";
 import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
 import Portfolio from "@/components/Freelancer/Portfolio";
 import About from "@/components/HomeMain/About";
-import Blog from "@/components/HomeMain/Blog";
 import Clients from "@/components/HomeMain/Clients";
 import Footer from "@/components/HomeMain/Footer";
 import Marq from "@/components/HomeMain/Marq";
@@ -23,6 +22,8 @@ import PortfolioClassicGrid3 from "../portfolio-grid-3";
 import Header from "@/components/HomeMain/Header";
 import Wellness from "@/components/InnerPages/Home/Wellness";
 import Overlay from "@/components/Preview/Overlay";
+import BlogClassic from "../blog-classic";
+import DarkFooter from "../dark-footer";
 
 function HomeCreativeAgency() {
   useEffect(() => {
@@ -56,9 +57,9 @@ function HomeCreativeAgency() {
             {/* <CreativeBlog /> */}
             {/* <WeAre /> */}
             <Wellness />
-            <Blog />
+            <BlogClassic />
           </main>
-          <Footer />
+          <DarkFooter />
         </div>
       </div>
     </>

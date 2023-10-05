@@ -9,6 +9,7 @@ import Footer from "@/components/Startup/Footer";
 
 import Product from "@/components/InnerPages/Products/product";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageProducts() {
   useEffect(() => {
@@ -39,7 +40,7 @@ function PageProducts() {
         {/* <FAQ /> */}
         {/* <CallToAction innerPageStyle /> */}
       </main>
-      <Footer lightMode />
+      <LightFooter  />
     </>
   );
 }

@@ -10,6 +10,7 @@ import CallToAction from "@/components/InnerPages/AboutUs/CallToAction";
 import Story from "@/components/InnerPages/AboutUs/Story";
 import Header from "@/components/InnerPages/Header";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function PageAbout() {
   useEffect(() => {
@@ -41,7 +42,7 @@ function PageAbout() {
         {/* <Clients /> */}
         <CallToAction innerPageStyle />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

@@ -30,7 +30,7 @@ function PortfolioClassicGrid2() {
         {/* <Header data={metadata} /> */}
         <GridTwoCols />
       </main>
-      {/* <Footer subBg /> */}
+      {/* <DarkFooter/> */}
     </>
   );
 }

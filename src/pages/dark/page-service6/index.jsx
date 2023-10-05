@@ -11,6 +11,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Service6 from "@/components/InnerPages/ServiceDetails/Service6";
 import DarkNavbar from "../dark-navbar";
 import ServiceMain from "@/components/InnerPages/ServiceDetails/ServiceMain";
+import DarkFooter from "../dark-footer";
 
 function PageService6() {
   useEffect(() => {
@@ -35,7 +36,7 @@ function PageService6() {
         <Header data={headerMetadata} subBg={true} />
         <ServiceMain></ServiceMain>
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

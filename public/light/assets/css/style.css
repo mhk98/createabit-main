@@ -5793,6 +5793,7 @@ footer .bg-pattern {
 }
 .caption h1 {
   margin-top: 60px;
+  text-align: start;
 }
 
 .page-header .caption .sub-title {

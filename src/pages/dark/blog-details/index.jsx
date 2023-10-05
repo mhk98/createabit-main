@@ -7,7 +7,7 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 import Navbar from "@/components/Common/MainNavbar";
 import Details from "@/components/InnerPages/Blog/Details";
-import Footer from "@/components/Startup/Footer";
+import DarkFooter from "../dark-footer";
 
 function BlogDetails() {
   useEffect(() => {
@@ -26,7 +26,7 @@ function BlogDetails() {
       <main>
         <Details />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

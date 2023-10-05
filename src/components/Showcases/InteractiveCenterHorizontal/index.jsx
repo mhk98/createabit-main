@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 //= Data
 import data from "@/data/Showcases/interactive-center-horizontal.json";
@@ -50,7 +49,7 @@ function InteractiveCenterHorizontal() {
                   >
                     <h2>
                       <span className="num">{item.number}.</span>
-                      <Link href="/dark/grocery-details">
+                      <Link href="/dark/project-details2">
                         <span className="tag sub-title">{item.type}</span>{" "}
                         <span className="text">{item.title}</span>
                       </Link>

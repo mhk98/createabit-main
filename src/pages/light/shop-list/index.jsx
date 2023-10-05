@@ -9,6 +9,7 @@ import Footer from "@/components/HomeMain/Footer";
 import Header from "@/components/Shop/Header";
 import List from "@/components/Shop/List";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function ShopListLight() {
   useEffect(() => {
@@ -43,7 +44,7 @@ function ShopListLight() {
             <Header data={metadata} />
             <List />
           </main>
-          <Footer subBg lightMode />
+          <LightFooter   />
         </div>
       </div>
     </>

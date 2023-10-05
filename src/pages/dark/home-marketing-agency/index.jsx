@@ -22,6 +22,7 @@ import Portfolio from "@/components/MarketingAgency/Portfolio";
 import Services from "@/components/MarketingAgency/Services";
 import SideImage from "@/components/MarketingAgency/SideImage";
 import Testimonials from "@/components/MarketingAgency/Testimonials";
+import DarkFooter from "../dark-footer";
 
 function HomeMarketingAgency() {
   useEffect(() => {
@@ -52,7 +53,7 @@ function HomeMarketingAgency() {
         <CallToAction />
         <Marq2 />
       </main>
-      <Footer />
+      <DarkFooter />
     </ParallaxProvider>
   );
 }

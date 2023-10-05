@@ -8,10 +8,9 @@ import Loader from "@/components/Common/Loader";
 import Header from "@/components/InnerPages/Header";
 import Layout from "@/layouts/default";
 
-import LightFooter from "@/components/HomeMain/LightFooter";
-
 import Service2 from "@/components/InnerPages/ServiceDetails/Service2";
 import LightNavbar from "../light-navbar";
+import LightFooter from "../light-footer";
 
 function PageService2() {
   useEffect(() => {

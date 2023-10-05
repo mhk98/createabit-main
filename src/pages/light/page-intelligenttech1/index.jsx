@@ -5,8 +5,8 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import LightFooter from "@/components/HomeMain/LightFooter";
 import IntelligentTech1 from "@/components/InnerPages/Intelligent/IntelligentTech1";
+import LightFooter from "../light-footer";
 import LightNavbar from "../light-navbar";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
@@ -33,7 +33,7 @@ function PageProductShop1() {
       <main>
         <IntelligentTech1></IntelligentTech1>
       </main>
-      <LightFooter lightMode />
+      <LightFooter />
     </>
   );
 }

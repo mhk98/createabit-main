@@ -8,6 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Footer from "@/components/HomeMain/Footer";
 import ProductShop3 from "@/components/InnerPages/Shop/productShop3";
 import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 // import ProductShop1 from "@/components/InnerPages/Shop/productShop1";
 
 function PageProductShop3() {
@@ -33,7 +34,7 @@ function PageProductShop3() {
       <main>
         <ProductShop3></ProductShop3>
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }

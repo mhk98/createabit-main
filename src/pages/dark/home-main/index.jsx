@@ -17,6 +17,7 @@ import Header from "@/components/OnePage/Header";
 import DarkNavbar from "../dark-navbar";
 import PortfolioClassicGrid2 from "../portfolio-grid-2";
 import PortfolioClassicGrid3 from "../portfolio-grid-3";
+import DarkFooter from "../dark-footer";
 
 function HomeMain() {
   useEffect(() => {
@@ -117,7 +118,7 @@ function HomeMain() {
             <Testimonials />
             {/* <Blog /> */}
           </main>
-          <Footer />
+          <DarkFooter />
         </div>
       </div>
     </>
