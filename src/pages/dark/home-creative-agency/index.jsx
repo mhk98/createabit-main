@@ -22,8 +22,8 @@ import PortfolioClassicGrid3 from "../portfolio-grid-3";
 import Header from "@/components/HomeMain/Header";
 import Wellness from "@/components/InnerPages/Home/Wellness";
 import Overlay from "@/components/Preview/Overlay";
-import BlogClassic from "../blog-classic";
 import DarkFooter from "../dark-footer";
+import Blog from "@/components/HomeMain/Blog";
 
 function HomeCreativeAgency() {
   useEffect(() => {
@@ -57,7 +57,7 @@ function HomeCreativeAgency() {
             {/* <CreativeBlog /> */}
             {/* <WeAre /> */}
             <Wellness />
-            <BlogClassic />
+            <Blog />
           </main>
           <DarkFooter />
         </div>
