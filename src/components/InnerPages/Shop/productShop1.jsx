@@ -29,7 +29,7 @@ const ProductShop1 = () => {
               href="/light/home-creative-agency/"
               className="butn butn-md butn-bord radius-30"
             >
-              <span>Learn more</span>
+              <span>Add to Cart</span>
             </Link>
           </div>
         </div>
@@ -50,7 +50,7 @@ const ProductShop1 = () => {
               href="/light/home-creative-agency/"
               className="butn butn-md butn-bord radius-30"
             >
-              <span>Learn more</span>
+              <span>Add to Cart</span>
             </Link>
           </div>
         </div>
@@ -71,7 +71,7 @@ const ProductShop1 = () => {
               href="/light/home-creative-agency/"
               className="butn butn-md butn-bord radius-30"
             >
-              <span>Learn more</span>
+              <span>Add to Cart</span>
             </Link>
           </div>
         </div>
@@ -92,7 +92,7 @@ const ProductShop1 = () => {
               href="/light/home-creative-agency/"
               className="butn butn-md butn-bord radius-30"
             >
-              <span>Learn more</span>
+              <span>Add to Cart</span>
             </Link>
           </div>
         </div>
@@ -113,7 +113,7 @@ const ProductShop1 = () => {
               href="/light/home-creative-agency/"
               className="butn butn-md butn-bord radius-30"
             >
-              <span>Learn more</span>
+              <span>Add to Cart</span>
             </Link>
           </div>
         </div>
@@ -134,7 +134,7 @@ const ProductShop1 = () => {
               href="/light/home-creative-agency/"
               className="butn butn-md butn-bord radius-30"
             >
-              <span>Learn more</span>
+              <span>Add to Cart</span>
             </Link>
           </div>
         </div>

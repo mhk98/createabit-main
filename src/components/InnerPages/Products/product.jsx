@@ -189,6 +189,17 @@ function Product({ lightMode }) {
                         <span className="full-width">View Details</span>
                       </div>
                     </Link>
+                    <Link
+                      style={{ marginLeft: "20px" }}
+                      href={`/${
+                        lightMode ? "light" : "dark"
+                      }/page-productshop1`}
+                      className="butn butn-md butn-bord radius-30 mt-4"
+                    >
+                      <div className="full-width">
+                        <span className="full-width">Add to Cart</span>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -311,6 +322,17 @@ function Product({ lightMode }) {
                     >
                       <div className="full-width">
                         <span className="full-width">View Details</span>
+                      </div>
+                    </Link>
+                      <Link
+                      style={{ marginLeft: "20px" }}
+                      href={`/${
+                        lightMode ? "light" : "dark"
+                      }/page-productshop1`}
+                      className="butn butn-md butn-bord radius-30 mt-4"
+                    >
+                      <div className="full-width">
+                        <span className="full-width">Add to Cart</span>
                       </div>
                     </Link>
                   </div>
@@ -437,6 +459,18 @@ function Product({ lightMode }) {
                         {/* <Link href="">View Details</Link> */}
                         View Details
                       </span>
+                    </Link>
+
+                    <Link
+                      style={{ marginLeft: "20px" }}
+                      href={`/${
+                        lightMode ? "light" : "dark"
+                      }/page-productshop1`}
+                      className="butn butn-md butn-bord radius-30 mt-4"
+                    >
+                      <div className="full-width">
+                        <span className="full-width">Add to Cart</span>
+                      </div>
                     </Link>
                   </div>
                 </div>

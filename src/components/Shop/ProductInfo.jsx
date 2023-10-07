@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Controller, EffectFade, Thumbs } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useState, useEffect } from "react";
+import { Controller, EffectFade, Thumbs } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 function ProductInfo() {
   const [loadSwiper, setloadSwiper] = useState(false);
@@ -13,29 +13,29 @@ function ProductInfo() {
     touchRatio: 0.2,
     slideToClickedSlide: true,
     onSwiper: function (swiper) {
-      setGalleryThumbs(swiper)
-    }
-  }
+      setGalleryThumbs(swiper);
+    },
+  };
 
   const galleryTopOptions = {
     modules: [EffectFade, Controller, Thumbs],
     spaceBetween: 0,
-    effect: 'fade',
-    speed: 1000
-  }
+    effect: "fade",
+    speed: 1000,
+  };
 
   useEffect(() => {
     setloadSwiper(true);
   }, []);
 
   function decreaseCount(event) {
-    let input = event.currentTarget.parentElement.querySelector('input');
+    let input = event.currentTarget.parentElement.querySelector("input");
     if (parseInt(input.value) === 1) return;
     input.value = parseInt(input.value) - 1;
   }
 
   function increaseCount(event) {
-    let input = event.currentTarget.parentElement.querySelector('input');
+    let input = event.currentTarget.parentElement.querySelector("input");
     input.value = parseInt(input.value) + 1;
   }
 
@@ -44,8 +44,7 @@ function ProductInfo() {
       <div className="col-lg-4">
         <div className="img-preview md-mb50">
           <div className="gallery-top">
-            {
-              galleryThumbs &&
+            {galleryThumbs && (
               <Swiper {...galleryTopOptions} thumbs={{ swiper: galleryThumbs }}>
                 <SwiperSlide>
                   <div className="img">
@@ -68,11 +67,10 @@ function ProductInfo() {
                   </div>
                 </SwiperSlide>
               </Swiper>
-            }
+            )}
           </div>
           <div className="gallery-thumb mt-10">
-            {
-              loadSwiper &&
+            {loadSwiper && (
               <Swiper {...galleryThumbsOptions}>
                 <SwiperSlide>
                   <div className="img">
@@ -95,7 +93,7 @@ function ProductInfo() {
                   </div>
                 </SwiperSlide>
               </Swiper>
-            }
+            )}
           </div>
         </div>
       </div>
@@ -125,9 +123,11 @@ function ProductInfo() {
               </div>
             </div>
             <div className="text mt-30">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut
-                pellentesque ante. Quisque at viver neque. Duis consectetur nisl at
-                vehicular.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ut pellentesque ante. Quisque at viver neque. Duis
+                consectetur nisl at vehicular.
+              </p>
             </div>
             <div className="dot-list mt-30">
               <ul className="rest">
@@ -140,9 +140,13 @@ function ProductInfo() {
             <div className="d-flex align-items-center">
               <div>
                 <div className="counter">
-                  <span className="down" onClick={decreaseCount}>-</span>
+                  <span className="down" onClick={decreaseCount}>
+                    -
+                  </span>
                   <input type="text" defaultValue="1" />
-                  <span className="up" onClick={increaseCount}>+</span>
+                  <span className="up" onClick={increaseCount}>
+                    +
+                  </span>
                 </div>
               </div>
               <div className="ml-auto">
@@ -160,19 +164,23 @@ function ProductInfo() {
               </li>
               <li className="d-flex align-items-center mb-15">
                 <strong>CATEGORY :</strong>
-                <span className="ml-10"><a href="#0">Clothes</a></span>
+                <span className="ml-10">
+                  <a href="#0">Clothes</a>
+                </span>
               </li>
               <li className="d-flex align-items-center">
                 <strong>TAG :</strong>
-                <span className="ml-10"><a href="#0">Men</a> , <a href="#0">Women</a> , <a
-                  href="#0">Jacket</a></span>
+                <span className="ml-10">
+                  <a href="#0">Men</a> , <a href="#0">Women</a> ,{" "}
+                  <a href="#0">Jacket</a>
+                </span>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ProductInfo
+export default ProductInfo;

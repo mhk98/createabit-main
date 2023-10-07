@@ -7,7 +7,7 @@ export const productCategory1Api = createApi({
   }),
   endpoints: (builder) => ({
     getProductCategory1: builder.query({
-      query: () => "/productCategory1",
+      query: () => "/product",
     }),
   }),
 });
