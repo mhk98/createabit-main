@@ -8,9 +8,10 @@ export const productCartApi = createApi({
   }),
   endpoints: (builder) => ({
     createCart: builder.mutation({
-      query: () => ({
+      query: (product) => ({
         url: "/cart/create-cart",
         method: "POST",
+        body: product,
       }),
     }),
   }),

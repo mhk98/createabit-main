@@ -7,137 +7,49 @@ import product3 from "../../../../images/42-inch-lcd-digital-signage.jpg";
 import product5 from "../../../../images/Mirror-advertising-player.jpg";
 import product6 from "../../../../images/Touch-Screen-Kiosk2.jpg";
 import product4 from "../../../../images/Touch-table3.jpg";
+import { useGetProductsQuery } from "@/features/product/products";
+import { useCreateCartMutation } from "@/features/cart/cart";
+import { useState } from "react";
 const ProductShop1 = () => {
+  const { data } = useGetProductsQuery();
+  console.log("products", data?.data);
+  const products = data?.data;
+
+  const [createCart, { isLoading, isError }] = useCreateCartMutation();
+
+  const addToCart = (product) => {
+    console.log("productDetails", product);
+    createCart(product);
+  };
+
   return (
     <div className="container">
       <div
         className="row  justify-center align-middle mx-auto gap-5"
         style={{ margin: "160px 0px" }}
       >
-        <div className="col-lg-3">
-          <Image src={product1} alt="" />
-          <h4>Lcd Wall Video</h4>
-          <p>
-            Traffic control centers, financial institutions, public security and
-            judicial organs, exhibitions, business office buildings,
-            recreational places, hydraulic monitoring stations, power plant
-            monitoring stations, etc.
-          </p>
+        {products?.map((product) => (
+          <div className="col-lg-3" key={product.id}>
+            <Image
+              src={`http://localhost:5000/${product.image}`}
+              alt=""
+              width={300}
+              height={200}
+            />
+            <h4>{product.title}</h4>
+            <p>{product.text}</p>
+            <p style={{ fontWeight: "700" }}>${product.price}</p>
 
-          <div className="purchase mt-4">
-            <Link
-              href="/light/home-creative-agency/"
-              className="butn butn-md butn-bord radius-30"
-            >
-              <span>Add to Cart</span>
-            </Link>
+            <div className="purchase mt-4">
+              <button
+                onClick={() => addToCart(product)}
+                className="butn butn-md butn-bord radius-30"
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="col-lg-3">
-          <Image src={product2} alt="" />
-          <h4>Wall Mount display</h4>
-          <p>
-            Traffic control centers, financial institutions, public security and
-            judicial organs, exhibitions, business office buildings,
-            recreational places, hydraulic monitoring stations, power plant
-            monitoring stations, etc.
-          </p>
-          {/* <Link className="btn" href="/light/home-creative-agency/">
-            <span className="rolling-text">Classic Mode</span>
-          </Link> */}
-          <div className="purchase mt-4">
-            <Link
-              href="/light/home-creative-agency/"
-              className="butn butn-md butn-bord radius-30"
-            >
-              <span>Add to Cart</span>
-            </Link>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <Image src={product3} alt="" />
-          <h4>Stand Alone Signage</h4>
-          <p>
-            Traffic control centers, financial institutions, public security and
-            judicial organs, exhibitions, business office buildings,
-            recreational places, hydraulic monitoring stations, power plant
-            monitoring stations, etc.
-          </p>
-          {/* <Link className="btn" href="/light/home-creative-agency/">
-            <span className="rolling-text">Classic Mode</span>
-          </Link> */}
-          <div className="purchase mt-4">
-            <Link
-              href="/light/home-creative-agency/"
-              className="butn butn-md butn-bord radius-30"
-            >
-              <span>Add to Cart</span>
-            </Link>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <Image src={product4} alt="" />
-          <h4>Touch Table</h4>
-          <p>
-            Traffic control centers, financial institutions, public security and
-            judicial organs, exhibitions, business office buildings,
-            recreational places, hydraulic monitoring stations, power plant
-            monitoring stations, etc.
-          </p>
-          {/* <Link className="btn" href="/light/home-creative-agency/">
-            <span className="rolling-text">Classic Mode</span>
-          </Link> */}
-          <div className="purchase mt-4">
-            <Link
-              href="/light/home-creative-agency/"
-              className="butn butn-md butn-bord radius-30"
-            >
-              <span>Add to Cart</span>
-            </Link>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <Image src={product5} alt="" />
-          <h4>OutDoor Digital Synage</h4>
-          <p>
-            Traffic control centers, financial institutions, public security and
-            judicial organs, exhibitions, business office buildings,
-            recreational places, hydraulic monitoring stations, power plant
-            monitoring stations, etc.
-          </p>
-          {/* <Link className="btn" href="/light/home-creative-agency/">
-            <span className="rolling-text">Classic Mode</span>
-          </Link> */}
-          <div className="purchase mt-4">
-            <Link
-              href="/light/home-creative-agency/"
-              className="butn butn-md butn-bord radius-30"
-            >
-              <span>Add to Cart</span>
-            </Link>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <Image src={product6} alt="" />
-          <h4>Multimedia Kiosk</h4>
-          <p>
-            Traffic control centers, financial institutions, public security and
-            judicial organs, exhibitions, business office buildings,
-            recreational places, hydraulic monitoring stations, power plant
-            monitoring stations, etc.
-          </p>
-          {/* <Link className="btn" href="/light/home-creative-agency/">
-            <span className="rolling-text">Classic Mode</span>
-          </Link> */}
-          <div className="purchase mt-4">
-            <Link
-              href="/light/home-creative-agency/"
-              className="butn butn-md butn-bord radius-30"
-            >
-              <span>Add to Cart</span>
-            </Link>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
