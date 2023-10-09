@@ -1,3 +1,4 @@
+import { productCartApi } from "@/features/cart/cart";
 import { productCategory1Api } from "@/features/product/productCategory1";
 import { productCategory2Api } from "@/features/product/productCategory2";
 import { productCategory3Api } from "@/features/product/productCategory3";
@@ -18,6 +19,7 @@ const store = configureStore({
     [productCategory2Api.reducerPath]: productCategory2Api.reducer,
     [productCategory3Api.reducerPath]: productCategory3Api.reducer,
     [productsApi.reducerPath]: productsApi.reducer,
+    [productCartApi.reducerPath]: productCartApi.reducer,
 
     // services: servicesSlice,
     // serviceDetails: serviceDetailsSlice,
@@ -32,7 +34,8 @@ const store = configureStore({
       productCategory1Api.middleware,
       productCategory2Api.middleware,
       productCategory3Api.middleware,
-      productsApi.middleware
+      productsApi.middleware,
+      productCartApi.middleware
     ),
 });
 

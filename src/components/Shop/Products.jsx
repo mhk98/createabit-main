@@ -2,7 +2,7 @@
 import data from "@/data/Shop/list.json";
 import Link from "next/link";
 
-function Products(lightMode) {
+function Products({ lightMode }) {
   function openList(e) {
     e.stopPropagation();
     const options = document.querySelector(".select-options");
@@ -24,7 +24,7 @@ function Products(lightMode) {
   return (
     <div className="col-lg-9">
       <div className="shop-products">
-        <div className="top-side d-flex align-items-end mb-40">
+        <div className="mb-40 top-side d-flex align-items-end">
           <div>
             <h6 className="fz-16 line-height-1">Showing 1–9 of 12 results</h6>
           </div>

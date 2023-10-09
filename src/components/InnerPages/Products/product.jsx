@@ -17,7 +17,16 @@ function Product({ lightMode }) {
 
   const products = data?.data;
 
-  console.log("products", products);
+  // const { data1 } =
+  //   useCreateCartMutation();
+
+  //   const cart = data1?.data1
+
+  //   const cartData = {
+  //     title:
+  //   }
+
+  // console.log("cart", cart);
   useEffect(() => {
     loadBackgroudImages();
     window.addEventListener("scroll", handleShowTabs);
@@ -183,7 +192,7 @@ function Product({ lightMode }) {
                       href={`/${
                         lightMode ? "light" : "dark"
                       }/page-productshop1`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">
                         <span className="full-width">View Details</span>
@@ -194,7 +203,7 @@ function Product({ lightMode }) {
                       href={`/${
                         lightMode ? "light" : "dark"
                       }/page-productshop1`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">
                         <span className="full-width">Add to Cart</span>
@@ -318,18 +327,18 @@ function Product({ lightMode }) {
                       href={`/${
                         lightMode ? "light" : "dark"
                       }/page-productshop2`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">
                         <span className="full-width">View Details</span>
                       </div>
                     </Link>
-                      <Link
+                    <Link
                       style={{ marginLeft: "20px" }}
                       href={`/${
                         lightMode ? "light" : "dark"
                       }/page-productshop1`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">
                         <span className="full-width">Add to Cart</span>
@@ -453,7 +462,7 @@ function Product({ lightMode }) {
                       href={`/${
                         lightMode ? "light" : "dark"
                       }/page-productshop3`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <span className="full-width">
                         {/* <Link href="">View Details</Link> */}
@@ -466,7 +475,7 @@ function Product({ lightMode }) {
                       href={`/${
                         lightMode ? "light" : "dark"
                       }/page-productshop1`}
-                      className="butn butn-md butn-bord radius-30 mt-4"
+                      className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">
                         <span className="full-width">Add to Cart</span>
