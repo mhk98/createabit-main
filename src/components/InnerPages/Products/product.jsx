@@ -198,7 +198,8 @@ function Product({ lightMode }) {
                         <span className="full-width">View Details</span>
                       </div>
                     </Link>
-                    <Link
+
+                    {/* <Link
                       style={{ marginLeft: "20px" }}
                       href={`/${
                         lightMode ? "light" : "dark"
@@ -208,7 +209,7 @@ function Product({ lightMode }) {
                       <div className="full-width">
                         <span className="full-width">Add to Cart</span>
                       </div>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

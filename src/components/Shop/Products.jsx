@@ -1,5 +1,6 @@
 //= Data
-import data from "@/data/Shop/list.json";
+import { useGetProductsQuery } from "@/features/product/products";
+import Image from "next/image";
 import Link from "next/link";
 
 function Products({ lightMode }) {
@@ -21,10 +22,21 @@ function Products({ lightMode }) {
     document.querySelector(".select-options").style.display = "none";
   }
 
+  const { data } = useGetProductsQuery();
+  console.log("products", data?.data);
+  const products = data?.data;
+
+  // const [createCart, { isLoading, isError }] = useCreateCartMutation();
+
+  // const addToCart = (product) => {
+  //   console.log("productDetails", product);
+  //   createCart(product);
+  // };
+
   return (
     <div className="col-lg-9">
       <div className="shop-products">
-        <div className="mb-40 top-side d-flex align-items-end">
+        {/* <div className="mb-40 top-side d-flex align-items-end">
           <div>
             <h6 className="fz-16 line-height-1">Showing 1–9 of 12 results</h6>
           </div>
@@ -61,15 +73,19 @@ function Products({ lightMode }) {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
         <Link href={`/${lightMode ? "light" : "dark"}/shop/product`}>
           <div className="row">
-            {data.map((item) => (
-              <div className="col-md-6 col-lg-4" key={item.id}>
+            {products?.map((item) => (
+              <div className="col-md-6 col-lg-4" key={item.Product_Id}>
                 <div className="item mb-50">
                   <div className="img">
-                    <img src={item.image} alt="" />
-
+                    <Image
+                      src={`http://localhost:5000/${item.image}`}
+                      alt=""
+                      width={300}
+                      height={200}
+                    />
                     <a href="#0" className="add-cart">
                       Add to Cart
                     </a>
@@ -79,14 +95,14 @@ function Products({ lightMode }) {
                   </div>
                   <div className="cont">
                     <div className="rate">
-                      {new Array(item.stars).fill().map((_, i) => (
+                      {/* {new Array(item.stars).fill().map((_, i) => (
                         <i className="fas fa-star" key={i}></i>
                       ))}
                       {new Array(5 - item.stars).fill().map((_, i) => (
                         <i className="far fa-star" key={i}></i>
-                      ))}
+                      ))} */}
                     </div>
-                    <h6>{item.name}</h6>
+                    <h6>{item.title}</h6>
                     <h5>${item.price}</h5>
                   </div>
                 </div>
@@ -94,7 +110,7 @@ function Products({ lightMode }) {
             ))}
           </div>
         </Link>
-        <div className="pagination d-flex justify-content-center mt-30">
+        {/* <div className="pagination d-flex justify-content-center mt-30">
           <ul className="rest">
             <li className="active">
               <a href="#0">1</a>
@@ -108,7 +124,7 @@ function Products({ lightMode }) {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
