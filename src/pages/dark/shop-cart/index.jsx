@@ -9,6 +9,8 @@ import Navbar from "@/components/Common/MainNavbar";
 import Cart from "@/components/Shop/Cart";
 import Header from "@/components/Shop/Header";
 import Footer from "@/components/Startup/Footer";
+import DarkNavbar from "../dark-navbar";
+import DarkFooter from "../dark-footer";
 
 function ShopCart() {
   useEffect(() => {
@@ -37,13 +39,13 @@ function ShopCart() {
 
       <Loader />
       <div id="smooth-wrapper">
-        <Navbar mainBg noStatic />
+        <DarkNavbar />
         <div id="smooth-content">
           <main className="main-bg">
             <Header data={metadata} />
             <Cart />
           </main>
-          <Footer subBg />
+          <DarkFooter />
         </div>
       </div>
     </>

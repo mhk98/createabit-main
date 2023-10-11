@@ -13,7 +13,7 @@ function Cart({ lightMode }) {
     input.value = parseInt(input.value) + 1;
   }
 
-  const { data } = useGetAllCartQuery();
+  const { data, isError, isLoading } = useGetAllCartQuery();
 
   const carts = data?.data;
   console.log("allcart", carts);
@@ -36,42 +36,45 @@ function Cart({ lightMode }) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td data-column="Product">
-                      <div className="d-flex align-items-center">
-                        <div>
-                          <div className="img icon-img-80">
-                            <img src="/dark/assets/imgs/shop/3.jpg" alt="" />
+                  {carts?.map((cart) => (
+                    // eslint-disable-next-line react/jsx-key
+                    <tr>
+                      <td data-column="Product">
+                        <div className="d-flex align-items-center">
+                          <div>
+                            <div className="img icon-img-80">
+                              <img src="/dark/assets/imgs/shop/3.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div className="ml-30">
+                            <h6>{cart.title}</h6>
                           </div>
                         </div>
-                        <div className="ml-30">
-                          <h6>Men Hooded</h6>
+                      </td>
+                      <td data-column="price">
+                        <h5 className="main-color4 fz-18">${cart.price}</h5>
+                      </td>
+                      <td data-column="	Quantity">
+                        <div className="counter">
+                          <span className="down" onClick={decreaseCount}>
+                            -
+                          </span>
+                          <input type="text" defaultValue="1" />
+                          <span className="up" onClick={increaseCount}>
+                            +
+                          </span>
                         </div>
-                      </div>
-                    </td>
-                    <td data-column="price">
-                      <h5 className="main-color4 fz-18">$130.00</h5>
-                    </td>
-                    <td data-column="	Quantity">
-                      <div className="counter">
-                        <span className="down" onClick={decreaseCount}>
-                          -
-                        </span>
-                        <input type="text" defaultValue="1" />
-                        <span className="up" onClick={increaseCount}>
-                          +
-                        </span>
-                      </div>
-                    </td>
-                    <td data-column="Subtotal">
-                      <h5 className="main-color4 fz-18">$130.00</h5>
-                    </td>
-                    <td className="remove">
-                      <a href="#0">
-                        <span className="pe-7s-close"></span>
-                      </a>
-                    </td>
-                  </tr>
+                      </td>
+                      <td data-column="Subtotal">
+                        <h5 className="main-color4 fz-18">$130.00</h5>
+                      </td>
+                      <td className="remove">
+                        <a href="#0">
+                          <span className="pe-7s-close"></span>
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

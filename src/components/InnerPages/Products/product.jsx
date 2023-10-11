@@ -189,9 +189,7 @@ function Product({ lightMode }) {
 
                     <Link
                       // href="/dark/page-productshop1"
-                      href={`/${
-                        lightMode ? "light" : "dark"
-                      }/page-productshop1`}
+                      href={`/${lightMode ? "light" : "dark"}/shop-list`}
                       className="mt-4 butn butn-md butn-bord radius-30"
                     >
                       <div className="full-width">

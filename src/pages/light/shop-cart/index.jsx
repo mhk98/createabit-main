@@ -8,7 +8,7 @@ import Loader from "@/components/Common/Loader";
 import Navbar from "@/components/Common/MainNavbar";
 import Cart from "@/components/Shop/Cart";
 import Header from "@/components/Shop/Header";
-import Footer from "@/components/Startup/Footer";
+import LightNavbar from "../light-navbar";
 import LightFooter from "../light-footer";
 
 function ShopCartLight() {
@@ -38,13 +38,13 @@ function ShopCartLight() {
 
       <Loader />
       <div id="smooth-wrapper">
-        <Navbar mainBg noStatic lightMode />
+        <LightNavbar/>
         <div id="smooth-content">
           <main className="main-bg">
             <Header data={metadata} />
             <Cart lightMode />
           </main>
-          <LightFooter   />
+          <LightFooter  />
         </div>
       </div>
     </>

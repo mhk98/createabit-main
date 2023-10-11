@@ -2,6 +2,8 @@
 import { useGetProductsQuery } from "@/features/product/products";
 import Image from "next/image";
 import Link from "next/link";
+import { useCreateCartMutation } from "../../features/cart/cart";
+import toast from "react-hot-toast";
 
 function Products({ lightMode }) {
   function openList(e) {
@@ -26,15 +28,19 @@ function Products({ lightMode }) {
   console.log("products", data?.data);
   const products = data?.data;
 
-  // const [createCart, { isLoading, isError }] = useCreateCartMutation();
+  const [createCart, { isLoading, isError }] = useCreateCartMutation();
 
-  // const addToCart = (product) => {
-  //   console.log("productDetails", product);
-  //   createCart(product);
-  // };
+  const addToCart = (product) => {
+    // console.log("productDetails", product);
+    if (product) {
+      toast.success("Successfully product add to cart!");
+    }
+    createCart(product);
+    console.log("product added", product);
+  };
 
   return (
-    <div className="col-lg-9">
+    <div className="col-lg-12">
       <div className="shop-products">
         {/* <div className="mb-40 top-side d-flex align-items-end">
           <div>
@@ -74,10 +80,10 @@ function Products({ lightMode }) {
             </div>
           </div>
         </div> */}
-        <Link href={`/${lightMode ? "light" : "dark"}/shop/product`}>
+        <Link href="">
           <div className="row">
             {products?.map((item) => (
-              <div className="col-md-6 col-lg-4" key={item.Product_Id}>
+              <div className="col-md-6 col-lg-3" key={item.Product_Id}>
                 <div className="item mb-50">
                   <div className="img">
                     <Image
@@ -86,9 +92,12 @@ function Products({ lightMode }) {
                       width={300}
                       height={200}
                     />
-                    <a href="#0" className="add-cart">
+                    <button
+                      onClick={() => addToCart(item)}
+                      className="add-cart text-white"
+                    >
                       Add to Cart
-                    </a>
+                    </button>
                     <span className="fav">
                       <i className="far fa-heart"></i>
                     </span>

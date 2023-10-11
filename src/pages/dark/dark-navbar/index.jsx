@@ -284,6 +284,18 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </Link>
                   </div>
                 </li>
+                <li
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="o-hidden">
+                    <Link href="/dark/shop-cart/" className="link">
+                      <span className="fill-text" data-text="Cart">
+                        Cart
+                      </span>
+                    </Link>
+                  </div>
+                </li>
 
                 <li
                   onMouseEnter={handleMouseEnter}

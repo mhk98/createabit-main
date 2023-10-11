@@ -7,6 +7,7 @@ import "@/styles/globals.css";
 import "@/styles/modal-video.css";
 import { Provider } from "react-redux";
 import "swiper/css/bundle";
+import { Toaster } from "react-hot-toast";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -24,7 +25,7 @@ function App({ Component, pageProps }) {
       <Provider store={store}>
         <Component {...pageProps} />
       </Provider>
-
+      <Toaster />
       <Script strategy="beforeInteractive" src="/assets/js/plugins.js"></Script>
       <Script
         strategy="beforeInteractive"
