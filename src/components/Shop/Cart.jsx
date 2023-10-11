@@ -1,20 +1,26 @@
-import React from 'react';
-import Link from 'next/link';
+import { useGetAllCartQuery } from "@/features/cart/cart";
+import Link from "next/link";
 
 function Cart({ lightMode }) {
   function decreaseCount(event) {
-    let input = event.currentTarget.parentElement.querySelector('input');
+    let input = event.currentTarget.parentElement.querySelector("input");
     if (parseInt(input.value) === 1) return;
     input.value = parseInt(input.value) - 1;
   }
 
   function increaseCount(event) {
-    let input = event.currentTarget.parentElement.querySelector('input');
+    let input = event.currentTarget.parentElement.querySelector("input");
     input.value = parseInt(input.value) + 1;
   }
 
+  const { data } = useGetAllCartQuery();
+
+  const carts = data?.data;
+  console.log("allcart", carts);
   return (
-    <section className={`shop-cart ${lightMode ? 'light' : ''} section-padding`}>
+    <section
+      className={`shop-cart ${lightMode ? "light" : ""} section-padding`}
+    >
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-11">
@@ -35,38 +41,6 @@ function Cart({ lightMode }) {
                       <div className="d-flex align-items-center">
                         <div>
                           <div className="img icon-img-80">
-                            <img src="/dark/assets/imgs/shop/5.jpg" alt="" />
-                          </div>
-                        </div>
-                        <div className="ml-30">
-                          <h6>Men Hooded</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td data-column="price">
-                      <h5 className="main-color4 fz-18">$130.00</h5>
-                    </td>
-                    <td data-column="	Quantity">
-                      <div className="counter">
-                        <span className="down" onClick={decreaseCount}>-</span>
-                        <input type="text" defaultValue="1" />
-                        <span className="up" onClick={increaseCount}>+</span>
-                      </div>
-                    </td>
-                    <td data-column="Subtotal">
-                      <h5 className="main-color4 fz-18">$130.00</h5>
-                    </td>
-                    <td className="remove">
-                      <a href="#0">
-                        <span className="pe-7s-close"></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td data-column="Product">
-                      <div className="d-flex align-items-center">
-                        <div>
-                          <div className="img icon-img-80">
                             <img src="/dark/assets/imgs/shop/3.jpg" alt="" />
                           </div>
                         </div>
@@ -80,9 +54,13 @@ function Cart({ lightMode }) {
                     </td>
                     <td data-column="	Quantity">
                       <div className="counter">
-                        <span className="down" onClick={decreaseCount}>-</span>
+                        <span className="down" onClick={decreaseCount}>
+                          -
+                        </span>
                         <input type="text" defaultValue="1" />
-                        <span className="up" onClick={increaseCount}>+</span>
+                        <span className="up" onClick={increaseCount}>
+                          +
+                        </span>
                       </div>
                     </td>
                     <td data-column="Subtotal">
@@ -99,9 +77,11 @@ function Cart({ lightMode }) {
             </div>
             <div className="row mt-80">
               <div className="col-lg-6">
-                <div className="coupon mt-40">
+                <div className="mt-40 coupon">
                   <h4>Discount</h4>
-                  <p className="fz-13">Enter your coupon code if you have one.</p>
+                  <p className="fz-13">
+                    Enter your coupon code if you have one.
+                  </p>
                   <form action="contact.php">
                     <div className="form-group d-flex mt-30">
                       <input type="text" name="coupon_code" />
@@ -109,23 +89,36 @@ function Cart({ lightMode }) {
                         <span>Apply</span>
                       </button>
                     </div>
-                    <span className="fz-13 opacity-7 mt-10">Coupon code</span>
+                    <span className="mt-10 fz-13 opacity-7">Coupon code</span>
                   </form>
                 </div>
               </div>
               <div className="col-lg-4 offset-lg-2">
-                <div className="total mt-40">
+                <div className="mt-40 total">
                   <h4>Cart totals</h4>
                   <ul className="rest mt-30">
                     <li className="mb-5">
-                      <h6>Subtotal : <span className="fz-16 main-color4 ml-10">$130.00</span></h6>
+                      <h6>
+                        Subtotal :{" "}
+                        <span className="ml-10 fz-16 main-color4">$130.00</span>
+                      </h6>
                     </li>
                     <li>
-                      <h6>Total : <span className="fz-16 main-color4 ml-10">$260.00</span></h6>
+                      <h6>
+                        Total :{" "}
+                        <span className="ml-10 fz-16 main-color4">$260.00</span>
+                      </h6>
                     </li>
                   </ul>
-                  <Link href="/dark/shop-checkout" className={`${lightMode ? 'main-colorbg4' : 'bg-white'} butn butn-md butn-bg text-dark mt-30`}>
-                    <span className="text-u fz-13 fw-600">Proceed to checkout</span>
+                  <Link
+                    href="/dark/shop-checkout"
+                    className={`${
+                      lightMode ? "main-colorbg4" : "bg-white"
+                    } butn butn-md butn-bg text-dark mt-30`}
+                  >
+                    <span className="text-u fz-13 fw-600">
+                      Proceed to checkout
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -134,7 +127,7 @@ function Cart({ lightMode }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Cart
+export default Cart;

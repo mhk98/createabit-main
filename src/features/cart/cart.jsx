@@ -14,7 +14,13 @@ export const productCartApi = createApi({
         body: product,
       }),
     }),
+    getAllCart: builder.query({
+      query: () => ({
+        url: "/cart",
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useCreateCartMutation } = productCartApi;
+export const { useCreateCartMutation, useGetAllCartQuery } = productCartApi;
