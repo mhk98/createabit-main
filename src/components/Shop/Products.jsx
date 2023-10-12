@@ -2,8 +2,8 @@
 import { useGetProductsQuery } from "@/features/product/products";
 import Image from "next/image";
 import Link from "next/link";
-import { useCreateCartMutation } from "../../features/cart/cart";
 import toast from "react-hot-toast";
+import { useCreateCartMutation } from "../../features/cart/cart";
 
 function Products({ lightMode }) {
   function openList(e) {
@@ -40,9 +40,9 @@ function Products({ lightMode }) {
   };
 
   return (
-    <div className="col-lg-12">
+    <div className="col-lg-9">
       <div className="shop-products">
-        {/* <div className="mb-40 top-side d-flex align-items-end">
+        <div className="mb-40 top-side d-flex align-items-end">
           <div>
             <h6 className="fz-16 line-height-1">Showing 1–9 of 12 results</h6>
           </div>
@@ -79,11 +79,11 @@ function Products({ lightMode }) {
               </ul>
             </div>
           </div>
-        </div> */}
+        </div>
         <Link href="">
           <div className="row">
             {products?.map((item) => (
-              <div className="col-md-6 col-lg-3" key={item.Product_Id}>
+              <div className="col-md-6 col-lg-4" key={item.Product_Id}>
                 <div className="item mb-50">
                   <div className="img">
                     <Image
@@ -94,7 +94,7 @@ function Products({ lightMode }) {
                     />
                     <button
                       onClick={() => addToCart(item)}
-                      className="add-cart text-white"
+                      className="text-white add-cart"
                     >
                       Add to Cart
                     </button>

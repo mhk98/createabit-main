@@ -49,14 +49,14 @@ function Portfolio() {
               <div className="img">
                 <Image src={portfolio1} alt="" className="radius-10" />
                 <Link href="/dark/project-details1" className="tag">
-                  <span>Intelligent TECH Products</span>
+                  <span>Feature Product</span>
                 </Link>
               </div>
               <div className="cont mt-30 d-flex">
                 <div>
                   <h6 className="line-height-1">
                     <Link href="/dark/project-details1">
-                      INTELLIGENT NAIL PRINTER
+                      Shop Window Display
                     </Link>
                   </h6>
                 </div>
@@ -71,14 +71,14 @@ function Portfolio() {
               <div className="img">
                 <Image src={portfolio2} alt="" className="radius-10" />
                 <Link href="/dark/project-details1" className="tag">
-                  <span>Intelligent TECH Products</span>
+                  <span>Feature Product</span>
                 </Link>
               </div>
               <div className="cont mt-30 d-flex">
                 <div>
                   <h6 className="line-height-1">
                     <Link href="/dark/project-details1">
-                      INTELLIGENT NAIL PRINTER
+                      3d HOLOGRAPHIC Signage
                     </Link>
                   </h6>
                 </div>
@@ -95,14 +95,14 @@ function Portfolio() {
               <div className="img">
                 <Image src={portfolio2} alt="" className="radius-10" />
                 <Link href="/dark/project-details1" className="tag">
-                  <span>Intelligent TECH Products</span>
+                  <span>Feature Product</span>
                 </Link>
               </div>
               <div className="cont mt-30 d-flex">
                 <div>
                   <h6 className="line-height-1">
                     <Link href="/dark/project-details1">
-                      INTELLIGENT NAIL PRINTER
+                      Creative GOBO Projection
                     </Link>
                   </h6>
                 </div>
@@ -117,14 +117,14 @@ function Portfolio() {
               <div className="img">
                 <Image src={portfolio3} alt="" className="radius-10" />
                 <Link href="/dark/project-details1" className="tag">
-                  <span>Intelligent TECH Products</span>
+                  <span>Feature Product</span>
                 </Link>
               </div>
               <div className="cont mt-30 d-flex">
                 <div>
                   <h6 className="line-height-1">
                     <Link href="/dark/project-details1">
-                      INTELLIGENT NAIL PRINTER
+                      LED Creative Screen
                     </Link>
                   </h6>
                 </div>

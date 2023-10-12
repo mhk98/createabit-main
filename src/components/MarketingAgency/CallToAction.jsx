@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import { useEffect } from "react";
 //= Scripts
-import loadBackgroudImages from '@/common/loadBackgroudImages';
+import loadBackgroudImages from "@/common/loadBackgroudImages";
 
 function CallToAction({ lightMode }) {
   useEffect(() => {
@@ -15,18 +15,25 @@ function CallToAction({ lightMode }) {
           <div className="col-lg-10">
             <div className="sec-lg-head text-center">
               <h2 className="fz-70 fw-700">
-                <span>Have a project in mind?</span> <br />
+                <span>Do you have an exciting project idea?</span> <br />
                 <span className="underline">
-                  <Link href="/dark/page-contact" className="main-color2">Let’s get to work.</Link>
+                  <Link href="/dark/page-contact" className="main-color2">
+                    Let's turn it into reality together.
+                  </Link>
                 </span>
               </h2>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-pattern bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}></div>
+      <div
+        className="bg-pattern bg-img"
+        data-background={`/${
+          lightMode ? "light" : "dark"
+        }/assets/imgs/patterns/graph.png`}
+      ></div>
     </section>
-  )
+  );
 }
 
-export default CallToAction
+export default CallToAction;

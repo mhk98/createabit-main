@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Service1 from "./Service1";
 import Service2 from "./Service2";
 import Service3 from "./Service3";
@@ -60,7 +60,7 @@ const ServiceMain = () => {
           className={`butn butn-md butn-bord radius-30 ${
             activeButton === 4 ? "active" : ""
           }`}
-          onClick={() => handleButtonClick(3)}
+          onClick={() => handleButtonClick(4)}
         >
           Video & Animations
         </button>
@@ -68,7 +68,7 @@ const ServiceMain = () => {
           className={`butn butn-md butn-bord radius-30 ${
             activeButton === 5 ? "active" : ""
           }`}
-          onClick={() => handleButtonClick(3)}
+          onClick={() => handleButtonClick(5)}
         >
           Graphic Design
         </button>

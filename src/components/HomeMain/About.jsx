@@ -11,7 +11,8 @@ function About({ lightMode }) {
             <div className=" sec-lg-head md-mb30" style={{ marginTop: "15px" }}>
               <h2 className=" d-rotate wow">
                 <span className="rotate-text">
-                  CreateAbit designs is a renowned name in the digital world.
+                  We're not just a digital marketing agency, we're your online
+                  success partners!
                 </span>
               </h2>
             </div>
@@ -24,14 +25,16 @@ function About({ lightMode }) {
               <p className="d-slideup wow">
                 <span className="sideup-text">
                   <span className="up-text">
-                    CreateAbit designs are a reputed marketing and branding
-                    agency based in Washington DC metro area.
+                    CreateAbit designs is a renowned name in the digital world.
+                    We are a reputed marketing and branding agency based in
+                    Washington DC metro area.
                   </span>
                 </span>
                 <span className="sideup-text">
                   <span className="up-text">
                     Our extensive history, rich experience, and excellent track
-                    record make us a more reliable choice
+                    record make us a more reliable choice when it comes to
+                    designing and marketing services.
                   </span>
                 </span>
                 <span className="sideup-text">

@@ -1,8 +1,17 @@
-import { faLaptop } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBlog,
+  faFire,
+  faLaptop,
+  faLightbulb,
+  faLock,
+  faMobileButton,
+  faPhone,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import web_banner from "../../../../images/iPhone-App-Development.png";
-import service1 from "../../../../images/website-design-and-development-01.png";
+import service1 from "../../../../images/service/web-development.png";
 
 function Service1() {
   return (
@@ -28,7 +37,7 @@ function Service1() {
               exceptional value to our client getting them to their objectives
               that directly hit to the targeted area.
             </p>
-            <div className="purchase" style={{ marginTop: "20px" }}>
+            <div className="purchase" style={{ marginTop: "16px" }}>
               <a className="butn butn-md butn-bord radius-30">
                 <span>SEND US YOUR QUERIES! </span>
               </a>
@@ -47,10 +56,8 @@ function Service1() {
             business objectives. Following are some of our specialties:
           </p>
           <div className="service_card">
-            <div style={{ width: "240px" }}>
-              <div
-             
-              >
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
                 <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
                 <h5>Professional Design</h5>
               </div>
@@ -62,114 +69,117 @@ function Service1() {
                 </p>
               </div>
             </div>
-            <div style={{ width: "240px" }}>
-              <div>
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon
+                  icon={faMobileButton}
+                  style={{ fontSize: "30px" }}
+                />
+                <h5>Responsive Website</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  We design & develop mobile-friendly websites to scale
+                  seamlessly across different devices and screen sizes, a
+                  concept termed responsive web design.
                 </p>
               </div>
             </div>
-            <div style={{ width: "240px" }}>
-              <div>
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon icon={faSearch} style={{ fontSize: "30px" }} />
+                <h5>SEO friendly coding</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  We always follow Google’s SEO-friendly coding guideline. We do
+                  100% SEO Friendly HTML coding to boost up your site and become
+                  more search friendly.
                 </p>
               </div>
             </div>
-            <div style={{ width: "240px" }}>
-              <div>
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon icon={faBlog} style={{ fontSize: "30px" }} />
+                <h5>Multiple Frameworks & CMS</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  We have developed our expertise on different frameworks and
+                  CMS such as: WordPress, Joomla, Codeigniter, Magento, Laravel,
+                  and Custom Frameworks.
                 </p>
               </div>
             </div>
           </div>
           <div className="service_card">
-            <div style={{ width: "240px" }}>
-              <div
-             
-              >
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon
+                  icon={faLightbulb}
+                  style={{ fontSize: "30px" }}
+                />
+                <h5>Creativity</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  We’re a creative web design company in Bangladesh with a focus
+                  on the bigger picture and the smallest details, with the right
+                  kind of creativity expertise.
                 </p>
               </div>
             </div>
-            <div style={{ width: "240px" }}>
-              <div>
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon icon={faFire} style={{ fontSize: "30px" }} />
+                <h5>Passion</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  Our company is driven by one thing: passion; a passion for web
+                  design & development and a passion for helping our clients
+                  grow.
                 </p>
               </div>
             </div>
-            <div style={{ width: "240px" }}>
-              <div>
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon icon={faPhone} style={{ fontSize: "30px" }} />
+                <h5>Great Support</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  Our affordable web design maintenance and support service
+                  offers peace-of-mind for clients who require frequent updates
+                  to their websites.
                 </p>
               </div>
             </div>
-            <div style={{ width: "240px" }}>
-              <div>
-                <FontAwesomeIcon icon={faLaptop} style={{ fontSize: "30px" }} />
-                <h5>Professional Design</h5>
+            <div style={{ width: "300px" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <FontAwesomeIcon icon={faLock} style={{ fontSize: "30px" }} />
+                <h5>Security</h5>
               </div>
               <div>
                 <p>
-                  We focus on developing effective, elegant and affordable web
-                  design solutions that create opportunities for small to large
-                  Organizations to grow their businesses.
+                  We have a great team who always work on the security of your
+                  site and make sure that your website is secured from any known
+                  threats.
                 </p>
               </div>
             </div>
           </div>
-         
         </div>
 
         <div>
           <h3 className="text-center mt-60">Features That You’ll Love</h3>
           <div>
-            <div className="service_feature mt-100">
+            <div className="mt-30 service_feature">
               <div>
                 <Image src={web_banner} alt=""></Image>
               </div>
 
-              <div>
+              <div style={{lineHeight:"10px", marginBottom:"10px"}}>
                 <div class="e1617-51 x-text x-text-headline">
                   <div class="x-text-content">
                     <span class="x-graphic" aria-hidden="true">
@@ -183,7 +193,7 @@ function Service1() {
                       <h6 class="x-text-content-text-primary">
                         Clean HTML CSS
                       </h6>
-                      <p style={{ fontSize: "20px" }}>
+                      <p style={{ fontSize: "16px" }}>
                         {" "}
                         Our expert programmers always maintain a clean HTML,
                         CSS, &amp; JavaScript coding structure.
@@ -202,12 +212,12 @@ function Service1() {
                     </span>
                     <div class="x-text-content-text">
                       <h6 class="x-text-content-text-primary">
-                        Clean HTML CSS
+                        Responsive Website
                       </h6>
-                      <p style={{ fontSize: "20px" }}>
+                      <p style={{ fontSize: "16px" }}>
                         {" "}
-                        Our expert programmers always maintain a clean HTML,
-                        CSS, &amp; JavaScript coding structure.
+                        We put the best effort on mobile-friendly web design so
+                        that your website fits into each and every device.
                       </p>
                     </div>
                   </div>
@@ -223,12 +233,12 @@ function Service1() {
                     </span>
                     <div class="x-text-content-text">
                       <h6 class="x-text-content-text-primary">
-                        Clean HTML CSS
+                        Google Standard Coding
                       </h6>
-                      <p style={{ fontSize: "20px" }}>
+                      <p style={{ fontSize: "16px" }}>
                         {" "}
-                        Our expert programmers always maintain a clean HTML,
-                        CSS, &amp; JavaScript coding structure.
+                        We make sure that your website coding is error-free and
+                        follows all the coding guidelines of Google.
                       </p>
                     </div>
                   </div>
@@ -244,12 +254,35 @@ function Service1() {
                     </span>
                     <div class="x-text-content-text">
                       <h6 class="x-text-content-text-primary">
-                        Clean HTML CSS
+                        Eye-Catching Design
                       </h6>
-                      <p style={{ fontSize: "20px" }}>
+                      <p style={{ fontSize: "16px" }}>
                         {" "}
-                        Our expert programmers always maintain a clean HTML,
-                        CSS, &amp; JavaScript coding structure.
+                        We make attractive and appropriate designs for your
+                        website, understanding your requirements.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="e1617-51 x-text x-text-headline">
+                  <div class="x-text-content">
+                    <span class="x-graphic" aria-hidden="true">
+                      <i
+                        class="x-icon x-graphic-icon x-graphic-primary"
+                        aria-hidden="true"
+                        data-x-icon-b=""
+                      ></i>
+                    </span>
+                    <div class="x-text-content-text">
+                      <h6 class="x-text-content-text-primary">
+                        Social Media Integration
+                      </h6>
+                      <p style={{ fontSize: "16px" }}>
+                        {" "}
+                        We integrate your website with your social media
+                        profiles such as Facebook, Twitter, LinkedIn, Google+,
+                        etc.
                       </p>
                     </div>
                   </div>

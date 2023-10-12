@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import Link from "next/link";
+import { useEffect } from "react";
 //= Scripts
 import parallaxie from "@/common/parallaxie";
 
@@ -20,7 +20,9 @@ function CallToAction({ lightMode, innerPageStyle }) {
             <div className="col-11 d-flex align-items-center">
               <div className="valign">
                 <h2 className="fz-50 d-rotate wow">
-                  <span className="rotate-text">Have a project in mind?</span>
+                  <span className="rotate-text">
+                    Do you have an exciting project idea?
+                  </span>
                   <span className="rotate-text">
                     Let’s{" "}
                     <span className={innerPageStyle ? "" : "sub-font"}>

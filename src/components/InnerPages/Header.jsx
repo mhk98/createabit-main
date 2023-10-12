@@ -14,9 +14,12 @@ function Header({ data, subBg }) {
               <div className=" offset-lg-4">
                 <div className=" mt-30" style={{ marginLeft: "-165px" }}>
                   <p>
-                    We help our clients succeed by creating brand identities,
-                    digital experiences, and print materials that communicate
-                    clearly, achieve marketing goals, and look fantastic.
+                    CreateAbit designs is a renowned name in the digital world.
+                    We are a reputed marketing and branding agency based in
+                    Washington DC metro area. Our extensive history, rich
+                    experience, and excellent track record make us a more
+                    reliable choice when it comes to designing and marketing
+                    services.
                   </p>
                 </div>
               </div>

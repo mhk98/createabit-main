@@ -1,4 +1,3 @@
-import Testimonials from "@/components/DigitalAgency/Testimonials";
 import {
   faBuildingUser,
   faCheck,
@@ -22,21 +21,16 @@ function Service3() {
             <Image className="service_image" src={service1} alt="" />
           </div>
           <div>
-            <h4>Website Design & Development</h4>
+            <h4>App Developers & Experts</h4>
             <h5>Professional & Creative Web Design Solution</h5>
             <p className="mt-8">
-              Createabit's experienced web designers have the ability to make
-              your website look professional, yet beautiful. We use the latest
-              web design technologies that enabled us to become the top web
-              design and development company in the industry.
+              Mobile devices have already conquered the internet. Social
+              sharing, geo tagging and information search has taken the mobile
+              to a different level altogether. If you have a business that seeks
+              to reach its customers through internet, the mobile users need to
+              be tapped. The most effective way to do it right now is having
+              your own mobile application.
             </p>{" "}
-            <br />
-            <p>
-              Our commitment is to provide prodigious, high-quality services by
-              utilizing professionals with their research and studies to deliver
-              exceptional value to our client getting them to their objectives
-              that directly hit to the targeted area.
-            </p>
             <div className="purchase" style={{ marginTop: "20px" }}>
               <a className="butn butn-md butn-bord radius-30">
                 <span>SEND US YOUR QUERIES! </span>
@@ -93,88 +87,346 @@ function Service3() {
           </p>
         </div>
 
-        <Testimonials />
+        <div className="mt-100 mb-100">
+          <h3 className="text-center">Features & Benefits of Our Web Apps</h3>
+          <div className=" row mt-100 feature_benefits">
+            <div class=" col-lg-4 col-md-12 col-sm-12">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center ",
+                  marginBottom: "20px",
+                }}
+              >
+                <div className="left-side">
+                  <div className="user-icon">
+                    <FontAwesomeIcon
+                      className="rounded-circle"
+                      icon={faUserGraduate}
+                      style={{
+                        fontSize: "10px",
+                        backgroundColor: "white",
+                        color: "black",
+                        width: "30px",
+                        height: "30px",
+                        padding: "20px",
+                      }}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="ml-20 right-side">
+                  <p
+                    className="heading"
+                    style={{ fontWeight: "600", fontSize: "18px" }}
+                  >
+                    Outstanding Build Quality
+                  </p>
+                  <small className="content">
+                    At iTBiz, we use the industry’s best patterns and latest
+                    technologies to produce web applications with outstanding
+                    quality.
+                  </small>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center ",
+                  marginBottom: "20px",
+                }}
+              >
+                <div className="left-side">
+                  <div className="user-icon">
+                    <FontAwesomeIcon
+                      className="rounded-circle"
+                      icon={faUserGraduate}
+                      style={{
+                        fontSize: "10px",
+                        backgroundColor: "white",
+                        color: "black",
+                        width: "30px",
+                        height: "30px",
+                        padding: "20px",
+                      }}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="ml-20 right-side">
+                  <p
+                    className="heading"
+                    style={{ fontWeight: "600", fontSize: "18px" }}
+                  >
+                    User Centric Design
+                  </p>
+                  <small className="content">
+                    We design the user interface of the applications in the way
+                    that the users will expect without having to think about it.
+                    needs.
+                  </small>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center ",
+                  marginBottom: "20px",
+                }}
+              >
+                <div className="left-side">
+                  <div className="user-icon">
+                    <FontAwesomeIcon
+                      className="rounded-circle"
+                      icon={faUserGraduate}
+                      style={{
+                        fontSize: "10px",
+                        backgroundColor: "white",
+                        color: "black",
+                        width: "30px",
+                        height: "30px",
+                        padding: "20px",
+                      }}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="ml-20 right-side">
+                  <p
+                    className="heading"
+                    style={{ fontWeight: "600", fontSize: "18px" }}
+                  >
+                    Cloud Based Architecture
+                  </p>
+                  <small className="content">
+                    Our applications are server/cloud-based. So, every time we
+                    update, you have access to the new version from any
+                    connected device.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class=" col-lg-4 col-md-12 col-sm-12">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center ",
+                  marginBottom: "20px",
+                }}
+              >
+                <div className="left-side">
+                  <div className="user-icon">
+                    <FontAwesomeIcon
+                      className="rounded-circle"
+                      icon={faUserGraduate}
+                      style={{
+                        fontSize: "10px",
+                        backgroundColor: "white",
+                        color: "black",
+                        width: "30px",
+                        height: "30px",
+                        padding: "20px",
+                      }}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="ml-20 right-side">
+                  <p
+                    className="heading"
+                    style={{ fontWeight: "600", fontSize: "18px" }}
+                  >
+                    Accurate budgeting
+                  </p>
+                  <small className="content">
+                    We assess your requirements thoroughly. And then we propose
+                    a realistic estimate of the budget and time required to
+                    complete the project.
+                  </small>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center ",
+                  marginBottom: "20px",
+                }}
+              >
+                <div className="left-side">
+                  <div className="user-icon">
+                    <FontAwesomeIcon
+                      className="rounded-circle"
+                      icon={faUserGraduate}
+                      style={{
+                        fontSize: "10px",
+                        backgroundColor: "white",
+                        color: "black",
+                        width: "30px",
+                        height: "30px",
+                        padding: "20px",
+                      }}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="ml-20 right-side">
+                  <p
+                    className="heading"
+                    style={{ fontWeight: "600", fontSize: "18px" }}
+                  >
+                    Future proof and scalable
+                  </p>
+                  <small className="content">
+                    We build in hooks for future development and consider
+                    scalability issues where user numbers are likely to grow.
+                  </small>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center ",
+                  marginBottom: "20px",
+                }}
+              >
+                <div className="left-side">
+                  <div className="user-icon">
+                    <FontAwesomeIcon
+                      className="rounded-circle"
+                      icon={faUserGraduate}
+                      style={{
+                        fontSize: "10px",
+                        backgroundColor: "white",
+                        color: "black",
+                        width: "30px",
+                        height: "30px",
+                        padding: "20px",
+                      }}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="ml-20 right-side">
+                  <p
+                    className="heading"
+                    style={{ fontWeight: "600", fontSize: "18px" }}
+                  >
+                    Superior security and compliance
+                  </p>
+                  <small className="content">
+                    We understand your industry and business. So, we provide the
+                    solution that is customized and fits according to your
+                    needs.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <Testimonials /> */}
 
         <div>
           <h3 className="text-center mt-60">
             List Of Our App Development Services
           </h3>
           <div>
-            <div className="align-middle  mt-100 service_feature">
+            <div className="align-middle mt-100 app_development">
               <div class="">
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Mobile App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Mobile App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Mobile App Design</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Mobile App Design
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Smartphone App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Smartphone App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Tablet App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Tablet App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">HTML5 Mobile Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    HTML5 Mobile Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">iOS App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    iOS App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Android App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Android App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">BlackBerry App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    BlackBerry App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Windows App Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Windows App Development
+                  </h5>
                 </div>
                 <div className="flex">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    style={{ fontSize: "30px", fontWeight: "600" }}
+                    style={{ fontSize: "18px", fontWeight: "600" }}
                   />
-                  <h5 className="ml-10">Cross-platform Development</h5>
+                  <h5 style={{ fontSize: "18px" }} className="ml-10">
+                    Cross-platform Development
+                  </h5>
                 </div>
               </div>
               <div className="">
-                <Image src={service2} alt=""></Image>
+                <Image src={service2} alt="" width={400}></Image>
               </div>
             </div>
           </div>
@@ -207,9 +459,9 @@ function Service3() {
                           fontSize: "10px",
                           backgroundColor: "white",
                           color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
+                          width: "30px",
+                          height: "30px",
+                          padding: "20px",
                         }}
                       ></FontAwesomeIcon>
                     </div>
@@ -219,12 +471,12 @@ function Service3() {
                       className="heading"
                       style={{ fontWeight: "600", fontSize: "18px" }}
                     >
-                      Superior security and compliance
+                      Accurate budgeting
                     </p>
                     <small className="content">
-                      We understand your industry and business. So, we provide
-                      the solution that is customized and fits according to your
-                      needs.
+                      We assess your requirements thoroughly. And then we
+                      propose a realistic estimate of the budget and time
+                      required to complete the project.
                     </small>
                   </div>
                 </div>
@@ -245,9 +497,9 @@ function Service3() {
                           fontSize: "10px",
                           backgroundColor: "white",
                           color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
+                          width: "30px",
+                          height: "30px",
+                          padding: "20px",
                         }}
                       ></FontAwesomeIcon>
                     </div>
@@ -257,12 +509,12 @@ function Service3() {
                       className="heading"
                       style={{ fontWeight: "600", fontSize: "18px" }}
                     >
-                      Superior security and compliance
+                      Outstanding Build Quality
                     </p>
                     <small className="content">
-                      We understand your industry and business. So, we provide
-                      the solution that is customized and fits according to your
-                      needs.
+                      At iTBiz, we use the industry’s best patterns and latest
+                      technologies to produce web applications with outstanding
+                      quality.
                     </small>
                   </div>
                 </div>
@@ -283,9 +535,9 @@ function Service3() {
                           fontSize: "10px",
                           backgroundColor: "white",
                           color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
+                          width: "30px",
+                          height: "30px",
+                          padding: "20px",
                         }}
                       ></FontAwesomeIcon>
                     </div>
@@ -295,12 +547,12 @@ function Service3() {
                       className="heading"
                       style={{ fontWeight: "600", fontSize: "18px" }}
                     >
-                      Superior security and compliance
+                      User Centric Design
                     </p>
                     <small className="content">
-                      We understand your industry and business. So, we provide
-                      the solution that is customized and fits according to your
-                      needs.
+                      We design the user interface of the applications in the
+                      way that the users will expect without having to think
+                      about it.
                     </small>
                   </div>
                 </div>
@@ -321,9 +573,9 @@ function Service3() {
                           fontSize: "10px",
                           backgroundColor: "white",
                           color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
+                          width: "30px",
+                          height: "30px",
+                          padding: "20px",
                         }}
                       ></FontAwesomeIcon>
                     </div>
@@ -359,9 +611,9 @@ function Service3() {
                           fontSize: "10px",
                           backgroundColor: "white",
                           color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
+                          width: "30px",
+                          height: "30px",
+                          padding: "20px",
                         }}
                       ></FontAwesomeIcon>
                     </div>
@@ -371,12 +623,11 @@ function Service3() {
                       className="heading"
                       style={{ fontWeight: "600", fontSize: "18px" }}
                     >
-                      Superior security and compliance
+                      Future proof and scalable
                     </p>
                     <small className="content">
-                      We understand your industry and business. So, we provide
-                      the solution that is customized and fits according to your
-                      needs.
+                      We build in hooks for future development and consider
+                      scalability issues where user numbers are likely to grow.
                     </small>
                   </div>
                 </div>
@@ -397,9 +648,9 @@ function Service3() {
                           fontSize: "10px",
                           backgroundColor: "white",
                           color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
+                          width: "30px",
+                          height: "30px",
+                          padding: "20px",
                         }}
                       ></FontAwesomeIcon>
                     </div>
@@ -409,53 +660,16 @@ function Service3() {
                       className="heading"
                       style={{ fontWeight: "600", fontSize: "18px" }}
                     >
-                      Superior security and compliance
+                      Cloud Based Architecture
                     </p>
                     <small className="content">
-                      We understand your industry and business. So, we provide
-                      the solution that is customized and fits according to your
-                      needs.
+                      Our applications are server/cloud-based. So, every time we
+                      update, you have access to the new version from any
+                      connected device.
                     </small>
                   </div>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center ",
-                    marginBottom: "20px",
-                  }}
-                >
-                  <div className="left-side">
-                    <div className="user-icon">
-                      <FontAwesomeIcon
-                        className="rounded-circle"
-                        icon={faUserSecret}
-                        style={{
-                          fontSize: "10px",
-                          backgroundColor: "white",
-                          color: "black",
-                          width: "40px",
-                          height: "40px",
-                          padding: "25px",
-                        }}
-                      ></FontAwesomeIcon>
-                    </div>
-                  </div>
-                  <div className="ml-20 right-side">
-                    <p
-                      className="heading"
-                      style={{ fontWeight: "600", fontSize: "18px" }}
-                    >
-                      Superior security and compliance
-                    </p>
-                    <small className="content">
-                      We understand your industry and business. So, we provide
-                      the solution that is customized and fits according to your
-                      needs.
-                    </small>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

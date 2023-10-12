@@ -56,7 +56,7 @@ function HomeCreativeAgency() {
             <HzScroll />
             {/* <CreativeBlog /> */}
             {/* <WeAre /> */}
-            <Wellness />
+            {/* <Wellness /> */}
             <Blog />
           </main>
           <DarkFooter />

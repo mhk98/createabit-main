@@ -25,12 +25,12 @@ function Grid() {
           <div className="row">
             <div className="col-lg-7">
               <div className="position-re">
-                <h6 className="dot-titl-non mb-10">Product</h6>
+                <h6 className="mb-10 dot-titl-non">Product</h6>
                 <h2 className="fz-50">INTERACTIVE WOW Products</h2>
               </div>
             </div>
             <div className="col-lg-5 d-flex align-items-center">
-              <div className="full-width d-flex justify-content-end justify-end">
+              <div className="justify-end full-width d-flex justify-content-end">
                 <div className="vew-all">
                   <Link href="/dark/portfolio-classic-grid">
                     View All Works
@@ -55,7 +55,7 @@ function Grid() {
           </div>
         </div>
         <div className="row">
-          <div className="filtering col-12 mb-80 text-center">
+          <div className="text-center filtering col-12 mb-80">
             {/* <div className="filter">
               <span className="text">Filter By :</span>
               {data.filters.map((item, index) => (
@@ -72,7 +72,7 @@ function Grid() {
           </div>
         </div>
         <div className="gallery">
-          <div className="row grid md-marg">
+          <div className="grid row md-marg">
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
                 <Link href="/dark/project-details1" className="imago wow">
@@ -97,12 +97,12 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
                     <Link href="/dark/project-details1">
-                      INTERACTIVE FLOOR PROJECTION
+                    3D HOLOGRAPHIC SIGNAGE
                     </Link>
                   </h5>
                 </div>
@@ -132,12 +132,12 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
                     <Link href="/dark/project-details1">
-                      INTERACTIVE FLOOR PROJECTION
+                    DIGITAL DISPLAY
                     </Link>
                   </h5>
                 </div>
@@ -167,19 +167,19 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
                     <Link href="/dark/project-details1">
-                      INTERACTIVE FLOOR PROJECTION
+                    VIRTUAL BOOK
                     </Link>
                   </h5>
                 </div>
               </div>
             </div>
           </div>
-          <div className="row grid md-marg">
+          <div className="grid row md-marg">
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
                 <Link href="/dark/project-details1" className="imago wow">
@@ -204,12 +204,12 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
                     <Link href="/dark/project-details1">
-                      INTERACTIVE FLOOR PROJECTION
+                    REAR PROJECTION
                     </Link>
                   </h5>
                 </div>
@@ -239,12 +239,12 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
                     <Link href="/dark/project-details1">
-                      INTERACTIVE FLOOR PROJECTION
+                    INTERACTIVE FLOOR
                     </Link>
                   </h5>
                 </div>
@@ -274,19 +274,19 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
                     <Link href="/dark/project-details1">
-                      INTERACTIVE FLOOR PROJECTION
+                    TOUCH TABLE
                     </Link>
                   </h5>
                 </div>
               </div>
             </div>
           </div>
-          <div className="row grid md-marg">
+          <div className="grid row md-marg">
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
                 <Link href="/dark/project-details1" className="imago wow">
@@ -311,7 +311,7 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
@@ -346,7 +346,7 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>
@@ -381,7 +381,7 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> INTERACTIVE WOW PRODUCTION
+                      © 2023 <br /> INTERACTIVE WOW PRODUCT
                     </Link>
                   </h6>
                   <h5>

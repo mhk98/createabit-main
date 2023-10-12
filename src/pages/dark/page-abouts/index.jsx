@@ -20,7 +20,7 @@ function PageAbout() {
 
   const headerMetadata = {
     subTitle: "WHO WE ARE ?",
-    title: "We're a digital agency based in Valencia.",
+    title: "We're not just a digital marketing agency, we're your online success partners!",
     text: "About Us",
   };
 

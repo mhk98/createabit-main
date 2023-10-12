@@ -67,14 +67,17 @@ function Header({ lightMode }) {
           <div className="col-lg-9">
             <div className="caption title">
               <h1>
-                High End <br /> <span className="stroke">Creative</span> Agency
+                We Are Your
+                <br /> <span className="stroke">Bag Of</span> Secrets!
               </h1>
               <div className="row mt-30">
                 <div className="col-lg-5 offset-lg-1">
                   <div className="text">
                     <p>
-                      Through our years of experience, we've also learned that
-                      while each channel has its own set of advantages.
+                      We're your one-stop creative marketing solutions provider
+                      – branding, web marketing, interior/exterior design,
+                      digital video walls – unlocking visual design success
+                      against competitors!
                     </p>
                   </div>
                   <div className="crv-butn-vid mt-30">

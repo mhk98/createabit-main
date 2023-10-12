@@ -7,7 +7,7 @@ function DarkFooter() {
     <footer className="sub-bg">
       <div className="footer-container">
         <div className="container pb-80 pt-80 ontop">
-          {/* <div className="call-box text-center mb-80">
+          {/* <div className="text-center call-box mb-80">
             <h2>
               <a href="page-contact.html">
                 Let's <span className="stroke"> Discuss</span>
@@ -30,18 +30,23 @@ function DarkFooter() {
           </div> */}
           <div className="row">
             <div className="col-lg-3">
-              <div className="colum md-mb50">
-                <div className="tit mb-20">
-                  <h6>Address</h6>
-                </div>
-                <div className="text">
-                  <p>901 South Highland St, Suite # 301,Arlington, VA 22041</p>
-                </div>
+              <div className="logo" style={{ marginBottom: "20px" }}>
+                <a href="#">
+                  <img src="/dark/assets/imgs/logo-light.png" alt="" />
+                </a>
               </div>
+              <small>
+                We tend to believe we are not just a company. We are
+                incorporated but for the sake of representation. However, our
+                actual belief is far beyond incorporation, this is a concept. A
+                concept which sees ‘design’ as a medium to trigger the
+                undiscovered “seventh sense” of the human psychology
+              </small>
             </div>
+            
             <div className="col-lg-3 offset-lg-1">
               <div className="colum md-mb50">
-                <div className="tit mb-20">
+                <div className="mb-20 tit">
                   <h6>Company</h6>
                 </div>
                 <div className="text">
@@ -54,9 +59,9 @@ function DarkFooter() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-2 md-mb50">
-              <div className="tit mb-20">
-                <h6>Information</h6>
+            <div className="col-lg-3 md-mb50">
+              <div className="mb-20 tit">
+                <h6>Sitemap</h6>
               </div>
 
               <ul className="rest social-text ">
@@ -74,8 +79,8 @@ function DarkFooter() {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3">
-              <div className="tit mb-20">
+            <div className="col-lg-2">
+              <div className="mb-20 tit">
                 <h6>Social</h6>
               </div>
               {/* <div className="subscribe">
@@ -107,16 +112,9 @@ function DarkFooter() {
             </div>
           </div>
         </div>
-        <div className="sub-footer pt-40 pb-40 bord-thin-top ontop">
+        <div className="pt-40 pb-40 sub-footer bord-thin-top ontop">
           <div className="container">
             <div className="row">
-              <div className="col-lg-4">
-                <div className="logo">
-                  <a href="#">
-                    <img src="/dark/assets/imgs/logo-light.png" alt="" />
-                  </a>
-                </div>
-              </div>
               <div className="col-lg-8">
                 <div className="copyright d-flex">
                   <div className="ml-auto">

@@ -5,8 +5,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import service1 from "../../../../images/DIGITAL-MARKETING-01.png";
 import service2 from "../../../../images/Marketing-STRATEGY-02-01.png";
+import service1 from "../../../../images/service/SEO-01.png";
 
 function Service4() {
   return (
@@ -24,18 +24,22 @@ function Service4() {
             We spread your business throughout to the digital space
           </p>
           <p className="mt-8">
-            Createabit's experienced web designers have the ability to make your
-            website look professional, yet beautiful. We use the latest web
-            design technologies that enabled us to become the top web design and
-            development company in the industry.
+            We are one of the best Digital/Social Media Marketing (SMM) Company
+            out there. We assist you to reach your targeted audience and make
+            the most out of it with our Digital/Social Media Marketing (SMM).
           </p>{" "}
           <br />
           <p>
-            Our commitment is to provide prodigious, high-quality services by
-            utilizing professionals with their research and studies to deliver
-            exceptional value to our client getting them to their objectives
-            that directly hit to the targeted area.
+            We focus entirely on your brand, aims and solutions for hours. Then,
+            using our experience an expertise, we spread your brand throughout
+            the platform.
           </p>
+          <p>
+            Tags which will help you understand our service: Facebook Marketing,
+            Facebook advertising, Twitter marketing, Digital Content, Digital
+            Marketing, YouTube Marketing, Content Marketing.
+          </p>
+          <br />
           <div className="purchase" style={{ marginTop: "20px" }}>
             <a className="butn butn-md butn-bord radius-30">
               <span>SEND US YOUR QUERIES! </span>
@@ -274,7 +278,7 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Greater Inbound Traffic</h4>
             <p>
               We will implement a social media strategy that will greatly
               increase your brand recognition since you will be engaging with a
@@ -301,11 +305,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Greater Inbound Traffic</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              Without social media, your inbound traffic is limited to your
+              usual customers. With our proven SMM Strategy, we will help you to
+              reach more audience outside of your loyal customer circle.
             </p>
           </div>
           <div
@@ -328,11 +332,12 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Enhanced Search Engine Rankings</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              Social media presence is becoming a significant factor in
+              calculating rankings. We make sure to use all techniques to make a
+              positive impact on your Search Engine Results through our SMM
+              service.
             </p>
           </div>
         </div>
@@ -349,11 +354,12 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Share Content Quickly and Easily</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              Social media plays a large part of any content marketing
+              distribution plan. So, we put more effort to create contents that
+              align with your brand and generate more interests for your
+              audience.
             </p>
           </div>
           <div className="col-lg-3 service_smm">
@@ -368,11 +374,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Greater Chances for Converting</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              Every blog post, image, video, or comment we share for you is a
+              chance for someone to react, and every reaction could lead to a
+              site visit, and eventually a conversion.
             </p>
           </div>
           <div
@@ -395,11 +401,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Higher Conversion Rates</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              With increased visibility, we make sure your business gains more
+              opportunities for conversion. Moreover, we allow your business to
+              give a positive impression through a humanization factor.
             </p>
           </div>
           <div
@@ -422,11 +428,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Increased Brand Authority</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              We make your customers happy. And, these happy customers mention
+              your business on social media that show new visitors your value
+              and brand authority.
             </p>
           </div>
         </div>
@@ -443,11 +449,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Increased Brand Authority</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              We make your customers happy. And, these happy customers mention
+              your business on social media that show new visitors your value
+              and brand authority.
             </p>
           </div>
           <div className="col-lg-3 service_smm">
@@ -462,11 +468,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>More Satisfaction of Customers</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              We make your customers appreciate knowing that when they post
+              comments on your pages, they will receive a personalized response
+              rather than an automated message.
             </p>
           </div>
           <div
@@ -489,11 +495,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Enhanced Brand Loyalty</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              Considering that customer satisfaction and brand loyalty typically
+              go hand in hand, we regularly engage with consumers and begin
+              developing a bond with them through Social Media Platforms.
             </p>
           </div>
           <div
@@ -516,11 +522,11 @@ function Service4() {
                 padding: "20px",
               }}
             />
-            <h4>Extended Awareness</h4>
+            <h4>Higher Conversion Rates</h4>
             <p>
-              We will implement a social media strategy that will greatly
-              increase your brand recognition since you will be engaging with a
-              broad audience of consumers.
+              With increased visibility, we make sure your business gains more
+              opportunities for conversion. Moreover, we allow your business to
+              give a positive impression through a humanization factor.
             </p>
           </div>
         </div>
@@ -552,9 +558,9 @@ function Service4() {
                       fontSize: "10px",
                       backgroundColor: "white",
                       color: "black",
-                      width: "40px",
-                      height: "40px",
-                      padding: "25px",
+                      width: "30px",
+                      height: "30px",
+                      padding: "20px",
                     }}
                   ></FontAwesomeIcon>
                 </div>
@@ -564,11 +570,12 @@ function Service4() {
                   className="heading"
                   style={{ fontWeight: "600", fontSize: "18px" }}
                 >
-                  Superior security and compliance
+                  Various Platforms
                 </p>
                 <small className="content">
-                  We understand your industry and business. So, we provide the
-                  solution that is customized and fits according to your needs.
+                  You might appreciate the fact that we can work with Facebook,
+                  LinkedIn, Twitter Google+, Pinterest, & many more with equal
+                  proficiency.
                 </small>
               </div>
             </div>
@@ -589,9 +596,9 @@ function Service4() {
                       fontSize: "10px",
                       backgroundColor: "white",
                       color: "black",
-                      width: "40px",
-                      height: "40px",
-                      padding: "25px",
+                      width: "30px",
+                      height: "30px",
+                      padding: "20px",
                     }}
                   ></FontAwesomeIcon>
                 </div>
@@ -601,11 +608,11 @@ function Service4() {
                   className="heading"
                   style={{ fontWeight: "600", fontSize: "18px" }}
                 >
-                  Superior security and compliance
+                  Content Strategy
                 </p>
                 <small className="content">
-                  We understand your industry and business. So, we provide the
-                  solution that is customized and fits according to your needs.
+                  Our team works with your brand and develop a content strategy
+                  appropriate for your own customer’s personas & journey.
                 </small>
               </div>
             </div>
@@ -626,9 +633,9 @@ function Service4() {
                       fontSize: "10px",
                       backgroundColor: "white",
                       color: "black",
-                      width: "40px",
-                      height: "40px",
-                      padding: "25px",
+                      width: "30px",
+                      height: "30px",
+                      padding: "20px",
                     }}
                   ></FontAwesomeIcon>
                 </div>
@@ -638,11 +645,12 @@ function Service4() {
                   className="heading"
                   style={{ fontWeight: "600", fontSize: "18px" }}
                 >
-                  Superior security and compliance
+                  Online Advertising
                 </p>
                 <small className="content">
-                  We understand your industry and business. So, we provide the
-                  solution that is customized and fits according to your needs.
+                  We advertise your Social Media Pages, posts and likes to
+                  enhance your brand awareness and eventually generate greater
+                  brand value for your business.
                 </small>
               </div>
             </div>
@@ -665,9 +673,9 @@ function Service4() {
                       fontSize: "10px",
                       backgroundColor: "white",
                       color: "black",
-                      width: "40px",
-                      height: "40px",
-                      padding: "25px",
+                      width: "30px",
+                      height: "30px",
+                      padding: "20px",
                     }}
                   ></FontAwesomeIcon>
                 </div>
@@ -677,11 +685,12 @@ function Service4() {
                   className="heading"
                   style={{ fontWeight: "600", fontSize: "18px" }}
                 >
-                  Superior security and compliance
+                  Social Media Strategy
                 </p>
                 <small className="content">
-                  We understand your industry and business. So, we provide the
-                  solution that is customized and fits according to your needs.
+                  We help you set clear social media marketing objectives and
+                  devise effective Social Media Strategies, taking ownership of
+                  it.
                 </small>
               </div>
             </div>
@@ -702,9 +711,9 @@ function Service4() {
                       fontSize: "10px",
                       backgroundColor: "white",
                       color: "black",
-                      width: "40px",
-                      height: "40px",
-                      padding: "25px",
+                      width: "30px",
+                      height: "30px",
+                      padding: "20px",
                     }}
                   ></FontAwesomeIcon>
                 </div>
@@ -714,11 +723,12 @@ function Service4() {
                   className="heading"
                   style={{ fontWeight: "600", fontSize: "18px" }}
                 >
-                  Superior security and compliance
+                  Great Development
                 </p>
                 <small className="content">
-                  We understand your industry and business. So, we provide the
-                  solution that is customized and fits according to your needs.
+                  We put ourselves in the shoes of their customers & come up
+                  with excellent content that can grab the attention and
+                  increase your business visibility.
                 </small>
               </div>
             </div>
@@ -739,9 +749,9 @@ function Service4() {
                       fontSize: "10px",
                       backgroundColor: "white",
                       color: "black",
-                      width: "40px",
-                      height: "40px",
-                      padding: "25px",
+                      width: "30px",
+                      height: "30px",
+                      padding: "20px",
                     }}
                   ></FontAwesomeIcon>
                 </div>
@@ -751,11 +761,11 @@ function Service4() {
                   className="heading"
                   style={{ fontWeight: "600", fontSize: "18px" }}
                 >
-                  Superior security and compliance
+                  Get Profitable Results
                 </p>
                 <small className="content">
-                  We understand your industry and business. So, we provide the
-                  solution that is customized and fits according to your needs.
+                  Last but not least, we deliver profitable results to you by
+                  achieving your objectives without any hassle.
                 </small>
               </div>
             </div>
