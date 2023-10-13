@@ -11,8 +11,7 @@ function About({ lightMode }) {
             <div className=" sec-lg-head md-mb30" style={{ marginTop: "15px" }}>
               <h2 className=" d-rotate wow">
                 <span className="rotate-text">
-                  We're not just a digital marketing agency, we're your online
-                  success partners!
+                Your success is our mission in the digital world.
                 </span>
               </h2>
             </div>

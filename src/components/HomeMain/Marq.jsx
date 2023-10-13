@@ -11,31 +11,31 @@ function Marq() {
                 <div className="box non-strok">
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>UI-UX Experience</span>
+                      <span>Display Lab </span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Web Development</span>{" "}
+                      <span>Event Chief </span>{" "}
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Digital Marketing</span>
+                      <span>Auto Shop Management (ASM)</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Product Design</span>{" "}
+                      <span>Self Ordering System (SOS)</span>{" "}
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Mobile Solutions</span>
+                      <span>Display Lab </span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
@@ -43,31 +43,31 @@ function Marq() {
                 <div className="box non-strok">
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>UI-UX Experience</span>
+                      <span>Event Chief </span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Web Development</span>{" "}
+                      <span>Auto Shop Management (ASM)</span>{" "}
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Digital Marketing</span>
+                      <span>Self Ordering System (SOS)</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Product Design</span>{" "}
+                      <span>Display Lab </span>{" "}
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center">
-                      <span>Mobile Solutions</span>
+                      <span>Event Chief </span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
