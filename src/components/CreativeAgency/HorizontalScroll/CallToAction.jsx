@@ -16,9 +16,12 @@ function CallToAction({ lightMode }) {
             <div className="text-center sec-lg-head">
               <h6 className="mb-10 dot-titl">Call to Action</h6>
               <h2 className="fz-70 fw-700">
-                <span>Do you have an exciting project idea?</span>
+                <span>
+                  We're here to help you bring your exciting project idea from
+                  your dream to fruition.
+                </span>
                 <br />
-                <span>Let's turn it into reality together.</span>
+                {/* <span>Let's turn it into reality together.</span> */}
               </h2>
               <Link
                 href={`/${lightMode ? "light" : "dark"}/page-contact`}
