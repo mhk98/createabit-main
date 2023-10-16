@@ -130,7 +130,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Make your business visible online.
+                          Boost your online presence and get noticed.
                         </h6>
                       </li>
                       <li className="mt-5">
@@ -151,7 +151,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Make your eCommerce business stand out.
+                          Grow alongside your audience.
                         </h6>
                       </li>
                       <li className="mt-5">
@@ -172,7 +172,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Grow with your audience.
+                          Increase online visibility.
                         </h6>
                       </li>
                     </ul>
@@ -251,7 +251,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Make your business visible online.
+                          Differentiate your brand online.
                         </h6>
                       </li>
                       <li className="mt-5">
@@ -272,7 +272,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Make your eCommerce business stand out.
+                          Engage your growing audience.
                         </h6>
                       </li>
                       <li className="mt-5">
@@ -293,7 +293,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Grow with your audience.
+                          Capture your target audience.
                         </h6>
                       </li>
                     </ul>
@@ -345,12 +345,11 @@ function Products({ lightMode }) {
                 <div className="row justify-content-center">
                   <div className="col-md-11">
                     <p>
-                      Digital displays are getting quite popular now a day for
-                      it’s attractive features. We brought very new Digital
-                      displays with lots of features and technology. We Have
-                      various types of LCD Wall Video Displays, Wall Mount
-                      Displays, Stand Alone Signage, Touch Table, OutDoor
-                      Signage, Multimedia Kiosk.
+                      Experience the Evolution of Nail Design with Our Latest
+                      Creations. Innovate Your Nails and Embrace the Future of
+                      Design. Witness the Pioneering Trends in Nail Art with Our
+                      Unique Styles. Explore the Cutting-Edge of Nail Design
+                      Today.
                     </p>
                     <ul className="rest list-arrow mt-30">
                       <li>
@@ -371,7 +370,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Make your business visible online.
+                          Unlock the Next Level of Nail Design Innovation.
                         </h6>
                       </li>
                       <li className="mt-5">
@@ -392,7 +391,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Make your eCommerce business stand out.
+                        The Future of Nail Design is Now at Your Fingertips.
                         </h6>
                       </li>
                       <li className="mt-5">
@@ -413,7 +412,7 @@ function Products({ lightMode }) {
                           </svg>
                         </span>
                         <h6 className="inline fz-16 fw-400">
-                          Grow with your audience.
+                        Get a Glimpse of Nail Design's Exciting Tomorrow.
                         </h6>
                       </li>
                     </ul>

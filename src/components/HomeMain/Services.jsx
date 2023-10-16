@@ -21,8 +21,8 @@ function Services({ lightMode }) {
             <div className="col-lg-4 d-flex align-items-center">
               <div className="text wow fadeIn">
                 <p>
-                  Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit,
-                  sed quia.
+                  Experience excellence through our comprehensive suite of
+                  services.
                 </p>
               </div>
             </div>

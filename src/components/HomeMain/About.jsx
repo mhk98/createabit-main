@@ -11,8 +11,7 @@ function About({ lightMode }) {
             <div className=" sec-lg-head md-mb30" style={{ marginTop: "15px" }}>
               <h2 className=" d-rotate wow">
                 <span className="rotate-text">
-                  We're not just a digital marketing agency, we're your online
-                  success partners!
+                  Your success is our mission in the digital world.
                 </span>
               </h2>
             </div>
@@ -37,11 +36,11 @@ function About({ lightMode }) {
                     designing and marketing services.
                   </span>
                 </span>
-                <span className="sideup-text">
+                {/* <span className="sideup-text">
                   <span className="up-text">
                     When it comes to designing and marketing services.
                   </span>
-                </span>
+                </span> */}
               </p>
               <div
                 className="vew-all mt-50 ml-30 wow fadeIn"
@@ -96,7 +95,7 @@ function About({ lightMode }) {
             <div className="cont">
               <h2 className="d-rotate wow">
                 <span className="rotate-text" style={{ width: "600px" }}>
-                  Unlock Revenue Growth for Your Business.
+                  Achieve Sustainable Revenue Growth in Your Business.
                 </span>
               </h2>
               <div className="feat mt-80">
@@ -115,10 +114,10 @@ function About({ lightMode }) {
                     </div>
                   </div>
                   <div className="cont ml-30">
-                    <h6>High Standerd</h6>
+                    <h6>Elevate Your Experience</h6>
                     <p className="fz-15">
-                      Adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua.
+                      Unlocking Smooth Conversations with Every Step of the Way
+                      with Our Unrivaled High Standard Service.
                     </p>
                   </div>
                 </div>
@@ -137,10 +136,9 @@ function About({ lightMode }) {
                     </div>
                   </div>
                   <div className="cont ml-30">
-                    <h6>Ease of Communication</h6>
+                    <h6>Stay connected</h6>
                     <p className="fz-15">
-                      Adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua.
+                    With ease using our user-friendly communication solutions.
                     </p>
                   </div>
                 </div>

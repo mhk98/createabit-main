@@ -97,7 +97,7 @@ function Grid() {
                     </Link>
                   </h6>
                   <h5>
-                    <Link href="/dark/project-details1">DIGITAL DISPLAY</Link>
+                    <Link href="/dark/project-details1">3D HOLOGRAPHIC SIGNS</Link>
                   </h5>
                 </div>
               </div>
@@ -126,11 +126,11 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> Digital Product
+                      © 2023 <br /> Dynamic Digital Products
                     </Link>
                   </h6>
                   <h5>
-                    <Link href="/dark/project-details1">DIGITAL DISPLAY</Link>
+                    <Link href="/dark/project-details1">POS SYSTEMS</Link>
                   </h5>
                 </div>
               </div>
@@ -161,7 +161,7 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> Digital Product
+                      © 2023 <br /> Dynamic Digital Products
                     </Link>
                   </h6>
                   <h5>
@@ -194,7 +194,7 @@ function Grid() {
                   </span>
                   <h6 className="sub-title tag">
                     <Link href="/dark/project-details1">
-                      © 2023 <br /> Digital Product
+                      © 2023 <br /> Dynamic Digital Products
                     </Link>
                   </h6>
                   <h5>
