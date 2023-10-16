@@ -1,22 +1,48 @@
-import { useGetAllCartQuery } from "@/features/cart/cart";
-import Link from "next/link";
+import {
+  useDeleteCartMutation,
+  useGetAllCartQuery,
+} from "@/features/cart/cart";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 function Cart({ lightMode }) {
-  function decreaseCount(event) {
-    let input = event.currentTarget.parentElement.querySelector("input");
-    if (parseInt(input.value) === 1) return;
-    input.value = parseInt(input.value) - 1;
-  }
-
-  function increaseCount(event) {
-    let input = event.currentTarget.parentElement.querySelector("input");
-    input.value = parseInt(input.value) + 1;
-  }
-
   const { data, isError, isLoading } = useGetAllCartQuery();
+  const products = data?.data;
 
-  const carts = data?.data;
-  console.log("allcart", carts);
+  const [cart, setCart] = useState(products);
+
+  console.log("cart", cart);
+  // Function to update the cart item quantity
+  const updateQuantity = (id, newQuantity) => {
+    setCart((prevCart) =>
+      prevCart.map((item) => {
+        if (item.Cart_Id === id) {
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      })
+    );
+  };
+
+  // Function to calculate the subtotal of an item
+  const calculateSubtotal = (price, quantity) => price * quantity;
+
+  // Function to calculate the total cart price
+  const calculateTotal = () =>
+    cart.reduce(
+      (total, item) => total + calculateSubtotal(item.price, item.quantity),
+      0
+    );
+
+  const [deleteCart, { isLoading1, isError1 }] = useDeleteCartMutation();
+
+  const handleDelete = (id) => {
+    deleteCart(id);
+    toast.success("Successfully delete product from the cart");
+    // Update the cart state with the item removed
+    setCart((prevCart) => prevCart.filter((item) => item.Cart_Id !== id));
+  };
+
   return (
     <section
       className={`shop-cart ${lightMode ? "light" : ""} section-padding`}
@@ -36,42 +62,56 @@ function Cart({ lightMode }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {carts?.map((cart) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <tr>
+                  {cart?.map((item) => (
+                    <tr key={item.Cart_Id}>
                       <td data-column="Product">
                         <div className="d-flex align-items-center">
                           <div>
                             <div className="img icon-img-80">
-                              <img src="/dark/assets/imgs/shop/3.jpg" alt="" />
+                              <img src={item.image} alt={item.title} />
                             </div>
                           </div>
                           <div className="ml-30">
-                            <h6>{cart.title}</h6>
+                            <h6>{item.title}</h6>
                           </div>
                         </div>
                       </td>
                       <td data-column="price">
-                        <h5 className="main-color4 fz-18">${cart.price}</h5>
+                        <h5 className="main-color4 fz-18">${item.price}</h5>
                       </td>
-                      <td data-column="	Quantity">
+                      <td data-column="Quantity">
                         <div className="counter">
-                          <span className="down" onClick={decreaseCount}>
+                          <span
+                            className="down"
+                            onClick={() =>
+                              updateQuantity(item.Cart_Id, item.quantity - 1)
+                            }
+                          >
                             -
                           </span>
-                          <input type="text" defaultValue="1" />
-                          <span className="up" onClick={increaseCount}>
+                          <input type="text" value={item.quantity} readOnly />
+                          <span
+                            className="up"
+                            onClick={() =>
+                              updateQuantity(item.Cart_Id, item.quantity + 1)
+                            }
+                          >
                             +
                           </span>
                         </div>
                       </td>
                       <td data-column="Subtotal">
-                        <h5 className="main-color4 fz-18">$130.00</h5>
+                        <h5 className="main-color4 fz-18">
+                          $
+                          {calculateSubtotal(item.price, item.quantity).toFixed(
+                            2
+                          )}
+                        </h5>
                       </td>
                       <td className="remove">
-                        <a href="#0">
+                        <span onClick={() => handleDelete(item.Cart_Id)}>
                           <span className="pe-7s-close"></span>
-                        </a>
+                        </span>
                       </td>
                     </tr>
                   ))}
@@ -88,42 +128,30 @@ function Cart({ lightMode }) {
                   <form action="contact.php">
                     <div className="form-group d-flex mt-30">
                       <input type="text" name="coupon_code" />
-                      <button type="submit" className="butn butn-md butn-bord">
+                      <span type="submit" className="butn butn-md butn-bord">
                         <span>Apply</span>
-                      </button>
+                      </span>
                     </div>
                     <span className="mt-10 fz-13 opacity-7">Coupon code</span>
                   </form>
                 </div>
               </div>
               <div className="col-lg-4 offset-lg-2">
-                <div className="mt-40 total">
-                  <h4>Cart totals</h4>
-                  <ul className="rest mt-30">
-                    <li className="mb-5">
-                      <h6>
-                        Subtotal :{" "}
-                        <span className="ml-10 fz-16 main-color4">$130.00</span>
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        Total :{" "}
-                        <span className="ml-10 fz-16 main-color4">$260.00</span>
-                      </h6>
-                    </li>
-                  </ul>
-                  <Link
-                    href="/dark/shop-checkout"
-                    className={`${
-                      lightMode ? "main-colorbg4" : "bg-white"
-                    } butn butn-md butn-bg text-dark mt-30`}
-                  >
-                    <span className="text-u fz-13 fw-600">
-                      Proceed to checkout
-                    </span>
-                  </Link>
-                </div>
+                {cart && cart.length > 0 && (
+                  <div className="mt-40 total">
+                    <h4>Cart totals</h4>
+                    <ul className="rest mt-30">
+                      <li className="mb-5">
+                        <h6>
+                          Subtotal :{" "}
+                          <span className="ml-10 fz-16 main-color4">
+                            ${calculateTotal()}
+                          </span>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>

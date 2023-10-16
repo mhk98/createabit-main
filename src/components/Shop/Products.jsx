@@ -28,6 +28,7 @@ function Products({ lightMode }) {
   console.log("products", data?.data);
   const products = data?.data;
 
+  console.log("products", products);
   const [createCart, { isLoading, isError }] = useCreateCartMutation();
 
   const addToCart = (product) => {

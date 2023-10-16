@@ -6,6 +6,8 @@ export const productCartApi = createApi({
     // baseUrl: "https://createabit-backend.onrender.com/api/v1/",
     baseUrl: "http://localhost:5000/api/v1/",
   }),
+
+  tagTypes: ["carts"],
   endpoints: (builder) => ({
     createCart: builder.mutation({
       query: (product) => ({
@@ -13,14 +15,32 @@ export const productCartApi = createApi({
         method: "POST",
         body: product,
       }),
+      invalidatesTags: ["carts"],
+
     }),
+
+    deleteCart: builder.mutation({
+      query: (id) => ({
+        url: `/cart/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["carts"],
+
+    }),
+
     getAllCart: builder.query({
       query: () => ({
         url: "/cart",
-        method: "GET",
       }),
+      refetchOnMountOrArgChange: true,
+      pollingInterval: 1000,
+      provideTags: ["carts"],
     }),
   }),
 });
 
-export const { useCreateCartMutation, useGetAllCartQuery } = productCartApi;
+export const {
+  useCreateCartMutation,
+  useGetAllCartQuery,
+  useDeleteCartMutation,
+} = productCartApi;
