@@ -2,16 +2,23 @@ import {
   useDeleteCartMutation,
   useGetAllCartQuery,
 } from "@/features/cart/cart";
-import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 function Cart({ lightMode }) {
   const { data, isError, isLoading } = useGetAllCartQuery();
   const products = data?.data;
 
-  const [cart, setCart] = useState(products);
+  const [cart, setCart] = useState([]);
 
-  console.log("cart", cart);
+  useEffect(() => {
+    if (products) {
+      setCart(products);
+    }
+  }, [products]);
+
   // Function to update the cart item quantity
   const updateQuantity = (id, newQuantity) => {
     setCart((prevCart) =>
@@ -37,10 +44,37 @@ function Cart({ lightMode }) {
   const [deleteCart, { isLoading1, isError1 }] = useDeleteCartMutation();
 
   const handleDelete = (id) => {
-    deleteCart(id);
-    toast.success("Successfully delete product from the cart");
-    // Update the cart state with the item removed
-    setCart((prevCart) => prevCart.filter((item) => item.Cart_Id !== id));
+    if (id) {
+      alert("Do you delete");
+      deleteCart(id);
+      toast.success("Successfully delete product from the cart");
+      // Update the cart state with the item removed
+      setCart((prevCart) => prevCart.filter((item) => item.Cart_Id !== id));
+    }
+  };
+
+  const [couponCode, setCouponCode] = useState("");
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const [cartTotal, setCartTotal] = useState(calculateTotal());
+
+  // Function to handle changes in the coupon code input field
+  const handleCouponCodeChange = (e) => {
+    setCouponCode(e.target.value);
+  };
+
+  // Function to apply the coupon and calculate the discount
+  const applyCoupon = () => {
+    // You can add logic here to validate the coupon code and calculate the discount.
+    // For this example, we'll apply a fixed 20% discount if the coupon is "OCT".
+
+    if (couponCode === "OCT") {
+      const totalBeforeDiscount = calculateTotal();
+      const discount = (totalBeforeDiscount * 20) / 100; // 20% discount
+      const discountedTotal = totalBeforeDiscount - discount;
+
+      setAppliedDiscount(discount);
+      setCartTotal(discountedTotal);
+    }
   };
 
   return (
@@ -68,7 +102,14 @@ function Cart({ lightMode }) {
                         <div className="d-flex align-items-center">
                           <div>
                             <div className="img icon-img-80">
-                              <img src={item.image} alt={item.title} />
+                              {/* <Image src={item.image} alt={item.title} /> */}
+
+                              <Image
+                                src={`https://createabit-backend.onrender.com/${item.image}`}
+                                alt=""
+                                width={70}
+                                height={50}
+                              />
                             </div>
                           </div>
                           <div className="ml-30">
@@ -127,10 +168,19 @@ function Cart({ lightMode }) {
                   </p>
                   <form action="contact.php">
                     <div className="form-group d-flex mt-30">
-                      <input type="text" name="coupon_code" />
-                      <span type="submit" className="butn butn-md butn-bord">
+                      <input
+                        type="text"
+                        name="coupon_code"
+                        value={couponCode}
+                        onChange={handleCouponCodeChange}
+                      />
+                      <button
+                        type="button"
+                        className="butn butn-md butn-bord"
+                        onClick={applyCoupon}
+                      >
                         <span>Apply</span>
-                      </span>
+                      </button>
                     </div>
                     <span className="mt-10 fz-13 opacity-7">Coupon code</span>
                   </form>
@@ -145,11 +195,35 @@ function Cart({ lightMode }) {
                         <h6>
                           Subtotal :{" "}
                           <span className="ml-10 fz-16 main-color4">
-                            ${calculateTotal()}
+                            ${calculateTotal().toFixed(2)}
+                          </span>
+                        </h6>
+                      </li>
+                      <li className="mb-5">
+                        <h6>
+                          Discount :{" "}
+                          <span className="ml-10 fz-16 main-color4">
+                            -${appliedDiscount.toFixed(2)}
+                          </span>
+                        </h6>
+                      </li>
+                      <li className="mb-5">
+                        <h6>
+                          Total :{" "}
+                          <span className="ml-10 fz-16 main-color4">
+                            ${(calculateTotal() - appliedDiscount).toFixed(2)}
                           </span>
                         </h6>
                       </li>
                     </ul>
+                    <Link
+                      href="/dark/shop-checkout"
+                      className="butn butn-md butn-bord mt-30"
+                    >
+                      <span className="text-u fz-13 fw-600">
+                        Proceed to checkout
+                      </span>
+                    </Link>
                   </div>
                 )}
               </div>

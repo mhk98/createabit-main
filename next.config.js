@@ -17,7 +17,8 @@ const path = require("path");
 
 module.exports = {
   images: {
-    domains: ["localhost"], // Add 'localhost' as an allowed domain
+    domains: ["localhost", "createabit-backend.onrender.com"],
   },
 };
+
 // module.exports = nextConfig;

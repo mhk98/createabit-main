@@ -88,7 +88,7 @@ function Products({ lightMode }) {
                 <div className="item mb-50">
                   <div className="img">
                     <Image
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://createabit-backend.onrender.com/${item.image}`}
                       alt=""
                       width={300}
                       height={200}
