@@ -11,7 +11,6 @@ import { serviceDetailsApi } from "@/features/service/serviceDetailsApi";
 const { configureStore } = require("@reduxjs/toolkit");
 
 const store = configureStore({
-  devTools: true,
   reducer: {
     [serviceApi.reducerPath]: serviceApi.reducer,
     [serviceDetailsApi.reducerPath]: serviceDetailsApi.reducer,

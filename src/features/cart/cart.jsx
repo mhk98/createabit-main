@@ -7,34 +7,32 @@ export const productCartApi = createApi({
     // baseUrl: "http://localhost:5000/api/v1/",
   }),
 
-  tagTypes: ["carts"],
-  endpoints: (builder) => ({
-    createCart: builder.mutation({
+  tagTypes: ["carts"], // Define the tag type
+  endpoints: (build) => ({
+    createCart: build.mutation({
       query: (product) => ({
         url: "/cart/create-cart",
         method: "POST",
         body: product,
       }),
       invalidatesTags: ["carts"],
-
     }),
 
-    deleteCart: builder.mutation({
+    deleteCart: build.mutation({
       query: (id) => ({
         url: `/cart/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["carts"],
-
     }),
 
-    getAllCart: builder.query({
+    getAllCart: build.query({
       query: () => ({
         url: "/cart",
       }),
+      providesTags: ["carts"],
+
       refetchOnMountOrArgChange: true,
       pollingInterval: 1000,
-      provideTags: ["carts"],
     }),
   }),
 });
