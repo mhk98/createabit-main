@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 function Cart({ lightMode }) {
   const { data, isError, isLoading } = useGetAllCartQuery();
   const products = data?.data;
+  const [itemData, setItemData] = useState([]);
 
   const [cart, setCart] = useState([]);
 
@@ -24,6 +25,15 @@ function Cart({ lightMode }) {
     setCart((prevCart) =>
       prevCart.map((item) => {
         if (item.Cart_Id === id) {
+          // Create a new object containing item title and increment subtotal
+          const newItemData = {
+            title: item.title,
+            incrementSubtotal: calculateSubtotal(item.price, newQuantity),
+          };
+
+          // Update the itemData array with the new object
+          setItemData((prevData) => [...prevData, newItemData]);
+
           return { ...item, quantity: newQuantity };
         }
         return item;

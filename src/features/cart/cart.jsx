@@ -23,6 +23,7 @@ export const productCartApi = createApi({
         url: `/cart/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["carts"],
     }),
 
     getAllCart: build.query({

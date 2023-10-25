@@ -34,7 +34,8 @@ const store = configureStore({
       productCategory2Api.middleware,
       productCategory3Api.middleware,
       productsApi.middleware,
-      productCartApi.middleware
+      productCartApi.middleware,
+      productOrderApi.middleware
     ),
 });
 
