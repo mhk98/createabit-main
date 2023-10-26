@@ -1,10 +1,14 @@
+import cartSlice from "@/Redux-Thunk/reducers/cartSlice";
 import { productCartApi } from "@/features/cart/cart";
+import { productOrderApi } from "@/features/order/order";
 import { productCategory1Api } from "@/features/product/productCategory1";
 import { productCategory2Api } from "@/features/product/productCategory2";
 import { productCategory3Api } from "@/features/product/productCategory3";
 import { productsApi } from "@/features/product/products";
 import { serviceApi } from "@/features/service/serviceApi";
 import { serviceDetailsApi } from "@/features/service/serviceDetailsApi";
+import thunk from "redux-thunk";
+
 // import serviceDetailsSlice from "@/features/serviceDetails/serviceDetailsSlice";
 // import servicesSlice from "@/features/services/servicesSlice";
 
@@ -19,9 +23,11 @@ const store = configureStore({
     [productCategory3Api.reducerPath]: productCategory3Api.reducer,
     [productsApi.reducerPath]: productsApi.reducer,
     [productCartApi.reducerPath]: productCartApi.reducer,
+    [productOrderApi.reducerPath]: productOrderApi.reducer,
 
     // services: servicesSlice,
     // serviceDetails: serviceDetailsSlice,
+    cart: cartSlice,
   },
 
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
@@ -35,7 +41,8 @@ const store = configureStore({
       productCategory3Api.middleware,
       productsApi.middleware,
       productCartApi.middleware,
-      productOrderApi.middleware
+      productOrderApi.middleware,
+      thunk
     ),
 });
 

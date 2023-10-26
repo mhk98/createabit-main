@@ -5,14 +5,14 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/HomeMain/Footer";
-import About from "@/components/InnerPages/ProjectDetails2/About";
-import CallToAction from "@/components/InnerPages/ProjectDetails2/CallToAction";
-import Content from "@/components/InnerPages/ProjectDetails2/Content";
-import Header from "@/components/InnerPages/ProjectDetails2/Header";
+import About from "@/components/InnerPages/SoftwareDetails/About";
+import CallToAction from "@/components/InnerPages/SoftwareDetails/CallToAction";
+import Content from "@/components/InnerPages/SoftwareDetails/Content";
+import Header from "@/components/InnerPages/SoftwareDetails/Header";
+import DarkFooter from "../dark-footer";
 import DarkNavbar from "../dark-navbar";
 
-function ProjectDetails2() {
+function SoftwareDetails() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -21,7 +21,7 @@ function ProjectDetails2() {
   return (
     <>
       <Head>
-        <title>Createabit - Project Details</title>
+        <title>Createabit - Software Details</title>
       </Head>
 
       <Loader />
@@ -33,11 +33,11 @@ function ProjectDetails2() {
         <Content />
         <CallToAction />
       </main>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }
 
-ProjectDetails2.getLayout = (page) => <Layout>{page}</Layout>;
+SoftwareDetails.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default ProjectDetails2;
+export default SoftwareDetails;

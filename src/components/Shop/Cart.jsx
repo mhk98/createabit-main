@@ -1,16 +1,17 @@
-import {
-  useDeleteCartMutation,
-  useGetAllCartQuery,
-} from "@/features/cart/cart";
+import { useDeleteCartMutation } from "@/features/cart/cart";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 function Cart({ lightMode }) {
-  const { data, isError, isLoading } = useGetAllCartQuery();
-  const products = data?.data;
-  const [itemData, setItemData] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  // Load cart data from local storage when the component mounts
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setProducts(savedCart);
+  }, []);
 
   const [cart, setCart] = useState([]);
 
@@ -25,22 +26,16 @@ function Cart({ lightMode }) {
     setCart((prevCart) =>
       prevCart.map((item) => {
         if (item.Cart_Id === id) {
-          // Create a new object containing item title and increment subtotal
-          const newItemData = {
-            title: item.title,
-            incrementSubtotal: calculateSubtotal(item.price, newQuantity),
-          };
-
-          // Update the itemData array with the new object
-          setItemData((prevData) => [...prevData, newItemData]);
-
           return { ...item, quantity: newQuantity };
         }
         return item;
       })
     );
-  };
 
+    // Update the local storage with the new cart data after changing the state
+    const updatedCart = JSON.stringify(cart);
+    localStorage.setItem("cart", updatedCart);
+  };
   // Function to calculate the subtotal of an item
   const calculateSubtotal = (price, quantity) => price * quantity;
 
@@ -54,12 +49,29 @@ function Cart({ lightMode }) {
   const [deleteCart, { isLoading1, isError1 }] = useDeleteCartMutation();
 
   const handleDelete = (id) => {
+    console.log("Delete button clicked", id); // For debugging
+
     if (id) {
-      alert("Do you delete");
-      deleteCart(id);
-      toast.success("Successfully delete product from the cart");
-      // Update the cart state with the item removed
-      setCart((prevCart) => prevCart.filter((item) => item.Cart_Id !== id));
+      alert("Do you want to delete");
+
+      // Use the `filter` method to remove the item from the cart state
+      const updatedCart = cart.filter((item) => item.Product_Id !== id);
+      setCart(updatedCart);
+
+      // Calculate the updated cart total
+      const updatedTotal = updatedCart.reduce(
+        (total, item) => total + calculateSubtotal(item.price, item.quantity),
+        0
+      );
+
+      // Update the local storage with the new cart data after removing the item
+      const updatedCartJSON = JSON.stringify(updatedCart);
+      localStorage.setItem("cart", updatedCartJSON);
+
+      // Set the updated total and display a success toast message
+      setCartTotal(updatedTotal);
+    window.location.reload();
+     
     }
   };
 
@@ -160,9 +172,14 @@ function Cart({ lightMode }) {
                         </h5>
                       </td>
                       <td className="remove">
-                        <span onClick={() => handleDelete(item.Cart_Id)}>
+                        <button
+                          onClick={() => {
+                            console.log("Delete button clicked"); // Add this line for debugging
+                            handleDelete(item.Product_Id);
+                          }}
+                        >
                           <span className="pe-7s-close"></span>
-                        </span>
+                        </button>
                       </td>
                     </tr>
                   ))}

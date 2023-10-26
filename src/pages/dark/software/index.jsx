@@ -5,12 +5,11 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/HomeMain/Footer";
-import Grocery from "@/components/InnerPages/Grocery/Grocery";
-import DarkNavbar from "../dark-navbar";
+import Software from "@/components/InnerPages/Software/Software";
 import DarkFooter from "../dark-footer";
+import DarkNavbar from "../dark-navbar";
 
-function GroceryProduct() {
+function SoftwareProduct() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     return () => document.body.classList.remove("main-bg");
@@ -19,25 +18,25 @@ function GroceryProduct() {
   const headerMetadata = {
     subTitle: "WHAT CAN WE DO ?",
     title: "We combine our passion for design and code.",
-    text: "SERVICES",
+    text: "SOFTWARE",
   };
 
   return (
     <>
       <Head>
-        <title>Createabit - Grocery</title>
+        <title>Createabit - Software</title>
       </Head>
 
       <Loader />
       <DarkNavbar></DarkNavbar>
       <main>
-        <Grocery />
+        <Software />
       </main>
       <DarkFooter />
     </>
   );
 }
 
-GroceryProduct.getLayout = (page) => <Layout>{page}</Layout>;
+SoftwareProduct.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default GroceryProduct;
+export default SoftwareProduct;

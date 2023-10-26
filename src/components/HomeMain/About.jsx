@@ -138,13 +138,13 @@ function About({ lightMode }) {
                   <div className="cont ml-30">
                     <h6>Stay connected</h6>
                     <p className="fz-15">
-                    With ease using our user-friendly communication solutions.
+                      With ease using our user-friendly communication solutions.
                     </p>
                   </div>
                 </div>
                 <div className="mt-20 ml-70 ">
                   <Link
-                    href="/dark/grocery"
+                    href="/dark/industry"
                     className="classic butn butn-md butn-bord radius-30"
                   >
                     <span className="word">Read More</span>

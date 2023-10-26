@@ -2,10 +2,11 @@
 import { useGetProductsQuery } from "@/features/product/products";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useCreateCartMutation } from "../../features/cart/cart";
 
 function Products({ lightMode }) {
+  // const dispatch = useDispatch();
   function openList(e) {
     e.stopPropagation();
     const options = document.querySelector(".select-options");
@@ -25,19 +26,29 @@ function Products({ lightMode }) {
   }
 
   const { data } = useGetProductsQuery();
-  console.log("products", data?.data);
+
   const products = data?.data;
 
   console.log("products", products);
-  const [createCart, { isLoading, isError }] = useCreateCartMutation();
+
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(savedCart);
+  }, []);
 
   const addToCart = (product) => {
-    // console.log("productDetails", product);
-    if (product) {
-      toast.success("Successfully product add to cart!");
-    }
-    createCart(product);
-    console.log("product added", product);
+    // Create a new cart with the added product
+    const updatedCart = [...cart, product];
+    setCart(updatedCart);
+
+    // Save the updated cart data to local storage
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    // Show a success toast message to indicate that the product has been added
+    toast.success("Product added to the cart");
+    window.location.reload();
+
   };
 
   return (

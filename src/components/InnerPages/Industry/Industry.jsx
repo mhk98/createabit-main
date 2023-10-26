@@ -1,7 +1,6 @@
 import InteractiveCenterHorizontal from "@/components/Showcases/InteractiveCenterHorizontal";
-import React from "react";
 
-function Grocery() {
+function Industry() {
   return (
     <div>
       <InteractiveCenterHorizontal />
@@ -9,4 +8,4 @@ function Grocery() {
   );
 }
 
-export default Grocery;
+export default Industry;

@@ -1,10 +1,17 @@
-import { useGetAllCartQuery } from "@/features/cart/cart";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
-  const { data } = useGetAllCartQuery();
-  const carts = data?.data;
+  const [carts, setCarts] = useState([]);
+
+  // Load cart data from local storage when the component mounts
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCarts(savedCart);
+  }, []);
+
+  console.log("carts", carts);
+
   useEffect(() => {
     if (darkOnScroll) {
       let nav = document.querySelector("#navi");
@@ -270,7 +277,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/dark/project-details2/" className="link">
+                    <Link href="/dark/software/" className="link">
                       <span className="fill-text" data-text="Software">
                         Software
                       </span>
