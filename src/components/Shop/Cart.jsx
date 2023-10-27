@@ -1,11 +1,12 @@
-import { useDeleteCartMutation } from "@/features/cart/cart";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
+  const router = useRouter();
 
   // Load cart data from local storage when the component mounts
   useEffect(() => {
@@ -21,21 +22,30 @@ function Cart({ lightMode }) {
     }
   }, [products]);
 
-  // Function to update the cart item quantity
+  // Function to update the cart item quantity and update local storage
   const updateQuantity = (id, newQuantity) => {
     setCart((prevCart) =>
       prevCart.map((item) => {
-        if (item.Cart_Id === id) {
+        if (item.Product_Id === id) {
+          // Update the quantity of the specific item
           return { ...item, quantity: newQuantity };
         }
         return item;
       })
     );
 
+    // Recalculate and update the subtotal, discount, and total
+    const updatedSubtotal = calculateTotal();
+
+    const updatedDiscount = appliedDiscount; // You might need to recalculate the discount based on the updated cart.
+    const updatedTotal = updatedSubtotal - updatedDiscount;
+    setCartTotal(updatedTotal);
+
     // Update the local storage with the new cart data after changing the state
     const updatedCart = JSON.stringify(cart);
     localStorage.setItem("cart", updatedCart);
   };
+
   // Function to calculate the subtotal of an item
   const calculateSubtotal = (price, quantity) => price * quantity;
 
@@ -46,32 +56,23 @@ function Cart({ lightMode }) {
       0
     );
 
-  const [deleteCart, { isLoading1, isError1 }] = useDeleteCartMutation();
-
   const handleDelete = (id) => {
-    console.log("Delete button clicked", id); // For debugging
-
     if (id) {
-      alert("Do you want to delete");
+      if (window.confirm("Do you want to delete?")) {
+        // First, update the state by filtering the item
+        const updatedCart = cart.filter((item) => item.Product_Id !== id);
+        setCart(updatedCart);
 
-      // Use the `filter` method to remove the item from the cart state
-      const updatedCart = cart.filter((item) => item.Product_Id !== id);
-      setCart(updatedCart);
+        // Recalculate and update the subtotal, discount, and total
+        const updatedSubtotal = calculateTotal();
+        const updatedDiscount = appliedDiscount; // You might need to recalculate the discount based on the updated cart.
+        const updatedTotal = updatedSubtotal - updatedDiscount;
+        setCartTotal(updatedTotal);
 
-      // Calculate the updated cart total
-      const updatedTotal = updatedCart.reduce(
-        (total, item) => total + calculateSubtotal(item.price, item.quantity),
-        0
-      );
-
-      // Update the local storage with the new cart data after removing the item
-      const updatedCartJSON = JSON.stringify(updatedCart);
-      localStorage.setItem("cart", updatedCartJSON);
-
-      // Set the updated total and display a success toast message
-      setCartTotal(updatedTotal);
-    window.location.reload();
-     
+        // Update the local storage with the new cart data after removing the item
+        const updatedCartJSON = JSON.stringify(updatedCart);
+        localStorage.setItem("cart", updatedCartJSON);
+      }
     }
   };
 
@@ -89,7 +90,7 @@ function Cart({ lightMode }) {
     // You can add logic here to validate the coupon code and calculate the discount.
     // For this example, we'll apply a fixed 20% discount if the coupon is "OCT".
 
-    if (couponCode === "OCT") {
+    if (couponCode === "OCT20") {
       const totalBeforeDiscount = calculateTotal();
       const discount = (totalBeforeDiscount * 20) / 100; // 20% discount
       const discountedTotal = totalBeforeDiscount - discount;
@@ -97,6 +98,19 @@ function Cart({ lightMode }) {
       setAppliedDiscount(discount);
       setCartTotal(discountedTotal);
     }
+  };
+
+  const handleProceedToCheckout = () => {
+    // Calculate the subtotal and total one more time
+    const subtotal = calculateTotal();
+    const total = subtotal - appliedDiscount;
+
+    // Store the values in localStorage
+    localStorage.setItem("subtotal", subtotal.toFixed(2));
+    localStorage.setItem("total", total.toFixed(2));
+    toast.success("Successfully completed your order");
+
+    router.push("/dark/shop-checkout/");
   };
 
   return (
@@ -125,7 +139,6 @@ function Cart({ lightMode }) {
                           <div>
                             <div className="img icon-img-80">
                               {/* <Image src={item.image} alt={item.title} /> */}
-
                               <Image
                                 src={`https://createabit-backend.onrender.com/${item.image}`}
                                 alt=""
@@ -147,7 +160,7 @@ function Cart({ lightMode }) {
                           <span
                             className="down"
                             onClick={() =>
-                              updateQuantity(item.Cart_Id, item.quantity - 1)
+                              updateQuantity(item.Product_Id, item.quantity - 1)
                             }
                           >
                             -
@@ -156,7 +169,7 @@ function Cart({ lightMode }) {
                           <span
                             className="up"
                             onClick={() =>
-                              updateQuantity(item.Cart_Id, item.quantity + 1)
+                              updateQuantity(item.Product_Id, item.quantity + 1)
                             }
                           >
                             +
@@ -243,14 +256,14 @@ function Cart({ lightMode }) {
                         </h6>
                       </li>
                     </ul>
-                    <Link
-                      href="/dark/shop-checkout"
-                      className="butn butn-md butn-bord mt-30"
+                    <span
+                      onClick={handleProceedToCheckout}
+                      className="butn butn-md butn-bord mt-30 cursor-pointer"
                     >
                       <span className="text-u fz-13 fw-600">
                         Proceed to checkout
                       </span>
-                    </Link>
+                    </span>
                   </div>
                 )}
               </div>

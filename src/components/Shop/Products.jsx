@@ -25,7 +25,7 @@ function Products({ lightMode }) {
     document.querySelector(".select-options").style.display = "none";
   }
 
-  const { data } = useGetProductsQuery();
+  const { data, isLoading, isError } = useGetProductsQuery();
 
   const products = data?.data;
 
@@ -39,16 +39,19 @@ function Products({ lightMode }) {
   }, []);
 
   const addToCart = (product) => {
-    // Create a new cart with the added product
-    const updatedCart = [...cart, product];
-    setCart(updatedCart);
+    if (cart.some((item) => item.Product_Id === product.Product_Id)) {
+      alert("This product is already in the cart.");
+    } else {
+      // Create a new cart with the added product
+      const updatedCart = [...cart, product];
+      setCart(updatedCart);
 
-    // Save the updated cart data to local storage
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    // Show a success toast message to indicate that the product has been added
-    toast.success("Product added to the cart");
-    window.location.reload();
-
+      // Save the updated cart data to local storage
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      // Show a success toast message to indicate that the product has been added
+      toast.success("Product added to the cart");
+      // window.location.reload();
+    }
   };
 
   return (
