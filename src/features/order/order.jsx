@@ -1,27 +1,28 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const productOrderApi = createApi({
-  reducerPath: "productOrderApi",
+export const productCheckoutApi = createApi({
+  reducerPath: "productCheckoutApi",
   baseQuery: fetchBaseQuery({
-    // baseUrl: "https://createabit-backend.onrender.com/api/v1/",
-    baseUrl: "https://createabit-backend.onrender.com/api/v1/",
+    // baseUrl: "http://localhost:5000/api/v1/",
+    baseUrl: "http://localhost:5000/api/v1/",
   }),
 
   endpoints: (build) => ({
-    createOrder: build.mutation({
-      query: (product) => ({
-        url: "/order/create-order",
+    createCheckout: build.mutation({
+      query: (checkoutDetails) => ({
+        url: "/checkout/create-checkout",
         method: "POST",
-        body: product,
+        body: checkoutDetails,
       }),
     }),
 
-    getAllOrder: build.query({
+    getAllCheckout: build.query({
       query: () => ({
-        url: "/order",
+        url: "/checkout",
       }),
     }),
   }),
 });
 
-export const { useCreateOrderMutation, useGetAllOrderQuery } = productOrderApi;
+export const { useCreateCheckoutMutation, useGetAllCheckoutQuery } =
+  productCheckoutApi;
