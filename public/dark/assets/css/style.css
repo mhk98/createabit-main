@@ -9346,21 +9346,17 @@ header.in-box {
 
 .notification {
   position: absolute;
-    top: -19px;
-    right: -22px;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    padding: 0px 8px;
-    font-size: 15px;
-    font-weight: 800px!important;
+  top: -19px;
+  right: -22px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 0px 8px;
+  font-size: 15px;
+  font-weight: 800px !important;
 }
 @media only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px) {
-  .shop-cart {
-    /* Force table to not be like tables anymore */
-    /* Hide table headers (but not display: none;, for accessibility) */
-  }
   .shop-cart table {
     width: 100%;
   }
@@ -10346,6 +10342,20 @@ header.in-box {
   height: 400px;
 }
 
+.software-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.software-img {
+  width: 600px;
+}
+.software-content {
+  width: 600px;
+}
+
 @media only screen and (max-width: 600px) {
   .product_section {
     display: grid;
@@ -10356,11 +10366,28 @@ header.in-box {
   .product_main {
     display: none;
   }
+
+  .software-section {
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    margin: 50px, 0px !important;
+    padding: 0px 10px;
+    grid-gap: 20px;
+    margin: auto;
+  }
+
+  .software-img {
+    width: 350px;
+  }
+  .software-content {
+    width: 350px;
+  }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .product_section {
     display: grid;
     grid-template-columns: (1, 1fr);
+    align-items: center;
     grid-gap: 20px;
   }
 
@@ -10376,6 +10403,23 @@ header.in-box {
 
   .product_main {
     display: none;
+  }
+
+  .software-section {
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    margin: 50px, 0px !important;
+
+    padding: 0px 10px;
+    grid-gap: 50px;
+    margin: auto;
+  }
+
+  .software-img {
+    width: 600px;
+  }
+  .software-content {
+    width: 600px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -10399,6 +10443,20 @@ header.in-box {
     margin-bottom: 150px;
     background-color: #2468a3;
     padding-left: 15px;
+  }
+
+  .software-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px, 0px !important;
+  }
+
+  .software-img {
+    width: 500px;
+  }
+  .software-content {
+    width: 500px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -10444,6 +10502,20 @@ header.in-box {
   .faq2 {
     width: 500px;
     height: 600px;
+  }
+
+  .software-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px, 0px !important;
+  }
+
+  .software-img {
+    width: 570px;
+  }
+  .software-content {
+    width: 570px;
   }
 }
 

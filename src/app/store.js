@@ -1,6 +1,7 @@
 import cartSlice from "@/Redux-Thunk/reducers/cartSlice";
 import { productCartApi } from "@/features/cart/cart";
-import { productCheckoutApi, productOrderApi } from "@/features/order/order";
+import { productCheckoutApi } from "@/features/order/order";
+import { productPaymentApi } from "@/features/payment/payment";
 import { productCategory1Api } from "@/features/product/productCategory1";
 import { productCategory2Api } from "@/features/product/productCategory2";
 import { productCategory3Api } from "@/features/product/productCategory3";
@@ -24,6 +25,7 @@ const store = configureStore({
     [productsApi.reducerPath]: productsApi.reducer,
     [productCartApi.reducerPath]: productCartApi.reducer,
     [productCheckoutApi.reducerPath]: productCheckoutApi.reducer,
+    [productPaymentApi.reducerPath]: productPaymentApi.reducer,
 
     // services: servicesSlice,
     // serviceDetails: serviceDetailsSlice,
@@ -42,6 +44,7 @@ const store = configureStore({
       productsApi.middleware,
       productCartApi.middleware,
       productCheckoutApi.middleware,
+      productPaymentApi.middleware,
       thunk
     ),
 });

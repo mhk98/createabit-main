@@ -3,20 +3,19 @@ import { useEffect } from "react";
 import isInView from "@/common/isInView";
 import loadBackgroudImages from "@/common/loadBackgroudImages";
 //= Data
-import { useGetProductCategory1Query } from "@/features/product/productCategory1";
-import Link from "next/link";
+import { useGetServicesQuery } from "@/features/service/serviceApi";
 import Image from "next/image";
-import banner1 from "../../../../images/Digital-Marketing-_-Seo-01.png";
-import banner3 from "../../../../images/Feature-of-app-development-01.png";
-import banner2 from "../../../../images/digital-signage.png";
+import Link from "next/link";
+import banner1 from "../../../../images/product/3D-Holographic-Signs-1.png";
+import banner3 from "../../../../images/product/POS-systems.png";
+import banner2 from "../../../../images/product/digital-signage.png";
 
 function Products({ lightMode }) {
-  const { data, isLoading, isSuccess, isError, error } =
-    useGetProductCategory1Query();
+  const { data, isLoading, isSuccess, isError, error } = useGetServicesQuery();
 
-  const products = data?.data;
+  const services = data?.data;
 
-  console.log("products", products);
+  console.log("services", services);
   useEffect(() => {
     loadBackgroudImages();
     window.addEventListener("scroll", handleShowTabs);
@@ -69,362 +68,81 @@ function Products({ lightMode }) {
 
   return (
     <div>
-      <section className="portfolio-fixed product_category">
-        <div className="container-fluid rest">
-          <div className="row">
-            <div className="col-lg-6 rest" style={{ position: "relative" }}>
-              <div className="left" id="sticky_item">
-                <div
-                  id={`tab-$1`}
-                  className="img bg-img product_image"
-                  // data-background={`${
-                  //   lightMode ? "/light/" : "/dark/"
-                  // }${item.image}`}
-
-                  // key={index}
-                >
-                  <Image src={banner2} alt="" />
-                </div>
-              </div>
+      <section className="portfolio-fixed ">
+        <div className="container">
+          <div className="software-section">
+            <div className="software-img">
+              <Image src={banner2} alt="" />
             </div>
-            <div className="col-lg-6 sub-bg right">
-              <div
-                // className={`cont ${index === 0 ? "active" : ""}`}
-                className={`cont`}
-                // data-tab={`tab-${index + 1}`}
-                // key={index}
-              >
-                <div className="img-hiden">
-                  <Image src={banner2} alt="" />
-                </div>
-                {/* <span className="sub-title mb-15">
-                {item.number} {item.type}
-              </span> */}
-                <h2 className="mb-15">Dynamic Digital Products</h2>
-                <div className="row justify-content-center">
-                  <div className="col-md-11">
-                    <p>
-                      Digital displays are getting quite popular now a day for
-                      it’s attractive features. We brought very new Digital
-                      displays with lots of features and technology. We Have
-                      various types of LCD Wall Video Displays, Wall Mount
-                      Displays, Stand Alone Signage, Touch Table, OutDoor
-                      Signage, Multimedia Kiosk.
-                    </p>
-                    <ul className="rest list-arrow mt-30">
-                      <li>
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Boost your online presence and get noticed.
-                        </h6>
-                      </li>
-                      <li className="mt-5">
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Grow alongside your audience.
-                        </h6>
-                      </li>
-                      <li className="mt-5">
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Increase online visibility.
-                        </h6>
-                      </li>
-                    </ul>
 
-                    <Link
-                      href="/dark/page-product-category1/"
-                      className="butn butn-md butn-bord radius-30 mt-4"
-                    >
-                      <span>View Details</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <div className="software-content">
+              <h3 className="mb-15">DIGITAL DISPLAY</h3>
+
+              <p>
+                Digital displays are getting quite popular now a day for its
+                attractive features. We brought very new Digital displays with
+                lots of features and technology. We have various types of LCD
+                Wall Video Displays, Wall Mount Displays, Stand Alone Signage,
+                Touch Table, OutDoor Signage, Multimedia Kiosk.
+              </p>
+
+              <Link
+                href="/dark/page-service1"
+                className="mt-4 butn butn-md butn-bord radius-30"
+              >
+                <span>View Details</span>
+              </Link>
             </div>
           </div>
         </div>
-      </section>
-      <section className="portfolio-fixed product_category">
-        <div className="container-fluid rest">
-          <div className="row">
-            <div className="col-lg-6 rest" style={{ position: "relative" }}>
-              <div className="left" id="sticky_item">
-                <div
-                  id={`tab-$1`}
-                  className="img bg-img product_image"
-                  // data-background={`${
-                  //   lightMode ? "/light/" : "/dark/"
-                  // }${item.image}`}
+        <div className="container">
+          <div className=" software-section">
+            <div className="software-img">
+              <h3 className="mb-15">3D HOLOGRAPHIC SIGNS</h3>
 
-                  // key={index}
-                >
-                  <Image src={banner1} alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 sub-bg right">
-              <div
-                // className={`cont ${index === 0 ? "active" : ""}`}
-                className={`cont`}
-                // data-tab={`tab-${index + 1}`}
-                // key={index}
+              <p>
+                We came up with 3D holographic Signage that has spinning led fan
+                that creates dynamic visual display in 3 Dimension without any
+                kind of glasses. It will provide you enriched quality visual for
+                advertising.
+              </p>
+
+              <Link
+                href="/dark/page-service2"
+                className="mt-4 butn butn-md butn-bord radius-30"
               >
-                <div className="img-hiden">
-                  <Image src={banner1} alt="" />
-                </div>
-                {/* <span className="sub-title mb-15">
-                {item.number} {item.type}
-              </span> */}
-                <h2 className="mb-15">Intelligent TECH Products</h2>
-                <div className="row justify-content-center">
-                  <div className="col-md-11">
-                    <p>
-                      Digital displays are getting quite popular now a day for
-                      it’s attractive features. We brought very new Digital
-                      displays with lots of features and technology. We Have
-                      various types of LCD Wall Video Displays, Wall Mount
-                      Displays, Stand Alone Signage, Touch Table, OutDoor
-                      Signage, Multimedia Kiosk.
-                    </p>
-                    <ul className="rest list-arrow mt-30">
-                      <li>
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Differentiate your brand online.
-                        </h6>
-                      </li>
-                      <li className="mt-5">
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Engage your growing audience.
-                        </h6>
-                      </li>
-                      <li className="mt-5">
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Capture your target audience.
-                        </h6>
-                      </li>
-                    </ul>
-                    <Link
-                      href="/dark/page-product-category2/"
-                      className="butn butn-md butn-bord radius-30 mt-4"
-                    >
-                      <span>View Details</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+                <span>View Details</span>
+              </Link>
+            </div>
+
+            <div className="software-content">
+              <Image src={banner1} alt="" />
             </div>
           </div>
         </div>
-      </section>
-      <section className="portfolio-fixed product_category">
-        <div className="container-fluid rest">
-          <div className="row">
-            <div className="col-lg-6 rest" style={{ position: "relative" }}>
-              <div className="left" id="sticky_item">
-                <div
-                  id={`tab-$1`}
-                  className="img bg-img product_image"
-                  // data-background={`${
-                  //   lightMode ? "/light/" : "/dark/"
-                  // }${item.image}`}
-
-                  // key={index}
-                >
-                  <Image src={banner3} alt="" />
-                </div>
-              </div>
+        <div className="container">
+          <div className=" software-section">
+            <div className="software-img">
+              <Image src={banner3} alt="" />
             </div>
-            <div className="col-lg-6 sub-bg right">
-              <div
-                // className={`cont ${index === 0 ? "active" : ""}`}
-                className={`cont`}
-                // data-tab={`tab-${index + 1}`}
-                // key={index}
+
+            <div className="software-content">
+              <h3 className="mb-15">POS SYSTEMS</h3>
+
+              <p>
+                From the very beginning till now we are proving one of the best
+                Point of sales System. Our POS has successfully satisfied our
+                valuable customer with Its easy handling. We deliver 24x7
+                customer service so that the business never gets interrupted for
+                any inconvenience.
+              </p>
+
+              <Link
+                href="/dark/page-service3"
+                className="mt-4 butn butn-md butn-bord radius-30"
               >
-                <div className="img-hiden">
-                  <Image src={banner3} alt="" />
-                </div>
-                {/* <span className="sub-title mb-15">
-                {item.number} {item.type}
-              </span> */}
-                <h2 className="mb-15">INTERACTIVE WOW PRODUCTION</h2>
-                <div className="row justify-content-center">
-                  <div className="col-md-11">
-                    <p>
-                      Experience the Evolution of Nail Design with Our Latest
-                      Creations. Innovate Your Nails and Embrace the Future of
-                      Design. Witness the Pioneering Trends in Nail Art with Our
-                      Unique Styles. Explore the Cutting-Edge of Nail Design
-                      Today.
-                    </p>
-                    <ul className="rest list-arrow mt-30">
-                      <li>
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                          Unlock the Next Level of Nail Design Innovation.
-                        </h6>
-                      </li>
-                      <li className="mt-5">
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                        The Future of Nail Design is Now at Your Fingertips.
-                        </h6>
-                      </li>
-                      <li className="mt-5">
-                        <span className="icon">
-                          <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 9 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </span>
-                        <h6 className="inline fz-16 fw-400">
-                        Get a Glimpse of Nail Design's Exciting Tomorrow.
-                        </h6>
-                      </li>
-                    </ul>
-                    <Link
-                      href="/dark/page-product-category3/"
-                      className="butn butn-md butn-bord radius-30 mt-4"
-                    >
-                      <span>View Details</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+                <span>View Details</span>
+              </Link>
             </div>
           </div>
         </div>

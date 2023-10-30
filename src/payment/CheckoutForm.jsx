@@ -1,11 +1,12 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React from "react";
+import { useState } from "react";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ price }) => {
+  const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
   const elements = useElements();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event, price) => {
     // Block native form submission.
     event.preventDefault();
 
@@ -31,11 +32,28 @@ const CheckoutForm = () => {
     });
 
     if (error) {
-      console.log("[error]", error);
+      console.log("error", error);
     } else {
-      console.log("[PaymentMethod]", paymentMethod);
+      console.log("PaymentMethod", paymentMethod);
     }
+
+    const { paymentIntent, error: confirmCardError } =
+      await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+          billing_details: {
+            name: "Jenny Rosen",
+          },
+        },
+      });
+
+    if (confirmCardError) {
+      console.log(confirmCardError);
+    }
+
+    console.log(paymentIntent);
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <CardElement
@@ -56,7 +74,7 @@ const CheckoutForm = () => {
       />
       <button
         type="submit"
-        disabled={!stripe}
+        disabled={!stripe || !clientSecret}
         style={{
           padding: "8px 20px",
           marginTop: "15px",
@@ -64,7 +82,7 @@ const CheckoutForm = () => {
           border: "2px solid #430571",
           color: "#430571",
           fontWeight: "800",
-          borderRadius:"50px"
+          borderRadius: "50px",
         }}
       >
         Pay

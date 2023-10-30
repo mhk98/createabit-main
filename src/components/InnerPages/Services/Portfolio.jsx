@@ -71,14 +71,14 @@ function Portfolio({ lightMode }) {
 
   return (
     <div>
-      <section className="portfolio-fixed product_category">
+      <section className="portfolio-fixed ">
         <div className="container">
-          <div className="justify-center row align-items-center">
-            <div className="col-lg-6">
+          <div className="software-section">
+            <div className="software-img">
               <Image src={banner1} alt="" />
             </div>
 
-            <div className="col-lg-6">
+            <div className="software-content">
               <h3 className="mb-15">WEBSITE DEVELOPMENT</h3>
 
               <p>
@@ -100,8 +100,8 @@ function Portfolio({ lightMode }) {
           </div>
         </div>
         <div className="container">
-          <div className="justify-center row align-items-center">
-            <div className="col-lg-6">
+          <div className="software-section">
+            <div className="software-content">
               <h3 className="mb-15">WEB APPLICATION</h3>
 
               <p>
@@ -121,18 +121,18 @@ function Portfolio({ lightMode }) {
               </Link>
             </div>
 
-            <div className="col-lg-6">
+            <div className="software-img">
               <Image src={banner2} alt="" />
             </div>
           </div>
         </div>
         <div className="container">
-          <div className="justify-center row align-items-center">
-            <div className="col-lg-6">
+          <div className="software-section">
+            <div className="software-img">
               <Image src={banner3} alt="" />
             </div>
 
-            <div className="col-lg-6">
+            <div className="software-content">
               <h3 className="mb-15">MOBILE APPS DEVELOPMENT</h3>
 
               <p>
@@ -154,8 +154,8 @@ function Portfolio({ lightMode }) {
           </div>
         </div>
         <div className="container">
-          <div className="justify-center row align-items-center">
-            <div className="col-lg-6">
+          <div className="software-section">
+            <div className="software-content">
               <h3 className="mb-15">DIGITAL MARKETING & SEO</h3>
 
               <p>
@@ -173,18 +173,18 @@ function Portfolio({ lightMode }) {
               </Link>
             </div>
 
-            <div className="col-lg-6">
+            <div className="software-img">
               <Image src={banner4} alt="" />
             </div>
           </div>
         </div>
 
         <div className="container">
-          <div className="justify-center row align-items-center">
-            <div className="col-lg-6">
+          <div className="software-section">
+            <div className="software-img">
               <Image src={banner5} alt="" />
             </div>
-            <div className="col-lg-6">
+            <div className="software-content">
               <h3 className="mb-15">GRAPHICS DESIGN & PRINTING</h3>
 
               <p>
@@ -207,8 +207,8 @@ function Portfolio({ lightMode }) {
         </div>
 
         <div className="container">
-          <div className="justify-center row align-items-center">
-            <div className="col-lg-6">
+          <div className="software-section">
+            <div className="software-content">
               <h3 className="mb-15">VIDEO & ANIMATION</h3>
 
               <p>
@@ -227,7 +227,7 @@ function Portfolio({ lightMode }) {
                 <span>View Details</span>
               </Link>
             </div>
-            <div className="col-lg-6">
+            <div className="software-img">
               <Image src={banner6} alt="" />
             </div>
           </div>

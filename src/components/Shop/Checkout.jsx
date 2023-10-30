@@ -216,7 +216,7 @@ function Checkout({ lightMode }) {
                 </div>
                 <div className="mt-30">
                   <Elements stripe={stripePromise}>
-                    <CheckoutForm />
+                    <CheckoutForm price={total} />
                   </Elements>
                 </div>
                 <div className="mt-30">
