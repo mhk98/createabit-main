@@ -1,8 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
@@ -110,6 +108,7 @@ function Cart({ lightMode }) {
     localStorage.setItem("total", total.toFixed(2));
     toast.success("Successfully completed your order");
 
+    // window.location.reload();
     router.push("/dark/shop-checkout/");
   };
 
@@ -140,7 +139,7 @@ function Cart({ lightMode }) {
                             <div className="img icon-img-80">
                               {/* <Image src={item.image} alt={item.title} /> */}
                               <Image
-                                src={`http://localhost:5000/${item.image}`}
+                                src={`https://createabit-backend.onrender.com/${item.image}`}
                                 alt=""
                                 width={70}
                                 height={50}

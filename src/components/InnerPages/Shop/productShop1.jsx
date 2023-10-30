@@ -1,15 +1,7 @@
 import Image from "next/image";
-import product1 from "../../../../images/LCD-VIDEO-WALL-47 (1).jpg";
-import product2 from "../../../../images/Wall-Mount-Models.jpg";
 
-import Link from "next/link";
-import product3 from "../../../../images/42-inch-lcd-digital-signage.jpg";
-import product5 from "../../../../images/Mirror-advertising-player.jpg";
-import product6 from "../../../../images/Touch-Screen-Kiosk2.jpg";
-import product4 from "../../../../images/Touch-table3.jpg";
-import { useGetProductsQuery } from "@/features/product/products";
 import { useCreateCartMutation } from "@/features/cart/cart";
-import { useState } from "react";
+import { useGetProductsQuery } from "@/features/product/products";
 const ProductShop1 = () => {
   const { data } = useGetProductsQuery();
   console.log("products", data?.data);
@@ -31,7 +23,7 @@ const ProductShop1 = () => {
         {products?.map((product) => (
           <div className="col-lg-3" key={product.id}>
             <Image
-              src={`http://localhost:5000/${product.image}`}
+              src={`https://createabit-backend.onrender.com/${product.image}`}
               alt=""
               width={300}
               height={200}
