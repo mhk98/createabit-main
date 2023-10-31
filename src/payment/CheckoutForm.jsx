@@ -1,12 +1,37 @@
+import { useCreateCheckoutMutation } from "@/features/order/order";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const CheckoutForm = ({ price }) => {
+const CheckoutForm = ({ checkoutInfo }) => {
   const [clientSecret, setClientSecret] = useState("");
+  const [processing, setProcessing] = useState(false);
+  const [transactionId, setTransactionId] = useState("");
+  const [cardError, setCardError] = useState("");
+  const [createCheckout] = useCreateCheckoutMutation();
+
+  console.log("checkoutdetails", checkoutInfo);
   const stripe = useStripe();
   const elements = useElements();
+  const { Firstname, Email, Total: Price } = checkoutInfo;
+  useEffect(() => {
+    if (Price > 0) {
+      let data = { Price: Price };
+      axios
+        .post(
+          "https://createabit-backend.onrender.com/api/v1/payment/create-payment-intent",
 
-  const handleSubmit = async (event, price) => {
+          // "http://localhost:5000/api/v1/payment/create-payment-intent",
+          data
+        )
+        .then((res) => {
+          console.log("res.data.clientSecret", res.data.clientSecret);
+          setClientSecret(res.data.clientSecret);
+        });
+    }
+  }, [Price, axios]);
+
+  const handleSubmit = async (event, Price) => {
     // Block native form submission.
     event.preventDefault();
 
@@ -32,62 +57,79 @@ const CheckoutForm = ({ price }) => {
     });
 
     if (error) {
-      console.log("error", error);
+      console.log(error);
     } else {
       console.log("PaymentMethod", paymentMethod);
     }
 
-    const { paymentIntent, error: confirmCardError } =
+    setProcessing(true);
+    const { paymentIntent, error: confirmError } =
       await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card: card,
           billing_details: {
-            name: "Jenny Rosen",
+            email: Email,
+            name: Firstname,
           },
         },
       });
 
-    if (confirmCardError) {
-      console.log(confirmCardError);
+    if (confirmError) {
+      console.log("confirmError", confirmError);
     }
 
-    console.log(paymentIntent);
+    console.log("paymentIntent", paymentIntent);
+
+    if (paymentIntent.status === "succeeded") {
+      setTransactionId(paymentIntent.id);
+      const transactionId = paymentIntent.id;
+      createCheckout(checkoutInfo);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <CardElement
-        options={{
-          style: {
-            base: {
-              fontSize: "20px",
-              color: "#424770",
-              "::placeholder": {
-                color: "#aab7c4",
+    <>
+      <form onSubmit={handleSubmit}>
+        <CardElement
+          options={{
+            style: {
+              base: {
+                fontSize: "20px",
+                color: "#424770",
+                "::placeholder": {
+                  color: "#aab7c4",
+                },
+              },
+              invalid: {
+                color: "#9e2146",
               },
             },
-            invalid: {
-              color: "#9e2146",
-            },
-          },
-        }}
-      />
-      <button
-        type="submit"
-        disabled={!stripe || !clientSecret}
-        style={{
-          padding: "8px 20px",
-          marginTop: "15px",
-          fontSize: "16px",
-          border: "2px solid #430571",
-          color: "#430571",
-          fontWeight: "800",
-          borderRadius: "50px",
-        }}
-      >
-        Pay
-      </button>
-    </form>
+          }}
+        />
+        <button
+          type="submit"
+          disabled={!stripe || !clientSecret || processing}
+          style={{
+            padding: "8px 20px",
+            marginTop: "15px",
+            fontSize: "16px",
+            border: "2px solid #430571",
+            color: "#430571",
+            fontWeight: "800",
+            borderRadius: "50px",
+          }}
+        >
+          Pay
+        </button>
+      </form>
+
+      {cardError && <p className="text-red-500 ml-8">{cardError}</p>}
+      {transactionId && (
+        <p className="text-green-500">
+          Transaction complete with transactionId: {transactionId}
+        </p>
+      )}
+    </>
   );
 };
 

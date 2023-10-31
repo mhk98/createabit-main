@@ -9,10 +9,10 @@ export const productCheckoutApi = createApi({
 
   endpoints: (build) => ({
     createCheckout: build.mutation({
-      query: (checkoutDetails) => ({
+      query: (checkoutInfo) => ({
         url: "/checkout/create-checkout",
         method: "POST",
-        body: checkoutDetails,
+        body: checkoutInfo,
       }),
     }),
 

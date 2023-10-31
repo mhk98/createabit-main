@@ -32,27 +32,25 @@ function Checkout({ lightMode }) {
     setTotal(total);
   }, []);
 
-  const [createCheckout] = useCreateCheckoutMutation();
-
-  const handleCheckout = () => {
-    let data = {
-      FirstName: firstName,
-      LastName: lastName,
-      Email: email,
-      Country: country,
-      City: city,
-      Area: area,
-      PostCode: postalCode,
-      Address: address,
-      Phone: phone,
-      orderDetails: products,
-      SubTotal: subTotal,
-      Total: total,
-    };
-
-    toast.success("Successfully create order");
-    createCheckout(data);
+  // const handleCheckout = () => {
+  let checkoutInfo = {
+    orderDetails: products,
+    FirstName: firstName,
+    LastName: lastName,
+    Email: email,
+    Country: country,
+    City: city,
+    Area: area,
+    PostCode: postalCode,
+    Address: address,
+    Phone: phone,
+    orderDetails: products,
+    SubTotal: subTotal,
+    Total: total,
   };
+
+  // toast.success("Successfully create order");
+
   return (
     <section
       className={`shop-checkout ${lightMode ? "light" : ""} section-padding`}
@@ -216,7 +214,7 @@ function Checkout({ lightMode }) {
                 </div>
                 <div className="mt-30">
                   <Elements stripe={stripePromise}>
-                    <CheckoutForm price={total} />
+                    <CheckoutForm checkoutInfo={checkoutInfo} />
                   </Elements>
                 </div>
                 <div className="mt-30">
@@ -224,9 +222,7 @@ function Checkout({ lightMode }) {
                     type="submit"
                     className="main-colorbg4 butn butn-md butn-bg text-dark"
                   >
-                    <span onClick={handleCheckout} className="text-u fw-600">
-                      Place Order
-                    </span>
+                    <span className="text-u fw-600">Place Order</span>
                   </button>
                 </div>
               </div>
