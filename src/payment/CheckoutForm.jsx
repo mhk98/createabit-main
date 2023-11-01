@@ -108,7 +108,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
         />
         <button
           type="submit"
-          disabled={!stripe || !clientSecret || processing}
+          disabled={!stripe || !clientSecret}
           style={{
             padding: "8px 20px",
             marginTop: "15px",
