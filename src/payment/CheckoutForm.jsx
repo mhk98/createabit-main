@@ -108,7 +108,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
         />
         <button
           type="submit"
-          disabled={!stripe || !clientSecret}
+          disabled={!stripe || !clientSecret || processing}
           style={{
             padding: "8px 20px",
             marginTop: "15px",
@@ -119,7 +119,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
             borderRadius: "50px",
           }}
         >
-          Pay
+          Place Order
         </button>
       </form>
 

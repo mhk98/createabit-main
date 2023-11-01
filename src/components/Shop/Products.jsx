@@ -25,7 +25,7 @@ function Products({ lightMode }) {
     document.querySelector(".select-options").style.display = "none";
   }
 
-  const { data, isLoading, isError } = useGetProductsQuery();
+  const { data, isLoading, isError, error } = useGetProductsQuery();
 
   const products = data?.data;
 
@@ -56,85 +56,93 @@ function Products({ lightMode }) {
 
   return (
     <div className="col-lg-9">
-      <div className="shop-products">
-        <div className="mb-40 top-side d-flex align-items-end">
-          <div>
-            <h6 className="fz-16 line-height-1">Showing 1–9 of 12 results</h6>
-          </div>
-          <div className="ml-auto">
-            <div className="select">
-              <select className="form-control select-hidden" onClick={openList}>
-                <option value="Most Popular">Most Popular</option>
-                <option value="Sort by average rating">
-                  Sort by average rating
-                </option>
-                <option value="Price [Lowest to Highest]">
-                  Price [Lowest to Highest]
-                </option>
-                <option value="Price [Highest to Lowest]">
-                  Price [Highest to Lowest]
-                </option>
-              </select>
-              <div className="select-styled" onClick={openList}>
-                Most Popular
-              </div>
-              <ul className="select-options">
-                <li rel="Most Popular" onClick={handleItemClick}>
+      {error ? (
+        <>Oh no, there was an error</>
+      ) : isLoading ? (
+        <>Loading...</>
+      ) : data ? (
+        <div className="shop-products">
+          <div className="mb-40 top-side d-flex align-items-end">
+            <div>
+              <h6 className="fz-16 line-height-1">Showing 1–9 of 12 results</h6>
+            </div>
+            <div className="ml-auto">
+              <div className="select">
+                <select
+                  className="form-control select-hidden"
+                  onClick={openList}
+                >
+                  <option value="Most Popular">Most Popular</option>
+                  <option value="Sort by average rating">
+                    Sort by average rating
+                  </option>
+                  <option value="Price [Lowest to Highest]">
+                    Price [Lowest to Highest]
+                  </option>
+                  <option value="Price [Highest to Lowest]">
+                    Price [Highest to Lowest]
+                  </option>
+                </select>
+                <div className="select-styled" onClick={openList}>
                   Most Popular
-                </li>
-                <li rel="Sort by average rating" onClick={handleItemClick}>
-                  Sort by average rating
-                </li>
-                <li rel="Price [Lowest to Highest]" onClick={handleItemClick}>
-                  Price [Lowest to Highest]
-                </li>
-                <li rel="Price [Highest to Lowest]" onClick={handleItemClick}>
-                  Price [Highest to Lowest]
-                </li>
-              </ul>
+                </div>
+                <ul className="select-options">
+                  <li rel="Most Popular" onClick={handleItemClick}>
+                    Most Popular
+                  </li>
+                  <li rel="Sort by average rating" onClick={handleItemClick}>
+                    Sort by average rating
+                  </li>
+                  <li rel="Price [Lowest to Highest]" onClick={handleItemClick}>
+                    Price [Lowest to Highest]
+                  </li>
+                  <li rel="Price [Highest to Lowest]" onClick={handleItemClick}>
+                    Price [Highest to Lowest]
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <Link href="">
-          <div className="row">
-            {products?.map((item) => (
-              <div className="col-md-6 col-lg-4" key={item.Product_Id}>
-                <div className="item mb-50">
-                  <div className="img">
-                    <Image
-                      src={`https://createabit-backend.onrender.com/${item.image}`}
-                      alt=""
-                      width={300}
-                      height={200}
-                    />
-                    <button
-                      onClick={() => addToCart(item)}
-                      className="text-white add-cart"
-                    >
-                      Add to Cart
-                    </button>
-                    <span className="fav">
-                      <i className="far fa-heart"></i>
-                    </span>
-                  </div>
-                  <div className="cont">
-                    <div className="rate">
-                      {/* {new Array(item.stars).fill().map((_, i) => (
+          <Link href="">
+            <div className="row">
+              {products?.map((item) => (
+                <div className="col-md-6 col-lg-4" key={item.Product_Id}>
+                  <div className="item mb-50">
+                    <div className="img">
+                      <Image
+                        src={`https://createabit-backend.onrender.com/${item.image}`}
+                        alt=""
+                        width={300}
+                        height={200}
+                      />
+                      <button
+                        onClick={() => addToCart(item)}
+                        className="text-white add-cart"
+                      >
+                        Add to Cart
+                      </button>
+                      <span className="fav">
+                        <i className="far fa-heart"></i>
+                      </span>
+                    </div>
+                    <div className="cont">
+                      <div className="rate">
+                        {/* {new Array(item.stars).fill().map((_, i) => (
                         <i className="fas fa-star" key={i}></i>
                       ))}
                       {new Array(5 - item.stars).fill().map((_, i) => (
                         <i className="far fa-star" key={i}></i>
                       ))} */}
+                      </div>
+                      <h6>{item.title}</h6>
+                      <h5>${item.price}</h5>
                     </div>
-                    <h6>{item.title}</h6>
-                    <h5>${item.price}</h5>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Link>
-        {/* <div className="pagination d-flex justify-content-center mt-30">
+              ))}
+            </div>
+          </Link>
+          {/* <div className="pagination d-flex justify-content-center mt-30">
           <ul className="rest">
             <li className="active">
               <a href="#0">1</a>
@@ -149,7 +157,8 @@ function Products({ lightMode }) {
             </li>
           </ul>
         </div> */}
-      </div>
+        </div>
+      ) : null}
     </div>
   );
 }

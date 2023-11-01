@@ -1,9 +1,7 @@
-import { useCreateCheckoutMutation } from "@/features/order/order";
 import CheckoutForm from "@/payment/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 const stripePromise = loadStripe(
   "pk_test_51L1rVDH0VF27tpW3LEs6Z66fVvzRIoh08xSbY4zSyiG03Q2pwNVzhq8JoYv4s4xF4zwObI3gLNUjus6dFj0ltrvr00m17agrob"
 );
@@ -217,14 +215,14 @@ function Checkout({ lightMode }) {
                     <CheckoutForm checkoutInfo={checkoutInfo} />
                   </Elements>
                 </div>
-                <div className="mt-30">
+                {/* <div className="mt-30">
                   <button
                     type="submit"
                     className="main-colorbg4 butn butn-md butn-bg text-dark"
                   >
                     <span className="text-u fw-600">Place Order</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

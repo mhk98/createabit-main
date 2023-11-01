@@ -4,13 +4,12 @@ import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
+import Register from "@/components/Auth/Register";
 import Loader from "@/components/Common/Loader";
-import Checkout from "@/components/Shop/Checkout";
-import Header from "@/components/Shop/Header";
 import DarkFooter from "../dark-footer";
 import DarkNavbar from "../dark-navbar";
 
-function ShopCheckout() {
+function UserRegistration() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     // Smooth Scroll of Page
@@ -25,31 +24,30 @@ function ShopCheckout() {
   }, []);
 
   const metadata = {
-    subTitle: "SHOPPING",
-    title: "checkout.",
+    subTitle: "Registration",
+    title: "User Registration",
   };
 
   return (
     <>
       <Head>
-        <title>Createabit - Shop Checkout</title>
+        <title>Createabit - Shop Cart</title>
       </Head>
 
       <Loader />
       <div id="smooth-wrapper">
-        <DarkNavbar mainBg noStatic />
+        <DarkNavbar />
         <div id="smooth-content">
           <main className="main-bg">
-            <Header data={metadata} />
-            <Checkout />
+            <Register />
           </main>
-          <DarkFooter subBg />
+          
         </div>
       </div>
     </>
   );
 }
 
-ShopCheckout.getLayout = (page) => <Layout>{page}</Layout>;
+UserRegistration.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default ShopCheckout;
+export default UserRegistration;
