@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
@@ -106,7 +107,7 @@ function Cart({ lightMode }) {
     // Store the values in localStorage
     localStorage.setItem("subtotal", subtotal.toFixed(2));
     localStorage.setItem("total", total.toFixed(2));
-    // toast.success("Successfully completed your order");
+    toast.success("Now you are ready for proceed checkout");
 
     router.push("/dark/shop-checkout/", { scroll: false });
   };

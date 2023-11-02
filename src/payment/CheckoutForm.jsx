@@ -2,6 +2,7 @@ import { useCreateCheckoutMutation } from "@/features/order/order";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const CheckoutForm = ({ checkoutInfo }) => {
   const [clientSecret, setClientSecret] = useState("");
@@ -85,7 +86,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
     if (paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
       // const transactionId = paymentIntent.id;
-
+      toast.success("Transaction complete with transactionId", transactionId);
       //save payment information to the server
       createCheckout(checkoutInfo);
     }
@@ -128,11 +129,11 @@ const CheckoutForm = ({ checkoutInfo }) => {
       </form>
 
       {cardError && <p className="text-red-500 ml-8">{cardError}</p>}
-      {transactionId && (
+      {/* {transactionId && (
         <p className="text-green-500">
           Transaction complete with transactionId: {transactionId}
         </p>
-      )}
+      )} */}
     </>
   );
 };
