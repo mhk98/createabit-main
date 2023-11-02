@@ -4,11 +4,11 @@ import Head from "next/head";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
-import Register from "@/components/Auth/Register";
+import Login from "@/components/Auth/Login";
 import Loader from "@/components/Common/Loader";
 import DarkNavbar from "../dark-navbar";
 
-function UserRegistration() {
+function UserLogin() {
   useEffect(() => {
     document.body.classList.add("main-bg");
     // Smooth Scroll of Page
@@ -30,7 +30,7 @@ function UserRegistration() {
   return (
     <>
       <Head>
-        <title>Createabit - User Register</title>
+        <title>Createabit - User Login</title>
       </Head>
 
       <Loader />
@@ -38,7 +38,7 @@ function UserRegistration() {
         <DarkNavbar />
         <div id="smooth-content">
           <main className="main-bg">
-            <Register />
+            <Login />
           </main>
         </div>
       </div>
@@ -46,6 +46,6 @@ function UserRegistration() {
   );
 }
 
-UserRegistration.getLayout = (page) => <Layout>{page}</Layout>;
+UserLogin.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default UserRegistration;
+export default UserLogin;

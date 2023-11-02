@@ -5,9 +5,9 @@ import Script from "next/script";
 import store from "@/app/store";
 import "@/styles/globals.css";
 import "@/styles/modal-video.css";
+import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
 import "swiper/css/bundle";
-import { Toaster } from "react-hot-toast";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -21,6 +21,14 @@ function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
       </Head>
+
+      {/* <Provider store={store}>
+        <UserProvider>
+          <ProtectedRoute>
+            <Component {...pageProps} />
+          </ProtectedRoute>
+        </UserProvider>
+      </Provider> */}
 
       <Provider store={store}>
         <Component {...pageProps} />

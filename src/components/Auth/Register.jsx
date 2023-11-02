@@ -1,10 +1,11 @@
+import axios from "axios";
 import { useState } from "react";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
+    Name: "",
+    Email: "",
+    Password: "",
   });
 
   const handleChange = (e) => {
@@ -14,58 +15,64 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here, such as sending data to your server.
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/user/register",
+        formData
+      );
+
+      console.log("RegisterData", response.data);
+      // Handle the response data as needed, e.g., redirect to a new page or show a success message.
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle the error, e.g., show an error message to the user.
+    }
   };
 
   return (
     <div className="register-container">
-      <h2 className="text-black">Register</h2>
+      <h3>Register</h3>
       <form onSubmit={handleSubmit} className="register-form">
         <div className="form-group">
-          <label className="text-black text-left" htmlFor="username">
-            Username
-          </label>
+          <label htmlFor="username">Username</label>
           <input
             className="form-input"
             type="text"
-            name="username"
+            name="Name"
             id="username"
-            value={formData.username}
+            value={formData.Name} // Corrected property name
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label className="text-black text-left" htmlFor="email">
-            Email
-          </label>
+          <label htmlFor="email">Email</label>
           <input
             className="form-input"
             type="email"
-            name="email"
+            name="Email"
             id="email"
-            value={formData.email}
+            value={formData.Email} // Corrected property name
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label className="text-black text-left" htmlFor="password">
-            Password
-          </label>
+          <label htmlFor="password">Password</label>
           <input
             className="form-input"
             type="password"
-            name="password"
+            name="Password"
             id="password"
-            value={formData.password}
+            value={formData.Password} // Corrected property name
             onChange={handleChange}
             required
           />
         </div>
-        <button type="submit" className="register-button">
+        <button type="submit" className="butn butn-md butn-bord radius-10">
           Register
         </button>
       </form>

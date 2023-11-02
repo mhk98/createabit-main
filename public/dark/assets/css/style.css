@@ -10755,6 +10755,18 @@ header.in-box {
 
 /* styles/register.module.css */
 
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  text-align: center;
+  margin-top: 200px;
+  height: 400px;
+}
 .register-container {
   max-width: 400px;
   margin: 0 auto;
@@ -10762,9 +10774,10 @@ header.in-box {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: transparent;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
+  height: 500px;
 }
 
 .register-form {
@@ -10783,9 +10796,9 @@ label {
 }
 
 .form-input {
-  width: 350px!important;
+  width: 350px !important;
   padding: 10px;
-  margin: 5px 0;
+  margin: 8px 0;
   border: 1px solid #ccc;
   border-radius: 3px;
 }

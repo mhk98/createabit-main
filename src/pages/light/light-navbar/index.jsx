@@ -316,9 +316,9 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link href="/light/shop-cart/" className="link">
-                      <span className="fill-text" data-text="Cart">
-                        Cart
+                    <Link href="/light/login/" className="link">
+                      <span className="fill-text" data-text="Login">
+                        Login
                       </span>
                     </Link>
                   </div>

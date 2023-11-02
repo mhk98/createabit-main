@@ -13,16 +13,15 @@ const CheckoutForm = ({ checkoutInfo }) => {
   console.log("checkoutdetails", checkoutInfo);
   const stripe = useStripe();
   const elements = useElements();
-  const { Firstname, Email, Total: Price } = checkoutInfo;
+  const { FirstName, Email, Total: Price } = checkoutInfo;
   useEffect(() => {
     if (Price > 0) {
-      let data = { Price: Price };
       axios
         .post(
           "https://createabit-backend.onrender.com/api/v1/payment/create-payment-intent",
 
           // "http://localhost:5000/api/v1/payment/create-payment-intent",
-          data
+          { Price }
         )
         .then((res) => {
           console.log("res.data.clientSecret", res.data.clientSecret);
@@ -31,7 +30,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
     }
   }, [Price, axios]);
 
-  const handleSubmit = async (event, Price) => {
+  const handleSubmit = async (event) => {
     // Block native form submission.
     event.preventDefault();
 
@@ -51,15 +50,17 @@ const CheckoutForm = ({ checkoutInfo }) => {
     }
 
     // Use your card Element with other Stripe.js APIs
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
+    const { error } = await stripe.createPaymentMethod({
       type: "card",
       card,
     });
 
     if (error) {
-      console.log(error);
+      console.log("error", error);
+      setCardError(error.message);
     } else {
-      console.log("PaymentMethod", paymentMethod);
+      setCardError("");
+      // console.log("PaymentMethod", paymentMethod);
     }
 
     setProcessing(true);
@@ -69,7 +70,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
           card: card,
           billing_details: {
             email: Email,
-            name: Firstname,
+            name: FirstName,
           },
         },
       });
@@ -79,10 +80,13 @@ const CheckoutForm = ({ checkoutInfo }) => {
     }
 
     console.log("paymentIntent", paymentIntent);
+    setProcessing(false);
 
     if (paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
-      const transactionId = paymentIntent.id;
+      // const transactionId = paymentIntent.id;
+
+      //save payment information to the server
       createCheckout(checkoutInfo);
     }
   };
