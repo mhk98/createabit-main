@@ -6,7 +6,7 @@ import Layout from "@/layouts/preview";
 //= Components
 
 import Overlay from "@/components/Preview/Overlay";
-import HomeCreativeAgencyLight from "./light/home-creative-agency";
+import HomeCreativeAgency from "./dark/home-creative-agency";
 
 function LandingPreview() {
   useEffect(() => {
@@ -22,7 +22,7 @@ function LandingPreview() {
       <Overlay />
       <main>
         {/* <HomeMain></HomeMain> */}
-        <HomeCreativeAgencyLight />
+        <HomeCreativeAgency />
       </main>
     </>
   );
