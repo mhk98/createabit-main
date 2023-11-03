@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -71,6 +72,8 @@ function Cart({ lightMode }) {
         // Update the local storage with the new cart data after removing the item
         const updatedCartJSON = JSON.stringify(updatedCart);
         localStorage.setItem("cart", updatedCartJSON);
+
+        window.location.reload();
       }
     }
   };
@@ -109,7 +112,7 @@ function Cart({ lightMode }) {
     localStorage.setItem("total", total.toFixed(2));
     toast.success("Now you are ready for proceed checkout");
 
-    router.push("/dark/shop-checkout/", { scroll: false });
+    // router.push("/dark/shop-checkout/", { scroll: false });
   };
 
   return (
@@ -259,9 +262,13 @@ function Cart({ lightMode }) {
                       onClick={handleProceedToCheckout}
                       className="butn butn-md butn-bord mt-30 cursor-pointer"
                     >
-                      <span className="text-u fz-13 fw-600">
+                      <Link
+                        href="/dark/shop-checkout/"
+                        target="_blank"
+                        className="text-u fz-13 fw-600"
+                      >
                         Proceed to checkout
-                      </span>
+                      </Link>
                     </span>
                   </div>
                 )}

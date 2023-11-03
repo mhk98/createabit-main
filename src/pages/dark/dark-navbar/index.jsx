@@ -1,14 +1,17 @@
+import { isLoggedIn } from "@/components/services/auth.service";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   const [carts, setCarts] = useState([]);
 
+  const user = isLoggedIn();
+  console.log("userDetails", user);
   // Load cart data from local storage when the component mounts
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCarts(savedCart);
-  }, [carts]);
+  }, []);
 
   // console.log("carts", carts.length);
 
@@ -310,18 +313,34 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     </Link>
                   </div>
                 </li>
-                <li
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="o-hidden">
-                    <Link href="/dark/login/" className="link">
-                      <span className="fill-text" data-text="Login">
-                        Login
-                      </span>
-                    </Link>
-                  </div>
-                </li>
+
+                {user === true ? (
+                  <li
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="o-hidden">
+                      <Link href="/dark/login/" className="link">
+                        <span className="fill-text" data-text="LogOut">
+                          LogOut
+                        </span>
+                      </Link>
+                    </div>
+                  </li>
+                ) : (
+                  <li
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="o-hidden">
+                      <Link href="/dark/login/" className="link">
+                        <span className="fill-text" data-text="Login">
+                          Login
+                        </span>
+                      </Link>
+                    </div>
+                  </li>
+                )}
 
                 <li
                   onMouseEnter={handleMouseEnter}

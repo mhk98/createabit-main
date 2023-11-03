@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-
+import { useRouter } from "next/navigation";
 function Products({ lightMode }) {
   // const dispatch = useDispatch();
+  const router = useRouter();
   function openList(e) {
     e.stopPropagation();
     const options = document.querySelector(".select-options");
@@ -51,6 +52,7 @@ function Products({ lightMode }) {
       // Show a success toast message to indicate that the product has been added
       toast.success("Product added to the cart");
       // window.location.reload();
+      router.refresh();
     }
   };
 

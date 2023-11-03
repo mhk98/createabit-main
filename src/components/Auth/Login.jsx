@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
+import { isLoggedIn, storgeUserInfo } from "../services/auth.service";
+import { useRouter } from "next/router";
 
 const Login = () => {
-  //   const { setUser, setCookie } = useUser();
+  const router = useRouter();
+  console.log("isLoggedIn", isLoggedIn());
   const [formData, setFormData] = useState({
     Email: "",
     Password: "",
@@ -22,12 +25,16 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://createabit-backend.onrender.com/api/v1/user/login",
+        // "https://createabit-backend.onrender.com/api/v1/user/login",
+        "http://localhost:5000/api/v1/user/login",
         formData
       );
 
-      console.log("RegisterData", response.data);
-      // Handle the response data as needed, e.g., redirect to a new page or show a success message.
+      if (response.data.accessToken) {
+        router.push("/");
+      }
+
+      storgeUserInfo({ accessToken: response.data.accessToken });
     } catch (error) {
       console.error("Error:", error);
       // Handle the error, e.g., show an error message to the user.

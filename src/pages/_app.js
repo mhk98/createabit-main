@@ -8,6 +8,8 @@ import "@/styles/modal-video.css";
 import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
 import "swiper/css/bundle";
+import { UserProvider } from "@/components/Auth/userContext";
+import ProtectedRoute from "@/components/Auth/ProtectedRoute";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
