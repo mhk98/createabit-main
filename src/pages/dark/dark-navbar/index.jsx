@@ -6,7 +6,9 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   const [carts, setCarts] = useState([]);
 
   const user = isLoggedIn();
-  console.log("userDetails", user);
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+  };
   // Load cart data from local storage when the component mounts
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -321,7 +323,11 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   >
                     <div className="o-hidden">
                       <Link href="/dark/login/" className="link">
-                        <span className="fill-text" data-text="LogOut">
+                        <span
+                          onClick={handleLogout}
+                          className="fill-text"
+                          data-text="LogOut"
+                        >
                           LogOut
                         </span>
                       </Link>
