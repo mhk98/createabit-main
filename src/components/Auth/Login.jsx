@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { isLoggedIn, storgeUserInfo } from "../services/auth.service";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 
 const Login = () => {
   const router = useRouter();
-  console.log("isLoggedIn", isLoggedIn());
+
   const [formData, setFormData] = useState({
     Email: "",
     Password: "",

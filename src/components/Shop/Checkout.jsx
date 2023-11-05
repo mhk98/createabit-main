@@ -2,6 +2,8 @@ import CheckoutForm from "@/payment/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
+import { isLoggedIn } from "../services/auth.service";
+import { useRouter } from "next/navigation";
 const stripePromise = loadStripe(
   "pk_test_51L1rVDH0VF27tpW3LEs6Z66fVvzRIoh08xSbY4zSyiG03Q2pwNVzhq8JoYv4s4xF4zwObI3gLNUjus6dFj0ltrvr00m17agrob"
 );
@@ -19,6 +21,17 @@ function Checkout({ lightMode }) {
   const [postalCode, setPostalCode] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
+
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const userLoggedIn = isLoggedIn();
+
+  useEffect(() => {
+    if (!userLoggedIn) {
+      router.push("/dark/login");
+    }
+    setIsLoading(true);
+  }, [router, isLoading]);
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];

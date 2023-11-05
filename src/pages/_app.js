@@ -8,11 +8,28 @@ import "@/styles/modal-video.css";
 import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
 import "swiper/css/bundle";
-import { UserProvider } from "@/components/Auth/userContext";
-import ProtectedRoute from "@/components/Auth/ProtectedRoute";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { isLoggedIn } from "@/components/services/auth.service";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
+
+  /**
+   * const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const userLoggedIn = isLoggedIn();
+  useEffect(() => {
+    if (!userLoggedIn) {
+      router.push("/dark/login");
+    }
+    setIsLoading(true);
+  }, [router, isLoading]);
+
+  // if (!isLoading) {
+  //   return <p>Loading...</p>;
+  // }
+   */
 
   return getLayout(
     <>
