@@ -43,7 +43,7 @@ function DarkFooter() {
                 undiscovered “seventh sense” of the human psychology
               </small>
             </div>
-            
+
             <div className="col-lg-3 offset-lg-1">
               <div className="colum md-mb50">
                 <div className="mb-20 tit">
@@ -75,7 +75,9 @@ function DarkFooter() {
                   <Link href="/dark/blog-classic">Our Blog</Link>
                 </li>
                 <li>
-                  <Link href="/dark/shop-list">Shop</Link>
+                  <Link href="/dark/shop-list" target="_blank">
+                    Shop
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -3,10 +3,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { isLoggedIn } from "../services/auth.service";
 
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
   const router = useRouter();
+  const userLoggedIn = isLoggedIn();
 
   // Load cart data from local storage when the component mounts
   useEffect(() => {
@@ -72,8 +74,6 @@ function Cart({ lightMode }) {
         // Update the local storage with the new cart data after removing the item
         const updatedCartJSON = JSON.stringify(updatedCart);
         localStorage.setItem("cart", updatedCartJSON);
-
-        window.location.reload();
       }
     }
   };
@@ -258,18 +258,34 @@ function Cart({ lightMode }) {
                         </h6>
                       </li>
                     </ul>
-                    <span
-                      onClick={handleProceedToCheckout}
-                      className="butn butn-md butn-bord mt-30 cursor-pointer"
-                    >
-                      <Link
-                        href="/dark/shop-checkout/"
-                        target="_blank"
-                        className="text-u fz-13 fw-600"
+
+                    {userLoggedIn ? (
+                      <span
+                        onClick={handleProceedToCheckout}
+                        className="cursor-pointer butn butn-md butn-bord mt-30"
                       >
-                        Proceed to checkout
-                      </Link>
-                    </span>
+                        <Link
+                          href="/dark/shop-checkout/"
+                          target="_blank"
+                          className="text-u fz-13 fw-600"
+                        >
+                          Proceed to checkout
+                        </Link>
+                      </span>
+                    ) : (
+                      <span
+                        onClick={handleProceedToCheckout}
+                        className="cursor-pointer butn butn-md butn-bord mt-30"
+                      >
+                        <Link
+                          href="/dark/login/"
+                          target="_blank"
+                          className="text-u fz-13 fw-600"
+                        >
+                          Proceed to checkout
+                        </Link>
+                      </span>
+                    )}
                   </div>
                 )}
               </div>

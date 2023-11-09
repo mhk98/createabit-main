@@ -1,9 +1,9 @@
 import CheckoutForm from "@/payment/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { isLoggedIn } from "../services/auth.service";
-import { useRouter } from "next/navigation";
 const stripePromise = loadStripe(
   "pk_test_51L1rVDH0VF27tpW3LEs6Z66fVvzRIoh08xSbY4zSyiG03Q2pwNVzhq8JoYv4s4xF4zwObI3gLNUjus6dFj0ltrvr00m17agrob"
 );
@@ -21,6 +21,13 @@ function Checkout({ lightMode }) {
   const [postalCode, setPostalCode] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [shipping, setShipping] = useState("");
+  const [isChecked, setChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setChecked(!isChecked);
+  };
 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -70,7 +77,7 @@ function Checkout({ lightMode }) {
         <div className="row">
           <div className="col-lg-6">
             <div className="order-form md-mb50">
-              <h4 className="mb-40">Billing Details</h4>
+              <h6 className="mb-40">Billing Details</h6>
               <form action="contact.php">
                 <div className="row">
                   <div className="col-md-6">
@@ -141,7 +148,7 @@ function Checkout({ lightMode }) {
                   </div>
                   <div className="col-md-4">
                     <div className="form-group">
-                      <label htmlFor="">Postal Code *</label>
+                      <label htmlFor="">Post Code *</label>
                       <input
                         onChange={(e) => setPostalCode(e.target.value)}
                         type="text"
@@ -172,8 +179,86 @@ function Checkout({ lightMode }) {
                       />
                     </div>
                   </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="">Company Name *</label>
+                      <input
+                        onChange={(e) => setCompany(e.target.value)}
+                        type="text"
+                        name="company"
+                        required
+                      />
+                    </div>
+                  </div>
                 </div>
               </form>
+
+              <div>
+                <h6>
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                  />
+                  Same As Billing
+                </h6>
+
+                {isChecked && (
+                  <form>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="">First Name *</label>
+                        <input
+                          onChange={(e) => setFirstName(e.target.value)}
+                          type="text"
+                          name="first_name"
+                          value={firstName}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="">Last Name *</label>
+                        <input
+                          onChange={(e) => setLastName(e.target.value)}
+                          type="text"
+                          name="last_name"
+                          value={lastName}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="">Address*</label>
+                        <input
+                          onChange={(e) => setAddress(e.target.value)}
+                          type="text"
+                          name="address"
+                          value={address}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="">Shipping *</label>
+                        <input
+                          onChange={(e) => setShipping(e.target.value)}
+                          type="text"
+                          name="shipping"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    {/* Add more form fields as needed */}
+                  </form>
+                )}
+              </div>
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
@@ -215,7 +300,7 @@ function Checkout({ lightMode }) {
                     </div>
                   </li>
                 </ul>
-                <div className="text mt-40">
+                <div className="mt-40 text">
                   <p>
                     Your personal data will be used to process your order,
                     support your experience throughout this website, and for

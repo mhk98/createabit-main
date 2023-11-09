@@ -18,7 +18,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCarts(savedCart);
-  }, []);
+  }, [carts]);
 
   // console.log("carts", carts.length);
 
@@ -133,7 +133,11 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 </div>
                 {carts.length > 0 && (
                   <div className="addtocart">
-                    <Link href="/dark/shop-cart" className="icon ml-30">
+                    <Link
+                      href="/dark/shop-cart"
+                      target="_blank"
+                      className="icon ml-30"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="1.8em"

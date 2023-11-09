@@ -100,9 +100,9 @@ const CheckoutForm = ({ checkoutInfo }) => {
             style: {
               base: {
                 fontSize: "20px",
-                color: "#424770",
+                color: "white",
                 "::placeholder": {
-                  color: "#aab7c4",
+                  color: "white",
                 },
               },
               invalid: {
@@ -115,20 +115,21 @@ const CheckoutForm = ({ checkoutInfo }) => {
           type="submit"
           disabled={!stripe || !clientSecret || processing}
           style={{
-            padding: "8px 20px",
+            padding: "12px 20px",
             marginTop: "15px",
             fontSize: "16px",
             border: "2px solid #430571",
             color: "#430571",
             fontWeight: "800",
             borderRadius: "50px",
+            width: "100%",
           }}
         >
           Place Order
         </button>
       </form>
 
-      {cardError && <p className="text-red-500 ml-8">{cardError}</p>}
+      {cardError && <p className="ml-8 text-red-500">{cardError}</p>}
       {/* {transactionId && (
         <p className="text-green-500">
           Transaction complete with transactionId: {transactionId}

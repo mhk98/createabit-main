@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 import { useState } from "react";
 
 const Register = () => {
@@ -74,9 +75,18 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit" className="butn butn-md butn-bord radius-10">
+        <button type="submit" className="mt-3 butn butn-md butn-bord radius-10">
           Register
         </button>
+        <p className="mt-2">
+        <span>Alreay have an account?</span>
+        <span>
+          <Link href="/dark/login" className="text-primary" target="_blank">
+            {" "}
+            Sign In
+          </Link>
+        </span>
+      </p>
       </form>
     </div>
   );

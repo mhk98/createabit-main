@@ -1,8 +1,8 @@
 import axios from "axios";
-import { useState } from "react";
-import { isLoggedIn, storgeUserInfo } from "../services/auth.service";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import { useState } from "react";
+import { storgeUserInfo } from "../services/auth.service";
 
 const Login = () => {
   const router = useRouter();
@@ -32,7 +32,7 @@ const Login = () => {
       );
 
       if (response.data.accessToken) {
-        router.push("/");
+        location.replace("/");
       }
 
       storgeUserInfo({ accessToken: response.data.accessToken });
@@ -44,10 +44,10 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h3 className="  ">Login</h3>
+      <h3 className="">Login</h3>
       <form onSubmit={handleSubmit} className="register-form">
         <div className="form-group">
-          <label className="   text-left" htmlFor="email">
+          <label className="text-left " htmlFor="email">
             Email
           </label>
           <input
@@ -61,7 +61,7 @@ const Login = () => {
           />
         </div>
         <div className="form-group">
-          <label className="   text-left" htmlFor="password">
+          <label className="text-left " htmlFor="password">
             Password
           </label>
           <input
@@ -74,10 +74,19 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" className="butn butn-md butn-bord radius-10">
+        <button type="submit" className="mt-3 butn butn-md butn-bord radius-10">
           Login
         </button>
       </form>
+      <p className="mt-2">
+        <span>Don't have account?</span>
+        <span>
+          <Link href="/dark/register" className="text-primary" target="_blank">
+            {" "}
+            Sign Up
+          </Link>
+        </span>
+      </p>
     </div>
   );
 };
