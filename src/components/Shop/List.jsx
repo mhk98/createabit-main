@@ -7,7 +7,7 @@ function List() {
     <section className="main-shop section-padding">
       <div className="container">
         <div className="row md-marg">
-          <SideMenu />
+          {/* <SideMenu /> */}
           <Products />
         </div>
       </div>

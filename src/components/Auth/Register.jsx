@@ -21,7 +21,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "https://createabit-backend.onrender.com/api/v1/user/register",
+        "http://localhost:5000/api/v1/user/register",
         // "http://localhost:5000/api/v1/user/register",
 
         formData
@@ -79,14 +79,14 @@ const Register = () => {
           Register
         </button>
         <p className="mt-2">
-        <span>Alreay have an account?</span>
-        <span>
-          <Link href="/dark/login" className="text-primary" target="_blank">
-            {" "}
-            Sign In
-          </Link>
-        </span>
-      </p>
+          <span>Alreay have an account?</span>
+          <span>
+            <Link href="/dark/login" className="text-primary" target="_blank">
+              {" "}
+              Sign In
+            </Link>
+          </span>
+        </p>
       </form>
     </div>
   );

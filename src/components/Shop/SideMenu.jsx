@@ -1,4 +1,11 @@
-import React from 'react';
+import { useGetAllCartQuery } from "@/features/cart/cart";
+import {
+  useGetProductsQuery,
+  useSingleCategoryQuery,
+} from "@/features/product/products";
+import Image from "next/image";
+import React, { useState } from "react";
+import Products from "./Products";
 
 function SideMenu() {
   function handlePriceInput(e) {
@@ -6,7 +13,7 @@ function SideMenu() {
     const priceGap = 1000;
     const minPrice = parseInt(priceInput[0].value);
     const maxPrice = parseInt(priceInput[1].value);
-    const rangeInput = document.querySelectorAll(".range-input input")
+    const rangeInput = document.querySelectorAll(".range-input input");
 
     if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
       if (e.currentTarget.className === "input-min") {
@@ -40,10 +47,27 @@ function SideMenu() {
     }
   }
 
+  const [selectCategory, setSelectCategory] = useState(null);
+  const [categoryProduct, setCategoryProduct] = useState([]);
+  const handleCategoryClick = async (category) => {
+    setSelectCategory(category);
+  };
+
+  const { data, error, isLoading } = useGetProductsQuery();
+  const products = data?.data;
+  // console.log("products", products);
+
+  if (selectCategory) {
+    const filterProducts = products.filter(
+      (product) => product.category === selectCategory
+    );
+
+    setCategoryProduct(filterProducts);
+  }
+
   return (
     <div className="col-lg-3">
       <div className="sidebar md-mb80">
-
         <div className="item search mb-40">
           <form action="contact.php">
             <div className="form-group">
@@ -61,15 +85,36 @@ function SideMenu() {
           </div>
           <div className="dot-list">
             <ul className="rest">
-              <li><a href="#0">Technology</a></li>
-              <li><a href="#0">Accessories</a></li>
-              <li><a href="#0">Furniture</a></li>
-              <li><a href="#0">Clothes</a></li>
-              <li><a href="#0">Jewellery</a></li>
+              <li>
+                <button onClick={() => handleCategoryClick("Technology")}>
+                  Technology
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleCategoryClick("Accessories")}>
+                  Accessories
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleCategoryClick("Furniture")}>
+                  Furniture
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleCategoryClick("Clothes")}>
+                  Clothes
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleCategoryClick("Jewellery")}>
+                  Jewellery
+                </button>
+              </li>
             </ul>
           </div>
         </div>
 
+        
         <div className="item price-range mb-40">
           <div className="title">
             <h6>Filter by Price</h6>
@@ -79,22 +124,46 @@ function SideMenu() {
               <div className="progress"></div>
             </div>
             <div className="range-input">
-              <input type="range" className="range-min" min="10" max="10000" defaultValue="10"
-                step="100" onInput={handleRangeInput} />
-              <input type="range" className="range-max" min="0" max="10000" defaultValue="7500"
-                step="100" onInput={handleRangeInput} />
+              <input
+                type="range"
+                className="range-min"
+                min="10"
+                max="10000"
+                defaultValue="10"
+                step="100"
+                onInput={handleRangeInput}
+              />
+              <input
+                type="range"
+                className="range-max"
+                min="0"
+                max="10000"
+                defaultValue="7500"
+                step="100"
+                onInput={handleRangeInput}
+              />
             </div>
             <div className="price-input d-flex align-items-center mt-15">
               <div>
                 <div className="field">
                   <span>$</span>
-                  <input type="number" className="input-min" defaultValue="10" onInput={handlePriceInput} />
+                  <input
+                    type="number"
+                    className="input-min"
+                    defaultValue="10"
+                    onInput={handlePriceInput}
+                  />
                 </div>
               </div>
               <div className="ml-auto">
                 <div className="field">
                   <span>$</span>
-                  <input type="number" className="input-max" defaultValue="7500" onInput={handlePriceInput} />
+                  <input
+                    type="number"
+                    className="input-max"
+                    defaultValue="7500"
+                    onInput={handlePriceInput}
+                  />
                 </div>
               </div>
             </div>
@@ -186,10 +255,9 @@ function SideMenu() {
             <a href="#0">ThemesCamp</a>
           </div>
         </div>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default SideMenu
+export default SideMenu;

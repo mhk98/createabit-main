@@ -19,7 +19,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
     if (Price > 0) {
       axios
         .post(
-          "https://createabit-backend.onrender.com/api/v1/payment/create-payment-intent",
+          "http://localhost:5000/api/v1/payment/create-payment-intent",
 
           // "http://localhost:5000/api/v1/payment/create-payment-intent",
           { Price }
