@@ -89,6 +89,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
       toast.success("Transaction complete with transactionId", transactionId);
       //save payment information to the server
       createCheckout(checkoutInfo);
+      
     }
   };
 

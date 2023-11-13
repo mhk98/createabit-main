@@ -20,6 +20,7 @@ import Header from "@/components/HomeMain/Header";
 import Overlay from "@/components/Preview/Overlay";
 import DarkFooter from "../dark-footer";
 import Blog from "@/components/HomeMain/Blog";
+import Marq from "@/components/HomeMain/Marq";
 
 function HomeCreativeAgency() {
   useEffect(() => {
@@ -44,7 +45,7 @@ function HomeCreativeAgency() {
             <Portfolio />
             <PortfolioClassicGrid2 />
             <PortfolioClassicGrid3 />
-            {/* <Marq /> */}
+            <Marq />
             <Clients />
             <Services />
             <ServicesTabs />

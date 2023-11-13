@@ -27,6 +27,10 @@ const Register = () => {
         formData
       );
 
+      if (response) {
+        location.replace("/");
+      }
+
       console.log("RegisterData", response.data);
       // Handle the response data as needed, e.g., redirect to a new page or show a success message.
     } catch (error) {

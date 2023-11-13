@@ -3526,7 +3526,7 @@ body.loaded {
   left: -100%;
   width: 100%;
   height: 100vh;
-  background: white;
+  background: #1d1d1d;
   padding: 0px 30px 30px;
   overflow: hidden;
   z-index: 9999;
@@ -10367,6 +10367,20 @@ header.in-box {
   .product_main {
     display: none;
   }
+  .crev-header {
+    display: none;
+  }
+
+  .main-banner-img {
+    width: 400px;
+    height: 300px;
+    margin-top: 250px;
+  }
+
+  .crev-header1 {
+    display: block;
+    margin-top: -340px;
+  }
 
   .software-section {
     display: grid;
@@ -10390,6 +10404,10 @@ header.in-box {
     grid-template-columns: (1, 1fr);
     align-items: center;
     grid-gap: 20px;
+  }
+
+  .crev-header1 {
+    display: none;
   }
 
   .product_main1 {
@@ -10430,6 +10448,9 @@ header.in-box {
     grid-gap: 20px;
   }
 
+  .crev-header1 {
+    display: none;
+  }
   .product_main1 {
     display: none;
   }
@@ -10467,6 +10488,9 @@ header.in-box {
     gap: 20px;
   }
 
+  .crev-header1 {
+    display: none;
+  }
   .product_main1 {
     display: none;
   }

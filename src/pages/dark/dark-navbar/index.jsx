@@ -12,7 +12,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   const userLoggedIn = isLoggedIn();
   const handleLogout = () => {
     removeUserInfo(authKey);
-    router.push("/dark/login");
+    location.replace("/dark/login");
   };
   // Load cart data from local storage when the component mounts
   useEffect(() => {

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import portfolio6 from "../../../../images/portfolio6.jpg";
-import portfolio7 from "../../../../images/portfolio7.jpg";
-import portfolio8 from "../../../../images/portfolio8.jpg";
-import portfolio9 from "../../../../images/portfolio9.jpg";
+import portfolio1 from "../../../../images/DYNAMIC DIGITAL PRODUCTS/3D-Holographic-Signs-1.png";
+import portfolio2 from "../../../../images/DYNAMIC DIGITAL PRODUCTS/Digital-Display.png";
+import portfolio3 from "../../../../images/DYNAMIC DIGITAL PRODUCTS/Mirror-advertising-player.jpg";
+import portfolio4 from "../../../../images/DYNAMIC DIGITAL PRODUCTS/POS-systems.png";
+
 //= Scripts
 import initIsotope from "@/common/initIsotope";
 import Image from "next/image";
@@ -17,7 +18,7 @@ function Grid() {
   return (
     <section className="portfolio section-padding">
       <div className="container">
-        <div className="sec-lg-head mb-10">
+        <div className="mb-10 sec-lg-head">
           <div className="row">
             <div className="col-lg-7">
               <div className="position-re">
@@ -26,7 +27,7 @@ function Grid() {
               </div>
             </div>
             <div className="col-lg-5 d-flex align-items-center">
-              <div className="full-width d-flex justify-content-end justify-end">
+              <div className="justify-end full-width d-flex justify-content-end">
                 <div className="vew-all">
                   <Link href="/dark/portfolio-classic-grid">
                     View All Works
@@ -51,7 +52,7 @@ function Grid() {
           </div>
         </div>
         <div className="row">
-          <div className="filtering col-12 mb-80 text-center">
+          <div className="text-center filtering col-12 mb-80">
             {/* <div className="filter">
               <span className="text">Filter By :</span>
               {data.filters.map((item, index) => (
@@ -68,12 +69,12 @@ function Grid() {
           </div>
         </div>
         <div className="gallery">
-          <div className="row grid max-margin">
+          <div className="grid row max-margin">
             <div className={`col-md-6 items info-overlay mb-80`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
-                    <Image src={portfolio6} alt="image" />
+                    <Image src={portfolio1} alt="image" />
                   </div>
                 </Link>
                 <div className="info">
@@ -97,16 +98,18 @@ function Grid() {
                     </Link>
                   </h6>
                   <h5>
-                    <Link href="/dark/project-details1">3D HOLOGRAPHIC SIGNS</Link>
+                    <Link href="/dark/project-details1">
+                      3D HOLOGRAPHIC SIGNS
+                    </Link>
                   </h5>
                 </div>
               </div>
             </div>
             <div className={`col-md-6 items info-overlay mb-80`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
-                    <Image src={portfolio7} alt="image" />
+                    <Image src={portfolio2} alt="image" />
                   </div>
                 </Link>
                 <div className="info">
@@ -136,12 +139,12 @@ function Grid() {
               </div>
             </div>
           </div>
-          <div className="row grid max-margin">
+          <div className="grid row max-margin">
             <div className={`col-md-6 items info-overlay mb-80`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
-                    <Image src={portfolio8} alt="image" />
+                    <Image src={portfolio3} alt="image" />
                   </div>
                 </Link>
                 <div className="info">
@@ -172,9 +175,9 @@ function Grid() {
             </div>
             <div className={`col-md-6 items info-overlay mb-80`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
-                    <Image src={portfolio9} alt="image" />
+                    <Image src={portfolio4} alt="image" />
                   </div>
                 </Link>
                 <div className="info">

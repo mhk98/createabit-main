@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import about1 from "../../../images/1.jpg";
+import about from "../../../images/about/01.jpg";
+import about1 from "../../../images/about/1.jpg";
 function About({ lightMode }) {
   return (
     <section className="about-intro section-padding about-dark about-light">
@@ -10,7 +11,7 @@ function About({ lightMode }) {
           <div className="col-lg-5">
             <div className=" sec-lg-head md-mb30" style={{ marginTop: "15px" }}>
               <h2 className=" d-rotate wow">
-                <span className="rotate-text">
+                <span className="">
                   Your success is our mission in the digital world.
                 </span>
               </h2>
@@ -22,7 +23,7 @@ function About({ lightMode }) {
           >
             <div className="text">
               <p className="d-slideup wow">
-                <span className="sideup-text">
+                <span className="">
                   <span className="up-text">
                     CreateAbit designs is a renowned name in the digital world.
                     We are a reputed marketing and branding agency based in
@@ -30,7 +31,7 @@ function About({ lightMode }) {
                   </span>
                 </span>
                 <span className="sideup-text">
-                  <span className="up-text">
+                  <span className="">
                     Our extensive history, rich experience, and excellent track
                     record make us a more reliable choice when it comes to
                     designing and marketing services.
@@ -46,7 +47,7 @@ function About({ lightMode }) {
                 className="vew-all mt-50 ml-30 wow fadeIn"
                 data-wow-delay=".8s"
               >
-                <Link href="/dark/page-abouts/">
+                <Link href="/dark/page-abouts">
                   Let's Go
                   <span>
                     <svg
@@ -72,19 +73,14 @@ function About({ lightMode }) {
             <div className="imgs md-mb50">
               <div className="img1">
                 <div className="o-hidden">
-                  <div className="imago wow">
-                    <img
-                      src={`/${
-                        lightMode ? "light" : "dark"
-                      }/assets/imgs/about/01.jpg`}
-                      alt=""
-                    />
+                  <div className=" wow">
+                    <Image src={about} alt="" />
                   </div>
                 </div>
               </div>
               <div className="img2">
                 <div className="o-hidden">
-                  <div className="imago wow">
+                  <div className=" wow">
                     <Image src={about1} alt="" />
                   </div>
                 </div>

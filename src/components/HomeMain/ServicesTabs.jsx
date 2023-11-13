@@ -17,41 +17,41 @@ function ServicesTabs({ lightMode }) {
   }
 
   return (
-    <section className="services-tab revers section-padding pt-0">
+    <section className="pt-0 services-tab revers section-padding">
       <div className="container">
         {/* <div className="row mb-80"> */}
         <div className="col-lg-12">
           <div className="full-width">
-            <div className="main-marq o-hidden pt-40 pb-40 bord-thin-top bord-thin-bottom">
+            <div className="pt-40 pb-40 main-marq o-hidden bord-thin-top bord-thin-bottom">
               <div className="slide-har st1">
                 <div className="box">
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Web Application</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Web Application</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Website Development</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Website Development</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Mobile Application</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
@@ -59,31 +59,43 @@ function ServicesTabs({ lightMode }) {
                 <div className="box">
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Mobile Application</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Digital Marketing</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Digital Marketing</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Graphic Design</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
                   <div className="item">
                     <h4 className="d-flex align-items-center fz-70">
-                      <span>Amazing Design</span>
+                      <span>Graphic Design</span>
+                      <span className="fz-50 ml-50 stroke icon">*</span>
+                    </h4>
+                  </div>
+                  <div className="item">
+                    <h4 className="d-flex align-items-center fz-70">
+                      <span>Video & Animation</span>
+                      <span className="fz-50 ml-50 stroke icon">*</span>
+                    </h4>
+                  </div>
+                  <div className="item">
+                    <h4 className="d-flex align-items-center fz-70">
+                      <span>Video & Animation</span>
                       <span className="fz-50 ml-50 stroke icon">*</span>
                     </h4>
                   </div>
@@ -152,7 +164,7 @@ function ServicesTabs({ lightMode }) {
                     />
                   </div>
                   <div className="cont sub-bg">
-                    <div className="icon-img-60 mb-40">
+                    <div className="mb-40 icon-img-60">
                       <img
                         src={`/${
                           lightMode ? "light" : "dark"
@@ -194,7 +206,7 @@ function ServicesTabs({ lightMode }) {
                     />
                   </div>
                   <div className="cont sub-bg">
-                    <div className="icon-img-60 mb-40">
+                    <div className="mb-40 icon-img-60">
                       <img
                         src={`/${
                           lightMode ? "light" : "dark"
@@ -230,7 +242,7 @@ function ServicesTabs({ lightMode }) {
                     />
                   </div>
                   <div className="cont sub-bg">
-                    <div className="icon-img-60 mb-40">
+                    <div className="mb-40 icon-img-60">
                       <img
                         src={`/${
                           lightMode ? "light" : "dark"
@@ -266,7 +278,7 @@ function ServicesTabs({ lightMode }) {
                     />
                   </div>
                   <div className="cont sub-bg">
-                    <div className="icon-img-60 mb-40">
+                    <div className="mb-40 icon-img-60">
                       <img
                         src={`/${
                           lightMode ? "light" : "dark"

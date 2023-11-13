@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 //= Scripts
 import loadBackgroudImages from "@/common/loadBackgroudImages";
+import Image from "next/image";
+import about from "../../../../images/about/01.jpg";
 
-function Story(lightMode) {
+function Story({ lightMode }) {
   useEffect(() => {
     loadBackgroudImages();
   }, []);
@@ -56,30 +58,25 @@ function Story(lightMode) {
           className="about-intro section-padding"
           style={{ marginTop: "80px" }}
         >
-          <div className="container pt-40">
-            <div className="row justify-content-center">
+          <div className="container ">
+            <div className="mx-auto row">
               <div className="col-lg-6 rest">
                 <div className="imgs md-mb50">
                   <div className="img1">
                     <div className="o-hidden">
-                      <div className="imago wow">
-                        <img className="about_img"
-                          src={`/${
-                            lightMode ? "light" : "dark"
-                          }/assets/imgs/about/01.jpg`}
-                          alt=""
-                        />
+                      <div className=" wow">
+                        <Image className="" src={about} alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 valign rest">
+              <div className="mt-30 col-lg-6">
                 <div className="cont">
-                  <h2 className="d-rotate wow">
-                    <span className="rotate-text">Our Key Differentiators</span>
+                  <h2 className=" wow">
+                    <span className="">Our Key Differentiators</span>
                   </h2>
-                  <div className="mt-10 feat">
+                  <div className="mt-30 feat">
                     <ul className="">
                       <li className="mb-10 " style={{ fontSize: "16px" }}>
                         Expertise in executing customized project requirements
@@ -116,9 +113,9 @@ function Story(lightMode) {
             </div>
           </div>
         </section>
-        <div className="row">
-          <div className="col-lg-8">
-            <div className="cont mt-80">
+        <div className="row" style={{marginTop:"-40px"}}>
+          <div className="col-lg-8" >
+                      <div className="cont">
               <p style={{ fontSize: "16px" }}>
                 We know how important it is to keep the audiences involved and
                 how to maintain their interest in what you do. We ensure the
@@ -149,7 +146,7 @@ function Story(lightMode) {
           </div>
 
           <div className="text-right col-lg-4">
-            <div className="sec-head mt-80">
+            <div className="sec-head ">
               <h6 className="sub-title" style={{ fontSize: "20px" }}>
                 What We Do.
               </h6>

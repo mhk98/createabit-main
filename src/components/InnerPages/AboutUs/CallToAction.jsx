@@ -32,10 +32,10 @@ function CallToAction({ lightMode, innerPageStyle }) {
                   </span>
                 </h2>
               </div>
-              <div className="ml-auto">
+              <div className="mt-20 ml-auto">
                 <Link
                   href="/dark/page-contact"
-                  className="butn-circle d-flex align-items-center text-center m-auto"
+                  className="m-auto text-center butn-circle d-flex align-items-center"
                 >
                   <div className="full-width">
                     <span>

@@ -75,7 +75,7 @@ function Grid() {
           <div className="grid row md-marg">
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio6} alt="image" />
                   </div>
@@ -110,7 +110,7 @@ function Grid() {
             </div>
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio7} alt="image" />
                   </div>
@@ -145,7 +145,7 @@ function Grid() {
             </div>
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio8} alt="image" />
                   </div>
@@ -182,7 +182,7 @@ function Grid() {
           <div className="grid row md-marg">
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio9} alt="image" />
                   </div>
@@ -217,7 +217,7 @@ function Grid() {
             </div>
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio10} alt="image" />
                   </div>
@@ -252,7 +252,7 @@ function Grid() {
             </div>
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio11} alt="image" />
                   </div>
@@ -289,7 +289,7 @@ function Grid() {
           <div className="grid row md-marg">
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio12} alt="image" />
                   </div>
@@ -324,7 +324,7 @@ function Grid() {
             </div>
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio13} alt="image" />
                   </div>
@@ -359,7 +359,7 @@ function Grid() {
             </div>
             <div className={`col-lg-4 col-md-6 items info-overlay mb-50`}>
               <div className="item-img o-hidden">
-                <Link href="/dark/project-details1" className="imago wow">
+                <Link href="/dark/project-details1" className=" wow">
                   <div className="inner wow">
                     <Image src={portfolio14} alt="image" />
                   </div>
