@@ -10363,7 +10363,9 @@ header.in-box {
     grid-template-columns: (1, 1fr);
     grid-gap: 20px;
   }
-
+  .section-padding {
+    display: none;
+  }
   .product_main {
     display: none;
   }

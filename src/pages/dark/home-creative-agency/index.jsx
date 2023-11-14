@@ -45,7 +45,7 @@ function HomeCreativeAgency() {
             <Portfolio />
             <PortfolioClassicGrid2 />
             <PortfolioClassicGrid3 />
-            <Marq />
+            {/* <Marq /> */}
             <Clients />
             <Services />
             <ServicesTabs />

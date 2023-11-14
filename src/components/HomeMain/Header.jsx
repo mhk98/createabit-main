@@ -251,15 +251,16 @@ function Header({ lightMode }) {
           autoplay
         />
       </header>
+
       <header className="crev-header1">
         <div className="container-xxl">
-          <div className="row">
+          <div className="row justify-between">
             <div className="col-lg-8">
               <div className="caption title">
-                <h1>
+                <h3>
                   We Are Your
                   <br /> <span className="stroke">Bag Of</span> Secrets!
-                </h1>
+                </h3>
                 <div className="row mt-30">
                   <div className="col-lg-5 offset-lg-1">
                     <div className="text">
@@ -295,8 +296,8 @@ function Header({ lightMode }) {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
-              <div className="md-hide">
+            <div className="col-lg-4">
+              <div className="">
                 <Link href="/dark/page-about" className="hover-this">
                   <div className="circle-button in-bord hover-anim">
                     <div className="rotate-circle fz-30 text-u">

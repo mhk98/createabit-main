@@ -9,7 +9,7 @@ function LightNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCarts(savedCart);
-  }, [carts]);
+  }, []);
   useEffect(() => {
     if (darkOnScroll) {
       let nav = document.querySelector("#navi");

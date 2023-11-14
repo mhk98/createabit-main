@@ -18,7 +18,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCarts(savedCart);
-  }, [carts]);
+  }, []);
 
   // console.log("carts", carts.length);
 
