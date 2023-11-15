@@ -11,6 +11,7 @@ import "swiper/css/bundle";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { isLoggedIn } from "@/components/services/auth.service";
+import { MyContextProvider } from "@/MyContext/MyContext";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -48,10 +49,12 @@ function App({ Component, pageProps }) {
           </ProtectedRoute>
         </UserProvider>
       </Provider> */}
-
-      <Provider store={store}>
+<MyContextProvider>
+<Provider store={store}>
         <Component {...pageProps} />
       </Provider>
+</MyContextProvider>
+      
       <Toaster />
       <Script strategy="beforeInteractive" src="/assets/js/plugins.js"></Script>
       <Script

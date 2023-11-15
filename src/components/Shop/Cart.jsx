@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { isLoggedIn } from "../services/auth.service";
+import { useMyContext } from "@/MyContext/MyContext";
 
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
@@ -18,11 +19,15 @@ function Cart({ lightMode }) {
 
   const [cart, setCart] = useState([]);
 
+  // const { state, updateData } = useMyContext();
+
   useEffect(() => {
     if (products) {
       setCart(products);
     }
   }, [products]);
+
+  const { state, updateData } = useMyContext();
 
   // Function to update the cart item quantity and update local storage
   const updateQuantity = (id, newQuantity) => {
@@ -64,6 +69,7 @@ function Cart({ lightMode }) {
         // First, update the state by filtering the item
         const updatedCart = cart.filter((item) => item.Product_Id !== id);
         setCart(updatedCart);
+        updateData({ cart: updatedCart });
 
         // Recalculate and update the subtotal, discount, and total
         const updatedSubtotal = calculateTotal();

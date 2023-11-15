@@ -4,10 +4,18 @@ import { authKey } from "@/constants/storageKey";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useMyContext } from "@/MyContext/MyContext";
 
 function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
+  const { state, updateData } = useMyContext();
+  const { cart } = state; // Access the cart data from the context state
+
   const [carts, setCarts] = useState([]);
 
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCarts(savedCart);
+  }, []);
   const router = useRouter();
   const userLoggedIn = isLoggedIn();
   const handleLogout = () => {
@@ -15,10 +23,10 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
     location.replace("/dark/login");
   };
   // Load cart data from local storage when the component mounts
-  useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCarts(savedCart);
-  }, []);
+  // useEffect(() => {
+  //   const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+  //   setCarts(savedCart);
+  // }, []);
 
   // console.log("carts", carts.length);
 
@@ -131,13 +139,23 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     <span className="word">Menu</span>
                   </span>
                 </div>
-                {carts.length > 0 && (
+                {cart.length > 0 ? (
                   <div className="addtocart">
-                    <Link
-                      href="/dark/shop-cart"
-                      target="_blank"
-                      className="icon ml-30"
-                    >
+                    <Link href="/dark/shop-cart" className="icon ml-30">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1.8em"
+                        viewBox="0 0 576 512"
+                        fill="white"
+                      >
+                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c-2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                      </svg>
+                    </Link>
+                    <p className=" notification">{cart?.length}</p>
+                  </div>
+                ) : (
+                  <div className="addtocart">
+                    <Link href="/dark/shop-cart" className="icon ml-30">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="1.8em"
@@ -153,7 +171,6 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 <div className="ml-50 " style={{ marginTop: "-15px" }}>
                   <Link
                     href="/light/home-creative-agency/"
-                    target="_blank"
                     className="classic butn butn-md butn-bord radius-30"
                   >
                     <span className="word">Classic Mode</span>
@@ -171,11 +188,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link
-                      href="/dark/home-creative-agency/"
-                      target="_blank"
-                      className="link"
-                    >
+                    <Link href="/dark/home-creative-agency/" className="link">
                       <span className="fill-text" data-text="Home">
                         Home
                       </span>
@@ -187,11 +200,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link
-                      href="/dark/page-abouts/"
-                      target="_blank"
-                      className="link"
-                    >
+                    <Link href="/dark/page-abouts/" className="link">
                       <span className="fill-text" data-text="Who We Are">
                         Who We Are
                       </span>
@@ -209,7 +218,6 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       <Link href="/dark/page-product/" className="">
                         <span
                           className="fill-text"
-                          target="_blank"
                           data-text="Product Solution"
                         >
                           Product Solution
@@ -223,7 +231,6 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       <li>
                         <Link
                           href="/dark/page-product-category1/"
-                          target="_blank"
                           className="sub-link"
                         >
                           Dynamic Digital Products
@@ -232,7 +239,6 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       <li>
                         <Link
                           href="/dark/page-product-category2/"
-                          target="_blank"
                           className="sub-link"
                         >
                           Intelligent TECH Products
@@ -241,7 +247,6 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                       <li>
                         <Link
                           href="/dark/page-product-category3/"
-                          target="_blank"
                           className="sub-link"
                         >
                           INTERACTIVE WOW PRODUCTION
@@ -257,11 +262,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                 >
                   <div className="o-hidden">
                     <div className="cursor-pointer link dmenu">
-                      <Link
-                        href="/dark/page-services/"
-                        target="_blank"
-                        className=""
-                      >
+                      <Link href="/dark/page-services/" className="">
                         <span className="fill-text" data-text="Services">
                           Service
                         </span>
@@ -272,56 +273,32 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   <div className="sub-menu">
                     <ul>
                       <li>
-                        <Link
-                          href="/dark/page-service1/"
-                          target="_blank"
-                          className="sub-link"
-                        >
+                        <Link href="/dark/page-service1/" className="sub-link">
                           WEBSITE DEVELOPMENT
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/dark/page-service2/"
-                          target="_blank"
-                          className="sub-link"
-                        >
+                        <Link href="/dark/page-service2/" className="sub-link">
                           WEB APPLICATION
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/dark/page-service3/"
-                          target="_blank"
-                          className="sub-link"
-                        >
+                        <Link href="/dark/page-service3/" className="sub-link">
                           MOBILE APPS DEVELOPMENT
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/dark/page-service4/"
-                          target="_blank"
-                          className="sub-link"
-                        >
+                        <Link href="/dark/page-service4/" className="sub-link">
                           DIGITAL MARKETING & SEO
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/dark/page-service5/"
-                          target="_blank"
-                          className="sub-link"
-                        >
+                        <Link href="/dark/page-service5/" className="sub-link">
                           GRAPHICS DESIGN & PRINTING
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/dark/page-service6/"
-                          target="_blank"
-                          className="sub-link"
-                        >
+                        <Link href="/dark/page-service6/" className="sub-link">
                           VIDEO & ANIMATION
                         </Link>
                       </li>
@@ -358,11 +335,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link
-                      target="_blank"
-                      href="/dark/page-contact/"
-                      className="link"
-                    >
+                    <Link href="/dark/page-contact/" className="link">
                       <span className="fill-text" data-text="Contact">
                         Contact
                       </span>
@@ -393,11 +366,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                     onMouseLeave={handleMouseLeave}
                   >
                     <div className="o-hidden">
-                      <Link
-                        href="/dark/login/"
-                        target="_blank"
-                        className="link"
-                      >
+                      <Link href="/dark/login/" className="link">
                         <span className="fill-text" data-text="Login">
                           Login
                         </span>
@@ -411,11 +380,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="o-hidden">
-                    <Link
-                      href="/light/home-creative-agency/"
-                      target="_blank"
-                      className="link"
-                    >
+                    <Link href="/light/home-creative-agency/" className="link">
                       <span
                         className="fill-text classic_btn"
                         data-text="Classic Mode"

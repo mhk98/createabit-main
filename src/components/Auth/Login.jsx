@@ -32,7 +32,7 @@ const Login = () => {
       );
 
       if (response.data.accessToken) {
-        location.replace("/");
+        router.push("/");
       }
 
       storgeUserInfo({ accessToken: response.data.accessToken });

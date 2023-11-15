@@ -1,6 +1,0 @@
-[build]
-  command = "npm run export"
-  publish = "out"
-
-[settings]
-  node_version = "18.16.1"

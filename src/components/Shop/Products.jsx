@@ -1,4 +1,5 @@
 //= Data
+import { useMyContext } from "@/MyContext/MyContext";
 import {
   useGetProductsQuery,
   useSingleCategoryQuery,
@@ -8,6 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+
 function Products() {
   function handlePriceInput(e) {
     const priceInput = e.currentTarget;
@@ -75,6 +77,8 @@ function Products() {
 
   const [cart, setCart] = useState([]);
 
+  const { state, updateData } = useMyContext();
+
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(savedCart);
@@ -86,10 +90,12 @@ function Products() {
     } else {
       // Create a new cart with the added product
       const updatedCart = [...cart, product];
+      updateData({ cart: updatedCart });
       setCart(updatedCart);
 
       // Save the updated cart data to local storage
       localStorage.setItem("cart", JSON.stringify(updatedCart));
+
       // Show a success toast message to indicate that the product has been added
       toast.success("Product added to the cart");
     }
@@ -107,6 +113,7 @@ function Products() {
     error: error1,
   } = useSingleCategoryQuery(selectCategory);
 
+  console.log('data1', data1);
   return (
     <div className="row">
       <div className="col-lg-3">

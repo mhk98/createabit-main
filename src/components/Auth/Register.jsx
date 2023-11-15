@@ -1,5 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Register = () => {
@@ -8,7 +9,7 @@ const Register = () => {
     Email: "",
     Password: "",
   });
-
+  const router = useRouter();
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -28,7 +29,7 @@ const Register = () => {
       );
 
       if (response) {
-        location.replace("/");
+        router.push("/");
       }
 
       console.log("RegisterData", response.data);

@@ -22,7 +22,10 @@ function Checkout({ lightMode }) {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
-  const [shipping, setShipping] = useState("");
+
+  const [shippingFirstName, setShippingFirstName] = useState("");
+  const [shippingLastName, setShippingLastName] = useState("");
+  const [shippingAddress, setShippingAddress] = useState("");
   const [isChecked, setChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -65,6 +68,9 @@ function Checkout({ lightMode }) {
     orderDetails: products,
     SubTotal: subTotal,
     Total: total,
+    Shipping_FirstName: shippingFirstName,
+    Shipping_LastName: shippingLastName,
+    Shipping_Address: shippingAddress,
   };
 
   // toast.success("Successfully create order");
@@ -191,74 +197,67 @@ function Checkout({ lightMode }) {
                     </div>
                   </div>
                 </div>
+
+                <div>
+                  <h6>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
+                    />
+                    Same As Billing
+                  </h6>
+
+                  {isChecked && (
+                    <div>
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="">First Name *</label>
+                          <input
+                            onChange={(e) =>
+                              setShippingFirstName(e.target.value)
+                            }
+                            type="text"
+                            name="shipping_first_name"
+                            value={firstName}
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="">Last Name *</label>
+                          <input
+                            onChange={(e) =>
+                              setShippingLastName(e.target.value)
+                            }
+                            type="text"
+                            name="shipping_last_name"
+                            value={lastName}
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="">Address*</label>
+                          <input
+                            onChange={(e) => setShippingAddress(e.target.value)}
+                            type="text"
+                            name="shipping_address"
+                            value={address}
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      {/* Add more form fields as needed */}
+                    </div>
+                  )}
+                </div>
               </form>
-
-              <div>
-                <h6>
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
-                  />
-                  Same As Billing
-                </h6>
-
-                {isChecked && (
-                  <form>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="">First Name *</label>
-                        <input
-                          onChange={(e) => setFirstName(e.target.value)}
-                          type="text"
-                          name="first_name"
-                          value={firstName}
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="">Last Name *</label>
-                        <input
-                          onChange={(e) => setLastName(e.target.value)}
-                          type="text"
-                          name="last_name"
-                          value={lastName}
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="">Address*</label>
-                        <input
-                          onChange={(e) => setAddress(e.target.value)}
-                          type="text"
-                          name="address"
-                          value={address}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="">Shipping *</label>
-                        <input
-                          onChange={(e) => setShipping(e.target.value)}
-                          type="text"
-                          name="shipping"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    {/* Add more form fields as needed */}
-                  </form>
-                )}
-              </div>
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">

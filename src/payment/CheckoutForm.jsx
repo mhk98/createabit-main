@@ -1,6 +1,8 @@
 import { useCreateCheckoutMutation } from "@/features/order/order";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
+import { useRouter } from "next/navigation";
+
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -30,6 +32,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
         });
     }
   }, [Price, axios]);
+  const router = useRouter();
 
   const handleSubmit = async (event) => {
     // Block native form submission.
@@ -88,8 +91,11 @@ const CheckoutForm = ({ checkoutInfo }) => {
       // const transactionId = paymentIntent.id;
       toast.success("Transaction complete with transactionId", transactionId);
       //save payment information to the server
-      createCheckout(checkoutInfo);
-      
+
+      const res = await createCheckout(checkoutInfo);
+
+      localStorage.setItem("payment-status", res.data.status);
+      router.push("/dark/payment-status");
     }
   };
 
