@@ -113,7 +113,7 @@ function Products() {
     error: error1,
   } = useSingleCategoryQuery(selectCategory);
 
-  console.log('data1', data1);
+  console.log("data1", data1);
   return (
     <div className="row">
       <div className="col-lg-3">
@@ -369,7 +369,7 @@ function Products() {
                     <div className="item mb-50">
                       <div className="img">
                         <Image
-                          src={`http://localhost:5000/${item.Image}`}
+                          src={`https://createabit-backend.onrender.com/${item.Image}`}
                           alt=""
                           width={300}
                           height={200}
@@ -407,7 +407,7 @@ function Products() {
                     <div className="item mb-50">
                       <div className="img">
                         <Image
-                          src={`http://localhost:5000/${item.Image}`}
+                          src={`https://createabit-backend.onrender.com/${item.Image}`}
                           alt=""
                           width={300}
                           height={200}

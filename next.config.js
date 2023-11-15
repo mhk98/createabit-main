@@ -1,10 +1,6 @@
-/** @type {import('next').NextConfig} */
-const path = require("path");
-
+// // next.config.js
 module.exports = {
   images: {
-    domains: ["localhost", "createabit-backend.onrender.com"],
+    domains: ["createabit-backend.onrender.com"],
   },
 };
-
-// module.exports = nextConfig;
