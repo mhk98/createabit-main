@@ -10366,6 +10366,12 @@ header.in-box {
   .section-padding {
     display: none;
   }
+  .explore-radius {
+    margin-top: 40px !important;
+  }
+  .clients-carso2 {
+    margin-top: 200px;
+  }
   .product_main {
     display: none;
   }
@@ -10376,7 +10382,7 @@ header.in-box {
   .main-banner-img {
     width: 400px;
     height: 300px;
-    margin-top: 250px;
+    margin-top: 200px;
   }
 
   .crev-header1 {

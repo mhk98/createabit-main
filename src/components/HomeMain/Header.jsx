@@ -254,7 +254,7 @@ function Header({ lightMode }) {
 
       <header className="crev-header1">
         <div className="container-xxl">
-          <div className="row justify-between">
+          <div className="justify-between row">
             <div className="col-lg-8">
               <div className="caption title">
                 <h3>
@@ -296,7 +296,7 @@ function Header({ lightMode }) {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 explore-radius">
               <div className="">
                 <Link href="/dark/page-about" className="hover-this">
                   <div className="circle-button in-bord hover-anim">
