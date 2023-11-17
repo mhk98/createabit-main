@@ -8,7 +8,7 @@ import portfolio4 from "../../../images/portfolio4.jpg";
 
 function Portfolio() {
   return (
-    <section className="portfolio clasic section-padding" data-scroll-index="3">
+    <section className="portfolio clasic section-padding feature-product" data-scroll-index="3">
       <div className="container">
         <div className="sec-lg-head">
           <div className="row">

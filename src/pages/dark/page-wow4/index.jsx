@@ -5,7 +5,6 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/HomeMain/Footer";
 import Wow4 from "@/components/InnerPages/Wow/Wow4";
 import DarkNavbar from "../dark-navbar";
 import DarkFooter from "../dark-footer";

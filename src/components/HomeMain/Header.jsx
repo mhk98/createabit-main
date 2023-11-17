@@ -107,7 +107,7 @@ function Header({ lightMode }) {
               </div>
             </div>
             <div className="col-lg-3">
-              <div className="md-hide">
+              <div className="md-hide explore-radius1">
                 <Link href="/dark/page-about" className="hover-this">
                   <div className="circle-button in-bord hover-anim">
                     <div className="rotate-circle fz-30 text-u">
@@ -145,39 +145,40 @@ function Header({ lightMode }) {
             </div>
           </div>
         </div>
-        <div className="main-banner-img">
-          {/* <Image src={home_main} alt="" /> */}
-          <div
-            className="slider arch-slider slider-prlx"
-            style={{ marginTop: "-150px" }}
-          >
-            {loadSwiper && (
-              <Swiper
-                {...swiperOptions}
-                className="swiper-container parallax-slider"
-              >
-                {data.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <div
-                      className="bg-img valign"
-                      data-background={item.background}
-                      data-overlay-dark="5"
-                      style={{ width: "", height: "400px" }}
-                    >
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-lg-7">
-                            <div className="caption mt-30">
-                              <h5 className="inline main-colorbg">
-                                {/* <span>{item.number}</span> */}
-                              </h5>
-                              <h1>
-                                {/* <StatementSplitter statement={item.title} /> */}
-                              </h1>
-                              {/* <p>{item.text}</p> */}
+        <div className="row">
+          <div className="main-banner-img col-lg-5">
+            {/* <Image src={home_main} alt="" /> */}
+            <div
+              className="slider arch-slider slider-prlx"
+              style={{ marginTop: "-150px" }}
+            >
+              {loadSwiper && (
+                <Swiper
+                  {...swiperOptions}
+                  className="swiper-container parallax-slider"
+                >
+                  {data.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <div
+                        className="bg-img valign"
+                        data-background={item.background}
+                        data-overlay-dark="5"
+                        style={{ width: "", height: "400px" }}
+                      >
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-lg-7">
+                              <div className="caption mt-30">
+                                <h5 className="inline main-colorbg">
+                                  {/* <span>{item.number}</span> */}
+                                </h5>
+                                <h1>
+                                  {/* <StatementSplitter statement={item.title} /> */}
+                                </h1>
+                                {/* <p>{item.text}</p> */}
+                              </div>
                             </div>
-                          </div>
-                          {/* <div className="col-lg-3 offset-lg-1 valign">
+                            {/* <div className="col-lg-3 offset-lg-1 valign">
                       <div className="ml-auto explore">
                         <Link href="/dark/project-details1">
                           <div className="circle-button">
@@ -218,25 +219,27 @@ function Header({ lightMode }) {
                         </Link>
                       </div>
                     </div> */}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            )}
-            <div className="setting">
-              <div className="controls">
-                <div className="cursor-pointer swiper-button-next swiper-nav-ctrl next-ctrl">
-                  <i className="ion-chevron-right"></i>
-                </div>
-                <div className="cursor-pointer swiper-button-prev swiper-nav-ctrl prev-ctrl">
-                  <i className="ion-chevron-left"></i>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+              <div className="setting">
+                <div className="controls">
+                  <div className="cursor-pointer swiper-button-next swiper-nav-ctrl next-ctrl">
+                    <i className="ion-chevron-right"></i>
+                  </div>
+                  <div className="cursor-pointer swiper-button-prev swiper-nav-ctrl prev-ctrl">
+                    <i className="ion-chevron-left"></i>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         {/* <div
         className="bg-pattern bg-img"
         data-background={`/${

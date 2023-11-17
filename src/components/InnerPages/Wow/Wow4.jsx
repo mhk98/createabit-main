@@ -4,7 +4,7 @@ import app1 from "../../../../images/app1.jpg";
 import app2 from "../../../../images/app2.jpg";
 import app3 from "../../../../images/app3.jpg";
 import app4 from "../../../../images/app4.jpg";
-import app5 from "../../../../images/app5.jpg";
+
 import pro1 from "../../../../images/pro1.jpg";
 export default function Wow4() {
   return (
@@ -175,7 +175,7 @@ export default function Wow4() {
               <div className="col-lg-6">
                 <div className="item mt-30">
                   <div className="img">
-                    <Image src={app5} alt="" className="radius-10" />
+                    <Image src={app2} alt="" className="radius-10" />
                     <Link href="/dark/project-details1" className="tag">
                       <p>Wow Product</p>
                     </Link>

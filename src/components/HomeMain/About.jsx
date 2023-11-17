@@ -5,7 +5,7 @@ import about1 from "../../../images/about/1.jpg";
 function About({ lightMode }) {
   return (
     <>
-      <section className="about-intro section-padding about-dark about-light">
+      <section className="about-intro section-padding section-about about-dark about-light">
         <div className="container">
           <h6 className="text-center dot-titl-non fadeIn">Who We Are</h6>
           <div className="mb-40 align-middle row">
@@ -72,7 +72,10 @@ function About({ lightMode }) {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center">
+          <div
+            className="row justify-between gap-5"
+            style={{ marginTop: "50px" }}
+          >
             <div className="col-lg-6 rest">
               <div className="imgs md-mb50">
                 <div className="img1">
@@ -94,7 +97,7 @@ function About({ lightMode }) {
             <div className="col-lg-5 valign rest">
               <div className="cont">
                 <h2 className="d-rotate wow">
-                  <span className="rotate-text" style={{ width: "600px" }}>
+                  <span className="rotate-text">
                     Achieve Sustainable Revenue Growth in Your Business.
                   </span>
                 </h2>
