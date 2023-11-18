@@ -1,3 +1,2 @@
-[build]
-  command = "npx next build"
-  publish = "out"
+ command = "npx next build"
+  publish = "/opt/build/repo/out"
