@@ -1,10 +1,17 @@
-import { useEffect } from "react";
-import Head from "next/head";
-import Layout from "@/layouts/default";
+// import { useEffect } from "react";
+// import Head from "next/head";
+// import Layout from "@/layouts/default";
+// import Loader from "@/components/Common/Loader";
+// import DarkNavbar from "../dark-navbar";
+// import DarkFooter from "../dark-footer";
+// import CheckoutForm from "@/components/PaymentInfo/CheckoutForm";
+
 import Loader from "@/components/Common/Loader";
+import Head from "next/head";
 import DarkNavbar from "../dark-navbar";
-import DarkFooter from "../dark-footer";
 import CheckoutForm from "@/components/PaymentInfo/CheckoutForm";
+import DarkFooter from "../dark-footer";
+import DefaultLayout from "@/layouts/default";
 
 function PurchaseDetails() {
   useEffect(() => {
@@ -39,6 +46,6 @@ function PurchaseDetails() {
   );
 }
 
-PurchaseDetails.getLayout = (page) => <Layout>{page}</Layout>;
+PurchaseDetails.getLayout = (page) => <DefaultLayout>{page}</DefaultLayout>;
 
 export default PurchaseDetails;

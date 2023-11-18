@@ -43,4 +43,4 @@ const useMyContext = () => {
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export { MyContextProvider, useMyContext as default };
+export { MyContextProvider, useMyContext };

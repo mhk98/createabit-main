@@ -1,11 +1,16 @@
-import { useEffect } from "react";
-import Head from "next/head";
-import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
+import Head from "next/head";
+import { useEffect } from "react";
 import DarkNavbar from "../dark-navbar";
-import DarkFooter from "../dark-footer";
 import PaymentResult from "@/components/PaymentInfo/PaymentResult";
-
+import DarkFooter from "../dark-footer";
+import DefaultLayout from "@/layouts/default";
+// import Head from "next/head";
+// import Layout from "@/layouts/default";
+// import Loader from "@/components/Common/Loader";
+// import DarkNavbar from "../dark-navbar";
+// import DarkFooter from "../dark-footer";
+// import PaymentResult from "@/components/PaymentInfo/PaymentResult";
 
 function PurchaseStatus() {
   useEffect(() => {
@@ -40,6 +45,6 @@ function PurchaseStatus() {
   );
 }
 
-PurchaseStatus.getLayout = (page) => <Layout>{page}</Layout>;
+PurchaseStatus.getLayout = (page) => <DefaultLayout>{page}</DefaultLayout>;
 
 export default PurchaseStatus;
