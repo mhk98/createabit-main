@@ -6,9 +6,6 @@ import toast from "react-hot-toast";
 import { isLoggedIn } from "../services/auth.service";
 import useMyContext from "@/MyContext/MyContext";
 
-
-
-
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
   const router = useRouter();
@@ -21,8 +18,6 @@ function Cart({ lightMode }) {
   }, []);
 
   const [cart, setCart] = useState([]);
-
- 
 
   useEffect(() => {
     if (products) {
