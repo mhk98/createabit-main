@@ -49,12 +49,12 @@ function App({ Component, pageProps }) {
           </ProtectedRoute>
         </UserProvider>
       </Provider> */}
-<MyContextProvider>
-<Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
-</MyContextProvider>
-      
+      <MyContextProvider>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </MyContextProvider>
+
       <Toaster />
       <Script strategy="beforeInteractive" src="/assets/js/plugins.js"></Script>
       <Script

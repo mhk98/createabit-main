@@ -1,4 +1,5 @@
-import useMyContext from "@/MyContext/MyContext";
+
+import { useMyContext } from "@/MyContext/MyContext";
 import { isLoggedIn, removeUserInfo } from "@/components/services/auth.service";
 import { authKey } from "@/constants/storageKey";
 
