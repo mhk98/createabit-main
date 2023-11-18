@@ -5,10 +5,11 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Checkout from "@/components/Shop/Checkout";
+
 import Header from "@/components/Shop/Header";
 import DarkFooter from "../dark-footer";
 import DarkNavbar from "../dark-navbar";
+import Checkout from "../../../components/Shop/Checkout";
 
 function ShopCheckout() {
   useEffect(() => {

@@ -31,7 +31,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
           setClientSecret(res.data.clientSecret);
         });
     }
-  }, [Price, axios]);
+  }, [Price]);
   const router = useRouter();
 
   const handleSubmit = async (event) => {

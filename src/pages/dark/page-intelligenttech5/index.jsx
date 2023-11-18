@@ -5,7 +5,6 @@ import Head from "next/head";
 import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
-import Footer from "@/components/HomeMain/Footer";
 import IntelligentTech5 from "@/components/InnerPages/Intelligent/IntelligentTech5";
 import DarkNavbar from "../dark-navbar";
 import DarkFooter from "../dark-footer";
