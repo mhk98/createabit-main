@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 import { isLoggedIn } from "../services/auth.service";
 import CheckoutForm from "../PaymentInfo/CheckoutForm";
 import { useRouter } from "next/router";
-const stripePromise = loadStripe(
-  "pk_test_51L1rVDH0VF27tpW3LEs6Z66fVvzRIoh08xSbY4zSyiG03Q2pwNVzhq8JoYv4s4xF4zwObI3gLNUjus6dFj0ltrvr00m17agrob"
-);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
 function Checkout({ lightMode }) {
   const [products, setProducts] = useState([]);
