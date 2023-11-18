@@ -1,2 +1,0 @@
-command = "NODE_ENV=production npm run build"
-  publish = "/path/to/your/publish/directory"
