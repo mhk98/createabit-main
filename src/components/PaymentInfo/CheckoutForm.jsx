@@ -95,7 +95,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
       const res = await createCheckout(checkoutInfo);
 
       localStorage.setItem("payment-status", res.data.status);
-      router.push("/dark/payment-status");
+      router.push("/dark/page-purchaseStatus");
     }
   };
 

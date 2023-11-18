@@ -1,10 +1,11 @@
+import useMyContext from "@/MyContext/MyContext";
 import { isLoggedIn, removeUserInfo } from "@/components/services/auth.service";
 import { authKey } from "@/constants/storageKey";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useMyContext } from "@/MyContext/MyContext";
+
 
 function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   const { state, updateData } = useMyContext();
