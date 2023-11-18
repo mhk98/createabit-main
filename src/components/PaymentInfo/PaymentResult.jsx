@@ -1,3 +1,5 @@
+import React from "react";
+
 const PaymentResult = () => {
   const Result = localStorage.getItem("payment-status");
   return (
