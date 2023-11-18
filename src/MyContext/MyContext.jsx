@@ -1,5 +1,4 @@
-// MyContext.js
-import React, { createContext, useReducer, useContext } from "react";
+import { createContext, useContext, useReducer } from "react";
 
 const MyContext = createContext();
 
@@ -42,5 +41,4 @@ const useMyContext = () => {
   return context;
 };
 
-
-export  { MyContextProvider, useMyContext };
+export { MyContextProvider, useMyContext };

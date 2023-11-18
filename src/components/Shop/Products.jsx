@@ -2,7 +2,7 @@
 
 
 
-import useMyContext from "@/MyContext/MyContext";
+import {useMyContext} from "@/MyContext/MyContext";
 import {
   useGetProductsQuery,
   useSingleCategoryQuery,

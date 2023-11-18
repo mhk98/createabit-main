@@ -1,8 +1,7 @@
 import { useCreateCheckoutMutation } from "@/features/order/order";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
-import { useRouter } from "next/navigation";
-
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
