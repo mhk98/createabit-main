@@ -1,2 +1,2 @@
- command = "npm run build"
-  publish = "/opt/build/repo/out"
+command = "NODE_ENV=production npm run build"
+  publish = "/path/to/your/publish/directory"
