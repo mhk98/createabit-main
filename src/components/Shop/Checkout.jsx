@@ -3,7 +3,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
 import { isLoggedIn } from "../services/auth.service";
 import CheckoutForm from "../PaymentInfo/CheckoutForm";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
 function Checkout({ lightMode }) {
@@ -31,15 +32,15 @@ function Checkout({ lightMode }) {
   };
 
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const userLoggedIn = isLoggedIn();
 
   useEffect(() => {
     if (!userLoggedIn) {
       router.push("/dark/login");
     }
-    setIsLoading(true);
-  }, [router, isLoading]);
+    // setIsLoading(true);
+  }, [router]);
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];

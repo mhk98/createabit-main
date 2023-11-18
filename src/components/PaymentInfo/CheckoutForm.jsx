@@ -1,7 +1,7 @@
 import { useCreateCheckoutMutation } from "@/features/order/order";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -11,6 +11,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
   const [transactionId, setTransactionId] = useState("");
   const [cardError, setCardError] = useState("");
   const [createCheckout] = useCreateCheckoutMutation();
+  const [error, setError] = useState(null);
 
   console.log("checkoutdetails", checkoutInfo);
   const stripe = useStripe();
@@ -28,6 +29,9 @@ const CheckoutForm = ({ checkoutInfo }) => {
         .then((res) => {
           console.log("res.data.clientSecret", res.data.clientSecret);
           setClientSecret(res.data.clientSecret);
+        })
+        .catch((error) => {
+          console.error("Error fetching client secret:", error.message);
         });
     }
   }, [Price]);
@@ -48,6 +52,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
     // each type of element.
     const card = elements.getElement(CardElement);
 
+   
     if (card == null) {
       return;
     }
@@ -61,10 +66,12 @@ const CheckoutForm = ({ checkoutInfo }) => {
     if (error) {
       console.log("error", error);
       setCardError(error.message);
-    } else {
-      setCardError("");
-      // console.log("PaymentMethod", paymentMethod);
     }
+
+    // else {
+    //   setCardError("");
+    //   // console.log("PaymentMethod", paymentMethod);
+    // }
 
     setProcessing(true);
     const { paymentIntent, error: confirmError } =
@@ -80,12 +87,14 @@ const CheckoutForm = ({ checkoutInfo }) => {
 
     if (confirmError) {
       console.log("confirmError", confirmError);
+      setError("Payment failed. Please try again.");
+      return;
     }
 
     console.log("paymentIntent", paymentIntent);
     setProcessing(false);
 
-    if (paymentIntent.status === "succeeded") {
+    if (paymentIntent && paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
       // const transactionId = paymentIntent.id;
       toast.success("Transaction complete with transactionId", transactionId);
@@ -136,6 +145,8 @@ const CheckoutForm = ({ checkoutInfo }) => {
       </form>
 
       {cardError && <p className="ml-8 text-red-500">{cardError}</p>}
+      {error && <p className="ml-8 text-red-500">{error}</p>}
+
       {/* {transactionId && (
         <p className="text-green-500">
           Transaction complete with transactionId: {transactionId}

@@ -41,4 +41,4 @@ const useMyContext = () => {
   return context;
 };
 
-export { MyContextProvider, useMyContext };
+export { MyContextProvider, useMyContext as default};

@@ -1,9 +1,10 @@
+import React, { useEffect } from "react"; // Import useEffect from React
 import Loader from "@/components/Common/Loader";
 import Head from "next/head";
 import DarkNavbar from "../dark-navbar";
-import CheckoutForm from "@/components/PaymentInfo/CheckoutForm";
 import DarkFooter from "../dark-footer";
 import DefaultLayout from "@/layouts/default";
+import CheckoutForm from "@/components/PaymentInfo/CheckoutForm";
 
 function PurchaseDetails() {
   useEffect(() => {
@@ -29,7 +30,8 @@ function PurchaseDetails() {
         <DarkNavbar />
         <div id="smooth-content">
           <main className="main-bg">
-            <CheckoutForm />
+            {/* <CheckoutForm /> */}
+            
           </main>
           <DarkFooter />
         </div>

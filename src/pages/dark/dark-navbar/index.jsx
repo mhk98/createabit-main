@@ -1,12 +1,9 @@
-
-import { useMyContext } from "@/MyContext/MyContext";
+import useMyContext from "@/MyContext/MyContext";
 import { isLoggedIn, removeUserInfo } from "@/components/services/auth.service";
 import { authKey } from "@/constants/storageKey";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
 
 function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
   const { state, updateData } = useMyContext();
@@ -18,7 +15,7 @@ function DarkNavbar({ lightMode, alwaysDark, darkOnScroll }) {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCarts(savedCart);
   }, []);
-  const router = useRouter();
+
   const userLoggedIn = isLoggedIn();
   const handleLogout = () => {
     removeUserInfo(authKey);
