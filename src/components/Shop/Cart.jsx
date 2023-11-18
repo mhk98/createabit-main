@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { isLoggedIn } from "../services/auth.service";
-import { useMyContext } from "@/MyContext/MyContext";
+import useMyContext from "@/MyContext/MyContext";
+
 
 
 
