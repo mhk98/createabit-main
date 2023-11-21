@@ -2,6 +2,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { storgeUserInfo } from "../services/auth.service";
 
 const Login = () => {
@@ -32,9 +33,11 @@ const Login = () => {
       );
 
       if (response.data.accessToken) {
+        localStorage.setItem("name", response.data.data.user.Name);
+        localStorage.setItem("email", response.data.data.user.Email);
+        toast.success("Successfully Login");
         router.push("/");
       }
-
       storgeUserInfo({ accessToken: response.data.accessToken });
     } catch (error) {
       console.error("Error:", error);

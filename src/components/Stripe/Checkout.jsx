@@ -36,12 +36,6 @@ function Checkout({ lightMode }) {
     setChecked(!isChecked);
   };
 
-  // if (!isChecked) {
-  //   setShippingFirstName("");
-  //   setShippingLastName("");
-  //   setShippingAddress("");
-  // }
-
   const router = useRouter();
   // const [isLoading, setIsLoading] = useState(false);
   const userLoggedIn = isLoggedIn();
@@ -220,29 +214,48 @@ function Checkout({ lightMode }) {
 
                   {isChecked && (
                     <div>
-                      <input
-                        onChange={(e) => setShippingFirstName(e.target.value)}
-                        type="text"
-                        name="shipping_first_name"
-                        value={shippingFirstName} // Corrected to use shippingFirstName from state
-                        required
-                      />
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="">First Name *</label>
+                          <input
+                            onChange={(e) =>
+                              setShippingFirstName(e.target.value)
+                            }
+                            type="text"
+                            name="shipping_first_name"
+                            value={shippingFirstName || ""}
+                            required
+                          />
+                        </div>
+                      </div>
 
-                      <input
-                        onChange={(e) => setShippingLastName(e.target.value)}
-                        type="text"
-                        name="shipping_last_name"
-                        value={shippingLastName} // Corrected to use shippingLastName from state
-                        required
-                      />
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="">Last Name *</label>
+                          <input
+                            onChange={(e) =>
+                              setShippingLastName(e.target.value)
+                            }
+                            type="text"
+                            name="shipping_last_name"
+                            value={shippingLastName || ""}
+                            required
+                          />
+                        </div>
+                      </div>
 
-                      <input
-                        onChange={(e) => setShippingAddress(e.target.value)}
-                        type="text"
-                        name="shipping_address"
-                        value={shippingAddress} // Corrected to use shippingAddress from state
-                        required
-                      />
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="">Address*</label>
+                          <input
+                            onChange={(e) => setShippingAddress(e.target.value)}
+                            type="text"
+                            name="shipping_address"
+                            value={shippingAddress || ""}
+                            required
+                          />
+                        </div>
+                      </div>
 
                       {/* Add more form fields as needed */}
                     </div>

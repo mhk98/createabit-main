@@ -25,8 +25,10 @@ const CheckoutForm = ({ checkoutInfo }) => {
   const [createCheckout] = useCreateCheckoutMutation();
   const [error, setError] = useState(null);
 
-  console.log("CheckoutForm", checkoutInfo);
-  const { FirstName, Email, Total: Price } = checkoutInfo;
+  const Price = localStorage.getItem("total");
+  const Name = localStorage.getItem("name");
+  const Email = localStorage.getItem("email");
+
   useEffect(() => {
     if (Price > 0) {
       axios
@@ -89,7 +91,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
           card: card,
           billing_details: {
             email: Email,
-            name: FirstName,
+            name: Name,
           },
         },
       });
@@ -114,7 +116,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
       const res = await createCheckout(checkoutInfo);
 
       localStorage.setItem("payment-status", res.data.status);
-      router.push("/dark/page-purchaseStatus");
+      router.push("/dark/page-purchase-status");
     }
   };
 
