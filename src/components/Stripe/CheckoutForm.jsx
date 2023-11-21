@@ -24,10 +24,21 @@ const CheckoutForm = ({ checkoutInfo }) => {
   const [cardError, setCardError] = useState("");
   const [createCheckout] = useCreateCheckoutMutation();
   const [error, setError] = useState(null);
+  const [Name, setName] = useState("");
+  const [Price, setPrice] = useState("");
+  const [Email, setEmail] = useState("");
 
-  const Price = localStorage.getItem("total");
-  const Name = localStorage.getItem("name");
-  const Email = localStorage.getItem("email");
+  // useEffect(() => {}, []);
+
+  if (typeof window !== "undefined") {
+    // Access localStorage here
+    const Price = localStorage.getItem("total");
+    const Name = localStorage.getItem("name");
+    const Email = localStorage.getItem("email");
+    setPrice(Price);
+    setName(Name);
+    setEmail(Email);
+  }
 
   useEffect(() => {
     if (Price > 0) {

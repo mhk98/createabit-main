@@ -1,5 +1,13 @@
+import { useState } from "react";
+
 const PaymentResult = () => {
-  const status = localStorage.getItem("payment-status");
+  const [status, setStatus] = useState("");
+
+  if (typeof window !== "undefined") {
+    // Access localStorage here
+    const result = localStorage.getItem("payment-status");
+    setStatus(result);
+  }
   return (
     <div>
       <h2>Payment Status</h2>

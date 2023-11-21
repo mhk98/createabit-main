@@ -32,10 +32,10 @@ const Login = () => {
         formData
       );
 
-      if (response.data.accessToken) {
+      if (response.data.data.accessToken) {
         localStorage.setItem("name", response.data.data.user.Name);
         localStorage.setItem("email", response.data.data.user.Email);
-        toast.success("Successfully Login");
+        toast.success("Successfully Logged In");
         router.push("/");
       }
       storgeUserInfo({ accessToken: response.data.accessToken });
