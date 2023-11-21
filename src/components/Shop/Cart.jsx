@@ -1,10 +1,10 @@
+import useMyContext from "@/MyContext/MyContext";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { isLoggedIn } from "../services/auth.service";
-import useMyContext from "@/MyContext/MyContext";
 
 function Cart({ lightMode }) {
   const [products, setProducts] = useState([]);
@@ -270,7 +270,6 @@ function Cart({ lightMode }) {
                       >
                         <Link
                           href="/dark/shop-checkout/"
-                          target="_blank"
                           className="text-u fz-13 fw-600"
                         >
                           Proceed to checkout
@@ -283,7 +282,6 @@ function Cart({ lightMode }) {
                       >
                         <Link
                           href="/dark/login/"
-                          target="_blank"
                           className="text-u fz-13 fw-600"
                         >
                           Proceed to checkout

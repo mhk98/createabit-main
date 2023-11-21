@@ -75,9 +75,7 @@ function DarkFooter() {
                   <Link href="/dark/blog-classic">Our Blog</Link>
                 </li>
                 <li>
-                  <Link href="/dark/shop-list" target="_blank">
-                    Shop
-                  </Link>
+                  <Link href="/dark/shop-list">Shop</Link>
                 </li>
               </ul>
             </div>
@@ -124,9 +122,7 @@ function DarkFooter() {
                       © 2023 Geekfolio is Proudly Powered by{" "}
                       <span className="underline">
                         {" "}
-                        <a href={data.author_link} target="_blank">
-                          {data.author}
-                        </a>
+                        <a href={data.author_link}>{data.author}</a>
                       </span>
                     </p>
                   </div>

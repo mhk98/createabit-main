@@ -1,5 +1,4 @@
 node_modules
-.env
 .next
 # static folder for DigitalOcean App Platform
 _static

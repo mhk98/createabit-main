@@ -86,7 +86,7 @@ const Register = () => {
         <p className="mt-2">
           <span>Alreay have an account?</span>
           <span>
-            <Link href="/dark/login" className="text-primary" target="_blank">
+            <Link href="/dark/login" className="text-primary">
               {" "}
               Sign In
             </Link>

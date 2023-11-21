@@ -5,7 +5,7 @@ import { isLoggedIn } from "../services/auth.service";
 import CheckoutForm from "../PaymentInfo/CheckoutForm";
 import { useRouter } from "next/navigation";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY);
 
 function Checkout({ lightMode }) {
   const [products, setProducts] = useState([]);

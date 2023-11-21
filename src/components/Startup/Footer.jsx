@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 //= Data
 import data from "@/data/app-data.json";
 
@@ -105,9 +105,7 @@ function Footer({ lightMode, subBg }) {
                     <p className="fz-13">
                       © 2023 Geekfolio is Proudly Powered by{" "}
                       <span className="underline">
-                        <a href={data.author_link} target="_blank">
-                          {data.author}
-                        </a>
+                        <a href={data.author_link}>{data.author}</a>
                       </span>
                     </p>
                   </div>

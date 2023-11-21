@@ -1,6 +1,5 @@
-import React from 'react';
 //= Data
-import data from '@/data/app-data.json';
+import data from "@/data/app-data.json";
 
 function Footer({ lightMode }) {
   return (
@@ -27,7 +26,9 @@ function Footer({ lightMode }) {
                   <a href="#0">hello@design.com</a>
                 </p>
                 <h5>
-                  <a href="#" className="main-color2">+1 840 841 25 69</a>
+                  <a href="#" className="main-color2">
+                    +1 840 841 25 69
+                  </a>
                 </h5>
               </div>
             </div>
@@ -74,7 +75,12 @@ function Footer({ lightMode }) {
             <div className="col-lg-4">
               <div className="logo">
                 <a href="#0">
-                  <img src={`/dark/assets/imgs/logo-${lightMode ? 'dark' : 'light'}.png`} alt="" />
+                  <img
+                    src={`/dark/assets/imgs/logo-${
+                      lightMode ? "dark" : "light"
+                    }.png`}
+                    alt=""
+                  />
                 </a>
               </div>
             </div>
@@ -82,7 +88,11 @@ function Footer({ lightMode }) {
               <div className="copyright d-flex">
                 <div className="ml-auto">
                   <p className="fz-13">
-                    © 2023 Geekfolio is Proudly Powered by <span className="underline"> <a href={data.author_link} target="_blank">{data.author}</a></span>
+                    © 2023 Geekfolio is Proudly Powered by{" "}
+                    <span className="underline">
+                      {" "}
+                      <a href={data.author_link}>{data.author}</a>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -91,7 +101,7 @@ function Footer({ lightMode }) {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

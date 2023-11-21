@@ -81,7 +81,7 @@ const Login = () => {
       <p className="mt-2">
         <span>Don't have account?</span>
         <span>
-          <Link href="/dark/register" className="text-primary" target="_blank">
+          <Link href="/dark/register" className="text-primary">
             {" "}
             Sign Up
           </Link>

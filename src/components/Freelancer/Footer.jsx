@@ -1,4 +1,3 @@
-import React from "react";
 //= Data
 import data from "@/data/app-data.json";
 import Link from "next/link";
@@ -103,9 +102,7 @@ function Footer({ lightMode }) {
                       © 2023 Geekfolio is Proudly Powered by{" "}
                       <span className="underline">
                         {" "}
-                        <a href={data.author_link} target="_blank">
-                          {data.author}
-                        </a>
+                        <a href={data.author_link}>{data.author}</a>
                       </span>
                     </p>
                   </div>

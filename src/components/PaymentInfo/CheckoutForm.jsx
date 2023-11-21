@@ -52,7 +52,6 @@ const CheckoutForm = ({ checkoutInfo }) => {
     // each type of element.
     const card = elements.getElement(CardElement);
 
-   
     if (card == null) {
       return;
     }
@@ -96,6 +95,8 @@ const CheckoutForm = ({ checkoutInfo }) => {
 
     if (paymentIntent && paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
+
+      console.log("transcationId", paymentIntent.id);
       // const transactionId = paymentIntent.id;
       toast.success("Transaction complete with transactionId", transactionId);
       //save payment information to the server

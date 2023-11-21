@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from "next/link";
 //= Data
-import data from '@/data/Preview/shop-demos.json';
+import data from "@/data/Preview/shop-demos.json";
 
 function ShopDemos() {
   return (
@@ -16,27 +15,22 @@ function ShopDemos() {
       </div>
       <div className="container-fluid">
         <div className="row">
-          {
-            data.map(item => (
-              <div className="col-lg-3 col-md-6" key={item.id}>
-                <div className="item">
-                  <div className="img">
-                    <img src={item.image} alt="" />
-                  </div>
-                  <h6>{item.title}</h6>
-                  <Link href={item.link} target="_blank"></Link>
-                  {
-                    item.new &&
-                    <span className="new">New</span>
-                  }
+          {data.map((item) => (
+            <div className="col-lg-3 col-md-6" key={item.id}>
+              <div className="item">
+                <div className="img">
+                  <img src={item.image} alt="" />
                 </div>
+                <h6>{item.title}</h6>
+                <Link href={item.link}></Link>
+                {item.new && <span className="new">New</span>}
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default ShopDemos
+export default ShopDemos;

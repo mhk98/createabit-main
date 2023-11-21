@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 //= Data
-import data from '@/data/app-data.json';
+import data from "@/data/app-data.json";
 
 function Footer({ lightMode }) {
   useEffect(() => {
     if (window.innerWidth > 991) {
-      gsap.set('.footer-container', { yPercent: -50 })
-      const uncover = gsap.timeline({ paused: true })
-      uncover.to('.footer-container', { yPercent: 0, ease: 'none' });
+      gsap.set(".footer-container", { yPercent: -50 });
+      const uncover = gsap.timeline({ paused: true });
+      uncover.to(".footer-container", { yPercent: 0, ease: "none" });
       ScrollTrigger.create({
-        trigger: 'main',
-        start: 'bottom bottom',
-        end: '+=50%',
+        trigger: "main",
+        start: "bottom bottom",
+        end: "+=50%",
         animation: uncover,
         scrub: true,
       });
@@ -90,16 +90,24 @@ function Footer({ lightMode }) {
               <div className="col-lg-4">
                 <div className="logo">
                   <a href="#0">
-                    <img src={`/dark/assets/imgs/logo-${lightMode ? 'dark' : 'light'}.png`} alt="" />
+                    <img
+                      src={`/dark/assets/imgs/logo-${
+                        lightMode ? "dark" : "light"
+                      }.png`}
+                      alt=""
+                    />
                   </a>
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="copyright d-flex">
                   <div className="ml-auto">
-                    <p className="fz-13">© 2023 Geekfolio is Proudly Powered by <span className="underline"><a
-                      href={data.author_link}
-                      target="_blank">{data.author}</a></span></p>
+                    <p className="fz-13">
+                      © 2023 Geekfolio is Proudly Powered by{" "}
+                      <span className="underline">
+                        <a href={data.author_link}>{data.author}</a>
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -108,7 +116,7 @@ function Footer({ lightMode }) {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

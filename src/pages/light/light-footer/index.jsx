@@ -124,9 +124,7 @@ function LightFooter() {
                       © 2023 Geekfolio is Proudly Powered by{" "}
                       <span className="underline">
                         {" "}
-                        <a href={data.author_link} target="_blank">
-                          {data.author}
-                        </a>
+                        <a href={data.author_link}>{data.author}</a>
                       </span>
                     </p>
                   </div>
