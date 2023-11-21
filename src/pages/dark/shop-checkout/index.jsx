@@ -7,9 +7,9 @@ import Layout from "@/layouts/default";
 import Loader from "@/components/Common/Loader";
 
 import Header from "@/components/Shop/Header";
+import Checkout from "@/components/Stripe/Checkout";
 import DarkFooter from "../dark-footer";
 import DarkNavbar from "../dark-navbar";
-import Checkout from "../../../components/Shop/Checkout";
 
 function ShopCheckout() {
   useEffect(() => {

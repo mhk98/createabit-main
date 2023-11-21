@@ -6,9 +6,8 @@ import Layout from "@/layouts/default";
 //= Components
 import Loader from "@/components/Common/Loader";
 import Navbar from "@/components/Common/MainNavbar";
-import Checkout from "@/components/Shop/Checkout";
 import Header from "@/components/Shop/Header";
-import Footer from "@/components/Startup/Footer";
+import Checkout from "@/components/Stripe/Checkout";
 import LightFooter from "../light-footer";
 
 function ShopCheckout() {
@@ -44,7 +43,7 @@ function ShopCheckout() {
             <Header data={metadata} />
             <Checkout />
           </main>
-          <LightFooter   />
+          <LightFooter />
         </div>
       </div>
     </>

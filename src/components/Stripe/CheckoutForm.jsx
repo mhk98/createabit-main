@@ -5,7 +5,19 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
+//  <Elements stripe={stripePromise}>
+
+//                 </Elements>
+
+// const Wrapper = (props) => (
+//   <Elements stripe={stripePromise}>
+//     <Checkout {...props} />
+//   </Elements>
+// );
+
 const CheckoutForm = ({ checkoutInfo }) => {
+  const stripe = useStripe();
+  const elements = useElements();
   const [clientSecret, setClientSecret] = useState("");
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
@@ -13,9 +25,7 @@ const CheckoutForm = ({ checkoutInfo }) => {
   const [createCheckout] = useCreateCheckoutMutation();
   const [error, setError] = useState(null);
 
-  console.log("checkoutdetails", checkoutInfo);
-  const stripe = useStripe();
-  const elements = useElements();
+  console.log("CheckoutForm", checkoutInfo);
   const { FirstName, Email, Total: Price } = checkoutInfo;
   useEffect(() => {
     if (Price > 0) {

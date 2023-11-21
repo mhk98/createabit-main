@@ -1,5 +1,5 @@
 import Loader from "@/components/Common/Loader";
-import CheckoutForm from "@/components/PaymentInfo/CheckoutForm";
+import CheckoutForm from "@/components/Stripe/CheckoutForm";
 import DefaultLayout from "@/layouts/default";
 import Head from "next/head";
 import { useEffect } from "react"; // Import useEffect from React

@@ -1,11 +1,16 @@
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { isLoggedIn } from "../services/auth.service";
-import CheckoutForm from "../PaymentInfo/CheckoutForm";
-import { useRouter } from "next/navigation";
+import CheckoutForm from "./CheckoutForm";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY);
+// const Wrapper = (props) => (
+//   <Elements stripe={stripePromise}>
+//     <CheckoutForm {...props} />
+//   </Elements>
+// );
 
 function Checkout({ lightMode }) {
   const [products, setProducts] = useState([]);
@@ -30,6 +35,12 @@ function Checkout({ lightMode }) {
   const handleCheckboxChange = () => {
     setChecked(!isChecked);
   };
+
+  // if (!isChecked) {
+  //   setShippingFirstName("");
+  //   setShippingLastName("");
+  //   setShippingAddress("");
+  // }
 
   const router = useRouter();
   // const [isLoading, setIsLoading] = useState(false);
@@ -209,48 +220,29 @@ function Checkout({ lightMode }) {
 
                   {isChecked && (
                     <div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="">First Name *</label>
-                          <input
-                            onChange={(e) =>
-                              setShippingFirstName(e.target.value)
-                            }
-                            type="text"
-                            name="shipping_first_name"
-                            value={firstName}
-                            required
-                          />
-                        </div>
-                      </div>
+                      <input
+                        onChange={(e) => setShippingFirstName(e.target.value)}
+                        type="text"
+                        name="shipping_first_name"
+                        value={shippingFirstName} // Corrected to use shippingFirstName from state
+                        required
+                      />
 
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="">Last Name *</label>
-                          <input
-                            onChange={(e) =>
-                              setShippingLastName(e.target.value)
-                            }
-                            type="text"
-                            name="shipping_last_name"
-                            value={lastName}
-                            required
-                          />
-                        </div>
-                      </div>
+                      <input
+                        onChange={(e) => setShippingLastName(e.target.value)}
+                        type="text"
+                        name="shipping_last_name"
+                        value={shippingLastName} // Corrected to use shippingLastName from state
+                        required
+                      />
 
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="">Address*</label>
-                          <input
-                            onChange={(e) => setShippingAddress(e.target.value)}
-                            type="text"
-                            name="shipping_address"
-                            value={address}
-                            required
-                          />
-                        </div>
-                      </div>
+                      <input
+                        onChange={(e) => setShippingAddress(e.target.value)}
+                        type="text"
+                        name="shipping_address"
+                        value={shippingAddress} // Corrected to use shippingAddress from state
+                        required
+                      />
 
                       {/* Add more form fields as needed */}
                     </div>

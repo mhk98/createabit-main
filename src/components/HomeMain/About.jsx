@@ -14,7 +14,7 @@ function About({ lightMode }) {
                 className=" sec-lg-head md-mb30"
                 style={{ marginTop: "15px" }}
               >
-                <h2 className=" d-rotate wow">
+                <h2 className=" d-rotate wow fadeIn">
                   <span className="">
                     Your success is our mission in the digital world.
                   </span>
@@ -73,7 +73,7 @@ function About({ lightMode }) {
             </div>
           </div>
           <div
-            className="row justify-between gap-5"
+            className="justify-between gap-5 row"
             style={{ marginTop: "50px" }}
           >
             <div className="col-lg-6 rest">
